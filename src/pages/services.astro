@@ -1,0 +1,87 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PackageCard from "@/components/PackageCard.astro";
+---
+
+<Layout
+  title="Services — Incubate Labs"
+  description="Fixed-scope, fixed-day, fixed-price engagements. Three published packages plus longer Frame → Operate engagements on enquiry."
+>
+  <section class="max-w-page mx-auto px-6 pt-16 pb-10">
+    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Services</p>
+    <h1 class="text-5xl font-bold tracking-tight mb-6">Pick the smallest first move.</h1>
+    <p class="text-xl text-neutral-700 max-w-3xl leading-relaxed">
+      Every engagement below has fixed days, a fixed price, a fixed deliverable list, and an
+      explicit "what's NOT in scope" section. No "talk to sales." If a package doesn't fit, we'll
+      say so on the free triage call.
+    </p>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <section class="max-w-page mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Published packages</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <PackageCard
+        title="OSS Tool Hardening Pass"
+        days="2 days"
+        price="£2,000"
+        summary="Threat model, decision log, security policy, sunset criteria, test-or-document-the-gap audit. Same shape as the governance scaffold across our public repos."
+        href="/services/oss-tool-hardening-pass/"
+      />
+      <PackageCard
+        title="AI Governance Pack"
+        days="5 days"
+        price="£4,000"
+        summary="Threat model + decision log + outcome metrics + drift monitoring plan + 90-day review. NIST AI RMF aligned."
+        href="/services/ai-governance-pack/"
+      />
+      <PackageCard
+        title="Local-LLM Pilot"
+        days="10 days"
+        price="£8,000"
+        summary="Working Ollama deployment + redaction pipeline against your real (or anonymised) documents + RAM-only architecture + handover."
+        href="/services/local-llm-pilot/"
+      />
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <section class="max-w-page mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6">Bigger engagements</h2>
+    <div class="border border-neutral-200 rounded-lg p-8 max-w-3xl">
+      <h3 class="font-semibold text-xl mb-3">Incubate Engagement <span class="ml-2 text-sm font-normal text-neutral-500">flagship</span></h3>
+      <p class="text-2xl font-bold mb-4">from £25,000</p>
+      <p class="text-neutral-700 leading-relaxed mb-4">
+        A full <a href="/methodology/" class="text-accent hover:underline">Frame → Operate</a>
+        cycle on a real AI project. Solo + agent-augmented delivery on a monthly retainer model.
+        Scope is bespoke; the deliverable shape is not — every engagement ends with a populated
+        Project Record (intake memo, data feasibility, build plan, validation plan, ops plan,
+        commercial pack).
+      </p>
+      <p class="text-sm text-neutral-600 mb-6">
+        Right when: you have a real AI ambition, internal sponsorship, and want a small,
+        opinionated outside team to take you from idea to in-production.
+      </p>
+      <a
+        href="/contact/"
+        class="inline-flex items-center px-6 py-3 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors"
+      >
+        Talk about scope
+      </a>
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <section class="max-w-page mx-auto px-6 py-12 max-w-prose">
+    <h2 class="text-2xl font-bold mb-4">How an engagement actually starts</h2>
+    <ol class="list-decimal pl-5 space-y-2 text-neutral-700 leading-relaxed">
+      <li><strong>Free triage call</strong> (15–60 min). One of three formats — see <a href="/free/" class="text-accent hover:underline">free triage</a>.</li>
+      <li><strong>Written quote</strong> within 48 hours, naming the package, days, price, and explicit out-of-scope.</li>
+      <li><strong>50% deposit on signature</strong>, balance on delivery of the named artefacts.</li>
+      <li><strong>Async by default</strong>, with one weekly 30-min sync. UK-hours-friendly across EU/US clients.</li>
+    </ol>
+  </section>
+</Layout>

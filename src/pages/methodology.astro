@@ -1,0 +1,199 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+const patterns = [
+  { id: 0, name: "Deterministic", desc: "Rules are explicit, inputs bounded, outputs predictable. AI is the wrong tool. The methodology recommends an automation track instead. A valid outcome, not a failure." },
+  { id: 1, name: "Conversational", desc: "Systems that interact via natural language with humans." },
+  { id: 2, name: "Recognition", desc: "Classifying or extracting meaning from unstructured inputs: images, audio, documents." },
+  { id: 3, name: "Patterns & Anomalies", desc: "Identifying deviation from normal or surfacing hidden structure in data." },
+  { id: 4, name: "Predictive & Decision Support", desc: "Forecasting outcomes and supporting human decisions with data-driven insight." },
+  { id: 5, name: "Hyperpersonalization", desc: "Tailoring content or recommendations per user, in near real-time." },
+  { id: 6, name: "Autonomous", desc: "Acting with minimal human intervention, adapting to dynamic environments." },
+  { id: 7, name: "Goal-Driven", desc: "Optimising toward a defined objective under constraints." },
+];
+
+const phases = [
+  { num: 1, name: "Frame", agent: "Scout", purpose: "Decide whether this is an AI project at all, and if so, what success looks like." },
+  { num: 2, name: "Data", agent: "Surveyor", purpose: "Establish whether the data exists, is accessible, is usable, and is governable." },
+  { num: 3, name: "Pipeline", agent: "Forge", purpose: "Turn raw data into analysis-ready inputs and the pipelines that keep them that way." },
+  { num: 4, name: "Build", agent: "Architect", purpose: "Build or select a model that fits the pattern, the data, and the constraints." },
+  { num: 5, name: "Validate", agent: "Auditor", purpose: "Decide whether the system is good enough to deploy — technically, commercially, and ethically." },
+  { num: 6, name: "Operate", agent: "Operator", purpose: "Deploy, monitor, and maintain in the real world." },
+];
+
+const principles = [
+  { name: "Ethical", desc: "The system avoids harm, respects privacy, uses data responsibly." },
+  { name: "Responsible", desc: "Accountability for outcomes is named and documented." },
+  { name: "Transparent", desc: "Behaviour, data use, and decision logic are discoverable." },
+  { name: "Governed", desc: "Organisational policies, audit trails, and approval processes are enforced." },
+  { name: "Explainable", desc: "Stakeholders can be given a rationale for system outputs." },
+];
+---
+
+<Layout
+  title="Methodology — Incubate"
+  description="Incubate is a delivery methodology for AI projects, expressed as a multi-agent system. Eight patterns, six phases, six named agents plus a cross-cutting Sponsor."
+>
+  <section class="max-w-page mx-auto px-6 py-16">
+    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">The methodology</p>
+    <h1 class="text-5xl font-bold tracking-tight mb-6">Incubate</h1>
+    <p class="text-xl text-neutral-700 max-w-3xl leading-relaxed">
+      A delivery methodology for AI projects, expressed as a multi-agent system.
+      Eight patterns × six phases × six named agents, with stage-gates that refuse
+      to advance when the work isn't ready.
+    </p>
+    <div class="mt-6 inline-block border border-neutral-300 bg-neutral-50 rounded-md px-4 py-2 text-sm text-neutral-700">
+      <strong>Status:</strong> v0.1 skeleton — structural, honest. Per-phase detail is being filled in
+      against live engagements, not in advance. The
+      <a href="https://github.com/Product-nomad/incubate" class="text-accent hover:underline">spec repo</a>
+      is the source of truth as it grows.
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- Beliefs -->
+  <section class="max-w-page mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-8">What Incubate believes</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
+      <div>
+        <h3 class="font-semibold text-lg mb-2">Not every problem needs AI.</h3>
+        <p class="text-neutral-700 leading-relaxed">
+          Many problems brought to an AI consultancy are deterministic problems in disguise —
+          rules explicit, inputs bounded, outputs predictable. Better solved with code than
+          with models. <strong>"This is not an AI project, here is the automation that is"</strong>
+          is a valid and valuable outcome.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg mb-2">AI projects are data projects wearing a model-shaped hat.</h3>
+        <p class="text-neutral-700 leading-relaxed">
+          Most AI failures are data failures. The data isn't there, isn't clean, isn't owned,
+          isn't labelled, isn't representative, or isn't governed. We investigate data before
+          models, and refuse to advance when the data isn't real.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg mb-2">Iteration is the unit of progress, not the phase.</h3>
+        <p class="text-neutral-700 leading-relaxed">
+          Projects don't finish Phase 2 and move to Phase 3. They complete an iteration that
+          may touch several phases, learn something, and iterate. Loopbacks are the default,
+          not an exception.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg mb-2">Trust is a delivery requirement, not a compliance task.</h3>
+        <p class="text-neutral-700 leading-relaxed">
+          Governance, explainability, bias checking, and monitoring aren't a late-stage review.
+          They're threaded through every phase, because retrofitting trust is more expensive
+          than building it in.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- Eight patterns -->
+  <section class="max-w-page mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-2">Eight patterns</h2>
+    <p class="text-neutral-700 mb-8 max-w-prose">
+      Every idea is classified against eight patterns in the Frame phase. The pattern determines
+      data requirements, risk profile, algorithmic approach, infrastructure, and governance overhead.
+    </p>
+    <div class="border border-neutral-200 rounded-lg overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-neutral-50 text-left">
+          <tr>
+            <th class="px-4 py-3 w-16">#</th>
+            <th class="px-4 py-3 w-56">Pattern</th>
+            <th class="px-4 py-3">What it is</th>
+          </tr>
+        </thead>
+        <tbody>
+          {patterns.map((p) => (
+            <tr class="border-t border-neutral-200">
+              <td class="px-4 py-3 font-mono text-neutral-500">{p.id}</td>
+              <td class="px-4 py-3 font-semibold">{p.name}</td>
+              <td class="px-4 py-3 text-neutral-700">{p.desc}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- Six phases / six agents -->
+  <section class="max-w-page mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-2">Six phases, six named agents</h2>
+    <p class="text-neutral-700 mb-8 max-w-prose">
+      Each phase has a primary agent with defined inputs, tasks, and outputs. Agents hand off via
+      named artefacts; the work doesn't advance without one.
+    </p>
+    <div class="border border-neutral-200 rounded-lg overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-neutral-50 text-left">
+          <tr>
+            <th class="px-4 py-3 w-12">#</th>
+            <th class="px-4 py-3 w-32">Phase</th>
+            <th class="px-4 py-3 w-32">Agent</th>
+            <th class="px-4 py-3">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          {phases.map((p) => (
+            <tr class="border-t border-neutral-200">
+              <td class="px-4 py-3 font-mono text-neutral-500">{p.num}</td>
+              <td class="px-4 py-3 font-semibold">{p.name}</td>
+              <td class="px-4 py-3 font-mono">{p.agent}</td>
+              <td class="px-4 py-3 text-neutral-700">{p.purpose}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-6 text-neutral-700 max-w-prose">
+      A seventh agent — the <strong>Sponsor</strong> — sits across all phases. Its job is stage-gate
+      veto and commercial challenge. It asks the uncomfortable question at each handoff: <em>should
+      this still be happening?</em>
+    </p>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- Trust principles -->
+  <section class="max-w-page mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-2">Trustworthy AI — five principles</h2>
+    <p class="text-neutral-700 mb-8 max-w-prose">
+      Threaded through every phase, not added at the end. Aligns to NIST AI RMF and UK AI Safety
+      Institute guidance.
+    </p>
+    <ul class="space-y-3 max-w-3xl">
+      {principles.map((p) => (
+        <li class="border border-neutral-200 rounded-md px-4 py-3">
+          <span class="font-semibold">{p.name}</span> — <span class="text-neutral-700">{p.desc}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- CTA -->
+  <section class="max-w-page mx-auto px-6 py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4">See it applied to your project.</h2>
+    <p class="text-lg text-neutral-700 max-w-prose mx-auto mb-8">
+      A 30-min call walks you through which phase your work is actually at — and what the next
+      stage gate would test.
+    </p>
+    <a
+      href="/contact/"
+      class="inline-flex items-center px-8 py-4 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors"
+    >
+      Book a 30-min call
+    </a>
+  </section>
+</Layout>

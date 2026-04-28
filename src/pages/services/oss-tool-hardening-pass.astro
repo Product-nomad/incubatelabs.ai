@@ -1,0 +1,71 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="OSS Tool Hardening Pass — Incubate Labs"
+  description="Two days, £2,000. Threat model, decision log, security policy, sunset criteria, and a test-or-document-the-gap audit applied to your open-source tool."
+>
+  <section class="max-w-page mx-auto px-6 pt-16 pb-10">
+    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Engagement</p>
+    <h1 class="text-5xl font-bold tracking-tight mb-3">OSS Tool Hardening Pass</h1>
+    <p class="text-3xl font-bold mb-2">£2,000</p>
+    <p class="text-lg text-neutral-600">2 days, fixed scope.</p>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <section class="max-w-3xl mx-auto px-6 py-12 prose-content">
+    <h2 class="text-2xl font-bold mb-4">Right when</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li>You have an open-source tool, library, or template repo that you want to take from scaffolded to credible.</li>
+      <li>It's at v0.x with a working README but no governance documents.</li>
+      <li>You want a maintainer-friendly skeleton (security policy, threat model, decision log, sunset criteria) instead of pretending those questions don't exist.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">Deliverables</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li><code>THREAT_MODEL.md</code> — trust boundary, in-scope risks, mitigations, known gaps.</li>
+      <li><code>SECURITY.md</code> — vulnerability disclosure process, scope, response window.</li>
+      <li><code>DECISIONS.md</code> — material architectural decisions you've already made, dated, with the reasoning surfaced.</li>
+      <li><code>CHANGELOG.md</code> — Keep-a-Changelog format, seeded with the last 6 months retroactively.</li>
+      <li><code>STATE.md</code> — current status, what's done, what's next, open questions.</li>
+      <li>Sunset criteria added to the README — the conditions under which you'd archive the project.</li>
+      <li>Test-or-document-the-gap audit — either a small initial test suite or an honest written rationale for why the project ships without one.</li>
+      <li>Repo metadata polish — description, topics, homepage, OG/Twitter card meta tags.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">What's NOT in scope</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li>New product features.</li>
+      <li>Refactoring or architectural changes.</li>
+      <li>CI/CD pipeline build-out (separate engagement).</li>
+      <li>Custom social-preview image creation (we'll provide the spec; you commission the design or use Canva).</li>
+      <li>Ongoing maintenance.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">How it runs</h2>
+    <ol class="list-decimal pl-5 mb-8 space-y-2 text-neutral-700">
+      <li><strong>Day 1, morning.</strong> 30-min kickoff call. Walk the repo together, name the threat model in plain English, agree the sunset criteria.</li>
+      <li><strong>Day 1, afternoon + Day 2.</strong> Asynchronous work. PR opened against your repo with all deliverables.</li>
+      <li><strong>Day 2, end.</strong> 30-min handover call. Walk the PR, agree any final tweaks, merge.</li>
+    </ol>
+
+    <p class="text-sm text-neutral-500 mt-8">
+      This is the same scaffold we apply to our own public repos. See
+      <a href="https://github.com/Product-nomad/agentaudit" class="text-accent hover:underline">agentaudit</a>
+      and
+      <a href="https://github.com/Product-nomad/claude-agent-kit" class="text-accent hover:underline">claude-agent-kit</a>
+      as live examples.
+    </p>
+
+    <div class="mt-10 flex flex-wrap gap-4">
+      <a href="/contact/" class="inline-flex items-center px-6 py-3 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors">
+        Book a 30-min call
+      </a>
+      <a href="/services/" class="inline-flex items-center px-6 py-3 border border-ink text-ink font-medium rounded-md hover:bg-ink hover:text-paper transition-colors">
+        Other services
+      </a>
+    </div>
+  </section>
+</Layout>

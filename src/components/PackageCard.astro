@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  days: string;
+  price: string;
+  summary: string;
+  href: string;
+}
+
+const { title, days, price, summary, href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="block border border-neutral-200 hover:border-ink rounded-lg p-6 transition-colors group"
+>
+  <div class="flex items-baseline justify-between gap-4 mb-2">
+    <h3 class="font-semibold text-lg group-hover:text-accent transition-colors">{title}</h3>
+    <span class="text-sm text-neutral-500 whitespace-nowrap">{days}</span>
+  </div>
+  <p class="text-2xl font-bold mb-3">{price}</p>
+  <p class="text-sm text-neutral-700 leading-relaxed">{summary}</p>
+  <p class="mt-4 text-sm font-medium group-hover:text-accent">
+    See what's in scope →
+  </p>
+</a>

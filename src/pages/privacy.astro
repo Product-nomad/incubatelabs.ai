@@ -1,0 +1,69 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="Privacy — Incubate Labs"
+  description="What this site does and doesn't do with data. Short, honest, no dark patterns."
+>
+  <section class="max-w-3xl mx-auto px-6 pt-16 pb-12">
+    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Privacy</p>
+    <h1 class="text-5xl font-bold tracking-tight mb-6">Privacy</h1>
+    <p class="text-sm text-neutral-500">Last updated: April 2026</p>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <section class="max-w-3xl mx-auto px-6 py-12 text-neutral-800 leading-relaxed space-y-6">
+    <h2 class="text-2xl font-bold">What this site does</h2>
+    <p>
+      <code>incubatelabs.ai</code> is a static site hosted on Cloudflare Pages. There is no login,
+      no account, no first-party tracking cookie. The only first-party storage is whatever your
+      browser caches in normal operation.
+    </p>
+
+    <h2 class="text-2xl font-bold">Sub-processors</h2>
+    <ul class="list-disc pl-5 space-y-2">
+      <li>
+        <strong>Cloudflare</strong> hosts the site and provides the CDN. It logs request metadata
+        (IP, user agent, timestamp) for fraud/abuse purposes per its standard policy.
+      </li>
+      <li>
+        <strong>Plausible Analytics</strong> (when enabled) aggregates page views without cookies,
+        without persistent identifiers, and without sending anything to Google. Hosted in the EU.
+        See <a href="https://plausible.io/data-policy" class="text-accent hover:underline">plausible.io/data-policy</a>.
+      </li>
+      <li>
+        <strong>Cal.com</strong> handles booking when you click through to schedule a call. Cal.com
+        is the data controller for the booking record (your name, email, the time you picked).
+        See <a href="https://cal.com/privacy" class="text-accent hover:underline">cal.com/privacy</a>.
+      </li>
+      <li>
+        <strong>Fonts</strong> (Inter, JetBrains Mono) are self-hosted via <code>@fontsource</code>.
+        No requests to Google Fonts.
+      </li>
+    </ul>
+
+    <h2 class="text-2xl font-bold">If you email or book a call</h2>
+    <p>
+      I receive your email address, the time you picked, and whatever you wrote in the message.
+      I use that to run the call and follow up afterwards. I don't add you to any mailing list and
+      I don't sell or share contact details.
+    </p>
+
+    <h2 class="text-2xl font-bold">Your rights</h2>
+    <p>
+      Under UK GDPR you can ask what data I hold about you (likely just the booking record and
+      any emails), ask me to delete it, or
+      <a href="https://ico.org.uk/make-a-complaint/" class="text-accent hover:underline">complain to the ICO</a>.
+      Email <a href="mailto:hello@incubatelabs.ai" class="text-accent hover:underline">hello@incubatelabs.ai</a>.
+    </p>
+
+    <h2 class="text-2xl font-bold">No dark patterns</h2>
+    <p>
+      No pop-ups asking for cookies you don't need. No exit-intent modals. No newsletter
+      subscription dressed up as a discount. If something annoys you about how this site works,
+      tell me — I'll fix it.
+    </p>
+  </section>
+</Layout>

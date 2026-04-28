@@ -1,0 +1,30 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-neutral-200 mt-20">
+  <div class="max-w-page mx-auto px-6 py-10 text-sm text-neutral-600 grid gap-6 md:grid-cols-3">
+    <div>
+      <p class="font-semibold text-ink">Incubate Labs</p>
+      <p class="mt-1">From AI ambition to systems your CISO will sign off.</p>
+    </div>
+    <div>
+      <p class="font-semibold text-ink">Built in public</p>
+      <ul class="mt-1 space-y-1">
+        <li><a href="https://github.com/Product-nomad/incubatelabs.ai" class="hover:text-accent">Site source</a></li>
+        <li><a href="https://github.com/Product-nomad" class="hover:text-accent">All repos</a></li>
+        <li><a href="/privacy/" class="hover:text-accent">Privacy</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-ink">Talk</p>
+      <ul class="mt-1 space-y-1">
+        <li><a href="/contact/" class="hover:text-accent">Book a call</a></li>
+        <li><a href="https://x.com/product_nomad" class="hover:text-accent">@product_nomad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-page mx-auto px-6 pb-10 text-xs text-neutral-500">
+    © {currentYear} Incubate Labs. Solo, agent-augmented.
+  </div>
+</footer>

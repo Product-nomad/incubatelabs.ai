@@ -1,0 +1,204 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PackageCard from "@/components/PackageCard.astro";
+
+const proofPoints = [
+  {
+    title: "agentaudit",
+    summary: "OSS local audit tool for AI coding agent sessions. Catches leaked secrets, risky shell, sensitive-path writes. Published on npm with signed provenance.",
+    href: "https://github.com/Product-nomad/agentaudit",
+    cta: "GitHub",
+  },
+  {
+    title: "removepii",
+    summary: "GDPR-grade UK PII redactor. Two-phase regex + local LLM, RAM-only, zero cloud uploads. Behind a Cloudflare Zero Trust Tunnel.",
+    href: "https://removepii.co.uk",
+    cta: "Live",
+  },
+  {
+    title: "999callsimulator",
+    summary: "Voice-AI emergency-call simulator for kids. ElevenLabs WebRTC, sub-second first response, full sub-processor disclosure.",
+    href: "https://999callsimulator.com",
+    cta: "Live",
+  },
+  {
+    title: "idea-incubator",
+    summary: "Telegram bot capturing startup ideas with a 6-question Discovery Call flow + Mom-Test-style critique from Claude.",
+    href: "https://github.com/Product-nomad/idea-incubator",
+    cta: "GitHub",
+  },
+];
+
+const freeOfferings = [
+  {
+    title: "Local-AI Sovereignty Check",
+    length: "30 min",
+    summary: "Which of your AI workflows actually need cloud LLMs and which could run locally. Names UK GDPR Art. 44 risk specifically.",
+  },
+  {
+    title: "AI Session Audit",
+    length: "15 min",
+    summary: "Bring a sample of your team's recent Claude Code / Cursor sessions. Live agentaudit walkthrough of what your agent has been doing.",
+  },
+  {
+    title: "AI Pilot Scope Workshop",
+    length: "60 min",
+    summary: "Bring an AI idea. Leave with an evaluated brief and a recommended next step (usually: do 5–8 discovery calls before building).",
+  },
+];
+---
+
+<Layout
+  title="Incubate Labs — From AI ambition to systems your CISO will sign off"
+  description="Solo, agent-augmented engagements that take you from 'we should use AI' to local, sovereign, audited production. Published prices, public artefacts, no six-figure retainer."
+>
+  <!-- Hero -->
+  <section class="max-w-page mx-auto px-6 pt-20 pb-16">
+    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-6">Incubate Labs</p>
+    <h1 class="text-5xl md:text-6xl font-bold tracking-tight max-w-4xl leading-[1.05]">
+      From AI ambition to systems your CISO will sign off.
+    </h1>
+    <p class="mt-6 text-xl text-neutral-700 max-w-2xl leading-relaxed">
+      Solo, agent-augmented engagements that take you from <em>"we should use AI"</em>
+      to local, sovereign, audited production — without a six-figure consultancy retainer.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-4">
+      <a
+        href="/contact/"
+        class="inline-flex items-center px-6 py-3 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors"
+      >
+        Book a 30-min call
+      </a>
+      <a
+        href="/methodology/"
+        class="inline-flex items-center px-6 py-3 border border-ink text-ink font-medium rounded-md hover:bg-ink hover:text-paper transition-colors"
+      >
+        See the methodology
+      </a>
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- The gap -->
+  <section class="max-w-page mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-6">The gap</h2>
+    <div class="max-w-prose text-lg leading-relaxed text-neutral-800 space-y-4">
+      <p>
+        Most "AI strategy" engagements stop where the spreadsheet ends. The hard part is what
+        comes after — production-ready systems that survive a CISO review, an audit, a model
+        swap, a vendor fold.
+      </p>
+      <p>That's where Incubate Labs starts.</p>
+      <p>
+        We don't run AI workshops to validate roadmaps. We ship: shipped tools on npm, live UK
+        GDPR-grade redactors, voice-AI products in production, audit pipelines that survive
+        contact with reality. Public artefacts. Honest scope. Published prices.
+      </p>
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- Paid packages -->
+  <section class="max-w-page mx-auto px-6 py-16">
+    <div class="flex items-baseline justify-between flex-wrap gap-4 mb-8">
+      <h2 class="text-3xl font-bold">Engagements</h2>
+      <a href="/services/" class="text-sm font-medium text-accent hover:underline">All services →</a>
+    </div>
+    <p class="text-neutral-700 mb-10 max-w-prose">
+      Fixed scope, fixed days, fixed prices. No "talk to sales." If a package doesn't fit, the
+      free triage call below will tell you that honestly.
+    </p>
+    <div class="grid md:grid-cols-3 gap-4">
+      <PackageCard
+        title="OSS Tool Hardening Pass"
+        days="2 days"
+        price="£2,000"
+        summary="Threat model, decision log, security policy, sunset criteria, test-or-document-the-gap audit. Same shape as the governance scaffold across our public repos."
+        href="/services/oss-tool-hardening-pass/"
+      />
+      <PackageCard
+        title="AI Governance Pack"
+        days="5 days"
+        price="£4,000"
+        summary="Threat model + decision log + outcome metrics + drift monitoring plan + 90-day review. NIST AI RMF aligned."
+        href="/services/ai-governance-pack/"
+      />
+      <PackageCard
+        title="Local-LLM Pilot"
+        days="10 days"
+        price="£8,000"
+        summary="Working Ollama deployment + redaction pipeline against your real (or anonymised) documents + RAM-only architecture + handover."
+        href="/services/local-llm-pilot/"
+      />
+    </div>
+    <p class="mt-8 text-sm text-neutral-600">
+      Need a longer Frame → Operate engagement? See the
+      <a href="/services/" class="text-accent hover:underline">full services page</a>.
+    </p>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- Free triage -->
+  <section class="max-w-page mx-auto px-6 py-16">
+    <div class="flex items-baseline justify-between flex-wrap gap-4 mb-8">
+      <h2 class="text-3xl font-bold">Free triage</h2>
+      <a href="/free/" class="text-sm font-medium text-accent hover:underline">Book one →</a>
+    </div>
+    <p class="text-neutral-700 mb-10 max-w-prose">
+      Three ways to find out, for free, whether we should work together. Each is a real piece of
+      diagnostic work, not a sales call.
+    </p>
+    <div class="grid md:grid-cols-3 gap-6">
+      {freeOfferings.map((o) => (
+        <div class="border border-neutral-200 rounded-lg p-6">
+          <div class="flex items-baseline justify-between gap-3 mb-2">
+            <h3 class="font-semibold">{o.title}</h3>
+            <span class="text-xs text-neutral-500 whitespace-nowrap">{o.length}</span>
+          </div>
+          <p class="text-sm text-neutral-700 leading-relaxed">{o.summary}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- Proof -->
+  <section class="max-w-page mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-2">Built and shipped</h2>
+    <p class="text-neutral-700 mb-10 max-w-prose">
+      The methodology isn't theory. Every public repo and live product below is the same
+      discipline applied to a different problem.
+    </p>
+    <div class="grid md:grid-cols-2 gap-4">
+      {proofPoints.map((p) => (
+        <a href={p.href} class="block border border-neutral-200 hover:border-ink rounded-lg p-6 transition-colors group">
+          <div class="flex items-baseline justify-between gap-3 mb-2">
+            <h3 class="font-semibold font-mono text-base group-hover:text-accent transition-colors">{p.title}</h3>
+            <span class="text-xs text-neutral-500 whitespace-nowrap">{p.cta} →</span>
+          </div>
+          <p class="text-sm text-neutral-700 leading-relaxed">{p.summary}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <!-- CTA -->
+  <section class="max-w-page mx-auto px-6 py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4">Pick the smallest first move.</h2>
+    <p class="text-lg text-neutral-700 max-w-prose mx-auto mb-8">
+      A 30-min call costs nothing. If we shouldn't work together, you'll know inside 30 minutes.
+    </p>
+    <a
+      href="/contact/"
+      class="inline-flex items-center px-8 py-4 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors"
+    >
+      Book a 30-min call
+    </a>
+  </section>
+</Layout>

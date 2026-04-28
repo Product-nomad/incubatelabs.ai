@@ -1,0 +1,62 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="AI Governance Pack — Incubate Labs"
+  description="Five days, £4,000. Threat model, decision log, outcome metrics, drift monitoring plan, 90-day review. Aligned to NIST AI RMF and UK AI Safety Institute guidance."
+>
+  <section class="max-w-page mx-auto px-6 pt-16 pb-10">
+    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Engagement</p>
+    <h1 class="text-5xl font-bold tracking-tight mb-3">AI Governance Pack</h1>
+    <p class="text-3xl font-bold mb-2">£4,000</p>
+    <p class="text-lg text-neutral-600">5 days, fixed scope. Aligned to NIST AI RMF and UK AI Safety Institute guidance.</p>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <section class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-4">Right when</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li>You're shipping (or about to ship) an AI feature and your CISO, board, or buyer is asking governance questions.</li>
+      <li>You don't have a documented threat model, decision log, or drift-monitoring plan, and you can feel the audit risk accumulating.</li>
+      <li>You want NIST AI RMF / UK AISI alignment without paying a Big Four for the same documents.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">Deliverables</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li><strong>Threat model.</strong> Trust boundaries, sub-processors named, in-scope risks (R1…Rn), mitigations, known gaps.</li>
+      <li><strong>Decision log.</strong> Material architectural decisions retro-fitted from your current shipped state, with reasoning.</li>
+      <li><strong>Outcome metrics.</strong> 2–3 measurable, dated metrics per the value-delivery rule. Reviewed at every gate, not buried in a roadmap.</li>
+      <li><strong>Drift monitoring plan.</strong> Concrete thresholds and check cadence for: rule-coverage drift, false-positive rate, schema drift (where applicable), input distribution shift, prompt regression. With the actual checks, not just the headings.</li>
+      <li><strong>Sunset criteria.</strong> The named conditions under which the system would be retired.</li>
+      <li><strong>NIST AI RMF + UK AISI mapping.</strong> A short cross-reference showing which clauses your governance posture covers and which it deliberately doesn't.</li>
+      <li><strong>90-day review check-in.</strong> Asynchronous review of how the metrics moved, included in the price.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">What's NOT in scope</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li>Implementation of the drift-monitoring infrastructure (we deliver the plan; building the dashboards is separate).</li>
+      <li>SOC 2 / ISO 27001 audit prep — adjacent but a different deliverable shape.</li>
+      <li>Legal sign-off — your counsel reviews the threat model; we don't replace them.</li>
+      <li>Ongoing governance retainer — separate engagement.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">How it runs</h2>
+    <ol class="list-decimal pl-5 mb-8 space-y-2 text-neutral-700">
+      <li><strong>Day 1.</strong> 60-min kickoff. Walk current state. Identify sub-processors, data flow, decision points already made implicitly.</li>
+      <li><strong>Days 2–4.</strong> Asynchronous work. Drafts shared as PRs against your repo (or as files in a shared folder if you don't have a repo for this yet).</li>
+      <li><strong>Day 5.</strong> 60-min handover. Walk every artefact, agree the metrics, agree the 90-day review date.</li>
+      <li><strong>+90 days.</strong> Async review of metric movement, gap analysis if anything drifted.</li>
+    </ol>
+
+    <div class="mt-10 flex flex-wrap gap-4">
+      <a href="/contact/" class="inline-flex items-center px-6 py-3 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors">
+        Book a 30-min call
+      </a>
+      <a href="/services/" class="inline-flex items-center px-6 py-3 border border-ink text-ink font-medium rounded-md hover:bg-ink hover:text-paper transition-colors">
+        Other services
+      </a>
+    </div>
+  </section>
+</Layout>

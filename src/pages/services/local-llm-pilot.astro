@@ -1,0 +1,70 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="Local-LLM Pilot — Incubate Labs"
+  description="Ten days, £8,000. Working Ollama deployment + redaction or extraction pipeline against your real (or anonymised) documents. RAM-only architecture. No cloud LLMs in the data path."
+>
+  <section class="max-w-page mx-auto px-6 pt-16 pb-10">
+    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Engagement</p>
+    <h1 class="text-5xl font-bold tracking-tight mb-3">Local-LLM Pilot</h1>
+    <p class="text-3xl font-bold mb-2">£8,000</p>
+    <p class="text-lg text-neutral-600">10 days, fixed scope. No cloud LLMs in the data path.</p>
+  </section>
+
+  <hr class="max-w-page mx-auto" />
+
+  <section class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-4">Right when</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li>You're in a regulated sector (legal, healthcare, recruitment, financial services) where US-hosted LLM APIs trigger UK GDPR Article 44 cross-border-transfer concerns.</li>
+      <li>You have documents — contracts, medical notes, CVs, claims forms — that would need redacting or extracting from at scale, and "we'll just use ChatGPT" is a non-starter.</li>
+      <li>You want a real working pilot you can show to your DPO, CISO, or buyer — not a slide deck.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">Deliverables</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li><strong>Ollama deployment</strong> on your infrastructure (or ours, returned to you). Hardware-sized to your document volume. Model selection from open-weight options (Llama 3, Qwen 2.5, etc.) with a written rationale for the choice.</li>
+      <li><strong>Two-phase processing pipeline</strong> — deterministic regex first (fast, explainable), local LLM second (catches what regex misses). Same shape that powers <a href="https://removepii.co.uk" class="text-accent hover:underline">removepii.co.uk</a>.</li>
+      <li><strong>RAM-only architecture.</strong> No on-disk persistence of document contents. Documented and verified.</li>
+      <li><strong>Working pilot</strong> against 10 of your real (or anonymised) documents, demonstrating the redaction or extraction task end-to-end.</li>
+      <li><strong>Threat model</strong> documenting the trust boundary, the local-only data flow, and what would change if you moved to a hosted variant.</li>
+      <li><strong>Handover documentation.</strong> README, deployment runbook, decision log, sunset criteria.</li>
+      <li><strong>30-min DPO/CISO walkthrough call.</strong> So your governance function sees the data flow with their own eyes.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">What's NOT in scope</h2>
+    <ul class="list-disc pl-5 mb-8 space-y-2 text-neutral-700">
+      <li>Production hardening (HA, autoscale, multi-tenant). Pilot ships single-instance, single-tenant.</li>
+      <li>Custom fine-tuning of the open-weight model.</li>
+      <li>Integration with your existing document management system (separate engagement).</li>
+      <li>Building a UI. The pilot is a CLI / API; a Streamlit-style portal can be added on a follow-on.</li>
+      <li>Ongoing maintenance after handover.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mb-4">How it runs</h2>
+    <ol class="list-decimal pl-5 mb-8 space-y-2 text-neutral-700">
+      <li><strong>Day 1.</strong> Kickoff. Document samples (anonymised if needed) shared. Hardware target agreed.</li>
+      <li><strong>Days 2–4.</strong> Ollama + model selection. Initial regex pipeline against your samples.</li>
+      <li><strong>Days 5–7.</strong> Second-phase LLM pass. RAM-only verification.</li>
+      <li><strong>Days 8–9.</strong> Threat model + handover docs.</li>
+      <li><strong>Day 10.</strong> Handover call + DPO/CISO walkthrough.</li>
+    </ol>
+
+    <p class="text-sm text-neutral-500 mt-8">
+      The pattern is proven — see
+      <a href="https://removepii.co.uk" class="text-accent hover:underline">removepii.co.uk</a>
+      for a live UK GDPR-grade redactor running this exact architecture.
+    </p>
+
+    <div class="mt-10 flex flex-wrap gap-4">
+      <a href="/contact/" class="inline-flex items-center px-6 py-3 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors">
+        Book a 30-min call
+      </a>
+      <a href="/services/" class="inline-flex items-center px-6 py-3 border border-ink text-ink font-medium rounded-md hover:bg-ink hover:text-paper transition-colors">
+        Other services
+      </a>
+    </div>
+  </section>
+</Layout>
