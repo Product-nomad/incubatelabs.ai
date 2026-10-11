@@ -1,0 +1,12 @@
+# Cloudflare Pages project config (also used by `wrangler pages dev`).
+# Secret TURNSTILE_SECRET_KEY is set in Cloudflare, never here:
+#   npx wrangler pages secret put TURNSTILE_SECRET_KEY --project-name incubatelabs
+name = "incubatelabs"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-01"
+
+# The contact Function hands enquiries to the mailer Worker (workers/mailer),
+# which owns the send_email binding.
+[[services]]
+binding = "MAILER"
+service = "incubatelabs-mailer"

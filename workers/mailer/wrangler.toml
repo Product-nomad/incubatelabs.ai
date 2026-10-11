@@ -1,0 +1,13 @@
+# Internal mailer for the contact form. Deploy from this directory:
+#   npx wrangler deploy
+#   npx wrangler secret put FORM_DESTINATION   # Simon's verified Email Routing destination
+name = "incubatelabs-mailer"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+workers_dev = false
+preview_urls = false
+
+# Unrestricted binding: can send only to verified Email Routing destination
+# addresses on this account. The actual address comes from FORM_DESTINATION.
+[[send_email]]
+name = "SEND_EMAIL"
