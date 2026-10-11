@@ -1,0 +1,81 @@
+name: Deploy to Cloudflare
+
+# main deploys production; any other pushed branch deploys a Pages preview.
+on:
+  push:
+    branches: [main, v1-sme-site]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  PROJECT: incubatelabs
+  CF_API: https://api.cloudflare.com/client/v4
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ensure Pages project exists (production branch main)
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "$CF_API/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT")
+          if [ "$code" = "404" ]; then
+            npx wrangler pages project create "$PROJECT" --production-branch main
+          fi
+          subdomain=$(curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "$CF_API/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT" | jq -r '.result.subdomain')
+          echo "PAGES_SUBDOMAIN=$subdomain" >> "$GITHUB_ENV"
+
+      - name: Ensure Turnstile widget and set its secret
+        run: |
+          auth="Authorization: Bearer $CLOUDFLARE_API_TOKEN"
+          widgets="$CF_API/accounts/$CLOUDFLARE_ACCOUNT_ID/challenges/widgets"
+          sitekey=$(curl -s -H "$auth" "$widgets?per_page=50" | jq -r '.result[] | select(.name=="incubatelabs.ai") | .sitekey' | head -1)
+          if [ -z "$sitekey" ]; then
+            body=$(jq -n --arg pd "$PAGES_SUBDOMAIN" '{name:"incubatelabs.ai", mode:"managed", domains:["incubatelabs.ai",$pd]}')
+            sitekey=$(curl -s -H "$auth" -H "Content-Type: application/json" -d "$body" "$widgets" | jq -r '.result.sitekey')
+          fi
+          test -n "$sitekey" && test "$sitekey" != "null"
+          secret=$(curl -s -H "$auth" "$widgets/$sitekey" | jq -r '.result.secret')
+          echo "::add-mask::$secret"
+          echo "PUBLIC_TURNSTILE_SITE_KEY=$sitekey" >> "$GITHUB_ENV"
+          for e in production preview; do
+            printf '%s' "$secret" | npx wrangler pages secret put TURNSTILE_SECRET_KEY --project-name "$PROJECT" --env "$e"
+          done
+
+      - name: Deploy mailer Worker
+        env:
+          FORM_DESTINATION: ${{ secrets.FORM_DESTINATION }}
+        working-directory: workers/mailer
+        run: |
+          npx wrangler deploy
+          if [ -n "$FORM_DESTINATION" ]; then
+            printf '%s' "$FORM_DESTINATION" | npx wrangler secret put FORM_DESTINATION
+          fi
+
+      - run: npm run build
+
+      - name: Deploy Pages
+        run: |
+          # Pages rejects multi-line commit messages; send the subject only.
+          subject=$(git log -1 --pretty=%s | tr -d '"' | head -c 100)
+          npx wrangler pages deploy dist --project-name "$PROJECT" --branch "${GITHUB_REF_NAME}" \
+            --commit-hash "$GITHUB_SHA" --commit-message "$subject"
