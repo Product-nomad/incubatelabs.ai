@@ -3,7 +3,6 @@ export const site = {
   url: "https://incubatelabs.ai",
   email: "hello@incubatelabs.ai",
   founder: "Simon Newton",
-  location: "Huntingdon, Cambridgeshire",
   github: "https://github.com/Product-nomad",
   // Public Google Calendar appointment schedule link. Booking buttons are
   // hidden if this is empty.

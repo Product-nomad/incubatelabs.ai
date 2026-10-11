@@ -7,6 +7,9 @@ import "@fontsource/source-serif-4/600.css";
 import Nav from "@/components/Nav.astro";
 import Footer from "@/components/Footer.astro";
 import { site } from "@/data/site";
+// Heading and body fonts, preloaded so text don't reflow when it arrives (technical audit issue 10).
+import serifHeading from "@fontsource/source-serif-4/files/source-serif-4-latin-600-normal.woff2?url";
+import interBody from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
 
 interface Props {
   title: string;
@@ -19,21 +22,21 @@ const { title, description, canonical, noindex = false } = Astro.props;
 const fullCanonical = canonical || new URL(Astro.url.pathname, site.url).href;
 const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 
+const ogImage = `${site.url}/og-image.png`;
+
+// No address: the site shows no location (v1.1 spec §9).
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": `${site.url}/#org`,
   name: site.name,
   url: site.url,
   email: site.email,
+  image: ogImage,
   description: "Practical AI and automation for UK small businesses without an in-house IT team.",
-  founder: { "@type": "Person", name: site.founder },
+  founder: { "@type": "Person", name: site.founder, url: `${site.url}/about/` },
   areaServed: { "@type": "Country", name: "United Kingdom" },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Huntingdon",
-    addressRegion: "Cambridgeshire",
-    addressCountry: "GB",
-  },
+  sameAs: [site.github],
 };
 ---
 
@@ -47,6 +50,8 @@ const jsonLd = {
     {noindex && <meta name="robots" content="noindex" />}
     {!noindex && <link rel="canonical" href={fullCanonical} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href={serifHeading} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interBody} as="font" type="font/woff2" crossorigin />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="theme-color" content="#fbfaf7" />
 
@@ -56,10 +61,15 @@ const jsonLd = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={fullCanonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Practical AI and automation for small businesses without an IT team. incubatelabs.ai" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 

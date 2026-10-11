@@ -1,0 +1,24 @@
+---
+import Hexagon from "@/components/Hexagon.astro";
+import type { Engagement } from "@/data/engagements";
+
+interface Props {
+  engagement: Engagement;
+  showGoodIf?: boolean;
+}
+
+const { engagement, showGoodIf = false } = Astro.props;
+---
+
+<div class={`relative flex flex-col rounded-xl p-6 ${engagement.featured ? "border-2 border-ink" : "border border-line"}`}>
+  {engagement.featured && (
+    <span class="absolute -top-3 left-6 rounded-full bg-ink px-3 py-1 text-xs font-medium text-paper">Where most clients start</span>
+  )}
+  <div class="flex gap-1.5">
+    {Array.from({ length: engagement.size }, () => <Hexagon />)}
+    <span class="sr-only">Size: {engagement.size} of 3</span>
+  </div>
+  <h3 class="mt-4 text-xl">{engagement.name}</h3>
+  <p class={`mt-2 text-muted ${showGoodIf ? "mb-6" : ""}`}>{engagement.body}</p>
+  {showGoodIf && <p class="mt-auto border-t border-line pt-4 text-sm italic text-muted">{engagement.goodIf}</p>}
+</div>

@@ -1,7 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import CallToAction from "@/components/CallToAction.astro";
+import { illustrations } from "@/components/illustrations";
 import { useCases, type UseCase } from "@/data/useCases";
+import { site } from "@/data/site";
 
 export function getStaticPaths() {
   return useCases.map((useCase) => ({ params: { slug: useCase.slug }, props: { useCase } }));
@@ -13,16 +15,56 @@ interface Props {
 
 const { useCase } = Astro.props;
 const others = useCases.filter((uc) => uc.slug !== useCase.slug);
+const Illustration = illustrations[useCase.slug];
+const url = `${site.url}/use-cases/${useCase.slug}/`;
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: useCase.title,
+    serviceType: useCase.seoTitle,
+    description: useCase.seoDescription,
+    provider: { "@id": `${site.url}/#org` },
+    areaServed: { "@type": "Country", name: "United Kingdom" },
+    url,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
+      { "@type": "ListItem", position: 2, name: "What we automate", item: `${site.url}/use-cases/` },
+      { "@type": "ListItem", position: 3, name: useCase.title, item: url },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: useCase.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
 ---
 
 <Layout title={`${useCase.seoTitle} | Incubate Labs`} description={useCase.seoDescription}>
+  {structuredData.map((data) => (
+    <script slot="head" type="application/ld+json" set:html={JSON.stringify(data)} />
+  ))}
+
   <section class="max-w-page mx-auto px-4 sm:px-6 pt-12 pb-12">
     <nav aria-label="Breadcrumb" class="text-sm text-muted">
       <a href="/use-cases/" class="hover:text-accent">What we automate</a>
       <span class="mx-1.5" aria-hidden="true">/</span>
       <span aria-current="page" class="text-ink">{useCase.title}</span>
     </nav>
-    <h1 class="mt-6 max-w-4xl text-4xl sm:text-5xl leading-tight">{useCase.headline}</h1>
+    <div class="mt-6 flex max-w-xl items-center justify-center bg-band border border-line rounded-xl px-6 py-6 [&>svg]:h-[200px] [&>svg]:w-auto [&>svg]:max-w-full">
+      {Illustration && <Illustration />}
+    </div>
+    <h1 class="mt-8 max-w-4xl text-4xl sm:text-5xl leading-tight">{useCase.headline}</h1>
     <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">{useCase.intro}</p>
   </section>
 
@@ -46,6 +88,15 @@ const others = useCases.filter((uc) => uc.slug !== useCase.slug);
     </div>
   </section>
 
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16">
+    <div class="grid gap-8 md:grid-cols-[1fr_2fr]">
+      <h2 class="text-2xl sm:text-3xl">Where it fits</h2>
+      <div class="max-w-prose space-y-4 text-lg text-muted prose-links">
+        {useCase.fits.map((p) => <p set:html={p} />)}
+      </div>
+    </div>
+  </section>
+
   <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 grid gap-10 md:grid-cols-2">
     <div>
       <h2 class="text-2xl sm:text-3xl">What it can look like</h2>
@@ -58,8 +109,32 @@ const others = useCases.filter((uc) => uc.slug !== useCase.slug);
     </div>
   </section>
 
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16">
+    <div class="bg-band border border-line rounded-xl p-6 sm:p-8 md:grid md:grid-cols-[1fr_2fr] md:gap-8">
+      <h2 class="text-2xl sm:text-3xl">What it costs</h2>
+      <div class="mt-4 max-w-prose md:mt-0">
+        <p class="text-lg text-muted">We don't publish prices, because every job is different. Before any build you get a one-page cost check for your {useCase.short}: what it costs you now, what you'd save once your team is only checking the work, and what it would cost to run for the next 12 to 24 months, including if AI prices rise. If it doesn't pay back, we'll tell you not to build it.</p>
+        <a href="/how-we-work/#cost-check" class="mt-4 inline-block font-medium text-accent hover:underline">How the cost check works →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16">
+    <div class="grid gap-8 md:grid-cols-[1fr_2fr]">
+      <h2 class="text-2xl sm:text-3xl">Questions we get asked</h2>
+      <div class="max-w-prose divide-y divide-line border-y border-line">
+        {useCase.faq.map((f) => (
+          <div class="py-5">
+            <h3 class="text-xl">{f.q}</h3>
+            <p class="mt-2 text-lg text-muted">{f.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <CallToAction
-    heading={`Talk to us about ${useCase.title.toLowerCase()}.`}
+    heading={`Talk to us about ${useCase.short}.`}
     body="Describe how it works today and what's frustrating about it. We'll come back with an honest view on whether it's worth automating, and how."
   />
 

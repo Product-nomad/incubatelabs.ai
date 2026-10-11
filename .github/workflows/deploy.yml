@@ -3,7 +3,7 @@ name: Deploy to Cloudflare
 # main deploys production; any other pushed branch deploys a Pages preview.
 on:
   push:
-    branches: [main, v1-sme-site]
+    branches: [main, v1-sme-site, v1.1-brand-hero]
   workflow_dispatch:
 
 permissions:

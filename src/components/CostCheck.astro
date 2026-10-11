@@ -1,0 +1,145 @@
+---
+// v1.1 spec §6. The home page shows the chart panel; /how-we-work/ shows the cards only (§7).
+interface Props {
+  showPanel?: boolean;
+}
+
+const { showPanel = true } = Astro.props;
+
+const cards = [
+  {
+    title: "What it costs you now",
+    body: "The hours your team spends on the job, valued properly, plus the direct costs: software, freelancers, rework and late payments.",
+  },
+  {
+    title: "What you'd save",
+    body: "Hours back and direct costs removed, minus the time your team still spends checking the work. No inflated numbers.",
+  },
+  {
+    title: "What it costs to own",
+    body: "The build, plus everything it takes to run for the next 12 to 24 months: AI usage, software, hosting and upkeep. Stress-tested against AI prices doubling and tripling.",
+  },
+];
+
+const bullets = [
+  "AI only where judgement is needed. Everything else is plain, predictable software.",
+  "The smallest model that does the job, tested against cheaper options before go-live.",
+  "Not tied to one provider. Switching doesn't mean rebuilding.",
+  "Spending caps and monthly alerts, so there are no surprise bills.",
+  "Local models where it makes sense, with no per-use charges at all.",
+];
+
+// Chart: cumulative net savings over months 0–24, no y-axis figures. Each line starts at the
+// build cost (-1) and crosses break-even at month 4, 6 and 9.
+const X0 = 40;
+const XM = 14.667; // px per month, so month 24 lands at x≈392
+const Y_TOP = 24;
+const Y_SPAN = 212; // value 5 at the top, -1 at the bottom
+const x = (m: number) => X0 + m * XM;
+const y = (v: number) => Y_TOP + ((5 - v) / 6) * Y_SPAN;
+const lines = [
+  { label: "Today's AI prices", breakEven: 4, cls: "cc-today" },
+  { label: "AI prices ×2", breakEven: 6, cls: "cc-x2" },
+  { label: "AI prices ×3", breakEven: 9, cls: "cc-x3" },
+].map((l, i) => {
+  const end = -1 + 24 / l.breakEven;
+  return { ...l, d: `M${x(0)} ${y(-1)} L${x(24)} ${y(end).toFixed(1)}`, endY: y(end), delay: i * 0.2 };
+});
+const zeroY = y(0);
+---
+
+<section id="cost-check" class="max-w-page mx-auto px-4 sm:px-6 pb-20">
+  <div class="border-t border-line pt-10">
+    <p class="text-sm font-medium text-accent">The cost check</p>
+    <h2 class="mt-3 text-3xl sm:text-4xl">Three numbers before we build anything.</h2>
+    <p class="mt-4 max-w-prose text-lg text-muted">
+      Every discovery ends with a one-page cost check. You see what the job costs you now, what you'd save, and what it will really cost to run, including if AI prices rise. If it doesn't pay back, we'll tell you not to build it.
+    </p>
+  </div>
+
+  <ol class="mt-10 grid gap-5 md:grid-cols-3">
+    {cards.map((c, i) => (
+      <li class="border border-line rounded-xl p-6">
+        <span class="font-serif text-5xl font-semibold leading-none text-accent" aria-hidden="true">{i + 1}</span>
+        <h3 class="mt-4 text-xl">{c.title}</h3>
+        <p class="mt-2 text-muted">{c.body}</p>
+      </li>
+    ))}
+  </ol>
+
+  {showPanel && (
+    <div class="mt-5 grid gap-8 bg-band rounded-2xl p-6 sm:p-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+      <figure>
+        <svg
+          class="cc-chart h-auto w-full"
+          viewBox="0 0 520 280"
+          role="img"
+          aria-label="Illustrative payback: the project pays back at today's AI prices, at double and at triple, just later each time."
+        >
+          <defs>
+            <mask id="cc-x3-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="520" height="280">
+              <path class="cc-line" d={lines[2].d} pathLength="1" stroke="#fff" stroke-width="6" fill="none" style={`--d:${lines[2].delay}s`} />
+            </mask>
+          </defs>
+          <line x1={X0} y1="250" x2={x(24)} y2="250" stroke="#16181a" stroke-width="1" />
+          {[0, 6, 12, 18, 24].map((m) => (
+            <g>
+              <line x1={x(m)} y1="250" x2={x(m)} y2="255" stroke="#16181a" stroke-width="1" />
+              <text x={x(m)} y="270" text-anchor="middle" font-size="12" fill="#5d6166">{m === 24 ? "24 months" : m}</text>
+            </g>
+          ))}
+          <line x1={X0} y1={zeroY} x2={x(24)} y2={zeroY} stroke="#5d6166" stroke-width="1" stroke-dasharray="4 4" />
+          <text x={x(24)} y={zeroY + 16} text-anchor="end" font-size="12" fill="#5d6166">Break-even</text>
+
+          <path class="cc-line" d={lines[0].d} pathLength="1" fill="none" stroke="#1f5c45" stroke-width="2.5" stroke-linecap="round" style={`--d:${lines[0].delay}s`} />
+          <path class="cc-line" d={lines[1].d} pathLength="1" fill="none" stroke="#16181a" stroke-width="2" stroke-linecap="round" style={`--d:${lines[1].delay}s`} />
+          <path d={lines[2].d} fill="none" stroke="#5d6166" stroke-width="2" stroke-dasharray="6 5" mask="url(#cc-x3-mask)" />
+
+          {lines.map((l) => (
+            <text x={x(24) + 6} y={l.endY + 4} font-size="12" font-weight="500" fill={l.cls === "cc-today" ? "#1f5c45" : l.cls === "cc-x2" ? "#16181a" : "#5d6166"}>{l.label}</text>
+          ))}
+        </svg>
+        <figcaption class="mt-2 text-xs text-muted">Illustrative. Your cost check uses your own numbers.</figcaption>
+      </figure>
+
+      <div>
+        <h3 class="text-2xl">Built to survive AI price rises</h3>
+        <p class="mt-3 text-muted">AI providers are moving from winning market share to protecting margins, and prices are already rising. So we design for it:</p>
+        <ul class="mt-4 space-y-2">
+          {bullets.map((b) => (
+            <li class="flex gap-3">
+              <span class="font-semibold text-accent" aria-hidden="true">✓</span>
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="mt-5 text-xs text-muted">
+          Why prices are rising: <a href="https://www.tomtunguz.com/ai-model-inflation/index.md" rel="noopener" class="underline underline-offset-2 hover:text-accent">Tomasz Tunguz, AI model inflation</a>
+        </p>
+      </div>
+    </div>
+  )}
+</section>
+
+<style>
+  .cc-line { stroke-dasharray: 1; stroke-dashoffset: 0; }
+  .cc-pending .cc-line { stroke-dashoffset: 1; }
+  .cc-drawn .cc-line { transition: stroke-dashoffset 1.2s ease var(--d, 0s); }
+</style>
+
+<script>
+  // Draw the lines once when the chart scrolls into view. Without JS, or under
+  // reduced motion, the lines are simply shown.
+  const chart = document.querySelector<SVGElement>(".cc-chart");
+  if (chart && !matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+    chart.classList.add("cc-pending");
+    const io = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      chart.getBoundingClientRect();
+      chart.classList.add("cc-drawn");
+      chart.classList.remove("cc-pending");
+      io.disconnect();
+    }, { threshold: 0.4 });
+    io.observe(chart);
+  }
+</script>

@@ -1,0 +1,11 @@
+# v1.1: use-case pages renamed to match search wording (research/seo-2026-10/README.md).
+/use-cases/document-handling/          /use-cases/invoice-and-document-processing/  301
+/use-cases/document-handling           /use-cases/invoice-and-document-processing/  301
+/use-cases/admin-and-data-re-entry/    /use-cases/data-entry-automation/            301
+/use-cases/admin-and-data-re-entry     /use-cases/data-entry-automation/            301
+/use-cases/reporting/                  /use-cases/automated-reporting/              301
+/use-cases/reporting                   /use-cases/automated-reporting/              301
+/use-cases/customer-replies/           /use-cases/ai-email-replies/                 301
+/use-cases/customer-replies            /use-cases/ai-email-replies/                 301
+/use-cases/compliance-questionnaires/  /use-cases/security-questionnaires/          301
+/use-cases/compliance-questionnaires   /use-cases/security-questionnaires/          301

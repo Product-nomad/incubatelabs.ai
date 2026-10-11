@@ -1,6 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import CallToAction from "@/components/CallToAction.astro";
+import CostCheck from "@/components/CostCheck.astro";
+import EngagementCard from "@/components/EngagementCard.astro";
+import { engagements } from "@/data/engagements";
 
 const steps = [
   {
@@ -8,8 +11,8 @@ const steps = [
     body: "You tell us what's taking up your team's time. We ask a lot of questions about how the work happens today. This costs nothing.",
   },
   {
-    title: "A written scope",
-    body: "We send back a short, plain-English scope: what we'll build, what it won't do, what we need from you, and a fixed price.",
+    title: "A written scope and cost check",
+    body: "We send back a short, plain-English scope with a one-page cost check: what the job costs you now, what you'd save, and what it will cost to own, stress-tested against rising AI prices. Then a fixed price.",
   },
   {
     title: "The build",
@@ -21,24 +24,6 @@ const steps = [
   },
 ];
 
-const tiers = [
-  {
-    name: "Quick Win",
-    body: "One task, one fix. Small enough to deliver quickly and big enough to show whether it's worth going further.",
-    goodIf: "Good if you want to try AI on one specific job before committing further.",
-  },
-  {
-    name: "Automation Sprint",
-    body: "A single workflow automated end to end: inputs, processing, checks and the hand-off into your systems. This is where most clients start.",
-    goodIf: "Good if one workflow is clearly costing you time every week.",
-  },
-  {
-    name: "Operations Uplift",
-    body: "Several related workflows planned and delivered together, so they work as one system rather than a collection of separate fixes.",
-    goodIf: "Good if several connected jobs need sorting at once.",
-  },
-];
-
 const promises = [
   "Fixed scope and fixed price, agreed in writing before work starts",
   "Every scope says what's not included as clearly as what is",
@@ -46,16 +31,17 @@ const promises = [
   "Your data stays in your systems wherever possible, and we'll tell you exactly where it goes",
   "A person stays in the loop wherever a mistake would matter",
   "You own what we build",
+  "A cost check before any build, including what happens if AI prices rise",
 ];
 ---
 
 <Layout
-  title="How we work | Incubate Labs"
-  description="Fixed-scope, fixed-price AI and automation projects for UK small businesses. Quick Wins, Automation Sprints and Operations Uplifts, plus websites."
+  title="Fixed-Price AI Consulting Services | Incubate Labs"
+  description="How our AI consulting works: a free first call, a written scope and cost check, then a Quick Win, Automation Sprint or Operations Uplift. No retainers."
 >
   <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-12">
     <p class="text-sm font-medium text-accent">How we work</p>
-    <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">Small, fixed pieces of work that pay for themselves.</h1>
+    <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">Fixed-price AI consulting: small pieces of work that pay for themselves</h1>
     <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">
       No retainers and no open-ended day rates. Every engagement has a written scope and a fixed price, agreed before we start.
     </p>
@@ -77,19 +63,15 @@ const promises = [
   <section class="max-w-page mx-auto px-4 sm:px-6 py-16">
     <h2 class="text-3xl sm:text-4xl">Three sizes of engagement</h2>
     <div class="mt-10 grid gap-5 md:grid-cols-3">
-      {tiers.map((t) => (
-        <div class="flex flex-col border border-line rounded-xl p-6">
-          <h3 class="text-xl">{t.name}</h3>
-          <p class="mt-2 mb-6 text-muted">{t.body}</p>
-          <p class="mt-auto border-t border-line pt-4 text-sm italic text-muted">{t.goodIf}</p>
-        </div>
-      ))}
+      {engagements.map((e) => <EngagementCard engagement={e} showGoodIf />)}
     </div>
     <div class="mt-5 bg-band border border-line rounded-xl p-6 sm:p-8">
       <h3 class="text-xl">Websites</h3>
       <p class="mt-2 max-w-prose text-muted">We also design and build websites for small businesses: fast, clear and easy to update. They can be added to any of the engagements above or done on their own.</p>
     </div>
   </section>
+
+  <CostCheck showPanel={false} />
 
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-4">
     <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">

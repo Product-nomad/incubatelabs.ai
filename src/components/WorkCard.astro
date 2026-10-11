@@ -1,34 +1,42 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 import type { WorkItem } from "@/data/work";
 
 interface Props {
   item: WorkItem;
+  headingLevel?: "h2" | "h3";
 }
 
-const { item } = Astro.props;
+const { item, headingLevel = "h3" } = Astro.props;
+const Heading = headingLevel;
+const imagePath = `/projects/${item.image}.webp`;
+const hasImage = fs.existsSync(path.join(process.cwd(), "public", imagePath));
+const panelClass = {
+  ink: "bg-ink text-paper",
+  "accent-soft": "bg-accent-soft text-accent",
+  band: "bg-band text-ink",
+}[item.panel];
+const nameClass = item.nameStyle === "mono" ? "font-mono" : "font-serif";
+const Tag = item.href ? "a" : "article";
+const linkProps = item.href ? { href: item.href, ...(item.external ? { rel: "noopener" } : {}) } : {};
 ---
 
-<article class="flex flex-col border border-line rounded-xl p-6">
-  <h3 class="font-mono text-lg font-semibold">{item.name}</h3>
-  <dl class="mt-4 space-y-3 text-sm">
-    <div>
-      <dt class="font-medium text-ink">The problem</dt>
-      <dd class="mt-1 text-muted">{item.problem}</dd>
-    </div>
-    <div>
-      <dt class="font-medium text-ink">What I built</dt>
-      <dd class="mt-1 text-muted">{item.built}</dd>
-    </div>
-    <div>
-      <dt class="font-medium text-ink">What it shows</dt>
-      <dd class="mt-1 text-muted prose-links" set:html={item.shows} />
-    </div>
-  </dl>
-  <a
-    href={item.href}
-    class="mt-auto pt-5 text-sm font-medium text-accent hover:underline"
-    {...item.external ? { rel: "noopener" } : {}}
-  >
-    {item.linkLabel}
-  </a>
-</article>
+<Tag
+  {...linkProps}
+  class={`group flex flex-col overflow-hidden border border-line rounded-xl ${item.href ? "transition-colors hover:border-accent" : ""}`}
+>
+  <div class={`aspect-[16/10] border-b border-line ${hasImage ? "" : `flex items-center justify-center ${panelClass}`}`}>
+    {hasImage ? (
+      <img src={imagePath} alt="" width="800" height="500" loading="lazy" class="h-full w-full object-cover" />
+    ) : (
+      <span class={`px-6 text-center text-2xl font-semibold ${nameClass}`} aria-hidden="true">{item.name}</span>
+    )}
+  </div>
+  <div class="flex flex-1 flex-col p-6">
+    <p class="text-sm font-medium text-accent">{item.label}</p>
+    <Heading class={`mt-2 text-xl font-semibold ${nameClass} ${item.href ? "transition-colors group-hover:text-accent" : ""}`}>{item.name}</Heading>
+    <p class="mt-2 text-muted">{item.description}</p>
+    {item.linkLabel && <span class="mt-auto pt-5 text-sm font-medium text-accent">{item.linkLabel}</span>}
+  </div>
+</Tag>

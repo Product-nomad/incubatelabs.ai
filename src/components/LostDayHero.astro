@@ -1,0 +1,253 @@
+---
+// v1.1 spec §2 ("the lost day"), copy from §14. All blocks render at build time;
+// the script only flips data-state on the card and CSS does the rest.
+import { HERO_H1, week, checkLabels, days, ROWS, totals, stats } from "@/data/hero";
+
+// Reading order: top to bottom, then left to right, for the staggered crossfade.
+const blocks = week
+  .flatMap((day, d) => day.map(([start, len, kind, label]) => ({ d, start, len, kind, label })))
+  .sort((a, b) => a.start - b.start || a.d - b.d)
+  .map((b, i) => ({
+    ...b,
+    delay: i * 35,
+    after: b.kind === "c" ? checkLabels[b.label] : "Time back",
+  }));
+
+const hourLabels = Array.from({ length: Math.ceil(ROWS / 2) }, (_, i) => ({ row: i * 2, label: `${9 + i}:00` }));
+---
+
+<section class="max-w-page mx-auto px-4 sm:px-6 pt-12 pb-16 sm:pt-20">
+  <div class="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+    <div>
+      <p class="text-sm font-medium text-accent">AI consultant for UK small businesses</p>
+      <h1 class="mt-4 text-4xl sm:text-5xl leading-tight">{HERO_H1}</h1>
+      <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">
+        Owners lose more than a day a week to admin. We take the repetitive work off your team's plate, at a fixed price agreed up front, with a person checking what matters.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contact/" class="bg-ink text-paper rounded-md px-6 py-3 font-medium transition-colors hover:bg-accent">Talk it through</a>
+        <a href="/readiness-check/" class="border border-ink text-ink rounded-md px-6 py-3 font-medium transition-colors hover:bg-ink hover:text-paper">Find your hours: free check</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="ld-card" data-lostday data-state="before">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div class="min-w-0">
+            <p class="ld-caption">An illustrative week · owner of a 12-person trades firm</p>
+            <div class="ld-num mt-2" aria-hidden="true">
+              <!-- Decorative: text comes from data-t via CSS so it isn't read twice (the sr-only paragraph below carries it). -->
+              <p class="ld-num-before"><span class="ld-big" data-t={`${totals.lost}h`}></span> <span class="ld-lbl" data-t="lost to admin"></span></p>
+              <p class="ld-num-after">
+                <span class="ld-big text-accent-bright" data-t={`${totals.back}h`}></span> <span class="ld-lbl" data-t="back"></span>
+                <span class="ld-mid" data-t={`${totals.checking}h`}></span> <span class="ld-lbl" data-t="checking"></span>
+              </p>
+            </div>
+          </div>
+          <div class="ld-toggle self-start shrink-0" role="group" aria-label="Show the week">
+            <button type="button" data-set="before" aria-pressed="true">This week</button>
+            <button type="button" data-set="after" aria-pressed="false">With Incubate Labs</button>
+          </div>
+        </div>
+
+        <p class="sr-only">
+          In a typical week, about {totals.lost} hours go on admin such as invoices, chasing payments and re-typing. With Incubate Labs, about {totals.back} of those hours come back and {totals.checking} are spent checking the work.
+        </p>
+
+        <div class="ld-grid mt-5" aria-hidden="true">
+          {days.map((day, i) => <span class="ld-day" style={`grid-column:${i + 2};grid-row:1`}>{day}</span>)}
+          {hourLabels.map((h) => <span class="ld-hour" style={`grid-column:1;grid-row:${h.row + 2}`}>{h.label}</span>)}
+          {blocks.map((b) => (
+            <div
+              class="ld-blk"
+              data-k={b.kind}
+              style={`grid-column:${b.d + 2};grid-row:${b.start + 2} / span ${b.len};--d:${b.delay}ms`}
+            >
+              {b.kind === "w" ? (
+                <span class="ld-l ld-w" title={b.label}><span class="ld-t">{b.label}</span></span>
+              ) : (
+                <>
+                  <span class="ld-l ld-b" title={b.label}><span class="ld-t">{b.label}</span></span>
+                  <span class="ld-l ld-a" title={b.kind === "a" ? `Time back (was: ${b.label})` : `${b.after} (was: ${b.label})`}><span class="ld-t">{b.after}</span></span>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <ul class="ld-legend mt-5">
+          <li><span class="ld-sw ld-sw-w"></span>Customer work</li>
+          <li><span class="ld-sw ld-sw-a"></span>Admin</li>
+          <li><span class="ld-sw ld-sw-c"></span>A person checks</li>
+          <li><span class="ld-sw ld-sw-t"></span>Time back</li>
+        </ul>
+      </div>
+      <p class="ld-foot mt-3">
+        Illustrative. Admin time is the UK average reported by owners in the Amex SME Business Barometer 2026. Time back reflects the roughly 8 hours a week workers report saving with AI tools (Microsoft, 2025).
+      </p>
+    </div>
+  </div>
+
+  <ul class="ld-stats mt-14 grid gap-8 border-t border-ink pt-8 sm:grid-cols-2 lg:grid-cols-4">
+    {stats.map((s, i) => (
+      <li style={`--i:${i}`}>
+        <p class="font-serif text-[40px] font-semibold leading-none">
+          {s.figure}{s.figureMuted && <span class="ml-1 text-2xl text-muted">{s.figureMuted}</span>}
+        </p>
+        <p class="mt-3 text-sm text-ink">{s.text}</p>
+        <p class="mt-2 text-xs"><a href={s.href} rel="noopener" class="text-muted underline underline-offset-2 hover:text-accent">{s.source} →</a></p>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .ld-card {
+    background: #16181a;
+    color: #f1efe9;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 32px 64px -24px rgba(22, 24, 26, 0.45), 0 12px 28px -12px rgba(22, 24, 26, 0.3);
+  }
+  .ld-caption { font-size: 12px; color: #8b9196; }
+  .ld-num { display: grid; }
+  .ld-num > p { grid-area: 1 / 1; transition: opacity 0.7s ease, visibility 0s linear 0s; }
+  .ld-big { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 52px; line-height: 1; }
+  .ld-mid { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1; margin-left: 14px; }
+  .ld-lbl { font-size: 15px; color: #b9bdc1; }
+  .ld-num [data-t]::before { content: attr(data-t); }
+  /* The faded-out state also goes visibility: hidden once its fade ends. */
+  .ld-num-after,
+  [data-state="after"] .ld-num-before { opacity: 0; visibility: hidden; transition: opacity 0.7s ease, visibility 0s linear 0.7s; }
+  [data-state="after"] .ld-num-after { opacity: 1; visibility: visible; }
+
+  .ld-toggle {
+    display: inline-flex;
+    gap: 2px;
+    padding: 3px;
+    border-radius: 999px;
+    border: 1px solid #2b3035;
+  }
+  .ld-toggle button {
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #b9bdc1;
+    background: transparent;
+  }
+  .ld-toggle button[aria-pressed="true"] { background: #f1efe9; color: #16181a; }
+  .ld-toggle button:focus-visible { outline: 2px solid #6cbf9a; outline-offset: 2px; }
+
+  .ld-grid {
+    display: grid;
+    grid-template-columns: 40px repeat(5, minmax(0, 1fr));
+    grid-template-rows: auto repeat(17, 21px);
+    column-gap: 6px;
+    row-gap: 2px;
+  }
+  .ld-day { font-size: 11.5px; color: #8b9196; padding-bottom: 4px; }
+  .ld-hour { font-size: 10.5px; color: #8b9196; line-height: 1; padding-top: 1px; }
+  .ld-blk { position: relative; min-width: 0; }
+  .ld-l {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-start;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-size: 10.5px;
+    font-weight: 500;
+    line-height: 1.25;
+    overflow: hidden;
+    transition: opacity 0.7s ease var(--d, 0ms), visibility 0s linear var(--d, 0ms);
+  }
+  .ld-t { display: block; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .ld-w { background: #2b3035; color: #b9bdc1; }
+  .ld-b {
+    background: repeating-linear-gradient(135deg, #c96f4a 0 4px, #8c4a30 4px 8px);
+    border: 1px solid #c96f4a;
+    color: #fff6f0;
+  }
+  [data-k="a"] .ld-a { background: rgba(108, 191, 154, 0.08); border: 1.5px dashed #6cbf9a; color: #6cbf9a; }
+  [data-k="c"] .ld-a { background: #6cbf9a; box-shadow: 0 0 14px rgba(108, 191, 154, 0.45); color: #16181a; }
+  .ld-a,
+  [data-state="after"] .ld-b {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.7s ease var(--d, 0ms), visibility 0s linear calc(var(--d, 0ms) + 0.7s);
+  }
+  [data-state="after"] .ld-a { opacity: 1; visibility: visible; pointer-events: auto; }
+
+  .ld-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 11.5px; color: #b9bdc1; }
+  .ld-legend li { display: inline-flex; align-items: center; gap: 6px; }
+  .ld-sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+  .ld-sw-w { background: #2b3035; }
+  .ld-sw-a { background: repeating-linear-gradient(135deg, #c96f4a 0 3px, #8c4a30 3px 6px); border: 1px solid #c96f4a; }
+  .ld-sw-c { background: #6cbf9a; }
+  .ld-sw-t { border: 1.5px dashed #6cbf9a; background: rgba(108, 191, 154, 0.08); }
+  .ld-foot { font-size: 11.5px; color: #676d73; } /* spec #6f757b is 4.46:1 on paper, just under AA */
+
+  .ld-stats li { animation: ld-rise 0.6s ease both; animation-delay: calc(var(--i) * 0.15s); }
+  @keyframes ld-rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 639px) {
+    .ld-t { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ld-num > p,
+    .ld-l,
+    .ld-a,
+    [data-state="after"] .ld-b,
+    .ld-num-after,
+    [data-state="after"] .ld-num-before { transition: none; }
+    .ld-stats li { animation: none; }
+  }
+</style>
+
+<script>
+  const card = document.querySelector<HTMLElement>("[data-lostday]");
+  if (card) {
+    const buttons = card.querySelectorAll<HTMLButtonElement>("[data-set]");
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let auto = !reduced;
+    let visible = false;
+    let switched = false;
+    let timer: number | undefined;
+
+    const set = (state: string) => {
+      card.dataset.state = state;
+      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.set === state)));
+    };
+
+    const schedule = () => {
+      clearTimeout(timer);
+      if (!auto || !visible || document.hidden) return;
+      timer = window.setTimeout(() => {
+        switched = true;
+        set(card.dataset.state === "after" ? "before" : "after");
+        schedule();
+      }, switched ? 6500 : 2400);
+    };
+
+    buttons.forEach((b) =>
+      b.addEventListener("click", () => {
+        auto = false;
+        clearTimeout(timer);
+        set(b.dataset.set!);
+      }),
+    );
+
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      visible ? schedule() : clearTimeout(timer);
+    }).observe(card);
+
+    document.addEventListener("visibilitychange", () => (document.hidden ? clearTimeout(timer) : schedule()));
+  }
+</script>

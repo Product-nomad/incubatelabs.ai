@@ -1,0 +1,10 @@
+# Technical audit issue 12 (research/seo-2026-10/technical-audit.md). No CSP yet: add one
+# separately once it has been tested against Turnstile and the Google Calendar link.
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

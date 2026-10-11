@@ -16,6 +16,12 @@ export default {
         "accent-soft": "#e8efe9",
         "accent-line": "#cfe0d4",
         band: "#f4f2ed",
+        // v1.1 hero only: admin blocks are a deliberate, contained exception to the green-only rule.
+        admin: "#c96f4a",
+        "admin-deep": "#8c4a30",
+        night: "#16181a",
+        "night-raised": "#2b3035",
+        "accent-bright": "#6cbf9a",
       },
       maxWidth: {
         prose: "65ch",

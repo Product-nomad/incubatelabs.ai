@@ -1,38 +1,41 @@
 # incubatelabs.ai — STATE
 
-**Goal**: Get v1 of incubatelabs.ai live and indexed: a lead-generation site for practical AI and automation for UK micro and small businesses without an in-house IT team. AI services lead; web design is an add-on.
-**Phase**: Build (v1 on branch `v1-sme-site`, not yet deployed).
+**Goal**: A lead-generation site for practical AI and automation for UK small businesses (5–50 staff) without an in-house IT team. AI services lead; web design is an add-on.
+**Phase**: v1 live at https://incubatelabs.ai since 2026-10-11 (`main`). v1.1 built on `v1.1-brand-hero`, awaiting Simon's screenshot sign-off before merge.
 **Last touched**: 2026-10-11.
 
-## What's done (v1-sme-site)
-- April v0 pages removed (methodology, services, free triage, PackageCard).
-- New theme (ink / paper / forest-green accent, Source Serif 4 + Inter), Nav with `<details>` mobile menu, Footer, CallToAction, UseCaseCard, WorkCard.
-- Pages: home, use-cases index + 6 detail pages (from `src/data/useCases.ts`), how-we-work, work, readiness-check, about, contact, contact/thanks (noindex, not in sitemap), privacy, 404.
-- Sitemap via `@astrojs/sitemap`; robots.txt points at `sitemap-index.xml`.
-- Contact form: `functions/api/contact.ts` (honeypot, validation, Turnstile) → service binding → `workers/mailer` (send_email via Email Routing). See DECISIONS 2026-10-11.
-- Local checks passed 2026-10-11: build, banned-string scan, internal links (all resolve), form scenarios against `wrangler dev` (valid, no token → 403, honeypot dropped, no-JS → 303 `/contact/thanks/`, bad email / header injection → 400), screenshots at 1280 and 390 with no horizontal scroll (`.screens/`, gitignored).
-- Readiness Check built 2026-10-11 to the approved proposal (`src/data/readiness.ts`, `src/pages/readiness-check.astro`). Verified in Playwright: three answer profiles give the expected recommendations and prep points, recommendation links resolve, validation blocks unanswered steps, "Email me my result" sends via `/api/contact`.
+## v1.1 (branch `v1.1-brand-hero`, spec: `design/v1.1/spec.md`)
+- Brand tokens (`admin`, `admin-deep`, `night`, `night-raised`, `accent-bright`); text logo kept until logo files land.
+- "Lost day" hero: build-time week planner, 679-byte script island, autoplay/IO/visibility/reduced-motion behaviour, sourced stats strip. H1 in `HERO_H1` (`src/data/hero.ts`); totals derived from the week data and checked at build time.
+- "Sound familiar?", illustrated use-case cards (six SVG components in `src/components/illustrations/`), asked-for vs fix list, cost-check section with payback chart (`CostCheck.astro`), hexagon engagement cards with "Where most clients start" badge.
+- Projects (was "Things I've built"): attestloop, removepii, publicguard, retail PoC, plus Readiness Check on /work/. Image slots read `public/projects/<name>.webp` when present.
+- De-personalised: no location except the legal line; Iraq entry removed from About; JSON-LD address removed.
+- Readiness Check cost estimate (hours × rate × 46 + monthly × 12, nearest £100), sent only with "Send my result to Simon".
+- SEO addendum applied: hero copy, renamed use-case pages with 301s (`public/_redirects`), "Where it fits", "What it costs" (no prices) and FAQ blocks, Service/BreadcrumbList/FAQPage JSON-LD, OG image (`public/og-image.png`, source in `design/v1.1/og-image-source.html`), technical-audit fixes. Research summaries committed under `research/seo-2026-10/`; `raw/` is gitignored.
+- Local acceptance checks passed 2026-10-11; screenshots in `.screens/v1.1/` (gitignored).
 
-## Blocked on Simon
-- **Readiness Check wording**: the option labels, one-line reasons, "Before you start" points, the "nothing stands out" text and the email note ("Your result goes to Simon, who will email it to you personally") are drafted, not from the spec. Approve before launch.
-- **No-JS contact form**: Turnstile needs JS, so a visitor with JS off gets the failure page (with the email address), not `/contact/thanks/`. The thanks redirect works when a token is present.
-- **Forwarding inbox** for the form and `hello@`.
-- **Cloudflare credentials** (`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`) not present on this machine.
+## Open decisions (v1.1 §12; not built)
+- **Final H1**: SEO version applied ("Practical AI and automation for small businesses without an IT team."); confirm.
+- **Legal line**: still names the town ("…a sole trader based in Huntingdon, Cambridgeshire."). Keep the town or use a business address. It is the only location left on the site.
+- **About page voice**: Simon doesn't want the site to read as a one-person operation. About is unchanged apart from the Iraq and location removals.
+- **Founder photo**: on hold.
+- **"Works with the tools you already use" strip**: not confirmed, not built.
+- **Project screenshots**: Simon to supply as `public/projects/{attestloop,removepii,publicguard,retail-poc,readiness-check}.webp` (16:10).
+- **Logo files**: arriving separately in `public/brand/`; nav 36px, footer 32px, `currentColor` #16181a, keep `aria-label="Incubate Labs, home"`.
 
-## Before launch
-1. ~~`bookingUrl` set~~ (done 2026-10-11)
-2. Turnstile keys set (`PUBLIC_TURNSTILE_SITE_KEY` build var; `TURNSTILE_SECRET_KEY` Pages secret)
-3. Email Routing for hello@ and the form destination verified (`FORM_DESTINATION` mailer secret)
-4. Simon reviews the About page wording and the form reply-time wording, and adds a photo
-5. Custom domain
-6. Search Console sitemap
+## Next steps (v1.1 §14.7; not built)
+- **Google Business Profile**: service-area business with the address hidden. Simon sets this up manually; it carries the local signal now the site shows no location.
+- **Content**: guide on Microsoft Copilot pricing and value for small businesses (the competitor gap in `research/seo-2026-10/`).
+- **GitHub bio**: Simon to replace "Open to PM and Delivery roles" (manual).
+- The SEO README's "keep 'based near Huntingdon' on the site" suggestion was **not applied**: Simon chose to show no location.
+- Technical-audit items not done (see the v1.1 report): logo in JSON-LD (no logo file yet), `priceRange` (no prices), founder photo (on hold), Cloudflare email obfuscation (dashboard decision), analytics (needs a Plausible account or Cloudflare Web Analytics switched on in the dashboard), CSP (needs testing against Turnstile).
 
 ## Stale docs
 - `ENGAGEMENT_PROTOCOL.md` and `CONTEXT.md` still describe the April packages (with prices), `/services/` pages and Cal.com. Rewrite before linking to either.
 - `THREAT_MODEL.md` was reissued for v1 on 2026-10-11.
 
 ## Key files
-- `src/data/site.ts`, `src/data/useCases.ts`, `src/data/work.ts` — content data
+- `src/data/site.ts`, `src/data/useCases.ts`, `src/data/work.ts`, `src/data/hero.ts`, `src/data/engagements.ts` — content data
 - `src/layouts/Layout.astro` — head meta, JSON-LD, fonts, Plausible (conditional)
 - `functions/api/contact.ts` — form endpoint
 - `workers/mailer/` — internal mail-sending Worker (deployed separately)

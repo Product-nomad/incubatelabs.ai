@@ -1,73 +1,57 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import LostDayHero from "@/components/LostDayHero.astro";
+import Hexagon from "@/components/Hexagon.astro";
 import UseCaseCard from "@/components/UseCaseCard.astro";
+import CostCheck from "@/components/CostCheck.astro";
+import EngagementCard from "@/components/EngagementCard.astro";
 import WorkCard from "@/components/WorkCard.astro";
 import CallToAction from "@/components/CallToAction.astro";
 import { useCases } from "@/data/useCases";
+import { engagements } from "@/data/engagements";
 import { work } from "@/data/work";
 
-const audiences = [
-  {
-    title: "No IT team",
-    body: "You run the business, and the technology is whoever's least busy. You want things that work without someone babysitting them.",
-  },
-  {
-    title: "An IT provider who fixes laptops",
-    body: "Your provider keeps email, devices and backups running. That's valuable, but it isn't the same as improving how work gets done.",
-  },
-  {
-    title: "On the brink of a hire",
-    body: "The team is stretched and you're about to recruit. Taking the repetitive work away first could buy you months before you need to.",
-  },
+const familiar = [
+  "Evenings and weekends go on admin you'd love to hand off",
+  "You're about to hire someone mainly to keep up with paperwork",
+  "The same details get typed into three different systems",
+  "Your team already uses ChatGPT, on personal accounts, with no rules",
+  "You know AI could help, but not where, or what it would pay back",
+  "Quotes and replies wait until the one person who knows has time",
 ];
 
-const tiers = [
-  {
-    name: "Quick Win",
-    body: "One task, one fix. A small, fast piece of work that proves whether AI earns its place in your business.",
-  },
-  {
-    name: "Automation Sprint",
-    body: "One workflow automated end to end, with a fixed scope and a clear result. This is where most clients start.",
-  },
-  {
-    name: "Operations Uplift",
-    body: "Several connected workflows across the business, planned and delivered together.",
-  },
+const askedFor = [
+  { asked: "An AI chatbot for customers", fix: "A set of good saved replies" },
+  { asked: "AI to move data between systems", fix: "A direct link between the two" },
+  { asked: "AI to work out what to charge", fix: "Clear pricing rules you can check" },
+  { asked: "AI to read documents that always look the same", fix: "A simple template rule" },
 ];
 
-const portfolio = work.filter((item) => item.external);
+const projects = work.filter((item) => !item.workPageOnly);
 ---
 
 <Layout
-  title="Incubate Labs | Practical AI for small businesses"
-  description="Practical AI and automation for UK small businesses without an IT team. Take repetitive admin off your team's plate and put off the next hire. Based in Cambridgeshire."
+  title="AI Consultant for UK Small Businesses | Incubate Labs"
+  description="Practical AI and automation for UK small businesses without an IT team. Fixed-price projects that take repetitive admin off your team's plate."
 >
-  <!-- Hero -->
-  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-20 sm:pt-24">
-    <p class="text-sm font-medium text-accent">AI and automation for UK small businesses</p>
-    <h1 class="mt-4 max-w-4xl text-4xl sm:text-6xl leading-tight">Do more with the team you already have.</h1>
-    <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">
-      We take the repetitive admin off your people's plates: the reading, re-typing, chasing and reporting. That means they can get on with the work that grows the business. It's not about replacing anyone. It's about not needing to hire again quite so soon.
-    </p>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a href="/contact/" class="bg-ink text-paper rounded-md px-6 py-3 font-medium transition-colors hover:bg-accent">Talk it through</a>
-      <a href="/use-cases/" class="border border-ink text-ink rounded-md px-6 py-3 font-medium transition-colors hover:bg-ink hover:text-paper">See what we automate</a>
-    </div>
-  </section>
+  <LostDayHero />
 
-  <!-- Who we work with -->
+  <!-- Sound familiar? -->
   <section class="bg-band border-y border-line">
-    <div class="max-w-page mx-auto px-4 sm:px-6 py-16">
-      <h2 class="text-3xl sm:text-4xl">Who we work with</h2>
-      <div class="mt-10 grid gap-8 md:grid-cols-3">
-        {audiences.map((a) => (
-          <div>
-            <h3 class="text-xl">{a.title}</h3>
-            <p class="mt-2 text-muted">{a.body}</p>
-          </div>
-        ))}
+    <div class="max-w-page mx-auto px-4 sm:px-6 py-16 grid gap-10 lg:grid-cols-[1fr_2fr]">
+      <div>
+        <h2 class="text-3xl sm:text-4xl">Sound familiar?</h2>
+        <p class="mt-4 text-lg text-muted">For owner-run UK businesses of 5 to 50 people, without an IT department.</p>
+        <a href="/contact/" class="mt-6 inline-block font-medium text-accent hover:underline">If three or more ring true, let's talk →</a>
       </div>
+      <ul class="familiar-grid">
+        {familiar.map((item) => (
+          <li class="flex items-start gap-3 bg-paper border border-line rounded-xl px-5 py-[18px] text-[17px]">
+            <Hexagon />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 
@@ -86,12 +70,29 @@ const portfolio = work.filter((item) => item.external);
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
     <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
       <h2 class="text-3xl sm:text-4xl">Not everything needs AI.</h2>
-      <div class="max-w-prose space-y-4 text-lg text-muted">
-        <p>A surprising number of "AI problems" are really a missing integration, a messy spreadsheet or a process nobody wrote down. When that's the case, we'll say so and fix it the simple way. It's cheaper for you and it's more reliable.</p>
-        <p>When AI is the right tool, we build it with a person in the loop where it matters, on systems you already use, and we hand it over so you're not dependent on us.</p>
+      <div>
+        <p class="max-w-prose text-lg text-muted">A surprising number of "AI problems" are really a missing integration, a messy spreadsheet or a process nobody wrote down. When that's the case, we'll say so and fix it the simple way. It's cheaper for you and it's more reliable.</p>
+        <div class="mt-8">
+          <div class="hidden sm:grid grid-cols-[1fr_auto_1fr] gap-4 px-5 pb-2 text-sm font-medium text-muted" aria-hidden="true">
+            <span>What gets asked for</span>
+            <span class="w-5"></span>
+            <span>What often fixes it</span>
+          </div>
+          <ul class="space-y-3">
+            {askedFor.map((row) => (
+              <li class="grid gap-2 border border-line rounded-xl px-5 py-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-4">
+                <span class="text-muted line-through decoration-muted/60"><span class="sr-only">Asked for: </span>{row.asked}</span>
+                <span class="font-semibold text-accent" aria-hidden="true">→</span>
+                <span class="font-medium text-ink"><span class="sr-only">Often fixed by: </span>{row.fix}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   </section>
+
+  <CostCheck />
 
   <!-- Engagement sizes -->
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
@@ -105,12 +106,7 @@ const portfolio = work.filter((item) => item.external);
       <a href="/how-we-work/" class="shrink-0 font-medium text-accent hover:underline">How we work →</a>
     </div>
     <div class="mt-10 grid gap-5 md:grid-cols-3">
-      {tiers.map((t) => (
-        <div class="border border-line rounded-xl p-6">
-          <h3 class="text-xl">{t.name}</h3>
-          <p class="mt-2 text-muted">{t.body}</p>
-        </div>
-      ))}
+      {engagements.map((e) => <EngagementCard engagement={e} />)}
     </div>
     <p class="mt-6 text-muted">Need a website too? We build those as well, either alongside an automation project or on their own.</p>
   </section>
@@ -118,22 +114,23 @@ const portfolio = work.filter((item) => item.external);
   <!-- Who you'll work with -->
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
     <div class="grid gap-6 border border-line rounded-xl p-6 sm:p-10 md:grid-cols-[1fr_2fr]">
-      <h2 class="text-2xl sm:text-3xl">Who you'll work with</h2>
+      <h2 class="text-2xl sm:text-3xl">Hands-on from the first call to the handover.</h2>
       <div class="max-w-prose space-y-4 text-lg text-muted">
-        <p>Incubate Labs is run by Simon Newton from Cambridgeshire. Before this, Simon spent years delivering operations and technology programmes, most recently as a Lead Product Delivery Manager at Ocado, after earlier careers in the British Army and in post-conflict reconstruction.</p>
-        <p>You deal with the person doing the work, from the first call to the handover. <a href="/about/" class="font-medium text-accent hover:underline">More about Simon →</a></p>
+        <p>Incubate Labs is run by Simon Newton. Before this, Simon spent years delivering operations and technology programmes, most recently as a Lead Product Delivery Manager at Ocado, after an earlier career in the British Army.</p>
+        <p><a href="/about/" class="font-medium text-accent hover:underline">More about Simon →</a></p>
       </div>
     </div>
   </section>
 
-  <!-- Things I've built -->
+  <!-- Projects -->
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
     <div class="flex items-end justify-between gap-4">
-      <h2 class="text-3xl sm:text-4xl">Things I've built</h2>
+      <h2 class="text-3xl sm:text-4xl">Projects</h2>
       <a href="/work/" class="shrink-0 font-medium text-accent hover:underline">See all →</a>
     </div>
-    <div class="mt-10 grid gap-5 md:grid-cols-3">
-      {portfolio.map((item) => <WorkCard item={item} />)}
+    <p class="mt-4 max-w-prose text-lg text-muted">Real, working builds: tools in use today and proofs of concept that tested an idea properly.</p>
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {projects.map((item) => <WorkCard item={item} />)}
     </div>
   </section>
 
@@ -150,3 +147,11 @@ const portfolio = work.filter((item) => item.external);
 
   <CallToAction />
 </Layout>
+
+<style>
+  .familiar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 12px;
+  }
+</style>

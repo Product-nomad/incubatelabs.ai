@@ -1,0 +1,469 @@
+record_type,competitor,keyword,position,volume,difficulty,cpc,est_traffic,relevant_to_us,page_type,ranking_keywords,url
+keyword,openkit.co.uk,ai consultant,17,2400,0,37.61000061035156,0.89,yes,guide/blog,,https://openkit.co.uk/blog/posts/what-does-an-ai-consultant-do
+keyword,cloudswitched.com,microsoft office 365 plans,9,590,24,1.4800000190734863,0.4,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,microsoft 365 email essentials,13,390,11,8.9399995803833,1.24,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,microsoft 365 business plan,16,390,18,3.7300000190734863,1.16,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,microsoft 365 business plans,18,390,19,3.7300000190734863,0.36,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,microsoft office 365 business plan,18,390,20,3.7300000190734863,0.01,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,copilot for business,7,320,17,4.980000019073486,4.32,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,office 365 plans,9,320,16,1.8199999332427979,1.02,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,copilot professional,14,260,20,4.420000076293945,0.15,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,createwith.com,ai engineer london,19,210,0,16.049999237060547,2.5,yes,event listing,,https://www.createwith.com/event/london-ai-engineer-europe-2026-apr-8-10-london-apr-2026
+keyword,openkit.co.uk,a consultant,8,170,0,20.649999618530273,0.84,yes,guide/blog,,https://openkit.co.uk/blog/posts/what-does-an-ai-consultant-do
+keyword,openkit.co.uk,ai consultancy uk,12,170,0,15.25,0.47,yes,guide/blog,,https://openkit.co.uk/blog/posts/best-ai-consultancies-uk-mid-market
+keyword,cloudswitched.com,microsoft 365 copilot business,7,170,4,4.909999847412109,1.86,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,office 365 business plans,12,170,4,3.3899998664855957,0.76,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,copilot license cost uk,11,170,1,3.8499999046325684,0.52,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,microsoft copilot license,16,170,16,3.069999933242798,0.38,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,20000 365,12,170,3,,0.24,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,createwith.com,code with claude london,15,170,14,,0.81,yes,tool directory/profile,,https://www.createwith.com/tool/claude/events/london
+keyword,createwith.com,notion london,13,140,1,1.4199999570846558,1.1,yes,event listing,,https://www.createwith.com/event/london-make-with-notion-showcase-returns-to-london-nov-2025
+keyword,createwith.com,ai engineering europe,9,140,0,9.229999542236328,0,yes,event listing,,https://www.createwith.com/event/london-ai-engineer-europe-2026-apr-8-10-london-apr-2026
+keyword,openkit.co.uk,eu ai act uk,7,110,0,5.019999980926514,0.83,yes,guide/blog,,https://openkit.co.uk/blog/posts/eu-ai-act-uk-compliance-guide
+keyword,openkit.co.uk,ai consultant near me,15,110,0,12.90999984741211,0.37,yes,guide/blog,,https://openkit.co.uk/blog/posts/best-ai-consultancies-uk-mid-market
+keyword,openkit.co.uk,ai agent for business,13,110,7,39.08000183105469,0.22,yes,guide/blog,,https://openkit.co.uk/blog/posts/ai-agents-implementation-guide-uk
+keyword,openkit.co.uk,ai consultancy london,19,110,0,38.959999084472656,0.19,yes,guide/blog,,https://openkit.co.uk/blog/posts/best-ai-consultancies-uk-mid-market
+keyword,openkit.co.uk,ai consultant uk,17,110,0,24.040000915527344,0.14,yes,service page,,https://openkit.co.uk/ai-services/ai-consulting
+keyword,cloudswitched.com,8000/365,15,110,0,,0.86,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,copilot cost uk,10,110,5,2.309999942779541,0.36,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,health copilot telford,13,110,0,,0.33,yes,service page (programmatic location),,https://www.cloudswitched.com/services/network-admin/media/telford
+keyword,cloudswitched.com,cyber essentials plus checker,14,110,0,9.680000305175781,0.31,yes,guide/blog,,https://www.cloudswitched.com/blog/cyber-essentials-certification-guide
+keyword,cloudswitched.com,copilot costs uk,9,110,8,2.309999942779541,0.01,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,createwith.com,mindstone ai meetup,20,110,0,4.230000019073486,0.53,yes,event listing,,https://www.createwith.com/event/cambridge-mindstone-cambridge-april-ai-meetup-apr-2026
+keyword,createwith.com,chatgpt london,14,110,0,0.07999999821186066,0.52,yes,tool directory/profile,,https://createwith.com/tool/chatgpt/events/london
+keyword,createwith.com,fin ai agent,11,110,0,11.289999961853027,0.22,yes,tool directory/profile,,https://createwith.com/tool/intercom/updates/intercom-launches-fin-for-ecommerce-ai-agent-that-handles-full-shopping-journey
+keyword,openkit.co.uk,roi for business,13,90,0,,0.0,yes,guide/blog,,https://openkit.co.uk/blog/posts/business-case-for-ai-roi-calculation
+keyword,cloudswitched.com,consequences of data loss,2,90,0,,5.35,yes,guide/blog,,https://www.cloudswitched.com/blog/what-to-do-lose-business-data
+keyword,cloudswitched.com,microsoft copilot license cost uk,9,90,2,3.7699999809265137,0.55,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,insurance agent for small business,4,90,0,39.56999969482422,0.02,yes,service page (programmatic location),,https://www.cloudswitched.com/services/seo/seo-agency-small-business-uk/insurance
+keyword,cloudswitched.com,ads consultant,15,90,0,,0.01,yes,service page (programmatic location),,https://www.cloudswitched.com/services/google-ads/google-ads-consultant-uk/professional-services
+keyword,openkit.co.uk,ai development agency,5,70,0,48.189998626708984,1.28,yes,guide/blog,,https://openkit.co.uk/blog/posts/leading-ai-development-agencies-london-enterprise
+keyword,openkit.co.uk,roi modeling,14,70,0,8.729999542236328,0.12,yes,guide/blog,,https://openkit.co.uk/blog/posts/business-case-for-ai-roi-calculation
+keyword,openkit.co.uk,generative ai consultant,4,70,5,,0.02,yes,guide/blog,,https://openkit.co.uk/blog/posts/generative-ai-consulting
+keyword,openkit.co.uk,generative ai consultants,14,70,10,,0.0,yes,guide/blog,,https://openkit.co.uk/blog/posts/generative-ai-consulting
+keyword,openkit.co.uk,roi models,14,70,0,8.729999542236328,0,yes,guide/blog,,https://openkit.co.uk/blog/posts/business-case-for-ai-roi-calculation
+keyword,cloudswitched.com,office email 365,2,70,0,,2.76,yes,guide/blog,,https://www.cloudswitched.com/blog/how-microsoft-office-365-can-benefit-your-organisation
+keyword,cloudswitched.com,microsoft 365 options,14,70,19,1.7999999523162842,0.53,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,is copilot free with office 365,13,70,11,,0.45,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,copilot free vs paid,8,70,3,2.049999952316284,0.4,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,office 365 lancaster,6,70,0,,0.39,yes,service page (programmatic location),,https://www.cloudswitched.com/solutions/voip/architecture/lancaster
+keyword,cloudswitched.com,copilot pricing uk,12,70,15,2.6600000858306885,0.27,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,enterprise copilot,11,70,17,3.180000066757202,0.17,yes,guide/blog,,https://www.cloudswitched.com/resources/microsoft-copilot-free-vs-business
+keyword,cloudswitched.com,travel agents tamworth,12,70,0,2.950000047683716,0.13,yes,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/travel/tamworth
+keyword,cloudswitched.com,cyber essentials requirements for it infrastructure v3 2,19,70,4,21.700000762939453,0.04,yes,guide/blog,,https://www.cloudswitched.com/blog/cyber-essentials-requirements-checklist-2026
+keyword,createwith.com,notion events,14,70,0,,0.56,yes,tool directory/profile,,https://www.createwith.com/tool/notion/events
+keyword,createwith.com,brighton ai,11,70,0,2.25,0.45,yes,city hub,,https://www.createwith.com/cities/brighton
+keyword,createwith.com,claude london,15,70,1,,0.42,yes,tool directory/profile,,https://createwith.com/tool/claude/events/london
+keyword,createwith.com,claude near me,20,70,13,,0.29,yes,tool directory/profile,,https://createwith.com/tool/claude/events/london
+keyword,createwith.com,claude revenue,15,70,24,,0.17,yes,tool directory/profile,,https://www.createwith.com/tool/claude/updates/claude-revenue-surges-9-as-anthropic-expands-enterprise-footprint-across-europe
+keyword,createwith.com,ai brighton,14,70,18,2.25,0,yes,other,,https://www.createwith.com/conference
+keyword,openkit.co.uk,what is ai consulting,4,50,2,22.309999465942383,0.71,yes,service page,,https://openkit.co.uk/ai-services/ai-consulting
+keyword,openkit.co.uk,what is ai consultant,2,50,0,22.309999465942383,0.03,yes,guide/blog,,https://openkit.co.uk/blog/posts/what-does-an-ai-consultant-do
+keyword,cloudswitched.com,copilot licence cost uk,10,50,0,2.809999942779541,0.16,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,do i need microsoft copilot,8,50,12,,0.09,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+keyword,cloudswitched.com,uk small business voip,20,50,28,29.43000030517578,0.02,yes,service page (programmatic location),,https://www.cloudswitched.com/solutions/voip/voip-for-small-business-uk
+keyword,cloudswitched.com,small business and ecommerce,12,50,0,7.019999980926514,0.02,yes,guide/blog,,https://www.cloudswitched.com/blog/ecommerce-small-businesses-getting-started
+keyword,createwith.com,oxford generative ai summit,8,50,2,1.899999976158142,0.37,yes,event listing,,https://www.createwith.com/event/oxford-oxford-generative-ai-summit-oct-2026
+keyword,createwith.com,make tool,12,50,20,3.4200000762939453,0.12,yes,tool directory/profile,,https://www.createwith.com/tool/make
+keyword,createwith.com,n8n revenue,17,50,12,,0.11,yes,tool directory/profile,,https://www.createwith.com/tool/n8n/updates/n8n-reports-10x-revenue-growth-as-ai-agents-drive-majority-of-workflows
+keyword,cloudswitched.com,what does office 365 include,12,40,17,2.8499999046325684,0.06,yes,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,createwith.com,ohara ai,13,20,6,,0.11,yes,tool directory/profile,,https://www.createwith.com/tool/ohara
+keyword,createwith.com,gumroad,13,27100,27,0.2800000011920929,155.68,,tool directory/profile,,https://www.createwith.com/tool/gumroad
+keyword,createwith.com,built with,11,8100,20,21.06999969482422,30.29,,homepage,,https://www.createwith.com/
+keyword,cloudswitched.com,ssrs,15,1900,13,14.449999809265137,3.87,,guide/blog,,https://www.cloudswitched.com/blog/sql-server-reporting-services-guide
+keyword,cloudswitched.com,sql server reporting services,16,1900,13,14.449999809265137,0.7,,guide/blog,,https://www.cloudswitched.com/blog/sql-server-reporting-services-guide
+keyword,cloudswitched.com,sql reporting,8,1900,6,14.449999809265137,0.24,,guide/blog,,https://www.cloudswitched.com/blog/sql-server-reporting-services-guide
+keyword,cloudswitched.com,sequel reporting,7,1900,7,14.449999809265137,0.0,,guide/blog,,https://www.cloudswitched.com/blog/sql-server-reporting-services-guide
+keyword,createwith.com,create with code,12,1900,9,25.56999969482422,10.29,,homepage,,https://www.createwith.com/
+keyword,createwith.com,adalo,11,1600,13,13.479999542236328,18.19,,tool directory/profile,,https://www.createwith.com/tool/adalo
+keyword,cloudswitched.com,peering,9,1000,28,,1.3,,guide/blog,,https://www.cloudswitched.com/blog/understanding-internet-peering-why-it-matters
+keyword,cloudswitched.com,google ppc price,7,1000,7,12.40999984741211,0.01,,guide/blog,,https://www.cloudswitched.com/blog/google-ads-cost-uk-2026-ppc-pricing
+keyword,cloudswitched.com,wifi 5,13,720,8,7.650000095367432,2.68,,guide/blog,,https://www.cloudswitched.com/blog/wifi-6-vs-wifi-5-upgrade
+keyword,cloudswitched.com,bing advertising,20,720,17,12.140000343322754,2.3,,guide/blog,,https://www.cloudswitched.com/blog/guide-to-microsoft-advertising-bing-ads-business
+keyword,cloudswitched.com,bing ad,9,720,17,12.140000343322754,0.58,,guide/blog,,https://www.cloudswitched.com/blog/guide-to-microsoft-advertising-bing-ads-business
+keyword,createwith.com,skool com,14,720,8,1.2400000095367432,4.28,,tool directory/profile,,https://www.createwith.com/tool/skool
+keyword,createwith.com,framer marketplace,20,720,24,2.0799999237060547,3.08,,tool directory/profile,,https://www.createwith.com/tool/framer/updates/framer-makes-marketplace-the-default-destination-for-finding-site-assets
+keyword,cloudswitched.com,what is peering in networking,13,590,8,,0.01,,guide/blog,,https://www.cloudswitched.com/blog/understanding-internet-peering-why-it-matters
+keyword,cloudswitched.com,business cloud,9,480,20,2.549999952316284,2.33,,guide/blog,,https://www.cloudswitched.com/blog/when-should-business-move-to-cloud
+keyword,cloudswitched.com,azure landing zone,16,480,0,2.1500000953674316,2.16,,guide/blog,,https://www.cloudswitched.com/blog/azure-landing-zones-setting-up-cloud-foundations
+keyword,cloudswitched.com,distribution list,17,480,0,,0.77,,guide/blog,,https://www.cloudswitched.com/blog/shared-mailboxes-vs-distribution-lists
+keyword,cloudswitched.com,distribution lists,19,480,0,,0.33,,guide/blog,,https://www.cloudswitched.com/blog/shared-mailboxes-vs-distribution-lists
+keyword,cloudswitched.com,networking cost,18,480,7,,0.31,,service page,,https://www.cloudswitched.com/solutions/cloud-networking/how-much-does-business-wifi-cost-uk/education
+keyword,createwith.com,weweb,15,480,21,8.819999694824219,4.64,,tool directory/profile,,https://www.createwith.com/tool/weweb
+keyword,cloudswitched.com,slack versus teams,20,390,2,,0.95,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-vs-slack
+keyword,cloudswitched.com,express route,15,390,5,,0.52,,guide/blog,,https://www.cloudswitched.com/blog/azure-expressroute-dedicated-connection
+keyword,cloudswitched.com,report server ssrs,15,390,15,13.220000267028809,0.0,,guide/blog,,https://www.cloudswitched.com/blog/sql-server-reporting-services-guide
+keyword,cloudswitched.com,display advertising google,18,390,13,19.65999984741211,0.0,,guide/blog,,https://www.cloudswitched.com/blog/google-display-advertising-business
+keyword,createwith.com,pilates on the park,12,390,0,,1.23,,event listing,,https://www.createwith.com/event/london-pilates-in-the-park-cos-ops-founders-associates-aug-2026
+keyword,cloudswitched.com,onedrive sharepoint,10,320,27,12.539999961853027,2.18,,guide/blog,,https://www.cloudswitched.com/blog/onedrive-vs-sharepoint-difference
+keyword,cloudswitched.com,azure expressroute,13,320,15,,0.7,,guide/blog,,https://www.cloudswitched.com/blog/azure-expressroute-dedicated-connection
+keyword,cloudswitched.com,wireless access point meraki,15,320,0,3.2899999618530273,0.01,,guide/blog,,https://www.cloudswitched.com/blog/guide-meraki-access-points-offices
+keyword,createwith.com,bolt event,8,320,1,,0.01,,tool directory/profile,,https://createwith.com/tool/bolt/events/manchester
+keyword,cloudswitched.com,bare metal recovery definition,11,260,0,,0.74,,guide/blog,,https://www.cloudswitched.com/blog/bare-metal-recovery-server
+keyword,cloudswitched.com,onedrive vs sharepoint,17,260,0,,0.63,,guide/blog,,https://www.cloudswitched.com/blog/onedrive-vs-sharepoint-difference
+keyword,cloudswitched.com,office packages,12,260,20,4.070000171661377,0.33,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,seo ecommerce site,17,260,26,,0.27,,guide/blog,,https://www.cloudswitched.com/blog/ecommerce-seo-guide-uk-online-retailers
+keyword,createwith.com,create with code uk,4,260,13,,8.84,,other,,https://www.createwith.com/about
+keyword,createwith.com,create withcode uk,17,260,0,,0.69,,other,,https://www.createwith.com/about
+keyword,cloudswitched.com,sharepoint onedrive,10,210,21,,1.1,,guide/blog,,https://www.cloudswitched.com/blog/onedrive-vs-sharepoint-difference
+keyword,cloudswitched.com,seo harrow,18,210,0,,0.4,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/startups/harrow
+keyword,cloudswitched.com,aws azure,12,210,28,9.300000190734863,0.17,,guide/blog,,https://www.cloudswitched.com/blog/azure-vs-aws-cloud-platform
+keyword,cloudswitched.com,office plans,8,210,21,6.369999885559082,0.02,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,co networking,14,210,18,8.149999618530273,0.01,,service page,,https://www.cloudswitched.com/solutions/cloud-networking/coworking/edinburgh
+keyword,cloudswitched.com,azure vm sizing,10,210,15,,0.0,,free calculator tool,,https://www.cloudswitched.com/tools/azure-vm-sizing-calculator
+keyword,cloudswitched.com,azure and aws,13,210,9,9.300000190734863,0.0,,guide/blog,,https://www.cloudswitched.com/blog/azure-vs-aws-cloud-platform
+keyword,createwith.com,create by,16,210,15,,0.25,,other,,https://www.createwith.com/about
+keyword,cloudswitched.com,btinternet password reset,1,170,0,,16.17,,guide/blog,,https://www.cloudswitched.com/news/bt-email-password-reset-attack-2026
+keyword,cloudswitched.com,btinternet forgotten password,3,170,0,,5.71,,guide/blog,,https://www.cloudswitched.com/news/bt-email-password-reset-attack-2026
+keyword,cloudswitched.com,uptime calculator,6,170,5,,2.28,,free calculator tool,,https://www.cloudswitched.com/tools/network-uptime-calculator
+keyword,cloudswitched.com,cost comparison,8,170,0,1.25,1.65,,guide/blog,,https://www.cloudswitched.com/blog/voip-vs-traditional-phone-systems-cost-comparison
+keyword,cloudswitched.com,document network services,15,170,0,,1.26,,guide/blog,,https://www.cloudswitched.com/blog/what-is-dns-why-it-matters
+keyword,cloudswitched.com,sogea adapter,14,170,0,,0.91,,guide/blog,,https://www.cloudswitched.com/blog/sogea-fttp-business-broadband-explained
+keyword,cloudswitched.com,wifi 5 v 6,17,170,6,,0.74,,guide/blog,,https://www.cloudswitched.com/blog/wifi-6-vs-wifi-5-upgrade
+keyword,cloudswitched.com,wifi 5 versus 6,14,170,4,,0.58,,guide/blog,,https://www.cloudswitched.com/blog/wifi-6-vs-wifi-5-upgrade
+keyword,cloudswitched.com,seo southend,12,170,0,,0.49,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/manufacturing/southend
+keyword,cloudswitched.com,datto backup,10,170,12,46.40999984741211,0.45,,service page,,https://www.cloudswitched.com/solutions/cloud-backup/datto-backup-uk/recruitment
+keyword,cloudswitched.com,southend seo,17,170,0,,0.43,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/manufacturing/southend
+keyword,cloudswitched.com,microsoft bing ads,20,170,12,12.609999656677246,0.36,,guide/blog,,https://www.cloudswitched.com/blog/guide-to-microsoft-advertising-bing-ads-business
+keyword,cloudswitched.com,keyword research services,12,170,3,,0.32,,guide/blog,,https://www.cloudswitched.com/blog/keyword-research-find-customer-searches
+keyword,cloudswitched.com,warehouse wi-fi,6,170,0,38.81999969482422,0.32,,guide/blog,,https://www.cloudswitched.com/blog/wifi-warehouse-industrial-space
+keyword,cloudswitched.com,warehouse wi fi,7,170,0,38.81999969482422,0.22,,guide/blog,,https://www.cloudswitched.com/blog/wifi-warehouse-industrial-space
+keyword,cloudswitched.com,accountants tonbridge,16,170,0,10.470000267028809,0.22,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/accountants/tonbridge
+keyword,cloudswitched.com,google versus microsoft,11,170,10,2.740000009536743,0.2,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-vs-google-workspace
+keyword,cloudswitched.com,warehouse wifi,8,170,0,38.81999969482422,0.19,,guide/blog,,https://www.cloudswitched.com/blog/wifi-warehouse-industrial-space
+keyword,cloudswitched.com,wifi for warehouse,9,170,0,38.81999969482422,0.16,,guide/blog,,https://www.cloudswitched.com/blog/wifi-warehouse-industrial-space
+keyword,cloudswitched.com,cost of leased line,17,170,8,57.209999084472656,0.15,,guide/blog,,https://www.cloudswitched.com/blog/leased-line-cost-uk-2026-pricing
+keyword,cloudswitched.com,wifi in warehouse,8,170,0,38.81999969482422,0.11,,guide/blog,,https://www.cloudswitched.com/blog/wifi-warehouse-industrial-space
+keyword,cloudswitched.com,calculate uptime,4,170,5,,0.02,,free calculator tool,,https://www.cloudswitched.com/tools/network-uptime-calculator
+keyword,createwith.com,lennoxtown library,16,170,0,,1.55,,event listing,,https://createwith.com/event/glasgow-lennoxtown-library-talks-unlock-ai-in-an-hour-may-2026
+keyword,createwith.com,evolve brighton,19,170,0,,1.09,,event listing,,https://www.createwith.com/event/brighton-evolve-26-shaping-tomorrow-jun-2026
+keyword,createwith.com,world of learning 2026,17,170,0,4.519999980926514,0.86,,event listing,,https://createwith.com/event/birmingham-the-world-of-learning-conference-exhibition-2026-oct-2026
+keyword,cloudswitched.com,e-commerce seo,9,140,25,68.87999725341797,1.48,,guide/blog,,https://www.cloudswitched.com/blog/ecommerce-seo-guide-uk-online-retailers
+keyword,cloudswitched.com,dental it support uk,18,140,0,,0.63,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/it-support-pay-as-you-go-uk/dental
+keyword,cloudswitched.com,meraki cameras,11,140,0,5.929999828338623,0.5,,guide/blog,,https://www.cloudswitched.com/blog/meraki-mv-smart-cameras
+keyword,cloudswitched.com,seo lichfield,13,140,0,,0.5,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/startups/lichfield
+keyword,cloudswitched.com,what is wi-fi 5,11,140,2,,0.37,,guide/blog,,https://www.cloudswitched.com/blog/wifi-6-vs-wifi-5-upgrade
+keyword,cloudswitched.com,what is a distro list,15,140,0,,0.36,,guide/blog,,https://www.cloudswitched.com/blog/shared-mailboxes-vs-distribution-lists
+keyword,cloudswitched.com,what is sogea broadband,18,140,0,9.329999923706055,0.26,,guide/blog,,https://www.cloudswitched.com/blog/sogea-fttp-business-broadband-explained
+keyword,cloudswitched.com,agencies in andover,7,140,0,0.6000000238418579,0.21,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/professional-services/andover
+keyword,cloudswitched.com,sunderland charities,12,140,0,22.079999923706055,0.21,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/charities/sunderland
+keyword,cloudswitched.com,charities in sunderland,11,140,0,22.079999923706055,0.2,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/charities/sunderland
+keyword,cloudswitched.com,cisco meraki ap,13,140,0,4.050000190734863,0.19,,guide/blog,,https://www.cloudswitched.com/blog/guide-meraki-access-points-offices
+keyword,cloudswitched.com,what is distribution list,17,140,3,,0.17,,guide/blog,,https://www.cloudswitched.com/blog/shared-mailboxes-vs-distribution-lists
+keyword,cloudswitched.com,charities in colchester,11,140,0,4.309999942779541,0.16,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/charities/colchester
+keyword,cloudswitched.com,burnley agencies,13,140,0,0.6399999856948853,0.16,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/creative-agencies/burnley
+keyword,cloudswitched.com,cisco meraki access point,13,140,0,4.050000190734863,0.16,,guide/blog,,https://www.cloudswitched.com/blog/guide-meraki-access-points-offices
+keyword,cloudswitched.com,mobile service providers comparison,9,140,0,1.9900000095367432,0.01,,guide/blog,,https://www.cloudswitched.com/blog/voip-vs-traditional-phone-systems-cost-comparison
+keyword,createwith.com,dma awards 2025,6,140,0,,0.95,,event listing,,https://www.createwith.com/event/edinburgh-webinar-dma-award-winners-2025-showcase-email-gold-may-2026
+keyword,createwith.com,pydata london 2026,14,140,14,4.059999942779541,0.92,,event listing,,https://createwith.com/event/london-pydata-london-2026-jun-2026
+keyword,createwith.com,wearedevelopers,20,140,17,6.119999885559082,0.57,,event listing,,https://www.createwith.com/event/berlin-wearedevelopers-world-congress-jul-2026
+keyword,cloudswitched.com,east sussex secure mail,3,110,0,,6.32,,service page (programmatic location),,https://www.cloudswitched.com/solutions/cloud-email/education/sussex
+keyword,cloudswitched.com,pay per click united kingdom,8,110,0,50.68000030517578,0.88,,guide/blog,,https://www.cloudswitched.com/blog/google-ads-cost-uk-2026-ppc-pricing
+keyword,cloudswitched.com,3.4 2,16,110,0,,0.76,,guide/blog,,https://www.cloudswitched.com/blog/3-2-1-backup-rule-ransomware-proof-cloud-backup-uk-2026
+keyword,cloudswitched.com,caredocs portal app,15,110,0,,0.66,,service page,,https://www.cloudswitched.com/solutions/azure-cloud-server/elderly-care/esher
+keyword,cloudswitched.com,sainsbury pet portal sign in online,15,110,0,3.4200000762939453,0.59,,service page (programmatic location),,https://www.cloudswitched.com/services/google-ads/google-shopping-ads-management-uk/pet-services
+keyword,cloudswitched.com,seo basingstoke,16,110,0,23.229999542236328,0.58,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/basingstoke
+keyword,cloudswitched.com,enfield csp,12,110,0,,0.57,,service page (programmatic location),,https://www.cloudswitched.com/services/database-reporting/finance/enfield
+keyword,cloudswitched.com,seo agency in preston,9,110,0,,0.48,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/sports-leisure/preston
+keyword,cloudswitched.com,softphone surgery connect,19,110,0,,0.43,,service page (programmatic location),,https://www.cloudswitched.com/solutions/voip/healthcare/walton-on-thames
+keyword,cloudswitched.com,andover printers,15,110,0,1.090000033378601,0.42,,service page (programmatic location),,https://www.cloudswitched.com/solutions/voip/printing-packaging/andover
+keyword,cloudswitched.com,seo services cheltenham,19,110,0,,0.4,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/dental/cheltenham
+keyword,cloudswitched.com,seo warrington,14,110,0,,0.23,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/pharmaceutical/warrington
+keyword,cloudswitched.com,ip settings dhcp,20,110,19,,0.22,,guide/blog,,https://www.cloudswitched.com/blog/dhcp-explained-ip-addresses
+keyword,cloudswitched.com,web designer in wigan,15,110,0,5.400000095367432,0.18,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/retail/wigan
+keyword,cloudswitched.com,slack teams,20,110,11,,0.18,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-vs-slack
+keyword,cloudswitched.com,website design wellingborough,17,110,0,5.829999923706055,0.15,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/opticians/wellingborough
+keyword,cloudswitched.com,law firms middlesbrough,16,110,0,3.25,0.14,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/law-firms/middlesbrough
+keyword,cloudswitched.com,microsoft azure cost,16,110,22,11.819999694824219,0.11,,guide/blog,,https://www.cloudswitched.com/blog/azure-pricing-payg-vs-reserved
+keyword,cloudswitched.com,keywords for business,8,110,11,,0.1,,guide/blog,,https://www.cloudswitched.com/blog/keyword-research-find-customer-searches
+keyword,cloudswitched.com,what is a reporting database,8,110,0,,0.09,,guide/blog,,https://www.cloudswitched.com/blog/data-warehouse-vs-reporting-database-uk-guide-2026
+keyword,cloudswitched.com,managed unmanaged switch,19,110,3,0.9599999785423279,0.06,,guide/blog,,https://www.cloudswitched.com/blog/network-switches-managed-vs-unmanaged
+keyword,cloudswitched.com,walton on thames removals,20,110,0,2.2100000381469727,0.06,,service page (programmatic location),,https://www.cloudswitched.com/services/google-ads/removals-storage/walton-on-thames
+keyword,cloudswitched.com,local seo pack,4,110,8,13.300000190734863,0.02,,guide/blog,,https://www.cloudswitched.com/blog/local-seo-uk-business-google-local-pack-guide-2026
+keyword,cloudswitched.com,chichester seo,19,110,0,7.760000228881836,0.01,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/creative-agencies/chichester
+keyword,cloudswitched.com,microsoft desktop virtualization,16,110,26,7.909999847412109,0,,guide/blog,,https://www.cloudswitched.com/blog/azure-virtual-desktop-guide
+keyword,cloudswitched.com,teams slack,18,110,10,,0,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-vs-slack
+keyword,createwith.com,createwith,1,110,8,,34.88,,homepage,,https://createwith.com/
+keyword,createwith.com,databutton,2,110,7,6.860000133514404,10.45,,tool directory/profile,,https://createwith.com/tool/databutton
+keyword,createwith.com,robocode leicester,6,110,0,7.429999828338623,1.71,,event listing,,https://www.createwith.com/event/leicester-vibe-code-social-leicester-jun-2026
+keyword,createwith.com,belfast tech week,15,110,0,10.920000076293945,1.22,,city hub,,https://createwith.com/cities/belfast
+keyword,createwith.com,figma events,10,110,0,,0.22,,tool directory/profile,,https://createwith.com/tool/figma/events/amsterdam
+keyword,createwith.com,figma event,9,110,21,,0.09,,tool directory/profile,,https://www.createwith.com/tool/figma/events
+keyword,openkit.co.uk,air aware labs,18,90,0,,0.55,,case study,,https://openkit.co.uk/portfolio/air-aware
+keyword,openkit.co.uk,air aware,16,90,0,,0.22,,case study,,https://openkit.co.uk/portfolio/air-aware
+keyword,cloudswitched.com,remote access loughborough,2,90,0,,14.76,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/professional-services/loughborough
+keyword,cloudswitched.com,ecommerce seo packages,2,90,0,,5.47,,guide/blog,,https://www.cloudswitched.com/blog/ecommerce-seo-guide-uk-online-retailers
+keyword,cloudswitched.com,seo blackpool,1,90,0,,2.06,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/events-conferences/blackpool
+keyword,cloudswitched.com,ats telford,6,90,0,1.1299999952316284,1.4,,service page (programmatic location),,https://www.cloudswitched.com/solutions/voip/recruitment/telford
+keyword,cloudswitched.com,seo agency in bradford,1,90,0,9.770000457763672,1.37,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/professional-services/bradford
+keyword,cloudswitched.com,seo for online shops,4,90,10,,1.27,,guide/blog,,https://www.cloudswitched.com/blog/ecommerce-seo-guide-uk-online-retailers
+keyword,cloudswitched.com,seo agency cheltenham,5,90,0,62,1.16,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/healthcare/cheltenham
+keyword,cloudswitched.com,meraki walton on thames,7,90,0,,1.0,,service page (programmatic location),,https://www.cloudswitched.com/solutions/voip/beauty-cosmetics/walton-on-thames
+keyword,cloudswitched.com,sogea line,6,90,0,,1.0,,guide/blog,,https://www.cloudswitched.com/blog/sogea-fttp-business-broadband-explained
+keyword,cloudswitched.com,google ads cost uk,7,90,0,14.010000228881836,0.98,,guide/blog,,https://www.cloudswitched.com/blog/google-ads-cost-uk-2026-ppc-pricing
+keyword,cloudswitched.com,towergate henley,20,90,0,,0.91,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/insurance/henley-on-thames
+keyword,cloudswitched.com,spire insurance chesterfield,14,90,0,64.37999725341797,0.77,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/insurance/chesterfield
+keyword,cloudswitched.com,blackpool csp,9,90,0,,0.72,,service page (programmatic location),,https://www.cloudswitched.com/solutions/voip/physiotherapy/blackpool
+keyword,cloudswitched.com,fero letchworth,9,90,0,6.110000133514404,0.71,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/retail/letchworth
+keyword,cloudswitched.com,azure bangor,5,90,0,,0.7,,service page,,https://www.cloudswitched.com/solutions/azure-cloud-server/beauty-cosmetics/bangor-wales
+keyword,cloudswitched.com,greenwich coworking space,16,90,0,11.420000076293945,0.54,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/coworking/greenwich
+keyword,cloudswitched.com,microsoft office plans,9,90,24,1.350000023841858,0.46,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,my tfl sharepoint,12,90,0,,0.45,,guide/blog,,https://www.cloudswitched.com/news/scattered-spider-tfl-sentencing-july-2026-uk-sme-it-support-social-engineering
+keyword,cloudswitched.com,m365 plans,15,90,14,1.9300000667572021,0.43,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,harrogate seo,5,90,0,,0.42,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/food-beverage/harrogate
+keyword,cloudswitched.com,best recruitment agencies norwich,12,90,0,1.2999999523162842,0.38,,service page,,https://www.cloudswitched.com/solutions/connectivity/recruitment/norwich
+keyword,cloudswitched.com,google map seo services,7,90,0,,0.33,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/google-maps-seo-uk/creative-agencies
+keyword,cloudswitched.com,website design westminster,20,90,20,,0.33,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/architecture/westminster
+keyword,cloudswitched.com,it support canterbury,20,90,0,5.720000267028809,0.29,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/kent
+keyword,cloudswitched.com,it support horsham,19,90,0,2.630000114440918,0.27,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/funeral-services/horsham
+keyword,cloudswitched.com,seo services essex,9,90,0,5.760000228881836,0.26,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/basildon
+keyword,cloudswitched.com,ppc 2026,16,90,8,,0.24,,guide/blog,,https://www.cloudswitched.com/blog/google-ads-cost-uk-2026-ppc-pricing
+keyword,cloudswitched.com,web design chelsea,18,90,0,,0.23,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/interior-design/kensington-and-chelsea
+keyword,cloudswitched.com,solution recruitment middlesbrough,19,90,0,,0.22,,service page (programmatic location),,https://www.cloudswitched.com/services/ai/recruitment/middlesbrough
+keyword,cloudswitched.com,how much does it cost to advertise on google,2,90,0,21.889999389648438,0.19,,guide/blog,,https://www.cloudswitched.com/blog/google-ads-cost-uk-2026-ppc-pricing
+keyword,cloudswitched.com,seo specialist oxford,20,90,0,,0.16,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/childcare-nurseries/oxford
+keyword,cloudswitched.com,microsoft storage plans,19,90,9,2.3399999141693115,0.14,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,leased line comparison,19,90,0,67.80000305175781,0.14,,guide/blog,,https://www.cloudswitched.com/blog/leased-line-cost-uk-2026-pricing
+keyword,cloudswitched.com,what is peering,13,90,21,,0.12,,guide/blog,,https://www.cloudswitched.com/blog/understanding-internet-peering-why-it-matters
+keyword,cloudswitched.com,solicitors old town stevenage,17,90,0,10.640000343322754,0.12,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/law-firms/stevenage
+keyword,cloudswitched.com,seo for online stores,15,90,0,,0.11,,guide/blog,,https://www.cloudswitched.com/blog/ecommerce-seo-guide-uk-online-retailers
+keyword,cloudswitched.com,advantages and disadvantages of active directory,16,90,0,,0.1,,guide/blog,,https://www.cloudswitched.com/blog/active-directory-business-networks
+keyword,cloudswitched.com,seo agency bradford,16,90,0,9.770000457763672,0.1,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/professional-services/bradford
+keyword,cloudswitched.com,seo farnham,17,90,0,,0.1,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/finance/farnham
+keyword,cloudswitched.com,opticians in salford,19,90,0,4.949999809265137,0.08,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/opticians/salford
+keyword,cloudswitched.com,architect in weybridge,18,90,0,9.350000381469727,0.06,,service page (programmatic location),,https://www.cloudswitched.com/services/google-ads/architecture/weybridge
+keyword,cloudswitched.com,wifi for office,19,90,7,50.15999984741211,0.05,,guide/blog,,https://www.cloudswitched.com/blog/complete-guide-business-broadband-uk
+keyword,cloudswitched.com,keyword reporting,17,90,6,,0.04,,guide/blog,,https://www.cloudswitched.com/blog/keyword-research-find-customer-searches
+keyword,cloudswitched.com,wifi solution for business,18,90,0,37.290000915527344,0.04,,guide/blog,,https://www.cloudswitched.com/blog/guide-to-mesh-wifi-business-premises
+keyword,cloudswitched.com,cheltenham seo agency,7,90,0,62,0.01,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/healthcare/cheltenham
+keyword,cloudswitched.com,reporting database,8,90,0,,0.0,,guide/blog,,https://www.cloudswitched.com/blog/database-reporting-tools-compared
+keyword,cloudswitched.com,reports in a database,8,90,0,,0.0,,guide/blog,,https://www.cloudswitched.com/blog/database-reporting-tools-compared
+keyword,cloudswitched.com,reports from database,12,90,0,,0.0,,guide/blog,,https://www.cloudswitched.com/blog/database-reporting-tools-compared
+keyword,cloudswitched.com,redundancy in network,16,90,0,,0,,guide/blog,,https://www.cloudswitched.com/blog/network-redundancy-prevent-single-point-failure
+keyword,createwith.com,code connect figma,1,90,0,,10.12,,tool directory/profile,,https://createwith.com/tool/figma/updates/figma-enhances-code-connect-ui-with-multiple-code-file-mapping
+keyword,createwith.com,framer corner,2,90,0,0.25999999046325684,3.33,,tool directory/profile,,https://createwith.com/tool/framer/updates/framer-introduces-squircles-for-super-smooth-corner-styling-in-december-update
+keyword,createwith.com,apidays london,15,90,2,,0.71,,event listing,,https://www.createwith.com/event/london-apidays-london-sep-2025
+keyword,createwith.com,adalo app,11,90,6,17.219999313354492,0.54,,tool directory/profile,,https://www.createwith.com/tool/adalo
+keyword,createwith.com,vercel ship london,18,90,11,,0.52,,tool directory/profile,,https://createwith.com/tool/vercel/updates/7470cdcb-80bd-4e35-83e7-554aa6957993
+keyword,createwith.com,blush designs,5,90,0,5.880000114440918,0.45,,tool directory/profile,,https://createwith.com/tool/blush
+keyword,createwith.com,bolt referral,20,90,0,,0.38,,tool directory/profile,,https://www.createwith.com/tool/bolt/updates/bolt-launches-referral-program-to-reward-users-for-sharing-the-platform
+keyword,createwith.com,event tech live london,15,90,20,,0.2,,event listing,,https://createwith.com/event/london-event-tech-live-london-event-technology-conference-exhibitio-nov-2026
+keyword,createwith.com,glasgow code,20,90,0,,0.09,,event listing,,https://www.createwith.com/event/glasgow-glasgow-launches-no-code-pilot-oct-2025
+keyword,newlens.uk,matthew keys,9,70,0,,0.22,,other,,https://www.newlens.uk/matthew-keys.html
+keyword,openkit.co.uk,hallam internet,10,70,0,,0.47,,case study,,https://openkit.co.uk/portfolio/hallam-internet-total-search-visibility-platform
+keyword,openkit.co.uk,technology in south korea,5,70,0,,0.22,,guide/blog,,https://openkit.co.uk/blog/posts/openkit-smart-cities-korea-innovation
+keyword,openkit.co.uk,uk pubs for lease,15,70,9,1.2400000095367432,0.02,,case study,,https://openkit.co.uk/portfolio/pubs-advisory-service
+keyword,cloudswitched.com,seo company poole,1,70,0,,3.21,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/poole
+keyword,cloudswitched.com,ecommerce seo uk,4,70,0,,1.88,,guide/blog,,https://www.cloudswitched.com/blog/ecommerce-seo-guide-uk-online-retailers
+keyword,cloudswitched.com,travel seo company,5,70,0,,1.39,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/seo-agency-manchester/travel
+keyword,cloudswitched.com,ppc uk,5,70,0,,1.23,,guide/blog,,https://www.cloudswitched.com/blog/google-ads-cost-uk-2026-ppc-pricing
+keyword,cloudswitched.com,warehouse wifi solutions,4,70,0,,0.99,,guide/blog,,https://www.cloudswitched.com/blog/guide-to-mesh-wifi-business-premises
+keyword,cloudswitched.com,access point calculator,5,70,0,,0.92,,free calculator tool,,https://www.cloudswitched.com/tools/wifi-coverage-calculator
+keyword,cloudswitched.com,factory internet,11,70,2,1.100000023841858,0.75,,service page,,https://www.cloudswitched.com/solutions/connectivity/manufacturing/twickenham
+keyword,cloudswitched.com,ups redundancy uk,6,70,0,3.940000057220459,0.55,,guide/blog,,https://www.cloudswitched.com/blog/network-redundancy-prevent-single-point-failure
+keyword,cloudswitched.com,southend intranet,14,70,0,,0.53,,service page (programmatic location),,https://www.cloudswitched.com/solutions/cloud-email/professional-services/southend
+keyword,cloudswitched.com,azure on prem,13,70,13,,0.46,,guide/blog,,https://www.cloudswitched.com/blog/on-premise-vs-azure-cloud-vs-hybrid-comparison
+keyword,cloudswitched.com,google ads services st albans,9,70,0,,0.44,,service page (programmatic location),,https://www.cloudswitched.com/services/google-ads/professional-services/st-albans
+keyword,cloudswitched.com,southend it,19,70,8,1.7000000476837158,0.44,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/southend
+keyword,cloudswitched.com,pcmis login,13,70,0,,0.4,,service page (programmatic location),,https://www.cloudswitched.com/services/virtual-cio/mental-health/worthing
+keyword,cloudswitched.com,seo agency in worcester,3,70,0,,0.39,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/logistics/worcester
+keyword,cloudswitched.com,security company chelmsford,16,70,0,3.4200000762939453,0.39,,service page (programmatic location),,https://www.cloudswitched.com/services/network-admin/security-services/chelmsford
+keyword,cloudswitched.com,seo rochdale,20,70,0,,0.35,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/coworking/rochdale
+keyword,cloudswitched.com,azure on premise,11,70,2,,0.34,,guide/blog,,https://www.cloudswitched.com/blog/on-premise-vs-azure-cloud-vs-hybrid-comparison
+keyword,cloudswitched.com,property management chichester,13,70,4,4.150000095367432,0.34,,service page,,https://www.cloudswitched.com/solutions/cloud-networking/property-management/chichester
+keyword,cloudswitched.com,printing letchworth,15,70,0,1.8299999237060547,0.32,,service page,,https://www.cloudswitched.com/solutions/connectivity/printing-packaging/letchworth
+keyword,cloudswitched.com,phone system on the internet,2,70,0,32.529998779296875,0.32,,guide/blog,,https://www.cloudswitched.com/blog/voip-vs-traditional-phone-systems-cost-comparison
+keyword,cloudswitched.com,seo wrexham,20,70,0,,0.29,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/professional-services/wrexham
+keyword,cloudswitched.com,switched on london reviews,20,70,0,,0.28,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/it-support-london/interior-design
+keyword,cloudswitched.com,phone corner repair centre mansfield reviews,12,70,0,,0.28,,service page (programmatic location),,https://www.cloudswitched.com/solutions/voip/construction/mansfield
+keyword,cloudswitched.com,web design folkestone,15,70,0,,0.28,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/architecture/folkestone
+keyword,cloudswitched.com,redbridge iapt,17,70,0,4.21999979019165,0.27,,service page (programmatic location),,https://www.cloudswitched.com/services/it-office-moves/mental-health/redbridge
+keyword,cloudswitched.com,seo company cheltenham,14,70,0,,0.27,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/healthcare/cheltenham
+keyword,cloudswitched.com,google ads services hertfordshire,12,70,0,,0.27,,service page (programmatic location),,https://www.cloudswitched.com/services/google-ads/events-conferences/hertfordshire
+keyword,cloudswitched.com,it support stafford,19,70,0,9.6899995803833,0.24,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/education/stafford
+keyword,cloudswitched.com,rapid recovery corby,16,70,0,8.119999885559082,0.24,,service page,,https://www.cloudswitched.com/solutions/cloud-backup/food-beverage/corby
+keyword,cloudswitched.com,runa sevenoaks,10,70,0,,0.23,,service page,,https://www.cloudswitched.com/solutions/cloud-networking/media/sevenoaks
+keyword,cloudswitched.com,what is risk in cyber security,11,70,11,,0.21,,guide/blog,,https://www.cloudswitched.com/blog/cybersecurity-risk-assessment
+keyword,cloudswitched.com,mansfield seo,13,70,0,,0.2,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/media/mansfield
+keyword,cloudswitched.com,dark fibre network uk,14,70,0,,0.19,,guide/blog,,https://www.cloudswitched.com/blog/understanding-dark-fibre-business-applications
+keyword,cloudswitched.com,availability calculator,8,70,2,,0.18,,free calculator tool,,https://www.cloudswitched.com/tools/network-uptime-calculator
+keyword,cloudswitched.com,it support in southend,20,70,0,7,0.18,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/southend
+keyword,cloudswitched.com,it support southend,20,70,0,7,0.18,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/southend
+keyword,cloudswitched.com,expressroute azure,11,70,14,,0.17,,guide/blog,,https://www.cloudswitched.com/blog/azure-expressroute-dedicated-connection
+keyword,cloudswitched.com,network maintenance,15,70,0,,0.17,,service page (programmatic location),,https://www.cloudswitched.com/services/network-admin/network-maintenance-uk
+keyword,cloudswitched.com,pay as you go it support,9,70,0,40.599998474121094,0.16,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/it-support-pay-as-you-go-uk/recruitment
+keyword,cloudswitched.com,it support for logistics,18,70,0,,0.14,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/logistics/romford
+keyword,cloudswitched.com,teams vs slack,18,70,4,,0.14,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-vs-slack
+keyword,cloudswitched.com,self storage east grinstead,18,70,0,14.050000190734863,0.12,,service page,,https://www.cloudswitched.com/solutions/cloud-backup/removals-storage/east-grinstead
+keyword,cloudswitched.com,retail seo,9,70,0,,0.11,,guide/blog,,https://www.cloudswitched.com/blog/ecommerce-seo-guide-uk-online-retailers
+keyword,cloudswitched.com,email migration,17,70,18,11.079999923706055,0.1,,guide/blog,,https://www.cloudswitched.com/blog/email-migration-checklist
+keyword,cloudswitched.com,seo worthing,18,70,0,,0.08,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/startups/worthing
+keyword,cloudswitched.com,exchange online plans,19,70,0,6.199999809265137,0.08,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,business internet line,16,70,22,37.66999816894531,0.07,,guide/blog,,https://www.cloudswitched.com/blog/complete-guide-business-broadband-uk
+keyword,cloudswitched.com,seo company perth,19,70,2,,0.06,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/media/perth
+keyword,cloudswitched.com,meraki cctv,13,70,0,5.320000171661377,0.05,,guide/blog,,https://www.cloudswitched.com/blog/meraki-mv-smart-cameras
+keyword,cloudswitched.com,what is support engineer,16,70,0,,0.05,,guide/blog,,https://www.cloudswitched.com/blog/role-of-it-support-engineer
+keyword,cloudswitched.com,internet solutions for business,19,70,19,,0.04,,guide/blog,,https://www.cloudswitched.com/blog/complete-guide-business-broadband-uk
+keyword,cloudswitched.com,server migrate,13,70,2,13.619999885559082,0.0,,guide/blog,,https://www.cloudswitched.com/blog/how-to-migrate-windows-server-file-server-azure
+keyword,cloudswitched.com,report server,19,70,11,3.6399998664855957,0.0,,guide/blog,,https://www.cloudswitched.com/blog/sql-server-reporting-services-guide
+keyword,cloudswitched.com,networking vlan,10,70,9,6.590000152587891,0.0,,guide/blog,,https://www.cloudswitched.com/blog/understanding-vlans-business-network
+keyword,cloudswitched.com,vlan network,10,70,15,6.590000152587891,0.0,,guide/blog,,https://www.cloudswitched.com/blog/understanding-vlans-business-network
+keyword,cloudswitched.com,migrate server,20,70,11,13.619999885559082,0.0,,guide/blog,,https://www.cloudswitched.com/blog/how-to-migrate-windows-server-file-server-azure
+keyword,cloudswitched.com,express routes azure,20,70,15,,0,,guide/blog,,https://www.cloudswitched.com/blog/azure-expressroute-dedicated-connection
+keyword,cloudswitched.com,online backup for nas,18,70,15,4.150000095367432,0,,guide/blog,,https://www.cloudswitched.com/blog/on-premise-nas-vs-cloud-backup-cost
+keyword,createwith.com,lovebay,16,70,0,,0.73,,tool directory/profile,,https://www.createwith.com/tool/lovable
+keyword,createwith.com,figma conference,16,70,17,1.9700000286102295,0.42,,tool directory/profile,,https://www.createwith.com/tool/figma/events
+keyword,createwith.com,leap riyadh 2026,15,70,19,0.7400000095367432,0.4,,event listing,,https://www.createwith.com/event/riyadh-leap-2026-tech-conference-apr-2026
+keyword,createwith.com,rsecon26,16,70,0,,0.28,,event listing,,https://www.createwith.com/event/sheffield-research-software-engineering-conference-2026-sep-2026
+keyword,createwith.com,lovable dover,12,70,24,3.1500000953674316,0.18,,tool directory/profile,,https://www.createwith.com/tool/lovable
+keyword,createwith.com,tech tuesday,17,70,0,,0.17,,event listing,,https://www.createwith.com/event/oxford-tech-tuesday-apr-2026
+keyword,createwith.com,create your,18,70,26,,0.14,,homepage,,https://www.createwith.com/
+keyword,createwith.com,create y,19,70,28,,0.13,,homepage,,https://www.createwith.com/
+keyword,createwith.com,perplexity health,18,70,0,,0.12,,tool directory/profile,,https://createwith.com/tool/perplexity/updates/1a5f91ba-fece-44f5-9117-7a5b8c71768c
+keyword,createwith.com,eventbrite coding,18,70,0,,0.06,,other,,https://www.createwith.com/countries/uk
+keyword,createwith.com,figma conferences,14,70,16,1.9700000286102295,0,,tool directory/profile,,https://www.createwith.com/tool/figma/events
+keyword,openkit.co.uk,zappl,3,50,0,,1.68,,case study,,https://openkit.co.uk/portfolio/zappl-enterprise-apple-device-management
+keyword,cloudswitched.com,cisco meraki firewalls,5,50,0,6.869999885559082,0.84,,guide/blog,,https://www.cloudswitched.com/blog/meraki-mx-vs-traditional-firewalls
+keyword,cloudswitched.com,seo scunthorpe,5,50,0,,0.49,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/scunthorpe
+keyword,cloudswitched.com,website updates maintenance,6,50,16,,0.46,,guide/blog,,https://www.cloudswitched.com/blog/website-maintenance-updates
+keyword,cloudswitched.com,maintenance and updates website,3,50,15,,0.44,,guide/blog,,https://www.cloudswitched.com/blog/website-maintenance-updates
+keyword,cloudswitched.com,scunthorpe seo,4,50,0,,0.39,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/scunthorpe
+keyword,cloudswitched.com,google ads sussex,13,50,0,,0.31,,service page (programmatic location),,https://www.cloudswitched.com/services/google-ads/hospitality/sussex
+keyword,cloudswitched.com,slack and microsoft,18,50,26,,0.29,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-vs-slack
+keyword,cloudswitched.com,seo burnley,15,50,0,5.369999885559082,0.29,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/creative-agencies/burnley
+keyword,cloudswitched.com,onedrive or sharepoint,19,50,0,,0.28,,guide/blog,,https://www.cloudswitched.com/blog/onedrive-vs-sharepoint-difference
+keyword,cloudswitched.com,seo aylesbury,16,50,0,,0.28,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/retail/aylesbury
+keyword,cloudswitched.com,it outcomes,15,50,0,,0.28,,guide/blog,,https://www.cloudswitched.com/blog/how-good-is-your-it-support-the-ultimate-10-point-checklist
+keyword,cloudswitched.com,seo ashford,19,50,0,43.2599983215332,0.28,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/startups/ashford-kent
+keyword,cloudswitched.com,seo witney,17,50,13,,0.25,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/media/witney
+keyword,cloudswitched.com,landingzone azure,11,50,0,,0.25,,guide/blog,,https://www.cloudswitched.com/blog/azure-landing-zones-setting-up-cloud-foundations
+keyword,cloudswitched.com,local seo wakefield,16,50,0,,0.25,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/media/wakefield
+keyword,cloudswitched.com,ppc property management,19,50,0,,0.24,,service page (programmatic location),,https://www.cloudswitched.com/services/google-ads/ppc-management-cost-uk/real-estate
+keyword,cloudswitched.com,seo leamington spa,18,50,0,5.550000190734863,0.24,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/beauty-cosmetics/leamington-spa
+keyword,cloudswitched.com,ipv6 adoption,18,50,28,,0.23,,guide/blog,,https://www.cloudswitched.com/blog/ipv4-vs-ipv6-uk-businesses
+keyword,cloudswitched.com,sogea fibre,19,50,0,6.710000038146973,0.23,,guide/blog,,https://www.cloudswitched.com/blog/sogea-fttp-business-broadband-explained
+keyword,cloudswitched.com,rochester seo,16,50,0,,0.21,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/rochester
+keyword,cloudswitched.com,seo stevenage,12,50,0,66.2300033569336,0.19,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/recruitment/stevenage
+keyword,cloudswitched.com,downtime calculator,10,50,4,,0.19,,free calculator tool,,https://www.cloudswitched.com/tools/network-uptime-calculator
+keyword,cloudswitched.com,wbc sogea,10,50,0,,0.16,,guide/blog,,https://www.cloudswitched.com/blog/sogea-fttp-business-broadband-explained
+keyword,cloudswitched.com,it support middlesbrough,18,50,0,13.010000228881836,0.15,,service page (programmatic location),,https://www.cloudswitched.com/services/it-support/food-beverage/middlesbrough
+keyword,cloudswitched.com,outlook chester,14,50,0,3.259999990463257,0.15,,service page (programmatic location),,https://www.cloudswitched.com/solutions/cloud-email/architecture/chester
+keyword,cloudswitched.com,what is azure virtual desktop,11,50,27,7.079999923706055,0.13,,guide/blog,,https://www.cloudswitched.com/blog/azure-virtual-desktop-guide
+keyword,cloudswitched.com,what is soadsl,19,50,0,,0.12,,guide/blog,,https://www.cloudswitched.com/blog/sogea-fttp-business-broadband-explained
+keyword,cloudswitched.com,openreach ead,12,50,0,,0.12,,guide/blog,,https://www.cloudswitched.com/blog/guide-to-business-ethernet-eofttp-ead
+keyword,cloudswitched.com,youtube demand gen,20,50,4,,0.12,,guide/blog,,https://www.cloudswitched.com/blog/how-to-use-google-ads-demand-gen-campaigns
+keyword,cloudswitched.com,margate recruitment agencies,13,50,7,1.2899999618530273,0.11,,service page (programmatic location),,https://www.cloudswitched.com/services/database-reporting/recruitment/margate
+keyword,cloudswitched.com,outlook business email pricing,16,50,15,7.179999828338623,0.09,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,on premises exchange,6,50,0,,0.08,,guide/blog,,https://www.cloudswitched.com/blog/exchange-online-vs-on-premise
+keyword,cloudswitched.com,seo rochester,15,50,0,,0.06,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/rochester
+keyword,cloudswitched.com,bt leased line costs,12,50,0,46.130001068115234,0.06,,guide/blog,,https://www.cloudswitched.com/blog/leased-line-cost-uk-2026-pricing
+keyword,cloudswitched.com,on premise exchange,8,50,0,,0.05,,guide/blog,,https://www.cloudswitched.com/blog/exchange-online-vs-on-premise
+keyword,cloudswitched.com,pay-as-you-go azure,9,50,12,5.619999885559082,0.04,,guide/blog,,https://www.cloudswitched.com/blog/azure-pricing-payg-vs-reserved
+keyword,cloudswitched.com,non profit it support,10,50,0,26.280000686645508,0.03,,guide/blog,,https://www.cloudswitched.com/blog/it-support-charities-non-profits
+keyword,cloudswitched.com,it support for nonprofits,14,50,0,26.280000686645508,0.03,,guide/blog,,https://www.cloudswitched.com/blog/it-support-charities-non-profits
+keyword,cloudswitched.com,nonprofit it support,15,50,10,26.280000686645508,0.02,,guide/blog,,https://www.cloudswitched.com/blog/it-support-charities-non-profits
+keyword,cloudswitched.com,not for profit it support,12,50,0,26.280000686645508,0.02,,guide/blog,,https://www.cloudswitched.com/blog/it-support-charities-non-profits
+keyword,cloudswitched.com,it support for non profit,16,50,0,26.280000686645508,0.02,,guide/blog,,https://www.cloudswitched.com/blog/it-support-charities-non-profits
+keyword,cloudswitched.com,cisco meraki firewall,6,50,0,6.869999885559082,0.0,,guide/blog,,https://www.cloudswitched.com/blog/meraki-mx-vs-traditional-firewalls
+keyword,cloudswitched.com,sharepoint or onedrive,16,50,0,,0.0,,guide/blog,,https://www.cloudswitched.com/blog/onedrive-vs-sharepoint-difference
+keyword,cloudswitched.com,outlook business email price,16,50,15,7.179999828338623,0,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+keyword,cloudswitched.com,requirements for a website,10,50,13,16.75,0,,guide/blog,,https://www.cloudswitched.com/resources/website-requirements-document-template
+keyword,cloudswitched.com,requirements of a website,13,50,0,16.75,0,,guide/blog,,https://www.cloudswitched.com/resources/website-requirements-document-template
+keyword,createwith.com,game pass nitro,8,50,27,,0.51,,tool directory/profile,,https://www.createwith.com/tool/discord/updates/discord-launches-nitro-rewards-with-xbox-game-pass-and-hardware-discounts
+keyword,createwith.com,skool website,12,50,6,0.3199999928474426,0.25,,tool directory/profile,,https://www.createwith.com/tool/skool
+keyword,openkit.co.uk,senai uk,13,40,0,,0.12,,other,,https://openkit.co.uk/industries/education
+keyword,cloudswitched.com,microsoft pbx,6,40,0,,0.53,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-phone-system
+keyword,cloudswitched.com,seo basildon,15,40,0,14.899999618530273,0.28,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/basildon
+keyword,cloudswitched.com,microsoft phone system,10,40,0,,0.21,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-phone-system
+keyword,cloudswitched.com,microsoft telephone system,11,40,5,,0.2,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-phone-system
+keyword,cloudswitched.com,microsoft business phone system,14,40,9,,0.19,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-teams-phone-system
+keyword,cloudswitched.com,seo slough,13,40,0,,0.15,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/saas-technology/slough
+keyword,cloudswitched.com,web design kensington,13,40,0,,0.15,,service page (programmatic location),,https://www.cloudswitched.com/services/web-development/interior-design/kensington-and-chelsea
+keyword,cloudswitched.com,office relocation project management,9,40,0,,0.08,,guide/blog,,https://www.cloudswitched.com/blog/it-office-move-project-management-guide-uk
+keyword,cloudswitched.com,ipv6 talktalk,17,40,0,,0.04,,guide/blog,,https://www.cloudswitched.com/blog/ipv4-vs-ipv6-uk-businesses
+keyword,cloudswitched.com,voip cost,12,40,0,6.650000095367432,0.03,,guide/blog,,https://www.cloudswitched.com/blog/voip-vs-traditional-phone-systems-cost-comparison
+keyword,cloudswitched.com,voip costs,12,40,0,6.650000095367432,0.03,,guide/blog,,https://www.cloudswitched.com/blog/voip-vs-traditional-phone-systems-cost-comparison
+keyword,cloudswitched.com,voicemail to email,20,40,0,,0.03,,guide/blog,,https://www.cloudswitched.com/blog/how-to-set-up-voip-voicemail-to-email
+keyword,cloudswitched.com,machine learning in business,15,40,22,,0.02,,guide/blog,,https://www.cloudswitched.com/blog/machine-learning-business
+keyword,cloudswitched.com,sql azure vs sql server,13,40,0,,0,,guide/blog,,https://www.cloudswitched.com/blog/azure-sql-vs-on-premise-sql
+keyword,cloudswitched.com,sql server vs azure sql,11,40,20,,0,,guide/blog,,https://www.cloudswitched.com/blog/azure-sql-vs-on-premise-sql
+keyword,createwith.com,typeform create,7,40,5,0.49000000953674316,0.21,,tool directory/profile,,https://www.createwith.com/tool/typeform
+keyword,cloudswitched.com,server room installation,3,30,0,,1.15,,guide/blog,,https://www.cloudswitched.com/blog/server-room-setup-new-office
+keyword,cloudswitched.com,seo rugby,20,30,0,,0.04,,service page (programmatic location),,https://www.cloudswitched.com/services/seo/saas-technology/rugby
+keyword,cloudswitched.com,google v microsoft,9,10,16,,0.03,,guide/blog,,https://www.cloudswitched.com/blog/microsoft-365-vs-google-workspace
+top_page,newlens.uk,,,,,,1.26,,homepage,1,https://www.newlens.uk/
+top_page,newlens.uk,,,,,,0.22,,other,1,https://www.newlens.uk/matthew-keys.html
+top_page,openkit.co.uk,,,,,,1.98,,guide/blog,4,https://openkit.co.uk/blog/posts/what-are-ai-agents
+top_page,openkit.co.uk,,,,,,1.83,,guide/blog,5,https://openkit.co.uk/blog/posts/what-does-an-ai-consultant-do
+top_page,openkit.co.uk,,,,,,1.68,,case study,1,https://openkit.co.uk/portfolio/zappl-enterprise-apple-device-management
+top_page,openkit.co.uk,,,,,,1.28,,guide/blog,1,https://openkit.co.uk/blog/posts/leading-ai-development-agencies-london-enterprise
+top_page,openkit.co.uk,,,,,,1.23,,guide/blog,1,https://openkit.co.uk/blog/posts/ai-consulting-uk-business-guide
+top_page,openkit.co.uk,,,,,,1.02,,guide/blog,3,https://openkit.co.uk/blog/posts/best-ai-consultancies-uk-mid-market
+top_page,openkit.co.uk,,,,,,0.98,,service page,5,https://openkit.co.uk/ai-services/ai-consulting
+top_page,openkit.co.uk,,,,,,0.83,,guide/blog,1,https://openkit.co.uk/blog/posts/eu-ai-act-uk-compliance-guide
+top_page,openkit.co.uk,,,,,,0.77,,case study,2,https://openkit.co.uk/portfolio/air-aware
+top_page,openkit.co.uk,,,,,,0.47,,case study,1,https://openkit.co.uk/portfolio/hallam-internet-total-search-visibility-platform
+top_page,openkit.co.uk,,,,,,0.39,,service page,1,https://openkit.co.uk/ai-services/large-language-model-development
+top_page,openkit.co.uk,,,,,,0.34,,guide/blog,3,https://openkit.co.uk/blog/posts/ai-assessment-tool-for-uk-teachers
+top_page,openkit.co.uk,,,,,,0.26,,other,3,https://openkit.co.uk/industries/education
+top_page,openkit.co.uk,,,,,,0.23,,guide/blog,2,https://openkit.co.uk/blog/posts/openkit-smart-cities-korea-innovation
+top_page,openkit.co.uk,,,,,,0.23,,other,1,https://openkit.co.uk/industries
+top_page,openkit.co.uk,,,,,,0.22,,guide/blog,1,https://openkit.co.uk/blog/posts/ai-agents-implementation-guide-uk
+top_page,openkit.co.uk,,,,,,0.17,,case study,1,https://openkit.co.uk/portfolio/baisics-ai-powered-legal-document-analysis-platform
+top_page,openkit.co.uk,,,,,,0.15,,case study,1,https://openkit.co.uk/portfolio/rentmy
+top_page,openkit.co.uk,,,,,,0.12,,guide/blog,3,https://openkit.co.uk/blog/posts/business-case-for-ai-roi-calculation
+top_page,openkit.co.uk,,,,,,0.12,,guide/blog,3,https://openkit.co.uk/blog/posts/generative-ai-consulting
+top_page,openkit.co.uk,,,,,,0.08,,homepage,2,https://openkit.co.uk/
+top_page,openkit.co.uk,,,,,,0.04,,other,1,https://openkit.co.uk/portfolio
+top_page,openkit.co.uk,,,,,,0.02,,case study,1,https://openkit.co.uk/portfolio/pubs-advisory-service
+top_page,openkit.co.uk,,,,,,0.0,,other,1,https://openkit.co.uk/about/iso-9001
+top_page,cloudswitched.com,,,,,,21.88,,guide/blog,2,https://www.cloudswitched.com/news/bt-email-password-reset-attack-2026
+top_page,cloudswitched.com,,,,,,18.35,,guide/blog,5,https://www.cloudswitched.com/blog/cyber-essentials-certification-guide
+top_page,cloudswitched.com,,,,,,17.07,,guide/blog,8,https://www.cloudswitched.com/blog/ecommerce-seo-guide-uk-online-retailers
+top_page,cloudswitched.com,,,,,,16.98,,guide/blog,5,https://www.cloudswitched.com/blog/guide-to-microsoft-advertising-bing-ads-business
+top_page,cloudswitched.com,,,,,,16.52,,guide/blog,23,https://www.cloudswitched.com/blog/keyword-research-find-customer-searches
+top_page,cloudswitched.com,,,,,,16.22,,guide/blog,22,https://www.cloudswitched.com/blog/microsoft-copilot-free-vs-business-which-do-you-need
+top_page,cloudswitched.com,,,,,,14.76,,service page (programmatic location),1,https://www.cloudswitched.com/services/it-support/professional-services/loughborough
+top_page,cloudswitched.com,,,,,,12.95,,guide/blog,30,https://www.cloudswitched.com/blog/microsoft-365-plans-explained
+top_page,cloudswitched.com,,,,,,9.96,,guide/blog,6,https://www.cloudswitched.com/resources/microsoft-copilot-free-vs-business
+top_page,cloudswitched.com,,,,,,8.99,,guide/blog,3,https://www.cloudswitched.com/blog/monitor-network-meraki-dashboard
+top_page,cloudswitched.com,,,,,,7.25,,guide/blog,27,https://www.cloudswitched.com/blog/sql-server-reporting-services-guide
+top_page,cloudswitched.com,,,,,,6.67,,service page,2,https://www.cloudswitched.com/solutions/cloud-backup/veeam-backup-uk
+top_page,cloudswitched.com,,,,,,6.32,,service page (programmatic location),1,https://www.cloudswitched.com/solutions/cloud-email/education/sussex
+top_page,cloudswitched.com,,,,,,5.47,,guide/blog,5,https://www.cloudswitched.com/blog/microsoft-entra-id-what-businesses-need-to-know
+top_page,cloudswitched.com,,,,,,5.45,,guide/blog,32,https://www.cloudswitched.com/blog/complete-guide-business-broadband-uk
+top_page,cloudswitched.com,,,,,,5.35,,guide/blog,1,https://www.cloudswitched.com/blog/what-to-do-lose-business-data
+top_page,cloudswitched.com,,,,,,5.17,,guide/blog,4,https://www.cloudswitched.com/blog/microsoft-365-vs-google-workspace
+top_page,cloudswitched.com,,,,,,4.85,,guide/blog,8,https://www.cloudswitched.com/blog/onedrive-vs-sharepoint-difference
+top_page,cloudswitched.com,,,,,,4.8,,service page,26,https://www.cloudswitched.com/services/seo
+top_page,cloudswitched.com,,,,,,4.65,,guide/blog,4,https://www.cloudswitched.com/blog/azure-pricing-payg-vs-reserved
+top_page,cloudswitched.com,,,,,,4.37,,service page (programmatic location),16,https://www.cloudswitched.com/services/seo/seo-company-london
+top_page,cloudswitched.com,,,,,,4.37,,guide/blog,4,https://www.cloudswitched.com/blog/wifi-6-vs-wifi-5-upgrade
+top_page,cloudswitched.com,,,,,,3.53,,guide/blog,6,https://www.cloudswitched.com/blog/google-ads-cost-uk-2026-ppc-pricing
+top_page,cloudswitched.com,,,,,,3.4,,guide/blog,8,https://www.cloudswitched.com/blog/sogea-fttp-business-broadband-explained
+top_page,cloudswitched.com,,,,,,3.21,,service page (programmatic location),1,https://www.cloudswitched.com/services/seo/poole
+top_page,createwith.com,,,,,,983.01,,tool directory/profile,5,https://www.createwith.com/tool/google-forms
+top_page,createwith.com,,,,,,155.91,,tool directory/profile,2,https://www.createwith.com/tool/gumroad
+top_page,createwith.com,,,,,,82.64,,tool directory/profile,2,https://www.createwith.com/tool/carrd
+top_page,createwith.com,,,,,,43.19,,homepage,15,https://www.createwith.com/
+top_page,createwith.com,,,,,,34.96,,homepage,2,https://createwith.com/
+top_page,createwith.com,,,,,,18.74,,tool directory/profile,2,https://www.createwith.com/tool/adalo
+top_page,createwith.com,,,,,,11.33,,tool directory/profile,1,https://www.createwith.com/tool/posthog/updates/posthog-unveils-39-new-features-for-enhanced-user-experience
+top_page,createwith.com,,,,,,10.45,,tool directory/profile,1,https://createwith.com/tool/databutton
+top_page,createwith.com,,,,,,10.12,,tool directory/profile,1,https://createwith.com/tool/figma/updates/figma-enhances-code-connect-ui-with-multiple-code-file-mapping
+top_page,createwith.com,,,,,,9.78,,other,3,https://www.createwith.com/about
+top_page,createwith.com,,,,,,6.96,,tool directory/profile,2,https://www.createwith.com/tool/make
+top_page,createwith.com,,,,,,4.99,,tool directory/profile,4,https://www.createwith.com/tool/skool
+top_page,createwith.com,,,,,,4.89,,tool directory/profile,3,https://www.createwith.com/tool/weweb
+top_page,createwith.com,,,,,,4.79,,event listing,8,https://www.createwith.com/event/barcelona-mwc-barcelona-2026-feb-2026
+top_page,createwith.com,,,,,,4.73,,tool directory/profile,7,https://www.createwith.com/tool/lovable
+top_page,createwith.com,,,,,,3.51,,city hub,10,https://www.createwith.com/cities/london
+top_page,createwith.com,,,,,,3.33,,tool directory/profile,1,https://createwith.com/tool/framer/updates/framer-introduces-squircles-for-super-smooth-corner-styling-in-december-update
+top_page,createwith.com,,,,,,3.08,,tool directory/profile,1,https://www.createwith.com/tool/framer/updates/framer-makes-marketplace-the-default-destination-for-finding-site-assets
+top_page,createwith.com,,,,,,2.77,,event listing,3,https://www.createwith.com/event/manchester-dtx-manchester-manchester-tech-week-apr-2026
+top_page,createwith.com,,,,,,2.56,,tool directory/profile,1,https://www.createwith.com/tool/tally-forms
+top_page,createwith.com,,,,,,2.5,,event listing,2,https://www.createwith.com/event/london-ai-engineer-europe-2026-apr-8-10-london-apr-2026
+top_page,createwith.com,,,,,,2.25,,event listing,6,https://www.createwith.com/event/london-the-ai-summit-london-2026-jun-2026
+top_page,createwith.com,,,,,,1.89,,tool directory/profile,4,https://www.createwith.com/tool/glide
+top_page,createwith.com,,,,,,1.71,,event listing,1,https://www.createwith.com/event/leicester-vibe-code-social-leicester-jun-2026
+top_page,createwith.com,,,,,,1.64,,event listing,4,https://www.createwith.com/event/london-register-your-interest-the-ai-summit-london-jun-2026

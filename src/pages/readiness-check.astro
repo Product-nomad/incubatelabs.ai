@@ -7,11 +7,15 @@ import { turnstileSiteKey } from "@/lib/turnstile";
 const mailto = `mailto:${site.email}?subject=${encodeURIComponent("Enquiry from incubatelabs.ai")}`;
 const buttonPrimary = "bg-ink text-paper rounded-md px-6 py-3 font-medium transition-colors hover:bg-accent";
 const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-medium transition-colors hover:bg-ink hover:text-paper";
+const numberInput =
+  "block w-full rounded-md border border-line bg-white py-2.5 pl-7 pr-3 text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
+// Radio steps from readiness.ts, then the cost step (v1.1 spec §10).
+const totalSteps = steps.length + 1;
 ---
 
 <Layout
-  title="Free AI readiness check | Incubate Labs"
-  description="A free, five-minute check for UK small businesses: find out which jobs are worth automating with AI first, and what to sort out before you start."
+  title="Free AI Readiness Assessment for SMEs | Incubate Labs"
+  description="A free five-minute AI readiness assessment for UK small businesses: find which jobs are worth automating first and what to sort out before you start."
 >
   {turnstileSiteKey && (
     <script slot="head" is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -19,7 +23,7 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
 
   <section id="rc-intro" class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-12">
     <p class="text-sm font-medium text-accent">Free Readiness Check</p>
-    <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">Where would AI actually help your business?</h1>
+    <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">Free AI readiness assessment: where would AI actually help your business?</h1>
     <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">
       Answer a few questions about how work happens day to day. You'll see which jobs are worth automating first, and what to sort out before you start. It takes about five minutes and you don't need to give us your email.
     </p>
@@ -29,9 +33,9 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
   <section class="max-w-page mx-auto px-4 sm:px-6">
     <form id="rc-form" class="hidden max-w-3xl" novalidate>
       <div class="mb-8">
-        <p id="rc-progress-label" class="text-sm font-medium text-accent" aria-live="polite">Step 1 of {steps.length}</p>
+        <p id="rc-progress-label" class="text-sm font-medium text-accent" aria-live="polite">Step 1 of {totalSteps}</p>
         <div class="mt-2 h-1.5 w-full rounded-full bg-line" aria-hidden="true">
-          <div id="rc-progress-bar" class="h-1.5 rounded-full bg-accent transition-all" style={`width: ${100 / steps.length}%`}></div>
+          <div id="rc-progress-bar" class="h-1.5 rounded-full bg-accent transition-all" style={`width: ${100 / totalSteps}%`}></div>
         </div>
       </div>
 
@@ -59,6 +63,34 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
         </div>
       ))}
 
+      <div class="rc-step hidden" data-step={steps.length}>
+        <h2 class="text-3xl sm:text-4xl" tabindex="-1">What it's costing you</h2>
+        <p class="mt-3 text-lg text-muted">Three rough numbers for a cost estimate. They stay in your browser unless you choose to send your result.</p>
+        <div class="mt-8 space-y-6">
+          <div>
+            <label for="rc-hours" class="text-lg font-medium text-ink">Roughly how many hours a week go on the jobs you picked?</label>
+            <div class="mt-3 max-w-xs">
+              <input id="rc-hours" name="hours" type="number" inputmode="decimal" min="0" step="any" required class={numberInput.replace("pl-7", "pl-3")} />
+            </div>
+          </div>
+          <div>
+            <label for="rc-rate" class="text-lg font-medium text-ink">Roughly what does an hour of that person's time cost you?</label>
+            <div class="relative mt-3 max-w-xs">
+              <span class="pointer-events-none absolute inset-y-0 left-3 flex items-center text-muted" aria-hidden="true">£</span>
+              <input id="rc-rate" name="rate" type="number" inputmode="decimal" min="0" step="any" required aria-describedby="rc-rate-help" class={numberInput} />
+            </div>
+            <p id="rc-rate-help" class="mt-2 text-sm text-muted">Salary plus about 30% for NI, pension and overheads. A rough figure is fine.</p>
+          </div>
+          <div>
+            <label for="rc-spend" class="text-lg font-medium text-ink">Any software or outside help you pay for to do these jobs, per month? <span class="font-normal text-muted">(optional)</span></label>
+            <div class="relative mt-3 max-w-xs">
+              <span class="pointer-events-none absolute inset-y-0 left-3 flex items-center text-muted" aria-hidden="true">£</span>
+              <input id="rc-spend" name="spend" type="number" inputmode="decimal" min="0" step="any" class={numberInput} />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <p id="rc-missing" role="alert" class="mt-6 hidden text-sm text-ink">Please answer every question to carry on.</p>
       <div class="mt-8 flex flex-wrap gap-3">
         <button type="button" id="rc-back" class={buttonSecondary}>Back</button>
@@ -74,6 +106,12 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
         Nothing stands out from your answers. That's useful to know too. If something is still eating your week, a short conversation is the quickest way to find out whether it's worth automating.
       </p>
 
+      <div class="mt-10 bg-accent-soft border border-accent-line rounded-xl p-6 sm:p-8">
+        <h3 class="text-2xl">What this is costing you</h3>
+        <p id="rc-cost" class="mt-3 font-serif text-4xl font-semibold text-ink">Roughly £0 a year</p>
+        <p class="mt-3 text-muted">A cost check on a call would show how much of that could come back, and what it would cost to run.</p>
+      </div>
+
       <div class="mt-10 bg-band border border-line rounded-xl p-6 sm:p-8">
         <h3 class="text-2xl">Before you start</h3>
         <ul id="rc-points" class="mt-4 space-y-3 text-muted"></ul>
@@ -83,7 +121,7 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
         {site.bookingUrl && (
           <a href={site.bookingUrl} target="_blank" rel="noopener" class={buttonPrimary}>Book a call to talk it through</a>
         )}
-        <button type="button" id="rc-email-open" class={site.bookingUrl ? buttonSecondary : buttonPrimary}>Email me my result</button>
+        <button type="button" id="rc-email-open" class={site.bookingUrl ? buttonSecondary : buttonPrimary}>Send my result to Simon</button>
       </div>
 
       <form id="rc-email-form" class="mt-6 hidden max-w-xl border border-line rounded-xl p-6" action="/api/contact" method="post">
@@ -97,7 +135,7 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
           <input id="rc-website" name="website" type="text" tabindex="-1" autocomplete="off" />
         </div>
         {turnstileSiteKey && <div class="cf-turnstile mt-4" data-sitekey={turnstileSiteKey}></div>}
-        <button type="submit" class={`mt-4 ${buttonPrimary} disabled:opacity-60`}>Send my result</button>
+        <button type="submit" class={`mt-4 ${buttonPrimary} disabled:opacity-60`}>Send</button>
         <p id="rc-email-error" role="alert" class="mt-4 hidden text-sm text-ink">
           Sorry, that didn't send. Please email <a href={mailto} class="text-accent underline">{site.email}</a> instead.
         </p>
@@ -111,7 +149,7 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
 </Layout>
 
 <script>
-  import { steps, computeResult, summarise, type Answers } from "@/data/readiness";
+  import { steps, computeResult, summarise, annualCost, formatPounds, type Answers, type CostInputs } from "@/data/readiness";
   import { useCases } from "@/data/useCases";
 
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -122,29 +160,45 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
   const missing = $("rc-missing");
   const result = $("rc-result");
   let current = 0;
+  const total = steps.length + 1;
+  const costStep = steps.length;
+  const num = (id: string) => Number($<HTMLInputElement>(id).value);
+
+  function costInputs(): CostInputs {
+    return { hours: num("rc-hours"), rate: num("rc-rate"), spend: num("rc-spend") || 0 };
+  }
 
   function answers(): Answers {
     const data = new FormData(form);
-    return Object.fromEntries(Array.from(data.entries()).map(([k, v]) => [k, String(v)]));
+    return Object.fromEntries(
+      Array.from(data.entries())
+        .filter(([k]) => !["hours", "rate", "spend"].includes(k))
+        .map(([k, v]) => [k, String(v)]),
+    );
   }
 
   function show(step: number) {
     current = step;
     stepEls.forEach((el, i) => el.classList.toggle("hidden", i !== step));
-    $("rc-progress-label").textContent = `Step ${step + 1} of ${steps.length}`;
-    $("rc-progress-bar").style.width = `${((step + 1) / steps.length) * 100}%`;
+    $("rc-progress-label").textContent = `Step ${step + 1} of ${total}`;
+    $("rc-progress-bar").style.width = `${((step + 1) / total) * 100}%`;
     back.classList.toggle("hidden", step === 0);
-    next.textContent = step === steps.length - 1 ? "See my result" : "Next";
+    next.textContent = step === total - 1 ? "See my result" : "Next";
     missing.classList.add("hidden");
     if (step === steps.length - 1) {
       const picked = useCases.find((uc) => uc.slug === answers().pick);
-      $("rc-job").textContent = picked ? picked.title.toLowerCase() : "the job that takes up most time";
+      $("rc-job").textContent = picked ? picked.short : "the job that takes up most time";
     }
     stepEls[step].querySelector<HTMLElement>("h2")?.focus();
     window.scrollTo({ top: form.getBoundingClientRect().top + window.scrollY - 24 });
   }
 
   function stepComplete(step: number): boolean {
+    if (step === costStep) {
+      const { hours, rate } = costInputs();
+      const spend = $<HTMLInputElement>("rc-spend").value;
+      return hours > 0 && rate > 0 && (spend === "" || Number(spend) >= 0);
+    }
     const a = answers();
     return steps[step].questions.every((q) => a[q.id]);
   }
@@ -180,7 +234,10 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
         return li;
       }),
     );
-    $<HTMLInputElement>("rc-summary").value = summarise(a, r);
+    const cost = costInputs();
+    $("rc-cost").textContent = `Roughly ${formatPounds(annualCost(cost))} a year`;
+    // Hidden field, submitted only with "Send my result to Simon".
+    $<HTMLInputElement>("rc-summary").value = summarise(a, r, cost);
     form.classList.add("hidden");
     result.classList.remove("hidden");
     $("rc-result-heading").focus();
@@ -201,7 +258,7 @@ const buttonSecondary = "border border-ink text-ink rounded-md px-6 py-3 font-me
       missing.classList.remove("hidden");
       return;
     }
-    if (current < steps.length - 1) show(current + 1);
+    if (current < total - 1) show(current + 1);
     else renderResult();
   });
 

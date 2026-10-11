@@ -62,7 +62,7 @@ export const steps: Step[] = [
     questions: [
       {
         id: "documents",
-        useCase: "document-handling",
+        useCase: "invoice-and-document-processing",
         text: "How do invoices, delivery notes and forms usually arrive, and what happens next?",
         options: [
           { value: "email-typed", label: "By email, and someone reads and types them in", score: 3 },
@@ -73,7 +73,7 @@ export const steps: Step[] = [
       },
       {
         id: "reentry",
-        useCase: "admin-and-data-re-entry",
+        useCase: "data-entry-automation",
         text: "How many systems does a new customer or job get typed into?",
         options: [
           { value: "one", label: "Just one", score: 0 },
@@ -84,7 +84,7 @@ export const steps: Step[] = [
       },
       {
         id: "reporting",
-        useCase: "reporting",
+        useCase: "automated-reporting",
         text: "How long does your regular weekly or monthly report take to put together?",
         options: [
           { value: "none", label: "We don't have a regular report", score: 0 },
@@ -95,7 +95,7 @@ export const steps: Step[] = [
       },
       {
         id: "replies",
-        useCase: "customer-replies",
+        useCase: "ai-email-replies",
         text: "How many customer emails or enquiries a week ask questions you've answered before?",
         options: [
           { value: "few", label: "Hardly any", score: 0 },
@@ -117,7 +117,7 @@ export const steps: Step[] = [
       },
       {
         id: "questionnaires",
-        useCase: "compliance-questionnaires",
+        useCase: "security-questionnaires",
         text: "How often do customers send you supplier or security questionnaires?",
         options: [
           { value: "never", label: "Never", score: 0 },
@@ -295,19 +295,45 @@ export function computeResult(answers: Answers): Result {
   else if (answers.tidy === "unknown") candidates.push(points.unknown);
   if (answers.owner === "no" || answers.owner === "partly") candidates.push(points.owner);
   if (answers.stakes === "high") candidates.push(points.high);
-  if (recommendations.some((r) => r.slug === "admin-and-data-re-entry")) candidates.push(points.integration);
+  if (recommendations.some((r) => r.slug === "data-entry-automation")) candidates.push(points.integration);
   if (candidates.length === 0) candidates.push(points.good);
 
   return { recommendations, beforeYouStart: candidates.slice(0, MAX_POINTS) };
 }
 
-// Plain-text summary for the "Email me my result" request.
-export function summarise(answers: Answers, result: Result): string {
+// Rough annual cost of the picked jobs (v1.1 spec §10): hours × rate × 46 working weeks,
+// plus monthly spend × 12, rounded to the nearest £100. Runs in the browser only.
+export const WORKING_WEEKS = 46;
+
+export interface CostInputs {
+  hours: number;
+  rate: number;
+  spend: number;
+}
+
+export function annualCost({ hours, rate, spend }: CostInputs): number {
+  const raw = hours * rate * WORKING_WEEKS + spend * 12;
+  return Math.round(raw / 100) * 100;
+}
+
+export function formatPounds(amount: number): string {
+  return `£${amount.toLocaleString("en-GB")}`;
+}
+
+// Plain-text summary, sent only if the visitor chooses "Send my result to Simon".
+export function summarise(answers: Answers, result: Result, cost?: CostInputs): string {
   const lines: string[] = ["Recommended first:"];
   if (result.recommendations.length === 0) lines.push("- Nothing stood out");
   for (const r of result.recommendations) lines.push(`- ${r.title}: ${r.reason}`);
   lines.push("", "Before you start:");
   for (const p of result.beforeYouStart) lines.push(`- ${p.lead} ${p.body}`);
+  if (cost) {
+    lines.push(
+      "",
+      "What this is costing you:",
+      `- Roughly ${formatPounds(annualCost(cost))} a year (${cost.hours} hours a week at ${formatPounds(cost.rate)} an hour, plus ${formatPounds(cost.spend)} a month on software or outside help)`,
+    );
+  }
   lines.push("", "Answers:");
   for (const q of steps.flatMap((s) => s.questions)) {
     const label = q.options.find((o) => o.value === answers[q.id])?.label ?? "-";

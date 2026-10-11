@@ -25,3 +25,6 @@ dist/
 # wrangler
 .wrangler/
 .dev.vars
+
+# SEO research API responses (35 MB); summaries are committed
+research/seo-2026-10/raw/

@@ -1,54 +1,75 @@
+// Projects (v1.1 spec §8). The page stays at /work/.
 export interface WorkItem {
+  label: string;
   name: string;
-  problem: string;
-  // HTML allowed (internal links only).
-  built: string;
-  shows: string;
-  href: string;
-  linkLabel: string;
-  external: boolean;
+  // Code names are set in monospace; descriptive names in the serif.
+  nameStyle: "mono" | "serif";
+  description: string;
+  // No href means the card isn't clickable (private work).
+  href?: string;
+  linkLabel?: string;
+  external?: boolean;
+  // Image slot: public/projects/<image>.webp is shown when it exists; until then, a solid panel.
+  image: string;
+  panel: "ink" | "accent-soft" | "band";
+  // Shown on /work/ only, not on the home page.
+  workPageOnly?: boolean;
 }
 
 export const work: WorkItem[] = [
   {
+    label: "Agentic pipeline",
     name: "attestloop",
-    problem: "Regulations are long, and working out which obligations apply to you is slow, expert work.",
-    built:
-      "An agentic pipeline that reads regulatory documents, pulls out the obligations and maps them to control frameworks.",
-    shows:
-      'Serious multi-step AI work. It\'s the same approach behind our <a href="/use-cases/compliance-questionnaires/">compliance questionnaire</a> service.',
+    nameStyle: "mono",
+    description: "Reads regulatory documents, pulls out the obligations and maps them to control frameworks.",
     href: "https://github.com/Product-nomad/attestloop",
     linkLabel: "GitHub →",
     external: true,
+    image: "attestloop",
+    panel: "ink",
   },
   {
-    name: "mysankeycom",
-    problem: "Flows of energy, money or stock are hard to explain in a table.",
-    built:
-      "An AI-assisted builder for interactive Sankey diagrams. Describe the flow and get a clear, shareable chart.",
-    shows: "Useful, good-looking tools, shipped end to end.",
-    href: "https://github.com/Product-nomad/mysankeycom",
+    label: "Live tool",
+    name: "removepii",
+    nameStyle: "mono",
+    description:
+      "Strips personal data from UK documents before they go near an AI. Runs on a local model, in memory only, with nothing uploaded.",
+    href: "https://removepii.co.uk",
+    linkLabel: "removepii.co.uk →",
+    external: true,
+    image: "removepii",
+    panel: "accent-soft",
+  },
+  {
+    label: "Autonomous agent",
+    name: "publicguard",
+    nameStyle: "mono",
+    description:
+      "Scans public GitHub repositories for exposed passwords and keys, then opens a polite issue for the owner, with a person checking each one first.",
+    href: "https://github.com/Product-nomad/publicguard",
     linkLabel: "GitHub →",
     external: true,
+    image: "publicguard",
+    panel: "band",
   },
   {
-    name: "idea-incubator",
-    problem: "Good ideas get lost in notes apps and never get tested.",
-    built:
-      "A Telegram bot that runs a six-question discovery conversation about a new idea, gives honest critique, and saves each idea as a tidy document.",
-    shows:
-      "Practical automation doing one job well, which is exactly the shape of an Automation Sprint.",
-    href: "https://github.com/Product-nomad/idea-incubator",
-    linkLabel: "GitHub →",
-    external: true,
+    label: "Proof of concept",
+    name: "Retail AI proof of concept",
+    nameStyle: "serif",
+    description:
+      "A fictional retailer made ready for AI agents: orders placed through a standard interface, every call metered, a checkout app on top. It showed the data, not the AI, is most of the work. We measured the running cost per order: under a tenth of a penny.",
+    image: "retail-poc",
+    panel: "ink",
   },
   {
+    label: "Free tool",
     name: "Readiness Check",
-    problem: "Most small businesses don't know where AI would actually help.",
-    built: "A free tool on this site that points you to the jobs worth automating first.",
-    shows: "A working tool you can try right now.",
+    nameStyle: "serif",
+    description: "A free check on this site that points you to the jobs worth automating first.",
     href: "/readiness-check/",
     linkLabel: "Try it →",
-    external: false,
+    image: "readiness-check",
+    panel: "accent-soft",
+    workPageOnly: true,
   },
 ];

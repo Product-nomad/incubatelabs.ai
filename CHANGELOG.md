@@ -2,6 +2,27 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.1.0] — 2026-10-11 (branch `v1.1-brand-hero`, pending sign-off)
+
+### Added
+- "Lost day" interactive hero with a sourced stats strip.
+- "Sound familiar?" checklist, use-case illustrations, "What gets asked for / what often fixes it" list.
+- Cost-check section with an illustrative payback chart, on the home page and (cards only) How we work.
+- Readiness Check rough annual cost estimate.
+- Use-case pages: "Where it fits", "What it costs" and "Questions we get asked" sections; Service, BreadcrumbList and FAQPage structured data.
+- Open Graph image; `_headers` (HSTS, frame and content-type options, immutable asset caching); sitemap `lastmod`.
+
+### Changed
+- Use-case pages renamed to search wording, with 301 redirects: Invoice & document processing, Data entry automation, Automated reporting, AI email replies, Security questionnaires (Quotes & proposals unchanged).
+- "Things I've built" is now "Projects" (still at /work/), with new project cards.
+- Titles and meta descriptions rewritten from the SEO research; all titles 60 characters or fewer, descriptions 155 or fewer.
+- Engagement cards show size with hexagons; Automation Sprint marked "Where most clients start".
+- CSS inlined; heading and body fonts preloaded (removes the layout shift on /privacy/).
+
+### Removed
+- Location from the footer, contact page, metadata and JSON-LD (legal line kept for now).
+- The Iraq entry on About.
+
 ## [1.0.0-draft] — 2026-10-11
 
 ### Changed

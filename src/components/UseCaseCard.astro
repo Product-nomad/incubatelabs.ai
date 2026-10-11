@@ -1,21 +1,31 @@
 ---
 import type { UseCase } from "@/data/useCases";
+import { illustrations } from "@/components/illustrations";
 
 interface Props {
   useCase: UseCase;
   index: number;
+  // h3 under a section h2 (home page); h2 where the cards sit directly under the page h1.
+  headingLevel?: "h2" | "h3";
 }
 
-const { useCase, index } = Astro.props;
+const { useCase, index, headingLevel = "h3" } = Astro.props;
 const number = String(index + 1).padStart(2, "0");
+const Heading = headingLevel;
+const Illustration = illustrations[useCase.slug];
 ---
 
 <a
   href={`/use-cases/${useCase.slug}/`}
-  class="group flex flex-col border border-line rounded-xl p-6 transition-colors hover:border-accent"
+  class="group flex flex-col overflow-hidden border border-line rounded-xl transition-colors hover:border-accent"
 >
-  <span class="text-sm font-medium text-accent">{number}</span>
-  <h3 class="mt-3 text-xl transition-colors group-hover:text-accent">{useCase.title}</h3>
-  <p class="mt-2 text-muted">{useCase.card}</p>
-  <span class="mt-auto pt-4 text-sm font-medium text-accent">Read more →</span>
+  <div class="flex items-center justify-center bg-band border-b border-line px-4 py-5 [&>svg]:h-[120px] [&>svg]:w-auto">
+    {Illustration && <Illustration />}
+  </div>
+  <div class="flex flex-1 flex-col p-6">
+    <span class="text-sm font-medium text-accent">{number}</span>
+    <Heading class="mt-3 text-xl transition-colors group-hover:text-accent">{useCase.title}</Heading>
+    <p class="mt-2 text-muted">{useCase.card}</p>
+    <span class="mt-auto pt-4 text-sm font-medium text-accent">Read more →</span>
+  </div>
 </a>

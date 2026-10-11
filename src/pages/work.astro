@@ -6,20 +6,20 @@ import { work } from "@/data/work";
 ---
 
 <Layout
-  title="Things I've built | Incubate Labs"
-  description="Tools and automations built by Simon Newton of Incubate Labs, including an agentic compliance pipeline, a Sankey diagram builder and an idea-capture bot."
+  title="Projects | Incubate Labs"
+  description="Real, working AI builds: an agentic compliance pipeline, a local tool that strips personal data, a secret-leak agent and a retail AI proof of concept."
 >
   <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-12">
-    <p class="text-sm font-medium text-accent">Things I've built</p>
-    <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">Things I've built</h1>
+    <p class="text-sm font-medium text-accent">Projects</p>
+    <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">Projects</h1>
     <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">
-      No client logos yet. Here's what I've built for myself instead. Each one is real, working and on GitHub, and each shows a skill I bring to client work.
+      Real, working builds: tools in use today and proofs of concept that tested an idea properly.
     </p>
   </section>
 
   <section class="max-w-page mx-auto px-4 sm:px-6">
-    <div class="grid gap-5 md:grid-cols-2">
-      {work.map((item) => <WorkCard item={item} />)}
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {work.map((item) => <WorkCard item={item} headingLevel="h2" />)}
     </div>
   </section>
 
