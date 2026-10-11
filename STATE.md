@@ -16,12 +16,11 @@
 ## Blocked on Simon
 - **Readiness Check wording**: the option labels, one-line reasons, "Before you start" points, the "nothing stands out" text and the email note ("Your result goes to Simon, who will email it to you personally") are drafted, not from the spec. Approve before launch.
 - **No-JS contact form**: Turnstile needs JS, so a visitor with JS off gets the failure page (with the email address), not `/contact/thanks/`. The thanks redirect works when a token is present.
-- **`bookingUrl`** in `src/data/site.ts`: the Book a call panel is hidden until it's set.
 - **Forwarding inbox** for the form and `hello@`.
 - **Cloudflare credentials** (`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`) not present on this machine.
 
 ## Before launch
-1. `bookingUrl` set
+1. ~~`bookingUrl` set~~ (done 2026-10-11)
 2. Turnstile keys set (`PUBLIC_TURNSTILE_SITE_KEY` build var; `TURNSTILE_SECRET_KEY` Pages secret)
 3. Email Routing for hello@ and the form destination verified (`FORM_DESTINATION` mailer secret)
 4. Simon reviews the About page wording and the form reply-time wording, and adds a photo
