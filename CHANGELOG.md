@@ -2,7 +2,7 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
-## [1.1.0] — 2026-10-11 (branch `v1.1-brand-hero`, pending sign-off)
+## [1.1.0] — 2026-10-11
 
 ### Added
 - "Lost day" interactive hero with a sourced stats strip.

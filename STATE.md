@@ -1,10 +1,10 @@
 # incubatelabs.ai — STATE
 
 **Goal**: A lead-generation site for practical AI and automation for UK small businesses (5–50 staff) without an in-house IT team. AI services lead; web design is an add-on.
-**Phase**: v1 live at https://incubatelabs.ai since 2026-10-11 (`main`). v1.1 built on `v1.1-brand-hero`, awaiting Simon's screenshot sign-off before merge.
+**Phase**: v1.1 live at https://incubatelabs.ai (merged to `main` and deployed 2026-10-11, commit `c0a36fc`). Signed off by Simon from the preview screenshots.
 **Last touched**: 2026-10-11.
 
-## v1.1 (branch `v1.1-brand-hero`, spec: `design/v1.1/spec.md`)
+## v1.1 (live; built on `v1.1-brand-hero`, spec: `design/v1.1/spec.md`)
 - Brand tokens (`admin`, `admin-deep`, `night`, `night-raised`, `accent-bright`); text logo kept until logo files land.
 - "Lost day" hero: build-time week planner, 679-byte script island, autoplay/IO/visibility/reduced-motion behaviour, sourced stats strip. H1 in `HERO_H1` (`src/data/hero.ts`); totals derived from the week data and checked at build time.
 - "Sound familiar?", illustrated use-case cards (six SVG components in `src/components/illustrations/`), asked-for vs fix list, cost-check section with payback chart (`CostCheck.astro`), hexagon engagement cards with "Where most clients start" badge.
@@ -12,7 +12,7 @@
 - De-personalised: no location except the legal line; Iraq entry removed from About; JSON-LD address removed.
 - Readiness Check cost estimate (hours × rate × 46 + monthly × 12, nearest £100), sent only with "Send my result to Simon".
 - SEO addendum applied: hero copy, renamed use-case pages with 301s (`public/_redirects`), "Where it fits", "What it costs" (no prices) and FAQ blocks, Service/BreadcrumbList/FAQPage JSON-LD, OG image (`public/og-image.png`, source in `design/v1.1/og-image-source.html`), technical-audit fixes. Research summaries committed under `research/seo-2026-10/`; `raw/` is gitignored.
-- Local acceptance checks passed 2026-10-11; screenshots in `.screens/v1.1/` (gitignored).
+- Acceptance checks passed 2026-10-11 locally and on the preview; screenshots in `.screens/v1.1/` (gitignored). After deploy: redirects 301 on the live domain, OG image passes opengraph.xyz (0 errors; warnings: no call-to-action text in the image, og:description 142 characters where some social previews show ~125). IndexNow re-pinged with all 14 URLs.
 
 ## Open decisions (v1.1 §12; not built)
 - **Final H1**: SEO version applied ("Practical AI and automation for small businesses without an IT team."); confirm.
