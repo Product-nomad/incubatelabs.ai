@@ -6,11 +6,11 @@ import { site } from "@/data/site";
 const beliefs = [
   {
     lead: "Most \"AI problems\" aren't.",
-    body: "Plenty of them are a missing integration or a process nobody wrote down. I'd rather fix that simply than sell you something clever.",
+    body: "Plenty of them are a missing integration or a process nobody wrote down. We'd rather fix that simply than sell you something clever.",
   },
   {
     lead: "AI projects are data projects.",
-    body: "When AI disappoints, it's usually because the information going in was messy, scattered or missing. That's where I start.",
+    body: "When AI disappoints, it's usually because the information going in was messy, scattered or missing. That's where we start.",
   },
   {
     lead: "The aim is more capacity, not fewer people.",
@@ -25,7 +25,7 @@ const beliefs = [
 >
   <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-12">
     <p class="text-sm font-medium text-accent">About</p>
-    <h1 class="mt-4 text-4xl sm:text-5xl leading-tight">Hello, I'm Simon.</h1>
+    <h1 class="mt-4 text-4xl sm:text-5xl leading-tight">Delivery first, technology second.</h1>
     <div class="mt-6 max-w-prose space-y-4 text-lg sm:text-xl text-muted leading-relaxed">
       <p>Incubate Labs builds practical AI and automation for small businesses that want it built for them, not explained to them in a slide deck.</p>
       <p>The work is delivery: taking something that needs to happen and making it happen properly, in the real world, with the people and constraints that are actually there. Founder Simon Newton has spent his career doing exactly that, from Army operations to leading product delivery in tech. An invoice workflow for a ten-person business is the same job at a different scale.</p>
@@ -34,12 +34,12 @@ const beliefs = [
 
   <section class="max-w-page mx-auto px-4 sm:px-6 py-12">
     <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
-      <h2 class="text-3xl sm:text-4xl">What I believe about AI in small businesses</h2>
+      <h2 class="text-3xl sm:text-4xl">What we believe about AI in small businesses</h2>
       <div class="max-w-prose space-y-5 text-lg text-muted">
         {beliefs.map((b) => (
           <p><strong class="font-semibold text-ink">{b.lead}</strong> {b.body}</p>
         ))}
-        <p class="prose-links">I build in public. You can see my own projects on <a href={site.github}>GitHub</a>.</p>
+        <p class="prose-links">We build in public. You can see our own projects on <a href={site.github}>GitHub</a>.</p>
       </div>
     </div>
   </section>

@@ -21,13 +21,13 @@
 
 ## Copy changes (2026-10-11)
 - Hero toggle relabelled "Before" / "After" (was "This week" / "With Incubate Labs"), with matching visually hidden text, so the hero doesn't read as a product.
-- "IT department / IT team" framing removed from the footer tagline, the "Sound familiar?" intro and the About intro. Still present, left unchanged pending Simon's wording: home meta description (`src/pages/index.astro`) and the ProfessionalService JSON-LD description (`src/layouts/Layout.astro`).
-- About: Background timeline removed; intro rewritten in the third person ("Founder Simon Newton…"). The H1 ("Hello, I'm Simon.") and the "What I believe" section are still first person.
+- "IT department / IT team" framing removed site-wide, including the home meta description and the JSON-LD description (2026-10-11); grep for IT department / IT team / IT person / in-house IT returns nothing.
+- About is firm-forward: H1 "Delivery first, technology second.", "What we believe about AI in small businesses", beliefs in we/us/our, third-person intro. Still first person: the "Let's talk." call to action at the foot of /about ("Tell me… If I can't help, I'll say so…"), awaiting Simon's decision.
 
 ## Open decisions (v1.1 §12; not built)
 - **Final H1**: "Practical AI and automation for small businesses." (changed by Simon 2026-10-11; title tag and meta description unchanged).
 - **Legal line**: still names the town ("…a sole trader based in Huntingdon, Cambridgeshire."). Keep the town or use a business address. It is the only location left on the site.
-- **About page voice**: Simon doesn't want the site to read as a one-person operation. Intro now third person and Background removed (2026-10-11); H1 and beliefs remain first person.
+- **About page voice**: firm-forward since 2026-10-11 except the page's "Let's talk." call to action (still first person).
 - **Founder photo**: on hold.
 - **"Works with the tools you already use" strip**: not confirmed, not built.
 - **Project screenshots**: Simon to supply as `public/projects/{attestloop,removepii,publicguard,retail-poc,readiness-check}.webp` (16:10).
