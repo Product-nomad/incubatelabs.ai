@@ -1,0 +1,88 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import CallToAction from "@/components/CallToAction.astro";
+import { site } from "@/data/site";
+
+const timeline = [
+  {
+    period: "1996–2003",
+    title: "British Army",
+    body: "Intelligence and operations. Where I learned to plan carefully, work with incomplete information and get things done under pressure.",
+  },
+  {
+    period: "2003–2015",
+    title: "Post-conflict reconstruction, Iraq",
+    body: "Twelve years working on reconstruction in Iraq, where a plan only matters if it survives contact with reality.",
+  },
+  {
+    period: "Ocado",
+    title: "Lead Product Delivery Manager",
+    body: "Delivering technology and operational change in one of the UK's most automated businesses.",
+  },
+  {
+    period: "Now",
+    title: "Incubate Labs",
+    body: "Building practical AI and automation for small businesses that don't have an IT department to do it for them.",
+  },
+];
+
+const beliefs = [
+  {
+    lead: "Most \"AI problems\" aren't.",
+    body: "Plenty of them are a missing integration or a process nobody wrote down. I'd rather fix that simply than sell you something clever.",
+  },
+  {
+    lead: "AI projects are data projects.",
+    body: "When AI disappoints, it's usually because the information going in was messy, scattered or missing. That's where I start.",
+  },
+  {
+    lead: "The aim is more capacity, not fewer people.",
+    body: "The best outcome is your team spending their time on the work they're good at.",
+  },
+];
+---
+
+<Layout
+  title="About | Incubate Labs"
+  description="Incubate Labs is run by Simon Newton, an applied AI builder based near Huntingdon, Cambridgeshire, with a background in delivery at Ocado, the British Army and post-conflict reconstruction."
+>
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-12">
+    <p class="text-sm font-medium text-accent">About</p>
+    <h1 class="mt-4 text-4xl sm:text-5xl leading-tight">Hello, I'm Simon.</h1>
+    <div class="mt-6 max-w-prose space-y-4 text-lg sm:text-xl text-muted leading-relaxed">
+      <p>I run Incubate Labs from Cambridgeshire. I build practical AI and automation for small businesses, the kind that don't have an IT department and don't want a consultancy's slide deck.</p>
+      <p>Most of my career has been about delivery: taking something that needs to happen and making it happen properly, in the real world, with the people and constraints that are actually there. That's the same job, whether it's an Army operation, a reconstruction programme or an invoice workflow for a ten-person business.</p>
+    </div>
+  </section>
+
+  <section class="max-w-page mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-3xl sm:text-4xl">Background</h2>
+    <ol class="mt-10 max-w-prose border-l border-line">
+      {timeline.map((t) => (
+        <li class="relative pb-10 pl-8 last:pb-0">
+          <span class="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
+          <p class="text-sm font-medium text-accent">{t.period}</p>
+          <h3 class="mt-1 text-xl">{t.title}</h3>
+          <p class="mt-2 text-muted">{t.body}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="max-w-page mx-auto px-4 sm:px-6 py-12">
+    <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
+      <h2 class="text-3xl sm:text-4xl">What I believe about AI in small businesses</h2>
+      <div class="max-w-prose space-y-5 text-lg text-muted">
+        {beliefs.map((b) => (
+          <p><strong class="font-semibold text-ink">{b.lead}</strong> {b.body}</p>
+        ))}
+        <p class="prose-links">I build in public. You can see my own projects on <a href={site.github}>GitHub</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    heading="Let's talk."
+    body="Tell me what's taking up your team's time. If I can't help, I'll say so, and point you somewhere that can."
+  />
+</Layout>

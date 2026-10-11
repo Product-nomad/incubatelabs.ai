@@ -1,0 +1,34 @@
+---
+import type { WorkItem } from "@/data/work";
+
+interface Props {
+  item: WorkItem;
+}
+
+const { item } = Astro.props;
+---
+
+<article class="flex flex-col border border-line rounded-xl p-6">
+  <h3 class="font-mono text-lg font-semibold">{item.name}</h3>
+  <dl class="mt-4 space-y-3 text-sm">
+    <div>
+      <dt class="font-medium text-ink">The problem</dt>
+      <dd class="mt-1 text-muted">{item.problem}</dd>
+    </div>
+    <div>
+      <dt class="font-medium text-ink">What I built</dt>
+      <dd class="mt-1 text-muted">{item.built}</dd>
+    </div>
+    <div>
+      <dt class="font-medium text-ink">What it shows</dt>
+      <dd class="mt-1 text-muted prose-links" set:html={item.shows} />
+    </div>
+  </dl>
+  <a
+    href={item.href}
+    class="mt-auto pt-5 text-sm font-medium text-accent hover:underline"
+    {...item.external ? { rel: "noopener" } : {}}
+  >
+    {item.linkLabel}
+  </a>
+</article>

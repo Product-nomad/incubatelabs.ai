@@ -1,0 +1,26 @@
+---
+interface Props {
+  heading?: string;
+  body?: string;
+}
+
+const {
+  heading = "Start with a conversation.",
+  body = "Tell us what's eating your team's time. We'll tell you honestly whether AI is the right fix, and what a sensible first step looks like.",
+} = Astro.props;
+---
+
+<section class="max-w-page mx-auto px-4 sm:px-6 py-16">
+  <div class="bg-ink text-paper rounded-2xl p-8 sm:p-12 flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+    <div class="max-w-prose">
+      <h2 class="text-3xl sm:text-4xl">{heading}</h2>
+      <p class="mt-4 text-lg text-paper/80">{body}</p>
+    </div>
+    <a
+      href="/contact/"
+      class="shrink-0 self-start md:self-center bg-paper text-ink rounded-md px-6 py-3 font-medium transition-colors hover:bg-accent-soft"
+    >
+      Get in touch →
+    </a>
+  </div>
+</section>

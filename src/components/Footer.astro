@@ -1,30 +1,46 @@
 ---
-const currentYear = new Date().getFullYear();
+import { site } from "@/data/site";
+import { useCases } from "@/data/useCases";
+
+const year = new Date().getFullYear();
+const linkClass = "text-muted hover:text-accent transition-colors";
 ---
 
-<footer class="border-t border-neutral-200 mt-20">
-  <div class="max-w-page mx-auto px-6 py-10 text-sm text-neutral-600 grid gap-6 md:grid-cols-3">
+<footer class="bg-band border-t border-line mt-20">
+  <div class="max-w-page mx-auto px-4 sm:px-6 py-12 grid gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
     <div>
-      <p class="font-semibold text-ink">Incubate Labs</p>
-      <p class="mt-1">From AI ambition to systems your CISO will sign off.</p>
+      <p class="font-serif font-semibold text-lg text-ink">Incubate Labs</p>
+      <p class="mt-2 text-muted">Practical AI for small businesses without an IT team.</p>
     </div>
     <div>
-      <p class="font-semibold text-ink">Built in public</p>
-      <ul class="mt-1 space-y-1">
-        <li><a href="https://github.com/Product-nomad/incubatelabs.ai" class="hover:text-accent">Site source</a></li>
-        <li><a href="https://github.com/Product-nomad" class="hover:text-accent">All repos</a></li>
-        <li><a href="/privacy/" class="hover:text-accent">Privacy</a></li>
+      <p class="font-medium text-ink">What we automate</p>
+      <ul class="mt-3 space-y-2">
+        {useCases.map((uc) => (
+          <li><a href={`/use-cases/${uc.slug}/`} class={linkClass}>{uc.title}</a></li>
+        ))}
       </ul>
     </div>
     <div>
-      <p class="font-semibold text-ink">Talk</p>
-      <ul class="mt-1 space-y-1">
-        <li><a href="/contact/" class="hover:text-accent">Book a call</a></li>
-        <li><a href="https://x.com/product_nomad" class="hover:text-accent">@product_nomad</a></li>
+      <p class="font-medium text-ink">Incubate Labs</p>
+      <ul class="mt-3 space-y-2">
+        <li><a href="/how-we-work/" class={linkClass}>How we work</a></li>
+        <li><a href="/work/" class={linkClass}>Things I've built</a></li>
+        <li><a href="/readiness-check/" class={linkClass}>Readiness Check</a></li>
+        <li><a href="/about/" class={linkClass}>About</a></li>
+        <li><a href="/contact/" class={linkClass}>Contact</a></li>
+        <li><a href="/privacy/" class={linkClass}>Privacy</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-medium text-ink">Get in touch</p>
+      <ul class="mt-3 space-y-2">
+        <li><a href={`mailto:${site.email}`} class={linkClass}>{site.email}</a></li>
+        <li class="text-muted">{site.location}</li>
+        <li><a href={site.github} class={linkClass}>GitHub</a></li>
       </ul>
     </div>
   </div>
-  <div class="max-w-page mx-auto px-6 pb-10 text-xs text-neutral-500">
-    © {currentYear} Incubate Labs. Solo, agent-augmented.
+  <div class="max-w-page mx-auto px-4 sm:px-6 pb-10 text-xs text-muted">
+    © {year} Incubate Labs. {site.legal}
   </div>
 </footer>

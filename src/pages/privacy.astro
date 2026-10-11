@@ -1,69 +1,53 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { site } from "@/data/site";
+
+const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 ---
 
 <Layout
-  title="Privacy — Incubate Labs"
-  description="What this site does and doesn't do with data. Short, honest, no dark patterns."
+  title="Privacy | Incubate Labs"
+  description="What incubatelabs.ai does and doesn't do with your data. Short, plain and honest."
 >
-  <section class="max-w-3xl mx-auto px-6 pt-16 pb-12">
-    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-4">Privacy</p>
-    <h1 class="text-5xl font-bold tracking-tight mb-6">Privacy</h1>
-    <p class="text-sm text-neutral-500">Last updated: April 2026</p>
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-8">
+    <h1 class="text-4xl sm:text-5xl leading-tight">Privacy notice</h1>
+    <p class="mt-4 text-sm text-muted">Last updated: October 2026</p>
   </section>
 
-  <hr class="max-w-page mx-auto" />
+  <section class="max-w-page mx-auto px-4 sm:px-6">
+    <div class="max-w-prose space-y-10 text-lg text-muted leading-relaxed prose-links">
+      <div>
+        <h2 class="text-2xl text-ink">Who we are</h2>
+        <p class="mt-3">{site.legal} Simon Newton is the data controller for any personal information you send us. You can contact us about privacy at <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+      </div>
 
-  <section class="max-w-3xl mx-auto px-6 py-12 text-neutral-800 leading-relaxed space-y-6">
-    <h2 class="text-2xl font-bold">What this site does</h2>
-    <p>
-      <code>incubatelabs.ai</code> is a static site hosted on Cloudflare Pages. There is no login,
-      no account, no first-party tracking cookie. The only first-party storage is whatever your
-      browser caches in normal operation.
-    </p>
+      <div>
+        <h2 class="text-2xl text-ink">What this site collects</h2>
+        <p class="mt-3">There are no accounts and no tracking cookies, so we don't show a cookie banner. If you use the contact form, we receive the name, email, business name and message you enter. It's sent straight to Simon's inbox and isn't stored on the website. The Readiness Check runs in your browser, and your answers aren't sent to us unless you choose to send them.</p>
+      </div>
 
-    <h2 class="text-2xl font-bold">Sub-processors</h2>
-    <ul class="list-disc pl-5 space-y-2">
-      <li>
-        <strong>Cloudflare</strong> hosts the site and provides the CDN. It logs request metadata
-        (IP, user agent, timestamp) for fraud/abuse purposes per its standard policy.
-      </li>
-      <li>
-        <strong>Plausible Analytics</strong> (when enabled) aggregates page views without cookies,
-        without persistent identifiers, and without sending anything to Google. Hosted in the EU.
-        See <a href="https://plausible.io/data-policy" class="text-accent hover:underline">plausible.io/data-policy</a>.
-      </li>
-      <li>
-        <strong>Cal.com</strong> handles booking when you click through to schedule a call. Cal.com
-        is the data controller for the booking record (your name, email, the time you picked).
-        See <a href="https://cal.com/privacy" class="text-accent hover:underline">cal.com/privacy</a>.
-      </li>
-      <li>
-        <strong>Fonts</strong> (Inter, JetBrains Mono) are self-hosted via <code>@fontsource</code>.
-        No requests to Google Fonts.
-      </li>
-    </ul>
+      <div>
+        <h2 class="text-2xl text-ink">Services this site uses</h2>
+        <ul class="mt-3 list-disc space-y-3 pl-5">
+          <li>Cloudflare hosts the site. Like any web host, it processes technical request data such as IP address, browser type and time of visit, to deliver pages and protect against abuse.</li>
+          {plausibleDomain && (
+            <li>Plausible Analytics counts page visits without cookies or personal identifiers, and is hosted in the EU. See <a href="https://plausible.io/data-policy">plausible.io/data-policy</a>.</li>
+          )}
+          <li>Cloudflare Turnstile checks that contact form submissions come from a person, not a bot. It doesn't use cookies to track you. See the <a href="https://www.cloudflare.com/turnstile-privacy-policy/">Turnstile privacy policy</a>.</li>
+          <li>Google Calendar handles bookings if you choose to book a call. Google receives the details you enter when booking. See <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
+          <li>Fonts are served from this site. No requests are made to Google Fonts.</li>
+        </ul>
+      </div>
 
-    <h2 class="text-2xl font-bold">If you email or book a call</h2>
-    <p>
-      I receive your email address, the time you picked, and whatever you wrote in the message.
-      I use that to run the call and follow up afterwards. I don't add you to any mailing list and
-      I don't sell or share contact details.
-    </p>
+      <div>
+        <h2 class="text-2xl text-ink">If you contact us</h2>
+        <p class="mt-3">We receive your name, email address and whatever you include in your message or booking. We use it only to reply and, if we work together, to deliver that work. We won't add you to a mailing list and we never sell or share contact details. We keep enquiry emails for up to two years unless we go on to work together, in which case we keep business records as the law requires.</p>
+      </div>
 
-    <h2 class="text-2xl font-bold">Your rights</h2>
-    <p>
-      Under UK GDPR you can ask what data I hold about you (likely just the booking record and
-      any emails), ask me to delete it, or
-      <a href="https://ico.org.uk/make-a-complaint/" class="text-accent hover:underline">complain to the ICO</a>.
-      Email <a href="mailto:hello@incubatelabs.ai" class="text-accent hover:underline">hello@incubatelabs.ai</a>.
-    </p>
-
-    <h2 class="text-2xl font-bold">No dark patterns</h2>
-    <p>
-      No pop-ups asking for cookies you don't need. No exit-intent modals. No newsletter
-      subscription dressed up as a discount. If something annoys you about how this site works,
-      tell me — I'll fix it.
-    </p>
+      <div>
+        <h2 class="text-2xl text-ink">Your rights</h2>
+        <p class="mt-3">Under UK GDPR you can ask what we hold about you, ask us to correct or delete it, or object to how it's used. Email <a href={`mailto:${site.email}`}>{site.email}</a>. If you're unhappy with our response, you can <a href="https://ico.org.uk/make-a-complaint/">complain to the ICO</a>.</p>
+      </div>
+    </div>
   </section>
 </Layout>

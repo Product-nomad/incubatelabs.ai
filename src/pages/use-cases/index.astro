@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import UseCaseCard from "@/components/UseCaseCard.astro";
+import CallToAction from "@/components/CallToAction.astro";
+import { useCases } from "@/data/useCases";
+---
+
+<Layout
+  title="What we automate | Incubate Labs"
+  description="Six common jobs we automate for UK small businesses: document handling, data re-entry, reporting, customer replies, quotes and compliance questionnaires."
+>
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-12">
+    <p class="text-sm font-medium text-accent">What we automate</p>
+    <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">Where the hours go, and how we get them back.</h1>
+    <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">
+      In most small businesses the time doesn't go on one big task. It goes on dozens of small, repetitive ones. These are the six we see most often.
+    </p>
+  </section>
+
+  <section class="max-w-page mx-auto px-4 sm:px-6">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {useCases.map((uc, i) => <UseCaseCard useCase={uc} index={i} />)}
+    </div>
+    <p class="mt-10 max-w-prose text-lg text-muted">
+      <span class="font-medium text-ink">Something else on your mind?</span> These are starting points, not a menu. If a job is repetitive, rule-bound and eating someone's week, it's worth a conversation.
+    </p>
+  </section>
+
+  <CallToAction />
+</Layout>

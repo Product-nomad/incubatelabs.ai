@@ -1,204 +1,152 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import PackageCard from "@/components/PackageCard.astro";
+import UseCaseCard from "@/components/UseCaseCard.astro";
+import WorkCard from "@/components/WorkCard.astro";
+import CallToAction from "@/components/CallToAction.astro";
+import { useCases } from "@/data/useCases";
+import { work } from "@/data/work";
 
-const proofPoints = [
+const audiences = [
   {
-    title: "agentaudit",
-    summary: "OSS local audit tool for AI coding agent sessions. Catches leaked secrets, risky shell, sensitive-path writes. Published on npm with signed provenance.",
-    href: "https://github.com/Product-nomad/agentaudit",
-    cta: "GitHub",
+    title: "No IT team",
+    body: "You run the business, and the technology is whoever's least busy. You want things that work without someone babysitting them.",
   },
   {
-    title: "removepii",
-    summary: "GDPR-grade UK PII redactor. Two-phase regex + local LLM, RAM-only, zero cloud uploads. Behind a Cloudflare Zero Trust Tunnel.",
-    href: "https://removepii.co.uk",
-    cta: "Live",
+    title: "An IT provider who fixes laptops",
+    body: "Your provider keeps email, devices and backups running. That's valuable, but it isn't the same as improving how work gets done.",
   },
   {
-    title: "999callsimulator",
-    summary: "Voice-AI emergency-call simulator for kids. ElevenLabs WebRTC, sub-second first response, full sub-processor disclosure.",
-    href: "https://999callsimulator.com",
-    cta: "Live",
-  },
-  {
-    title: "idea-incubator",
-    summary: "Telegram bot capturing startup ideas with a 6-question Discovery Call flow + Mom-Test-style critique from Claude.",
-    href: "https://github.com/Product-nomad/idea-incubator",
-    cta: "GitHub",
+    title: "On the brink of a hire",
+    body: "The team is stretched and you're about to recruit. Taking the repetitive work away first could buy you months before you need to.",
   },
 ];
 
-const freeOfferings = [
+const tiers = [
   {
-    title: "Local-AI Sovereignty Check",
-    length: "30 min",
-    summary: "Which of your AI workflows actually need cloud LLMs and which could run locally. Names UK GDPR Art. 44 risk specifically.",
+    name: "Quick Win",
+    body: "One task, one fix. A small, fast piece of work that proves whether AI earns its place in your business.",
   },
   {
-    title: "AI Session Audit",
-    length: "15 min",
-    summary: "Bring a sample of your team's recent Claude Code / Cursor sessions. Live agentaudit walkthrough of what your agent has been doing.",
+    name: "Automation Sprint",
+    body: "One workflow automated end to end, with a fixed scope and a clear result. This is where most clients start.",
   },
   {
-    title: "AI Pilot Scope Workshop",
-    length: "60 min",
-    summary: "Bring an AI idea. Leave with an evaluated brief and a recommended next step (usually: do 5–8 discovery calls before building).",
+    name: "Operations Uplift",
+    body: "Several connected workflows across the business, planned and delivered together.",
   },
 ];
+
+const portfolio = work.filter((item) => item.external);
 ---
 
 <Layout
-  title="Incubate Labs — From AI ambition to systems your CISO will sign off"
-  description="Solo, agent-augmented engagements that take you from 'we should use AI' to local, sovereign, audited production. Published prices, public artefacts, no six-figure retainer."
+  title="Incubate Labs | Practical AI for small businesses"
+  description="Practical AI and automation for UK small businesses without an IT team. Take repetitive admin off your team's plate and put off the next hire. Based in Cambridgeshire."
 >
   <!-- Hero -->
-  <section class="max-w-page mx-auto px-6 pt-20 pb-16">
-    <p class="text-xs uppercase tracking-widest text-neutral-500 mb-6">Incubate Labs</p>
-    <h1 class="text-5xl md:text-6xl font-bold tracking-tight max-w-4xl leading-[1.05]">
-      From AI ambition to systems your CISO will sign off.
-    </h1>
-    <p class="mt-6 text-xl text-neutral-700 max-w-2xl leading-relaxed">
-      Solo, agent-augmented engagements that take you from <em>"we should use AI"</em>
-      to local, sovereign, audited production — without a six-figure consultancy retainer.
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-20 sm:pt-24">
+    <p class="text-sm font-medium text-accent">AI and automation for UK small businesses</p>
+    <h1 class="mt-4 max-w-4xl text-4xl sm:text-6xl leading-tight">Do more with the team you already have.</h1>
+    <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">
+      We take the repetitive admin off your people's plates: the reading, re-typing, chasing and reporting. That means they can get on with the work that grows the business. It's not about replacing anyone. It's about not needing to hire again quite so soon.
     </p>
-    <div class="mt-10 flex flex-wrap gap-4">
-      <a
-        href="/contact/"
-        class="inline-flex items-center px-6 py-3 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors"
-      >
-        Book a 30-min call
-      </a>
-      <a
-        href="/methodology/"
-        class="inline-flex items-center px-6 py-3 border border-ink text-ink font-medium rounded-md hover:bg-ink hover:text-paper transition-colors"
-      >
-        See the methodology
-      </a>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/contact/" class="bg-ink text-paper rounded-md px-6 py-3 font-medium transition-colors hover:bg-accent">Talk it through</a>
+      <a href="/use-cases/" class="border border-ink text-ink rounded-md px-6 py-3 font-medium transition-colors hover:bg-ink hover:text-paper">See what we automate</a>
     </div>
   </section>
 
-  <hr class="max-w-page mx-auto" />
-
-  <!-- The gap -->
-  <section class="max-w-page mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold mb-6">The gap</h2>
-    <div class="max-w-prose text-lg leading-relaxed text-neutral-800 space-y-4">
-      <p>
-        Most "AI strategy" engagements stop where the spreadsheet ends. The hard part is what
-        comes after — production-ready systems that survive a CISO review, an audit, a model
-        swap, a vendor fold.
-      </p>
-      <p>That's where Incubate Labs starts.</p>
-      <p>
-        We don't run AI workshops to validate roadmaps. We ship: shipped tools on npm, live UK
-        GDPR-grade redactors, voice-AI products in production, audit pipelines that survive
-        contact with reality. Public artefacts. Honest scope. Published prices.
-      </p>
-    </div>
-  </section>
-
-  <hr class="max-w-page mx-auto" />
-
-  <!-- Paid packages -->
-  <section class="max-w-page mx-auto px-6 py-16">
-    <div class="flex items-baseline justify-between flex-wrap gap-4 mb-8">
-      <h2 class="text-3xl font-bold">Engagements</h2>
-      <a href="/services/" class="text-sm font-medium text-accent hover:underline">All services →</a>
-    </div>
-    <p class="text-neutral-700 mb-10 max-w-prose">
-      Fixed scope, fixed days, fixed prices. No "talk to sales." If a package doesn't fit, the
-      free triage call below will tell you that honestly.
-    </p>
-    <div class="grid md:grid-cols-3 gap-4">
-      <PackageCard
-        title="OSS Tool Hardening Pass"
-        days="2 days"
-        price="£2,000"
-        summary="Threat model, decision log, security policy, sunset criteria, test-or-document-the-gap audit. Same shape as the governance scaffold across our public repos."
-        href="/services/oss-tool-hardening-pass/"
-      />
-      <PackageCard
-        title="AI Governance Pack"
-        days="5 days"
-        price="£4,000"
-        summary="Threat model + decision log + outcome metrics + drift monitoring plan + 90-day review. NIST AI RMF aligned."
-        href="/services/ai-governance-pack/"
-      />
-      <PackageCard
-        title="Local-LLM Pilot"
-        days="10 days"
-        price="£8,000"
-        summary="Working Ollama deployment + redaction pipeline against your real (or anonymised) documents + RAM-only architecture + handover."
-        href="/services/local-llm-pilot/"
-      />
-    </div>
-    <p class="mt-8 text-sm text-neutral-600">
-      Need a longer Frame → Operate engagement? See the
-      <a href="/services/" class="text-accent hover:underline">full services page</a>.
-    </p>
-  </section>
-
-  <hr class="max-w-page mx-auto" />
-
-  <!-- Free triage -->
-  <section class="max-w-page mx-auto px-6 py-16">
-    <div class="flex items-baseline justify-between flex-wrap gap-4 mb-8">
-      <h2 class="text-3xl font-bold">Free triage</h2>
-      <a href="/free/" class="text-sm font-medium text-accent hover:underline">Book one →</a>
-    </div>
-    <p class="text-neutral-700 mb-10 max-w-prose">
-      Three ways to find out, for free, whether we should work together. Each is a real piece of
-      diagnostic work, not a sales call.
-    </p>
-    <div class="grid md:grid-cols-3 gap-6">
-      {freeOfferings.map((o) => (
-        <div class="border border-neutral-200 rounded-lg p-6">
-          <div class="flex items-baseline justify-between gap-3 mb-2">
-            <h3 class="font-semibold">{o.title}</h3>
-            <span class="text-xs text-neutral-500 whitespace-nowrap">{o.length}</span>
+  <!-- Who we work with -->
+  <section class="bg-band border-y border-line">
+    <div class="max-w-page mx-auto px-4 sm:px-6 py-16">
+      <h2 class="text-3xl sm:text-4xl">Who we work with</h2>
+      <div class="mt-10 grid gap-8 md:grid-cols-3">
+        {audiences.map((a) => (
+          <div>
+            <h3 class="text-xl">{a.title}</h3>
+            <p class="mt-2 text-muted">{a.body}</p>
           </div>
-          <p class="text-sm text-neutral-700 leading-relaxed">{o.summary}</p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Six jobs -->
+  <section class="max-w-page mx-auto px-4 sm:px-6 py-20">
+    <h2 class="text-3xl sm:text-4xl">Six jobs we take off your plate</h2>
+    <p class="mt-4 max-w-prose text-lg text-muted">
+      These are the places we most often find hours going missing in a small business. If one of them sounds familiar, that's usually the place to start.
+    </p>
+    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {useCases.map((uc, i) => <UseCaseCard useCase={uc} index={i} />)}
+    </div>
+  </section>
+
+  <!-- Not everything needs AI -->
+  <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
+    <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
+      <h2 class="text-3xl sm:text-4xl">Not everything needs AI.</h2>
+      <div class="max-w-prose space-y-4 text-lg text-muted">
+        <p>A surprising number of "AI problems" are really a missing integration, a messy spreadsheet or a process nobody wrote down. When that's the case, we'll say so and fix it the simple way. It's cheaper for you and it's more reliable.</p>
+        <p>When AI is the right tool, we build it with a person in the loop where it matters, on systems you already use, and we hand it over so you're not dependent on us.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement sizes -->
+  <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <h2 class="text-3xl sm:text-4xl">Fixed scope. Agreed up front.</h2>
+        <p class="mt-4 max-w-prose text-lg text-muted">
+          Three sizes of engagement, all with a fixed scope and a fixed price agreed before any work starts. No open-ended day rates.
+        </p>
+      </div>
+      <a href="/how-we-work/" class="shrink-0 font-medium text-accent hover:underline">How we work →</a>
+    </div>
+    <div class="mt-10 grid gap-5 md:grid-cols-3">
+      {tiers.map((t) => (
+        <div class="border border-line rounded-xl p-6">
+          <h3 class="text-xl">{t.name}</h3>
+          <p class="mt-2 text-muted">{t.body}</p>
         </div>
       ))}
     </div>
+    <p class="mt-6 text-muted">Need a website too? We build those as well, either alongside an automation project or on their own.</p>
   </section>
 
-  <hr class="max-w-page mx-auto" />
-
-  <!-- Proof -->
-  <section class="max-w-page mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold mb-2">Built and shipped</h2>
-    <p class="text-neutral-700 mb-10 max-w-prose">
-      The methodology isn't theory. Every public repo and live product below is the same
-      discipline applied to a different problem.
-    </p>
-    <div class="grid md:grid-cols-2 gap-4">
-      {proofPoints.map((p) => (
-        <a href={p.href} class="block border border-neutral-200 hover:border-ink rounded-lg p-6 transition-colors group">
-          <div class="flex items-baseline justify-between gap-3 mb-2">
-            <h3 class="font-semibold font-mono text-base group-hover:text-accent transition-colors">{p.title}</h3>
-            <span class="text-xs text-neutral-500 whitespace-nowrap">{p.cta} →</span>
-          </div>
-          <p class="text-sm text-neutral-700 leading-relaxed">{p.summary}</p>
-        </a>
-      ))}
+  <!-- Who you'll work with -->
+  <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
+    <div class="grid gap-6 border border-line rounded-xl p-6 sm:p-10 md:grid-cols-[1fr_2fr]">
+      <h2 class="text-2xl sm:text-3xl">Who you'll work with</h2>
+      <div class="max-w-prose space-y-4 text-lg text-muted">
+        <p>Incubate Labs is run by Simon Newton from Cambridgeshire. Before this, Simon spent years delivering operations and technology programmes, most recently as a Lead Product Delivery Manager at Ocado, after earlier careers in the British Army and in post-conflict reconstruction.</p>
+        <p>You deal with the person doing the work, from the first call to the handover. <a href="/about/" class="font-medium text-accent hover:underline">More about Simon →</a></p>
+      </div>
     </div>
   </section>
 
-  <hr class="max-w-page mx-auto" />
-
-  <!-- CTA -->
-  <section class="max-w-page mx-auto px-6 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">Pick the smallest first move.</h2>
-    <p class="text-lg text-neutral-700 max-w-prose mx-auto mb-8">
-      A 30-min call costs nothing. If we shouldn't work together, you'll know inside 30 minutes.
-    </p>
-    <a
-      href="/contact/"
-      class="inline-flex items-center px-8 py-4 bg-ink text-paper font-medium rounded-md hover:bg-accent transition-colors"
-    >
-      Book a 30-min call
-    </a>
+  <!-- Things I've built -->
+  <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl sm:text-4xl">Things I've built</h2>
+      <a href="/work/" class="shrink-0 font-medium text-accent hover:underline">See all →</a>
+    </div>
+    <div class="mt-10 grid gap-5 md:grid-cols-3">
+      {portfolio.map((item) => <WorkCard item={item} />)}
+    </div>
   </section>
+
+  <!-- Readiness Check band -->
+  <section class="bg-accent-soft">
+    <div class="max-w-page mx-auto px-4 sm:px-6 py-16 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div class="max-w-prose">
+        <h2 class="text-3xl sm:text-4xl">Not ready to talk yet?</h2>
+        <p class="mt-4 text-lg text-muted">Take the free Readiness Check. A few minutes of questions about how work happens in your business, and you'll see which jobs are worth automating first. No email needed.</p>
+      </div>
+      <a href="/readiness-check/" class="shrink-0 self-start md:self-center bg-ink text-paper rounded-md px-6 py-3 font-medium transition-colors hover:bg-accent">Take the Readiness Check →</a>
+    </div>
+  </section>
+
+  <CallToAction />
 </Layout>
