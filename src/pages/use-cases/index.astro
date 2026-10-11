@@ -1,25 +1,27 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import UseCaseCard from "@/components/UseCaseCard.astro";
+import WebsiteCard from "@/components/WebsiteCard.astro";
 import CallToAction from "@/components/CallToAction.astro";
 import { useCases } from "@/data/useCases";
 ---
 
 <Layout
   title="AI Automation Examples for Small Businesses | Incubate Labs"
-  description="Six jobs UK small businesses hand to AI and automation: documents, data entry, reporting, customer emails, quotes and security questionnaires."
+  description="Practical AI automation examples for UK small businesses, from invoices and data entry to reporting and quotes, plus websites that bring in work."
 >
   <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-12">
     <p class="text-sm font-medium text-accent">Where we can help</p>
     <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">AI automation examples: where the hours go, and how we get them back</h1>
     <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">
-      In most small businesses the time doesn't go on one big task. It goes on dozens of small, repetitive ones. These are the six we see most often.
+      Most work starts with the admin that eats your team's week. Sometimes it starts with the website that should be bringing work in. We build both, and connect them.
     </p>
   </section>
 
   <section class="max-w-page mx-auto px-4 sm:px-6">
     <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {useCases.map((uc, i) => <UseCaseCard useCase={uc} index={i} headingLevel="h2" />)}
+      <WebsiteCard headingLevel="h2" />
     </div>
     <p class="mt-10 max-w-prose text-lg text-muted">
       <span class="font-medium text-ink">Something else on your mind?</span> These are starting points, not a menu. If a job is repetitive, rule-bound and eating someone's week, it's worth a conversation.

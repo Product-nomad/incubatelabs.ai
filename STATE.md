@@ -1,7 +1,7 @@
 # incubatelabs.ai — STATE
 
-**Goal**: A lead-generation site for practical AI and automation for UK small businesses (5–50 staff) without an in-house IT team. AI services lead; web design is an add-on.
-**Phase**: v1.1 live at https://incubatelabs.ai (merged to `main` and deployed 2026-10-11, commit `c0a36fc`). Signed off by Simon from the preview screenshots.
+**Goal**: A lead-generation site for practical AI and automation for UK small businesses (5–50 staff). AI services lead; websites are offered alongside.
+**Phase**: v1.1 sprint **closed** 2026-10-11. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
 **Last touched**: 2026-10-11.
 
 ## v1.1 (live; built on `v1.1-brand-hero`, spec: `design/v1.1/spec.md`)
@@ -26,20 +26,24 @@
 - Home "Six jobs we take off your plate" section is now "Where we can help", with a full-width seventh card, "Websites that bring in work" (links to /contact/). The standalone "Need a website too?" line is gone. "What we automate" relabelled "Where we can help" in the nav, footer, use-case breadcrumbs (visible and BreadcrumbList) and the /use-cases/ eyebrow. Home page carries a Service JSON-LD entry for "Small business website design". /use-cases/ still shows only the six automation cards.
 - Hero week card caption ("An illustrative week · owner of a 12-person trades firm") removed.
 
-## Open decisions (v1.1 §12; not built)
-- **Final H1**: "Practical AI and automation for small businesses." (changed by Simon 2026-10-11; title tag and meta description unchanged).
-- **Legal line**: still names the town ("…a sole trader based in Huntingdon, Cambridgeshire."). Keep the town or use a business address. It is the only location left on the site.
-- **About page voice**: done; /about is firm-forward throughout (2026-10-11).
-- **Founder photo**: on hold.
-- **"Works with the tools you already use" strip**: not confirmed, not built.
-- **Project screenshots**: Simon to supply as `public/projects/{attestloop,removepii,publicguard,retail-poc,readiness-check}.webp` (16:10).
+## Final tidy (2026-10-11, closes the sprint)
+- "Websites that bring in work" is a shared component (`src/components/WebsiteCard.astro`, `id="websites"`), shown after the six cards on the home page and /use-cases/.
+- /use-cases/: meta description now mentions websites (145 characters); intro replaced with the "Where we can help" text. Title tag and H1 kept for SEO ("AI automation examples…").
+- Footer "Where we can help" column ends with "Websites" → `/use-cases/#websites`.
+- "Illustrative" is still visible in the hero footnote that cites the Amex and Microsoft sources (`src/components/LostDayHero.astro`); left in place.
 
-## Next steps (v1.1 §14.7; not built)
-- **Google Business Profile**: service-area business with the address hidden. Simon sets this up manually; it carries the local signal now the site shows no location.
-- **Content**: guide on Microsoft Copilot pricing and value for small businesses (the competitor gap in `research/seo-2026-10/`).
-- **GitHub bio**: Simon to replace "Open to PM and Delivery roles" (manual).
-- The SEO README's "keep 'based near Huntingdon' on the site" suggestion was **not applied**: Simon chose to show no location.
-- Technical-audit items not done (see the v1.1 report): `priceRange` (no prices), founder photo (on hold), Cloudflare email obfuscation (dashboard decision), analytics (needs a Plausible account or Cloudflare Web Analytics switched on in the dashboard), CSP (needs testing against Turnstile).
+## Open items
+- **Legal footer line**: still names the town ("…a sole trader based in Huntingdon, Cambridgeshire."), the only location on the site. Keep the town or use a business address.
+- **Dedicated /websites page**: the websites offer currently lives in a card on the home page and /use-cases/, plus a Service entry in the home JSON-LD.
+- **Copilot pricing guide**: Microsoft Copilot pricing and value for small businesses (the competitor gap in `research/seo-2026-10/`).
+- **Project screenshots**: Simon to supply as `public/projects/{attestloop,removepii,publicguard,retail-poc,readiness-check}.webp` (16:10).
+- **Google Business Profile**: service-area business with the address hidden (Simon, manual).
+- **GitHub bio**: replace "Open to PM and Delivery roles" (Simon, manual).
+
+## Backlog (parked, not in the open list)
+- Founder photo (on hold); "Works with the tools you already use" strip (not confirmed).
+- Technical-audit leftovers: `priceRange` (no prices), Cloudflare email obfuscation (dashboard decision), analytics (Plausible account or Cloudflare Web Analytics), CSP (needs testing against Turnstile).
+- The SEO README's "keep 'based near Huntingdon'" suggestion was not applied: Simon chose to show no location.
 
 ## Stale docs
 - `ENGAGEMENT_PROTOCOL.md` and `CONTEXT.md` still describe the April packages (with prices), `/services/` pages and Cal.com. Rewrite before linking to either.

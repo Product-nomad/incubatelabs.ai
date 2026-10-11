@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import LostDayHero from "@/components/LostDayHero.astro";
 import Hexagon from "@/components/Hexagon.astro";
 import UseCaseCard from "@/components/UseCaseCard.astro";
+import WebsiteCard from "@/components/WebsiteCard.astro";
 import CostCheck from "@/components/CostCheck.astro";
 import EngagementCard from "@/components/EngagementCard.astro";
 import WorkCard from "@/components/WorkCard.astro";
@@ -79,17 +80,7 @@ const websiteService = {
     </p>
     <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {useCases.map((uc, i) => <UseCaseCard useCase={uc} index={i} />)}
-      <a
-        href="/contact/"
-        class="group flex flex-col gap-4 border border-line rounded-xl p-6 transition-colors hover:border-accent [grid-column:1/-1] md:flex-row md:items-center md:gap-8"
-      >
-        <div class="flex items-center gap-3 md:w-72 md:shrink-0">
-          <Hexagon />
-          <h3 class="text-xl transition-colors group-hover:text-accent">Websites that bring in work</h3>
-        </div>
-        <p class="text-muted md:flex-1">A fast, clear site that explains what you do and turns visitors into enquiries. Built on its own or alongside an automation project, and connected to the systems behind it, so enquiries land where your team already works.</p>
-        <span class="text-sm font-medium text-accent md:shrink-0">Talk about a website →</span>
-      </a>
+      <WebsiteCard />
     </div>
   </section>
 
