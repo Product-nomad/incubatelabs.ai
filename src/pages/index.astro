@@ -10,6 +10,7 @@ import CallToAction from "@/components/CallToAction.astro";
 import { useCases } from "@/data/useCases";
 import { engagements } from "@/data/engagements";
 import { work } from "@/data/work";
+import { site } from "@/data/site";
 
 const familiar = [
   "Evenings and weekends go on admin you'd love to hand off",
@@ -28,6 +29,19 @@ const askedFor = [
 ];
 
 const projects = work.filter((item) => !item.workPageOnly);
+
+// Same structure as the Service entries on the use-case pages.
+const websiteService = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Small business website design",
+  serviceType: "Small business website design",
+  description:
+    "Fast, clear websites for UK small businesses, built on their own or alongside an automation project and connected to the systems behind them.",
+  provider: { "@id": `${site.url}/#org` },
+  areaServed: { "@type": "Country", name: "United Kingdom" },
+  url: `${site.url}/`,
+};
 ---
 
 <Layout
@@ -35,6 +49,7 @@ const projects = work.filter((item) => !item.workPageOnly);
   description="Practical AI and automation for UK small businesses. Fixed-price projects that take the repetitive admin off your team."
   socialDescription="Practical AI and automation for UK small businesses. Fixed-price projects that take the repetitive admin off your team."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(websiteService)} />
   <LostDayHero />
 
   <!-- Sound familiar? -->
@@ -56,14 +71,25 @@ const projects = work.filter((item) => !item.workPageOnly);
     </div>
   </section>
 
-  <!-- Six jobs -->
+  <!-- Where we can help -->
   <section class="max-w-page mx-auto px-4 sm:px-6 py-20">
-    <h2 class="text-3xl sm:text-4xl">Six jobs we take off your plate</h2>
+    <h2 class="text-3xl sm:text-4xl">Where we can help</h2>
     <p class="mt-4 max-w-prose text-lg text-muted">
-      These are the places we most often find hours going missing in a small business. If one of them sounds familiar, that's usually the place to start.
+      Most work starts with the admin that eats your team's week. Sometimes it starts with the website that should be bringing work in. We build both, and connect them.
     </p>
     <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {useCases.map((uc, i) => <UseCaseCard useCase={uc} index={i} />)}
+      <a
+        href="/contact/"
+        class="group flex flex-col gap-4 border border-line rounded-xl p-6 transition-colors hover:border-accent [grid-column:1/-1] md:flex-row md:items-center md:gap-8"
+      >
+        <div class="flex items-center gap-3 md:w-72 md:shrink-0">
+          <Hexagon />
+          <h3 class="text-xl transition-colors group-hover:text-accent">Websites that bring in work</h3>
+        </div>
+        <p class="text-muted md:flex-1">A fast, clear site that explains what you do and turns visitors into enquiries. Built on its own or alongside an automation project, and connected to the systems behind it, so enquiries land where your team already works.</p>
+        <span class="text-sm font-medium text-accent md:shrink-0">Talk about a website →</span>
+      </a>
     </div>
   </section>
 
@@ -109,7 +135,6 @@ const projects = work.filter((item) => !item.workPageOnly);
     <div class="mt-10 grid gap-5 md:grid-cols-3">
       {engagements.map((e) => <EngagementCard engagement={e} />)}
     </div>
-    <p class="mt-6 text-muted">Need a website too? We build those as well, either alongside an automation project or on their own.</p>
   </section>
 
   <!-- Who you'll work with -->

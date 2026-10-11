@@ -22,12 +22,14 @@
 ## Copy changes (2026-10-11)
 - Hero toggle relabelled "Before" / "After" (was "This week" / "With Incubate Labs"), with matching visually hidden text, so the hero doesn't read as a product.
 - "IT department / IT team" framing removed site-wide, including the home meta description and the JSON-LD description (2026-10-11); grep for IT department / IT team / IT person / in-house IT returns nothing.
-- About is firm-forward: H1 "Delivery first, technology second.", "What we believe about AI in small businesses", beliefs in we/us/our, third-person intro. Still first person: the "Let's talk." call to action at the foot of /about ("Tell me… If I can't help, I'll say so…"), awaiting Simon's decision.
+- About is firm-forward: H1 "Delivery first, technology second.", "What we believe about AI in small businesses", beliefs in we/us/our, third-person intro. The "Let's talk." box is now "Tell us… If we can't help, we'll say so…", so /about has no first person left.
+- Home "Six jobs we take off your plate" section is now "Where we can help", with a full-width seventh card, "Websites that bring in work" (links to /contact/). The standalone "Need a website too?" line is gone. "What we automate" relabelled "Where we can help" in the nav, footer, use-case breadcrumbs (visible and BreadcrumbList) and the /use-cases/ eyebrow. Home page carries a Service JSON-LD entry for "Small business website design". /use-cases/ still shows only the six automation cards.
+- Hero week card caption ("An illustrative week · owner of a 12-person trades firm") removed.
 
 ## Open decisions (v1.1 §12; not built)
 - **Final H1**: "Practical AI and automation for small businesses." (changed by Simon 2026-10-11; title tag and meta description unchanged).
 - **Legal line**: still names the town ("…a sole trader based in Huntingdon, Cambridgeshire."). Keep the town or use a business address. It is the only location left on the site.
-- **About page voice**: firm-forward since 2026-10-11 except the page's "Let's talk." call to action (still first person).
+- **About page voice**: done; /about is firm-forward throughout (2026-10-11).
 - **Founder photo**: on hold.
 - **"Works with the tools you already use" strip**: not confirmed, not built.
 - **Project screenshots**: Simon to supply as `public/projects/{attestloop,removepii,publicguard,retail-poc,readiness-check}.webp` (16:10).
