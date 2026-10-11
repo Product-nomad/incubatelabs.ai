@@ -45,13 +45,13 @@ const hourLabels = Array.from({ length: Math.ceil(ROWS / 2) }, (_, i) => ({ row:
             </div>
           </div>
           <div class="ld-toggle self-start shrink-0" role="group" aria-label="Show the week">
-            <button type="button" data-set="before" aria-pressed="true">This week</button>
-            <button type="button" data-set="after" aria-pressed="false">With Incubate Labs</button>
+            <button type="button" data-set="before" aria-pressed="true">Before</button>
+            <button type="button" data-set="after" aria-pressed="false">After</button>
           </div>
         </div>
 
         <p class="sr-only">
-          In a typical week, about {totals.lost} hours go on admin such as invoices, chasing payments and re-typing. With Incubate Labs, about {totals.back} of those hours come back and {totals.checking} are spent checking the work.
+          In a typical week, about {totals.lost} hours go on admin such as invoices, chasing payments and re-typing. After automation, about {totals.back} of those hours come back and {totals.checking} are spent checking the work.
         </p>
 
         <div class="ld-grid mt-5" aria-hidden="true">

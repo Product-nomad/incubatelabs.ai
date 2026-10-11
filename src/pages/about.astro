@@ -3,24 +3,6 @@ import Layout from "@/layouts/Layout.astro";
 import CallToAction from "@/components/CallToAction.astro";
 import { site } from "@/data/site";
 
-const timeline = [
-  {
-    period: "1996–2003",
-    title: "British Army",
-    body: "Intelligence and operations. Where I learned to plan carefully, work with incomplete information and get things done under pressure.",
-  },
-  {
-    period: "Ocado",
-    title: "Lead Product Delivery Manager",
-    body: "Delivering technology and operational change in one of the UK's most automated businesses.",
-  },
-  {
-    period: "Now",
-    title: "Incubate Labs",
-    body: "Building practical AI and automation for small businesses that don't have an IT department to do it for them.",
-  },
-];
-
 const beliefs = [
   {
     lead: "Most \"AI problems\" aren't.",
@@ -45,23 +27,9 @@ const beliefs = [
     <p class="text-sm font-medium text-accent">About</p>
     <h1 class="mt-4 text-4xl sm:text-5xl leading-tight">Hello, I'm Simon.</h1>
     <div class="mt-6 max-w-prose space-y-4 text-lg sm:text-xl text-muted leading-relaxed">
-      <p>I run Incubate Labs. I build practical AI and automation for small businesses, the kind that don't have an IT department and don't want a consultancy's slide deck.</p>
-      <p>Most of my career has been about delivery: taking something that needs to happen and making it happen properly, in the real world, with the people and constraints that are actually there. That's the same job, whether it's an Army operation, a reconstruction programme or an invoice workflow for a ten-person business.</p>
+      <p>Incubate Labs builds practical AI and automation for small businesses that want it built for them, not explained to them in a slide deck.</p>
+      <p>The work is delivery: taking something that needs to happen and making it happen properly, in the real world, with the people and constraints that are actually there. Founder Simon Newton has spent his career doing exactly that, from Army operations to leading product delivery in tech. An invoice workflow for a ten-person business is the same job at a different scale.</p>
     </div>
-  </section>
-
-  <section class="max-w-page mx-auto px-4 sm:px-6 py-12">
-    <h2 class="text-3xl sm:text-4xl">Background</h2>
-    <ol class="mt-10 max-w-prose border-l border-line">
-      {timeline.map((t) => (
-        <li class="relative pb-10 pl-8 last:pb-0">
-          <span class="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
-          <p class="text-sm font-medium text-accent">{t.period}</p>
-          <h3 class="mt-1 text-xl">{t.title}</h3>
-          <p class="mt-2 text-muted">{t.body}</p>
-        </li>
-      ))}
-    </ol>
   </section>
 
   <section class="max-w-page mx-auto px-4 sm:px-6 py-12">

@@ -19,10 +19,15 @@
 - Favicons: `favicon.svg` (ink, #f1efe9 in dark mode), `favicon-32.png`, `apple-touch-icon.png` (180px, ink on paper). Logo URL in the ProfessionalService JSON-LD.
 - Home page has a separate 119-character og:/twitter: description; the 142-character meta description stays for search.
 
+## Copy changes (2026-10-11)
+- Hero toggle relabelled "Before" / "After" (was "This week" / "With Incubate Labs"), with matching visually hidden text, so the hero doesn't read as a product.
+- "IT department / IT team" framing removed from the footer tagline, the "Sound familiar?" intro and the About intro. Still present, left unchanged pending Simon's wording: home meta description (`src/pages/index.astro`) and the ProfessionalService JSON-LD description (`src/layouts/Layout.astro`).
+- About: Background timeline removed; intro rewritten in the third person ("Founder Simon Newton…"). The H1 ("Hello, I'm Simon.") and the "What I believe" section are still first person.
+
 ## Open decisions (v1.1 §12; not built)
 - **Final H1**: "Practical AI and automation for small businesses." (changed by Simon 2026-10-11; title tag and meta description unchanged).
 - **Legal line**: still names the town ("…a sole trader based in Huntingdon, Cambridgeshire."). Keep the town or use a business address. It is the only location left on the site.
-- **About page voice**: Simon doesn't want the site to read as a one-person operation. About is unchanged apart from the Iraq and location removals.
+- **About page voice**: Simon doesn't want the site to read as a one-person operation. Intro now third person and Background removed (2026-10-11); H1 and beliefs remain first person.
 - **Founder photo**: on hold.
 - **"Works with the tools you already use" strip**: not confirmed, not built.
 - **Project screenshots**: Simon to supply as `public/projects/{attestloop,removepii,publicguard,retail-poc,readiness-check}.webp` (16:10).
