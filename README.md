@@ -41,7 +41,7 @@ Output lands in `dist/`. Cloudflare Pages picks it up via `npm run build`.
 | `/use-cases/<slug>/` | Six use-case pages, from `src/data/useCases.ts` |
 | `/how-we-work/` | Process and the three engagement sizes |
 | `/work/` | Things I've built |
-| `/readiness-check/` | Free AI readiness check (pending sign-off) |
+| `/readiness-check/` | Free AI readiness check (runs in the browser; logic in `src/data/readiness.ts`) |
 | `/about/` | About Simon |
 | `/contact/` | Form, booking and email |
 | `/contact/thanks/` | No-JS form confirmation (noindex, not in sitemap) |

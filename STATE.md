@@ -7,13 +7,15 @@
 ## What's done (v1-sme-site)
 - April v0 pages removed (methodology, services, free triage, PackageCard).
 - New theme (ink / paper / forest-green accent, Source Serif 4 + Inter), Nav with `<details>` mobile menu, Footer, CallToAction, UseCaseCard, WorkCard.
-- Pages: home, use-cases index + 6 detail pages (from `src/data/useCases.ts`), how-we-work, work, about, contact, contact/thanks (noindex, not in sitemap), privacy, 404.
+- Pages: home, use-cases index + 6 detail pages (from `src/data/useCases.ts`), how-we-work, work, readiness-check, about, contact, contact/thanks (noindex, not in sitemap), privacy, 404.
 - Sitemap via `@astrojs/sitemap`; robots.txt points at `sitemap-index.xml`.
 - Contact form: `functions/api/contact.ts` (honeypot, validation, Turnstile) → service binding → `workers/mailer` (send_email via Email Routing). See DECISIONS 2026-10-11.
-- Local checks passed 2026-10-11: build, banned-string scan, internal links (except `/readiness-check/`), form scenarios against `wrangler dev` (valid, no token → 403, honeypot dropped, no-JS → 303 `/contact/thanks/`, bad email / header injection → 400), screenshots at 1280 and 390 with no horizontal scroll (`.screens/`, gitignored).
+- Local checks passed 2026-10-11: build, banned-string scan, internal links (all resolve), form scenarios against `wrangler dev` (valid, no token → 403, honeypot dropped, no-JS → 303 `/contact/thanks/`, bad email / header injection → 400), screenshots at 1280 and 390 with no horizontal scroll (`.screens/`, gitignored).
+- Readiness Check built 2026-10-11 to the approved proposal (`src/data/readiness.ts`, `src/pages/readiness-check.astro`). Verified in Playwright: three answer profiles give the expected recommendations and prep points, recommendation links resolve, validation blocks unanswered steps, "Email me my result" sends via `/api/contact`.
 
 ## Blocked on Simon
-- **Readiness Check** (`/readiness-check/`): build gate. Proposal adapted from `ai-adoption-compass` awaiting sign-off. Until built, the links to it from home, footer, contact and `/work/` are broken.
+- **Readiness Check wording**: the option labels, one-line reasons, "Before you start" points, the "nothing stands out" text and the email note ("Your result goes to Simon, who will email it to you personally") are drafted, not from the spec. Approve before launch.
+- **No-JS contact form**: Turnstile needs JS, so a visitor with JS off gets the failure page (with the email address), not `/contact/thanks/`. The thanks redirect works when a token is present.
 - **`bookingUrl`** in `src/data/site.ts`: the Book a call panel is hidden until it's set.
 - **Forwarding inbox** for the form and `hello@`.
 - **Cloudflare credentials** (`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`) not present on this machine.

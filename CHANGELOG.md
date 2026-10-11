@@ -11,6 +11,7 @@ All notable user-visible changes. Format: [Keep a Changelog](https://keepachange
 - Privacy notice rewritten for the form, Turnstile and Google Calendar.
 
 ### Added
+- Readiness Check: 13-question, three-step, in-browser check that recommends which use cases to automate first, with data-readiness prep points. Adapted from `ai-adoption-compass`.
 - Six use-case pages generated from `src/data/useCases.ts`, plus an index.
 - How we work, Things I've built, About, 404 and contact thank-you pages.
 - Contact form backend: Pages Function with Turnstile, honeypot and validation, sending via an internal Email Routing Worker.
@@ -21,7 +22,7 @@ All notable user-visible changes. Format: [Keep a Changelog](https://keepachange
 - Methodology, services, package detail and free triage pages, and all published prices.
 
 ### Pending
-- Readiness Check (awaiting sign-off), booking URL, Cloudflare setup and deploy. See `STATE.md`.
+- Readiness Check wording sign-off, booking URL, Cloudflare setup and deploy. See `STATE.md`.
 
 ## [Unreleased] — 2026-04-28
 
