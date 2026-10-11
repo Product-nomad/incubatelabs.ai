@@ -1,11 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { site } from "@/data/site";
+import { turnstileSiteKey } from "@/lib/turnstile";
 
-// Turnstile site key is public. In local dev fall back to Cloudflare's
-// always-pass test key so the form can be exercised without real keys.
-const turnstileSiteKey =
-  import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || (import.meta.env.DEV ? "1x00000000000000000000AA" : "");
 const mailto = `mailto:${site.email}?subject=${encodeURIComponent("Enquiry from incubatelabs.ai")}`;
 const inputClass =
   "mt-2 block w-full rounded-md border border-line bg-white px-3 py-2.5 text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
