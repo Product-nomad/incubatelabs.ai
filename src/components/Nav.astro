@@ -1,4 +1,6 @@
 ---
+import Logo from "@/components/Logo.astro";
+
 const links = [
   { href: "/use-cases/", label: "What we automate" },
   { href: "/how-we-work/", label: "How we work" },
@@ -11,9 +13,8 @@ const isActive = (href: string) => currentPath.startsWith(href);
 
 <header class="border-b border-line">
   <div class="max-w-page mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
-    <a href="/" class="flex items-center gap-2.5 font-serif font-semibold text-xl text-ink">
-      <span class="block h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
-      Incubate Labs
+    <a href="/" aria-label="Incubate Labs, home" class="shrink-0">
+      <Logo height={36} />
     </a>
 
     <nav aria-label="Main" class="hidden md:flex items-center gap-7 text-sm">

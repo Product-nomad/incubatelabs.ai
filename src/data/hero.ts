@@ -1,7 +1,7 @@
 // Home page hero: "the lost day" (v1.1 spec §2, copy from the §14 SEO addendum).
 
 // The H1 lives in one constant so it can change without touching the layout.
-export const HERO_H1 = "Practical AI and automation for small businesses without an IT team.";
+export const HERO_H1 = "Practical AI and automation for small businesses.";
 
 // [start (half-hour index from 9:00), length (half-hours), kind, label]
 // Kind: w = customer work, a = admin that comes back, c = admin that becomes "a person checks".

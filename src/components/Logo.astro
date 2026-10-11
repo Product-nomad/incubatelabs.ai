@@ -1,0 +1,18 @@
+---
+// Incubate Labs lockup (public/brand/incubatelabs-lockup.svg), drawn with <use> so it
+// inherits currentColor and the file is fetched once and cached.
+import fs from "node:fs";
+import path from "node:path";
+
+interface Props {
+  height: number;
+}
+
+const { height } = Astro.props;
+const file = fs.readFileSync(path.join(process.cwd(), "public/brand/incubatelabs-lockup.svg"), "utf8");
+const viewBox = file.match(/viewBox="([^"]+)"/)![1];
+const [, , w, h] = viewBox.split(/\s+/).map(Number);
+const width = Math.round((height * w) / h);
+---
+
+<svg viewBox={viewBox} width={width} height={height} role="img" aria-label="Incubate Labs" class="block shrink-0" style="color:#16181a"><use href="/brand/incubatelabs-lockup.svg#lockup" /></svg>

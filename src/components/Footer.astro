@@ -1,6 +1,7 @@
 ---
 import { site } from "@/data/site";
 import { useCases } from "@/data/useCases";
+import Logo from "@/components/Logo.astro";
 
 const year = new Date().getFullYear();
 const linkClass = "text-muted hover:text-accent transition-colors";
@@ -9,7 +10,7 @@ const linkClass = "text-muted hover:text-accent transition-colors";
 <footer class="bg-band border-t border-line mt-20">
   <div class="max-w-page mx-auto px-4 sm:px-6 py-12 grid gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
     <div>
-      <p class="font-serif font-semibold text-lg text-ink">Incubate Labs</p>
+      <Logo height={32} />
       <p class="mt-2 text-muted">Practical AI for small businesses without an IT team.</p>
     </div>
     <div>
