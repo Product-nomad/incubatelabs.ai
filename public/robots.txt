@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://incubatelabs.ai/sitemap.xml
+Sitemap: https://incubatelabs.ai/sitemap-index.xml

@@ -18,3 +18,10 @@ dist/
 
 # logs
 *.log
+
+# screenshots from acceptance checks
+.screens/
+
+# wrangler
+.wrangler/
+.dev.vars

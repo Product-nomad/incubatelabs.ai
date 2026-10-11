@@ -5,12 +5,17 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        serif: ['"Source Serif 4"', "Georgia", "serif"],
       },
       colors: {
-        ink: "#0a0a0a",
-        paper: "#fdfdfc",
-        accent: "#0066ff",
+        ink: "#16181a",
+        paper: "#fbfaf7",
+        line: "#e4e1da",
+        muted: "#5d6166",
+        accent: "#1f5c45",
+        "accent-soft": "#e8efe9",
+        "accent-line": "#cfe0d4",
+        band: "#f4f2ed",
       },
       maxWidth: {
         prose: "65ch",
