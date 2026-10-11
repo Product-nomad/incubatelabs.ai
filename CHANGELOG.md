@@ -2,6 +2,27 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.0.0-draft] — 2026-10-11
+
+### Changed
+- Repositioned for UK small businesses without an IT team. New copy throughout.
+- New visual design: ink on warm paper, forest-green accent, Source Serif 4 headings, Inter body.
+- Contact page rewritten: form, Google Calendar booking (hidden until the URL is set) and email.
+- Privacy notice rewritten for the form, Turnstile and Google Calendar.
+
+### Added
+- Six use-case pages generated from `src/data/useCases.ts`, plus an index.
+- How we work, Things I've built, About, 404 and contact thank-you pages.
+- Contact form backend: Pages Function with Turnstile, honeypot and validation, sending via an internal Email Routing Worker.
+- Sitemap (`@astrojs/sitemap`), favicon, JSON-LD `ProfessionalService`, Open Graph `en_GB`.
+- Committed `package-lock.json`.
+
+### Removed
+- Methodology, services, package detail and free triage pages, and all published prices.
+
+### Pending
+- Readiness Check (awaiting sign-off), booking URL, Cloudflare setup and deploy. See `STATE.md`.
+
 ## [Unreleased] — 2026-04-28
 
 ### Added

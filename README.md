@@ -1,16 +1,17 @@
 # incubatelabs.ai
 
-Site source for [incubatelabs.ai](https://incubatelabs.ai) — a services brand offering structured AI delivery engagements under the **Incubate** methodology.
+Site source for [incubatelabs.ai](https://incubatelabs.ai): practical AI and automation for UK small businesses without an in-house IT team.
 
-> **Phase:** Frame → Build (v0 scaffold). Site lives; Cal.com, Plausible, and DNS still need wiring. See [`STATE.md`](./STATE.md).
+> **Status:** v1 in build. See [`STATE.md`](./STATE.md).
 
 ## Stack
 
-- **Astro** (static site)
-- **Tailwind CSS** + **Inter** (self-hosted via `@fontsource`)
-- **Cloudflare Pages** for hosting
-- **Cal.com** for booking (placeholder until account is set up)
-- **Plausible Analytics** (cookieless, EU-hosted, opt-in via env var)
+- **Astro 5** (static) + **Tailwind 3**, **Inter** and **Source Serif 4** self-hosted via `@fontsource`
+- **Cloudflare Pages** for hosting, with one Pages Function (`functions/api/contact.ts`)
+- **`workers/mailer`**: internal Worker that sends form enquiries through Cloudflare Email Routing
+- **Cloudflare Turnstile** on the contact form
+- **Google Calendar** appointment schedule for bookings
+- **Plausible Analytics** (cookieless, opt-in via `PUBLIC_PLAUSIBLE_DOMAIN`)
 
 ## Local dev
 
@@ -35,15 +36,39 @@ Output lands in `dist/`. Cloudflare Pages picks it up via `npm run build`.
 
 | Path | Page |
 |---|---|
-| `/` | Home — hero, three paid packages, three free triage offerings, proof points |
-| `/methodology/` | The Incubate methodology overview (8 patterns, 6 phases, 6 agents, 5 trust principles) |
-| `/services/` | Services index + flagship engagement |
-| `/services/oss-tool-hardening-pass/` | £2k, 2-day package detail |
-| `/services/ai-governance-pack/` | £4k, 5-day package detail |
-| `/services/local-llm-pilot/` | £8k, 10-day package detail |
-| `/free/` | Three free triage offerings, in detail |
-| `/contact/` | Cal.com embed + email + working hours |
-| `/privacy/` | Privacy notice — sub-processors named, no dark patterns |
+| `/` | Home |
+| `/use-cases/` | What we automate |
+| `/use-cases/<slug>/` | Six use-case pages, from `src/data/useCases.ts` |
+| `/how-we-work/` | Process and the three engagement sizes |
+| `/work/` | Things I've built |
+| `/readiness-check/` | Free AI readiness check (pending sign-off) |
+| `/about/` | About Simon |
+| `/contact/` | Form, booking and email |
+| `/contact/thanks/` | No-JS form confirmation (noindex, not in sitemap) |
+| `/privacy/` | Privacy notice |
+| `/404` | Not found |
+| `/api/contact` | Form endpoint (POST) |
+
+## Deploy
+
+Needs `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in the environment.
+
+```bash
+# 1. Mailer Worker (once, and whenever workers/mailer changes)
+cd workers/mailer
+npx wrangler deploy
+npx wrangler secret put FORM_DESTINATION      # verified Email Routing destination
+cd ../..
+
+# 2. Turnstile secret for the Pages project (once)
+npx wrangler pages secret put TURNSTILE_SECRET_KEY --project-name incubatelabs
+
+# 3. Build with the public Turnstile site key and deploy
+PUBLIC_TURNSTILE_SITE_KEY=<site key> npm run build
+npx wrangler pages deploy dist --project-name incubatelabs --branch <branch>   # main = production
+```
+
+Local testing: put Cloudflare's test keys in `.dev.vars` (`TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA`) and `workers/mailer/.dev.vars` (`FORM_DESTINATION=...`), then run `npx wrangler dev` in `workers/mailer` and `npx wrangler pages dev dist` at the root.
 
 ## Governance
 
@@ -59,6 +84,4 @@ Per `~/WAYS_OF_WORKING.md` §13, the site copy uses the terms in `CONTEXT.md` ex
 
 ## Licence
 
-The **site code** is MIT (see [`LICENSE`](./LICENSE)). Site **content** (copy, methodology) is © Incubate Labs; ask before reproducing wholesale.
-
-The **Incubate methodology spec** itself lives at [Product-nomad/incubate](https://github.com/Product-nomad/incubate) (separate repo, separate licence).
+The **site code** is MIT (see [`LICENSE`](./LICENSE)). Site **content** (copy) is © Incubate Labs; ask before reproducing wholesale.
