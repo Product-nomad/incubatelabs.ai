@@ -1,0 +1,35 @@
+---
+import GuideLayout from "@/layouts/GuideLayout.astro";
+import { getEntry } from "astro:content";
+import { TEMPLATE_ID, templateMarkdown } from "@/lib/guides";
+
+const guide = await getEntry("guides", TEMPLATE_ID);
+if (!guide) throw new Error("AI policy template entry missing");
+const markdown = templateMarkdown(guide.body ?? "");
+---
+
+<GuideLayout guide={guide}>
+  <Fragment slot="head">
+    <!-- The policy as Markdown, for the copy button. -->
+    <script type="text/plain" id="policy-md" data-placeholders-ok set:html={markdown} />
+  </Fragment>
+</GuideLayout>
+
+<script>
+  // Copy button: copies the policy Markdown and says "Copied" for 2 seconds.
+  const button = document.querySelector<HTMLButtonElement>("[data-copy-policy]");
+  const status = document.querySelector<HTMLElement>(".copy-status");
+  const source = document.getElementById("policy-md");
+  let timer: number | undefined;
+  button?.addEventListener("click", async () => {
+    if (!source || !status) return;
+    try {
+      await navigator.clipboard.writeText(source.textContent ?? "");
+      status.textContent = "Copied";
+    } catch {
+      status.textContent = "Couldn't copy. Use the Markdown download instead.";
+    }
+    window.clearTimeout(timer);
+    timer = window.setTimeout(() => (status.textContent = ""), 2000);
+  });
+</script>

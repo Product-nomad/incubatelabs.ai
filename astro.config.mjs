@@ -1,6 +1,8 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import rehypeGuide from "./src/lib/rehype-guide.mjs";
+import siteChecks from "./src/integrations/site-checks.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,7 +17,13 @@ export default defineConfig({
         return item;
       },
     }),
+    siteChecks(),
   ],
+  markdown: {
+    // Straight quotes, as in the rest of the site, so FAQ JSON-LD matches the visible text exactly.
+    smartypants: false,
+    rehypePlugins: [rehypeGuide],
+  },
   build: {
     format: "directory",
     // One small stylesheet: inline it to remove the render-blocking request.

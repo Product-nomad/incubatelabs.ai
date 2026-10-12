@@ -17,7 +17,7 @@ const familiar = [
   "Evenings and weekends go on admin you'd love to hand off",
   "You're about to hire someone mainly to keep up with paperwork",
   "The same details get typed into three different systems",
-  "Your team already uses ChatGPT, on personal accounts, with no rules",
+  'Your team already uses ChatGPT, on personal accounts, with <a href="/resources/ai-policy-template/" class="text-accent underline underline-offset-[3px] hover:decoration-2">no rules</a>',
   "You know AI could help, but not where, or what it would pay back",
   "Quotes and replies wait until the one person who knows has time",
 ];
@@ -65,7 +65,7 @@ const websiteService = {
         {familiar.map((item) => (
           <li class="flex items-start gap-3 bg-paper border border-line rounded-xl px-5 py-[18px] text-[17px]">
             <Hexagon />
-            <span>{item}</span>
+            <span set:html={item} />
           </li>
         ))}
       </ul>

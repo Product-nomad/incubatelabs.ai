@@ -8,7 +8,7 @@ const linkClass = "text-muted hover:text-accent transition-colors";
 ---
 
 <footer class="bg-band border-t border-line mt-20">
-  <div class="max-w-page mx-auto px-4 sm:px-6 py-12 grid gap-10 text-sm sm:grid-cols-2 lg:grid-cols-4">
+  <div class="max-w-page mx-auto px-4 sm:px-6 py-12 grid gap-10 text-sm sm:grid-cols-2 lg:grid-cols-5">
     <div>
       <Logo height={32} />
       <p class="mt-2 text-muted">Practical AI for small businesses. We build it, you use it.</p>
@@ -20,6 +20,15 @@ const linkClass = "text-muted hover:text-accent transition-colors";
           <li><a href={`/use-cases/${uc.slug}/`} class={linkClass}>{uc.title}</a></li>
         ))}
         <li><a href="/use-cases/#websites" class={linkClass}>Websites</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-medium text-ink">Guides</p>
+      <ul class="mt-3 space-y-2">
+        <li><a href="/guides/" class={linkClass}>All guides</a></li>
+        <li><a href="/guides/eu-ai-act-uk/" class={linkClass}>EU AI Act and UK businesses</a></li>
+        <li><a href="/guides/eu-ai-act-article-50-chatbots/" class={linkClass}>Article 50 and chatbots</a></li>
+        <li><a href="/resources/ai-policy-template/" class={linkClass}>AI policy template</a></li>
       </ul>
     </div>
     <div>

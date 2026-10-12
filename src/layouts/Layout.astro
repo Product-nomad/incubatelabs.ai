@@ -18,13 +18,27 @@ interface Props {
   noindex?: boolean;
   // Shorter description for social previews (og:/twitter:), which cut off around 125 characters.
   socialDescription?: string;
+  // Per-page social card (site-relative path) and its alt text; defaults to the site-wide card.
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: "website" | "article";
 }
 
-const { title, description, canonical, noindex = false, socialDescription = description } = Astro.props;
+const {
+  title,
+  description,
+  canonical,
+  noindex = false,
+  socialDescription = description,
+  ogImage: ogImagePath,
+  ogImageAlt = "Practical AI and automation for small businesses. incubatelabs.ai",
+  ogType = "website",
+} = Astro.props;
 const fullCanonical = canonical || new URL(Astro.url.pathname, site.url).href;
 const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 
-const ogImage = `${site.url}/og-image.png`;
+const siteOgImage = `${site.url}/og-image.png`;
+const ogImage = ogImagePath ? new URL(ogImagePath, site.url).href : siteOgImage;
 
 // No address: the site shows no location (v1.1 spec §9).
 const jsonLd = {
@@ -34,7 +48,7 @@ const jsonLd = {
   name: site.name,
   url: site.url,
   email: site.email,
-  image: ogImage,
+  image: siteOgImage,
   logo: `${site.url}/brand/incubatelabs-logo.svg`,
   description: "Practical AI and automation for UK small businesses. We build it, you use it.",
   founder: { "@type": "Person", name: site.founder, url: `${site.url}/about/` },
@@ -60,7 +74,7 @@ const jsonLd = {
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="theme-color" content="#fbfaf7" />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={title} />
@@ -69,7 +83,7 @@ const jsonLd = {
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Practical AI and automation for small businesses. incubatelabs.ai" />
+    <meta property="og:image:alt" content={ogImageAlt} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />

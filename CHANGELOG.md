@@ -2,6 +2,14 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.0] — 2026-10-12
+
+### Added
+- AI rules guides: /guides/ index, "Does the EU AI Act apply to your UK business?", "EU AI Act Article 50", "Is there a UK AI Act?" and "AI literacy training for staff", each with a last-reviewed date, Article, BreadcrumbList and FAQPage structured data, and its own social image.
+- Free AI policy template at /resources/ai-policy-template/, with Word (.docx) and Markdown downloads generated at build time and a copy-to-clipboard button. No email gate.
+- Footer "Guides" column; home "Sound familiar?" links "no rules" to the template; the AI email replies page links to the Article 50 guide.
+- Build-time checks on dist/: banned strings, stray [placeholders], title and description lengths. A failure fails the build.
+
 ## [1.1.0] — 2026-10-11
 
 ### Added

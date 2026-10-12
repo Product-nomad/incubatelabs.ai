@@ -205,6 +205,7 @@ export const useCases: UseCase[] = [
     fits: [
       "Most AI email assistants are built for one person writing their own emails. This is different. AI drafts responses to customer enquiries in your shared inbox, using your own policies, products and past answers, so each reply sounds like your business rather than a generic AI email response generator.",
       "Your team reviews each draft, edits it if needed and sends it. Over time the approved answers build into a library everyone can use, which also helps new staff get up to speed.",
+      'If an AI drafts or sends replies to customers, see <a href="/guides/eu-ai-act-article-50-chatbots/">what the EU AI Act says about disclosure</a>.',
     ],
     faq: [
       {

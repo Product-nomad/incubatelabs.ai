@@ -1,8 +1,14 @@
 # incubatelabs.ai — STATE
 
 **Goal**: A lead-generation site for practical AI and automation for UK small businesses (5–50 staff). AI services lead; websites are offered alongside.
-**Phase**: v1.1 sprint **closed** 2026-10-11. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
-**Last touched**: 2026-10-11.
+**Phase**: AI rules guides sprint (v1.2) shipped 2026-10-12. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
+**Last touched**: 2026-10-12.
+
+## v1.2 AI rules guides (2026-10-12; branch `guides-2026-10`, spec `design/guides-2026-10/00-build-spec.md`)
+- **Scope**: five pages from the supplied copy (final; no typos found) plus a /guides/ index, for the EU AI Act cluster in `research/seo-2026-10/eu-ai-act.md`.
+- **Shipped**: `src/content/guides/` collection (`src/content.config.ts`); one layout (`src/layouts/GuideLayout.astro`) with breadcrumbs, last-reviewed line, callout, visible FAQ + FAQPage JSON-LD built from the rendered text, muted sources, "More guides"; markup shaped by `src/lib/rehype-guide.mjs`. Pages: /guides/, /guides/eu-ai-act-uk/, /guides/eu-ai-act-article-50-chatbots/, /guides/uk-ai-act/, /guides/ai-literacy-training-staff/, /resources/ai-policy-template/ (docx via `src/lib/policy-docx.ts`, .md, copy button). OG images in `public/og/` from `design/guides-2026-10/og/build-og.mjs`. Footer Guides column, home "no rules" link, email-replies disclosure sentence.
+- **Checks**: `src/integrations/site-checks.mjs` runs on every build (banned strings, [placeholders] outside the three marked example blocks, title ≤60, description ≤155). Content-layer renders are cached in `node_modules/.astro/data-store.json`: delete it after changing the rehype plugin. Lighthouse 100/100/100/100 mobile and desktop on the main guide and template page (local).
+- **External links**: the ICO "72 hours" link (UK AI Act guide and template page) returns 404. Not replaced; needs a new URL from Simon.
 
 ## v1.1 (live; built on `v1.1-brand-hero`, spec: `design/v1.1/spec.md`)
 - Brand tokens (`admin`, `admin-deep`, `night`, `night-raised`, `accent-bright`); text logo kept until logo files land.
@@ -33,9 +39,13 @@
 - "Illustrative" is still visible in the hero footnote that cites the Amex and Microsoft sources (`src/components/LostDayHero.astro`); left in place.
 
 ## Open items
+- **ICO source link 404**: replace `https://ico.org.uk/for-organisations/sme-web-hub/72-hours-how-to-respond-to-a-personal-data-breach` in `src/content/guides/uk-ai-act.md` and `ai-policy-template.md`.
+- **AI literacy page H1/title**: SERPs checked 2026-10-12 (see `research/seo-2026-10/eu-ai-act.md` addendum): "ai literacy training" is gov.uk, education bodies and training sellers; "ai literacy course" is course-shopping intent. Revisit the H1 and title as the copy's build note says; not changed in this sprint.
+- **Readiness Check EU questions**: add the EU AI Act questions later.
+- **Guides OG for /guides/**: the card headline is the H1, "Guides", per spec; consider a longer headline.
 - **Legal footer line**: still names the town ("…a sole trader based in Huntingdon, Cambridgeshire."), the only location on the site. Keep the town or use a business address.
 - **Dedicated /websites page**: the websites offer currently lives in a card on the home page and /use-cases/, plus a Service entry in the home JSON-LD.
-- **Copilot pricing guide**: Microsoft Copilot pricing and value for small businesses (the competitor gap in `research/seo-2026-10/`).
+- **Copilot guide**: Microsoft Copilot pricing and value for small businesses (the competitor gap in `research/seo-2026-10/`); fits the new /guides/ section.
 - **Project screenshots**: Simon to supply as `public/projects/{attestloop,removepii,publicguard,retail-poc,readiness-check}.webp` (16:10).
 - **Google Business Profile**: service-area business with the address hidden (Simon, manual).
 - **GitHub bio**: replace "Open to PM and Delivery roles" (Simon, manual).
