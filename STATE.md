@@ -4,6 +4,11 @@
 **Phase**: AI rules guides sprint (v1.2) shipped 2026-10-12. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
 **Last touched**: 2026-10-12.
 
+## Animated use-case illustrations (2026-10-12; design `design/use-case-anim/use-case-cards-animated.html`)
+- Seven SVGs copied unchanged from the approved prototype into `src/components/illustrations/` (six use cases plus `Websites.astro`), replacing the v1.1 static art. Rendered through `AnimatedIllustration.astro`, which carries the scoped primitives CSS (keyframes prefixed `il-`) and one script island per page: `.pending` on load unless reduced motion, play at IntersectionObserver 0.45 with a 180ms stagger across a row of three, replay on card mouseenter/focusin (`data-anim-card`).
+- Used on home and /use-cases/ cards (art now full card width, 320×180 viewBox), the websites card (art left, text right from `md`, stacked below), and each use-case page header (plays on load).
+- Reduced motion and no-JS both show the final state. Only transform, opacity and stroke-dashoffset animate. Lighthouse 100s and CLS 0 unchanged on home and /use-cases/, mobile and desktop.
+
 ## v1.2 AI rules guides (2026-10-12; branch `guides-2026-10`, spec `design/guides-2026-10/00-build-spec.md`)
 - **Scope**: five pages from the supplied copy (final; no typos found) plus a /guides/ index, for the EU AI Act cluster in `research/seo-2026-10/eu-ai-act.md`.
 - **Shipped**: `src/content/guides/` collection (`src/content.config.ts`); one layout (`src/layouts/GuideLayout.astro`) with breadcrumbs, last-reviewed line, callout, visible FAQ + FAQPage JSON-LD built from the rendered text, muted sources, "More guides"; markup shaped by `src/lib/rehype-guide.mjs`. Pages: /guides/, /guides/eu-ai-act-uk/, /guides/eu-ai-act-article-50-chatbots/, /guides/uk-ai-act/, /guides/ai-literacy-training-staff/, /resources/ai-policy-template/ (docx via `src/lib/policy-docx.ts`, .md, copy button). OG images in `public/og/` from `design/guides-2026-10/og/build-og.mjs`. Footer Guides column, home "no rules" link, email-replies disclosure sentence.

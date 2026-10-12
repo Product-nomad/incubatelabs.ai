@@ -2,6 +2,11 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.3.0] — 2026-10-12
+
+### Changed
+- "Where we can help" cards, the websites card and use-case page headers use new animated illustrations that play once when scrolled into view and replay on hover or focus. Reduced motion and no-JS show the final state.
+
 ## [1.2.1] — 2026-10-12
 
 ### Added

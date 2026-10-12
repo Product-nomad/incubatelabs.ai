@@ -1,5 +1,18 @@
 ---
-// v1.1 spec §4. Markup kept exactly as specified; size it from the parent.
+// 03 Automated reporting. Animated illustration from design/use-case-anim/use-case-cards-animated.html
+// (approved 2026-10-12), copied unchanged. Classes and timings are driven by AnimatedIllustration.astro.
 ---
 
-<svg viewBox="0 0 240 120" aria-hidden="true"><polyline points="50,10 50,108 196,108" fill="none" stroke="#16181a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><g fill="#fbfaf7" stroke="#16181a" stroke-width="2.5" stroke-linejoin="round"><rect x="64" y="68" width="18" height="40" rx="3"/><rect x="92" y="52" width="18" height="56" rx="3"/><rect x="120" y="60" width="18" height="48" rx="3"/><rect x="176" y="40" width="18" height="68" rx="3"/></g><rect x="148" y="22" width="18" height="86" rx="3" fill="#e8efe9" stroke="#1f5c45" stroke-width="2.5"/><g fill="none" stroke="#1f5c45" stroke-width="2.5" stroke-linecap="round"><path d="M157 14 V6 H206"/><circle cx="212" cy="6" r="5" fill="#f4f2ed"/></g></svg>
+<svg viewBox="0 0 320 180" aria-hidden="true" fill="none" stroke-width="2.5">
+  <path d="M36 24V150H296" class="st-ink"/>
+  <rect x="56" y="108" width="26" height="42" rx="3" fill="#fbfaf7" class="a gy st-ink" style="--d:.1s"/>
+  <rect x="96" y="86" width="26" height="64" rx="3" fill="#fbfaf7" class="a gy st-ink" style="--d:.25s"/>
+  <rect x="136" y="98" width="26" height="52" rx="3" fill="#fbfaf7" class="a gy st-ink" style="--d:.4s"/>
+  <rect x="176" y="52" width="26" height="98" rx="3" fill="#e8efe9" class="a gy st-acc" style="--d:.55s"/>
+  <rect x="216" y="78" width="26" height="72" rx="3" fill="#fbfaf7" class="a gy st-ink" style="--d:.7s"/>
+  <circle cx="189" cy="52" r="4" fill="#1f5c45" stroke="none" class="a pop" style="--d:1s"/>
+  <path d="M189 52V32H214" class="draw st-acc" stroke-width="2" style="--len:46;--d:1.05s"/>
+  <g class="a rise" style="--d:1.3s"><rect x="214" y="12" width="84" height="40" rx="6" fill="#fbfaf7" class="st-acc"/></g>
+  <path d="M224 26h58" class="draw st-acc" stroke-width="2.5" style="--len:58;--d:1.6s"/>
+  <path d="M224 39h36" class="draw st-acc" stroke-width="2.5" style="--len:36;--d:1.85s"/>
+</svg>

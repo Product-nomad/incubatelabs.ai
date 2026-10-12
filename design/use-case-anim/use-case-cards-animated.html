@@ -1,0 +1,363 @@
+<title>Use-case card animations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<style>
+/* Layout: the site's own card grid, three across, with one full-width website card; each illustration is an inline SVG that plays a short before-to-after story. */
+:root{
+  --ink:#16181a; --paper:#fbfaf7; --band:#f4f2ed; --line:#e4e1da; --line-strong:#cfcac0; --muted:#5d6166;
+  --accent:#1f5c45; --accent-soft:#e8efe9; --bright:#6cbf9a;
+  --admin:#c96f4a; --admin-soft:#f6e4da;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px;padding-block:56px 80px}
+@media (max-width:480px){.wrap{padding-inline:16px;padding-block:32px 56px}}
+
+.head{display:flex;flex-wrap:wrap;gap:20px;align-items:end;justify-content:space-between;margin-bottom:36px}
+.head h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0;text-wrap:balance}
+.head p{margin:10px 0 0;color:var(--muted);max-width:62ch}
+.replay{appearance:none;font:inherit;font-weight:500;font-size:15px;background:var(--ink);color:var(--paper);border:0;border-radius:6px;padding:11px 18px;cursor:pointer}
+.replay:focus-visible,.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);color:inherit;text-decoration:none;transition:border-color .2s ease}
+.card:hover{border-color:var(--accent)}
+.card:hover h3{color:var(--accent)}
+.art{background:var(--band);border-bottom:1px solid var(--line);padding:18px 16px}
+.art svg{display:block;width:100%;height:auto;max-width:100%}
+.body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.num{font-size:14px;color:var(--accent);font-variant-numeric:tabular-nums}
+.body h3{font-family:var(--serif);font-weight:600;font-size:23px;line-height:1.2;margin:0;transition:color .2s ease}
+.body p{margin:0;color:var(--muted)}
+.more{margin-top:auto;padding-top:8px;color:var(--accent);font-weight:500;font-size:15px}
+.wide{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
+.wide .art{flex:1.4 1 380px;border-bottom:0;border-right:1px solid var(--line);min-width:0;display:flex;align-items:center}
+.wide .body{flex:1 1 280px;justify-content:center;min-width:0}
+@media (max-width:700px){.wide .art{border-right:0;border-bottom:1px solid var(--line)}}
+
+.notes{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px 32px;color:var(--muted);font-size:15px}
+.notes h2{font-family:var(--serif);font-size:18px;color:var(--ink);margin:0 0 6px;font-weight:600}
+.notes p{margin:0}
+
+/* ---------- Illustration primitives ---------- */
+.st-ink{stroke:var(--ink)} .st-acc{stroke:var(--accent)} .st-adm{stroke:var(--admin)} .st-line{stroke:var(--line-strong)}
+svg *{stroke-linecap:round;stroke-linejoin:round}
+.a{transform-box:fill-box;transform-origin:50% 50%}
+.gx{transform-origin:0 50%} .gy{transform-origin:50% 100%}
+.draw{stroke-dasharray:var(--len);stroke-dashoffset:0}
+.gone,.trav,.blip,.unread{opacity:0}
+
+@keyframes pop{0%{opacity:0;transform:scale(0)}65%{opacity:1;transform:scale(1.18)}100%{opacity:1;transform:scale(1)}}
+@keyframes gx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes gy{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes soft{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+@keyframes trav{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}85%{opacity:1}100%{opacity:0;transform:translate(var(--dx,0px),var(--dy,0px))}}
+@keyframes doc{0%{opacity:1;transform:rotate(var(--r))}55%{opacity:1;transform:translate(var(--dx),var(--dy)) rotate(0deg)}80%{opacity:1;transform:translate(var(--dx),var(--dy))}100%{opacity:0;transform:translate(var(--dx),var(--dy))}}
+@keyframes blip{0%{opacity:0}8%{opacity:1}88%{opacity:1}100%{opacity:0}}
+@keyframes scan{from{transform:translateY(0)}to{transform:translateY(72px)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes unread{0%{opacity:0;transform:scale(0)}12%{opacity:1;transform:scale(1)}86%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.6)}}
+@keyframes press{0%,100%{transform:none}45%{transform:scale(.92)}}
+@keyframes stamp{0%{opacity:0;transform:scale(1.7)}60%{opacity:1;transform:scale(.92)}100%{opacity:1;transform:scale(1)}}
+
+.anim:is(.play,.pending) .pop{animation:pop .45s cubic-bezier(.3,1.3,.5,1) var(--d,0s) both}
+.anim:is(.play,.pending) .gx{animation:gx .45s ease-out var(--d,0s) both}
+.anim:is(.play,.pending) .gy{animation:gy .6s cubic-bezier(.2,.8,.3,1) var(--d,0s) both}
+.anim:is(.play,.pending) .draw{animation:draw .5s ease-out var(--d,0s) both}
+.anim:is(.play,.pending) .rise{animation:rise .5s ease-out var(--d,0s) both}
+.anim:is(.play,.pending) .soft{animation:soft .4s ease-out var(--d,0s) both}
+.anim:is(.play,.pending) .trav{animation:trav var(--dur,.5s) ease-in-out var(--d,0s) both}
+.anim:is(.play,.pending) .doc{animation:doc .9s ease-in-out var(--d,0s) both}
+.anim:is(.play,.pending) .blip{animation:blip var(--dur,1s) linear var(--d,0s) both}
+.anim:is(.play,.pending) .scan{animation:scan .75s ease-in-out var(--d,0s) 3 alternate both}
+.anim:is(.play,.pending) .bob{animation:bob .5s ease-in-out var(--d,0s) 2 both}
+.anim:is(.play,.pending) .unread{animation:unread 2.6s ease var(--d,0s) both}
+.anim:is(.play,.pending) .press{animation:press .35s ease var(--d,0s) both}
+.anim:is(.play,.pending) .stamp{animation:stamp .5s cubic-bezier(.3,1.2,.5,1) var(--d,0s) both}
+.anim.pending *{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.anim *{animation:none!important}}
+</style>
+
+<main class="wrap">
+  <header class="head">
+    <div>
+      <h1>Use-case card animations</h1>
+      <p>Each card tells its job in about three seconds: the manual mess on the left, the automated result on the right, and a person checking where it matters. Cards play once as they scroll into view and replay when you hover over or tab to them.</p>
+    </div>
+    <button class="replay" id="replay-all" type="button">Replay all</button>
+  </header>
+
+  <section class="grid" aria-label="Where we can help">
+
+    <!-- 01 Invoice & document processing -->
+    <a class="card" href="#">
+      <div class="art anim" data-anim>
+        <svg viewBox="0 0 320 180" aria-hidden="true" fill="none" stroke-width="2.5">
+          <rect x="40" y="50" width="50" height="64" rx="4" class="st-line" stroke-dasharray="4 5"/>
+          <path d="M194 82H222" class="st-ink"/>
+          <rect x="130" y="38" width="64" height="86" rx="6" fill="#e8efe9" class="st-acc"/>
+          <g class="blip" style="--d:.1s;--dur:2.5s"><g class="a scan" style="--d:.1s"><rect x="134" y="44" width="56" height="3" rx="1.5" fill="#6cbf9a" stroke="none"/></g></g>
+          <g transform="translate(36 58)"><g class="a doc gone" style="--r:-9deg;--dx:101px;--dy:-9px;--d:1.5s"><rect width="50" height="64" rx="4" fill="#f6e4da" class="st-adm"/><path d="M10 18h30M10 28h30M10 38h20" class="st-adm" stroke-width="2"/></g></g>
+          <g transform="translate(42 54)"><g class="a doc gone" style="--r:6deg;--dx:95px;--dy:-5px;--d:.8s"><rect width="50" height="64" rx="4" fill="#f6e4da" class="st-adm"/><path d="M10 18h30M10 28h30M10 38h20" class="st-adm" stroke-width="2"/></g></g>
+          <g transform="translate(40 50)"><g class="a doc gone" style="--r:-2deg;--dx:97px;--dy:-1px;--d:.1s"><rect width="50" height="64" rx="4" fill="#f6e4da" class="st-adm"/><path d="M10 18h30M10 28h30M10 38h20" class="st-adm" stroke-width="2"/></g></g>
+          <rect x="222" y="40" width="78" height="88" rx="6" fill="#fbfaf7" class="st-ink"/>
+          <path d="M232 56h40" class="st-ink"/>
+          <rect x="232" y="66" width="58" height="12" rx="2" class="st-line" stroke-width="1.5"/>
+          <rect x="232" y="86" width="58" height="12" rx="2" class="st-line" stroke-width="1.5"/>
+          <rect x="232" y="106" width="58" height="12" rx="2" class="st-line" stroke-width="1.5"/>
+          <rect x="232" y="66" width="58" height="12" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:.9s"/>
+          <rect x="232" y="86" width="58" height="12" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:1.6s"/>
+          <rect x="232" y="106" width="58" height="12" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:2.3s"/>
+          <g class="a pop" style="--d:2.8s"><circle cx="300" cy="40" r="11" fill="#1f5c45" stroke="none"/><path d="M295 40l3.5 3.5 6.5-7" stroke="#fbfaf7"/></g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="num">01</span>
+        <h3>Invoice &amp; document processing</h3>
+        <p>Invoices, delivery notes, forms and PDFs read, sorted and filed without someone keying them in.</p>
+        <span class="more">Read more →</span>
+      </div>
+    </a>
+
+    <!-- 02 Data entry automation -->
+    <a class="card" href="#">
+      <div class="art anim" data-anim>
+        <svg viewBox="0 0 320 180" aria-hidden="true" fill="none" stroke-width="2.5">
+          <path d="M98 90H120M200 90H222" class="st-ink"/>
+          <g>
+            <rect x="18" y="50" width="80" height="80" rx="6" fill="#fbfaf7" class="st-ink"/><path d="M18 66h80" class="st-ink" stroke-width="2"/>
+            <rect x="30" y="80" width="56" height="10" rx="2" class="st-line" stroke-width="1.5"/><rect x="30" y="100" width="40" height="10" rx="2" class="st-line" stroke-width="1.5"/>
+            <rect x="30" y="80" width="56" height="10" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:.2s"/>
+            <rect x="30" y="100" width="40" height="10" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:.45s"/>
+          </g>
+          <g>
+            <rect x="120" y="50" width="80" height="80" rx="6" fill="#fbfaf7" class="st-ink"/><path d="M120 66h80" class="st-ink" stroke-width="2"/>
+            <rect x="132" y="80" width="56" height="10" rx="2" class="st-line" stroke-width="1.5"/><rect x="132" y="100" width="40" height="10" rx="2" class="st-line" stroke-width="1.5"/>
+            <rect x="132" y="80" width="56" height="10" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:1.3s"/>
+            <rect x="132" y="100" width="40" height="10" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:1.45s"/>
+          </g>
+          <g>
+            <rect x="222" y="50" width="80" height="80" rx="6" fill="#fbfaf7" class="st-ink"/><path d="M222 66h80" class="st-ink" stroke-width="2"/>
+            <rect x="234" y="80" width="56" height="10" rx="2" class="st-line" stroke-width="1.5"/><rect x="234" y="100" width="40" height="10" rx="2" class="st-line" stroke-width="1.5"/>
+            <rect x="234" y="80" width="56" height="10" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:2.1s"/>
+            <rect x="234" y="100" width="40" height="10" rx="2" fill="#e8efe9" class="a gx st-acc" stroke-width="1.5" style="--d:2.25s"/>
+          </g>
+          <circle cx="98" cy="90" r="5" fill="#6cbf9a" stroke="none" class="a trav" style="--dx:22px;--d:.85s"/>
+          <circle cx="200" cy="90" r="5" fill="#6cbf9a" stroke="none" class="a trav" style="--dx:22px;--d:1.65s"/>
+          <g class="a pop" style="--d:2.6s"><circle cx="98" cy="50" r="8" fill="#1f5c45" stroke="none"/><path d="M94.5 50l2.5 2.5 4.5-5" stroke="#fbfaf7" stroke-width="2"/></g>
+          <g class="a pop" style="--d:2.72s"><circle cx="200" cy="50" r="8" fill="#1f5c45" stroke="none"/><path d="M196.5 50l2.5 2.5 4.5-5" stroke="#fbfaf7" stroke-width="2"/></g>
+          <g class="a pop" style="--d:2.84s"><circle cx="302" cy="50" r="8" fill="#1f5c45" stroke="none"/><path d="M298.5 50l2.5 2.5 4.5-5" stroke="#fbfaf7" stroke-width="2"/></g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="num">02</span>
+        <h3>Data entry automation</h3>
+        <p>The same information typed into three systems. We connect them so it's entered once.</p>
+        <span class="more">Read more →</span>
+      </div>
+    </a>
+
+    <!-- 03 Automated reporting -->
+    <a class="card" href="#">
+      <div class="art anim" data-anim>
+        <svg viewBox="0 0 320 180" aria-hidden="true" fill="none" stroke-width="2.5">
+          <path d="M36 24V150H296" class="st-ink"/>
+          <rect x="56" y="108" width="26" height="42" rx="3" fill="#fbfaf7" class="a gy st-ink" style="--d:.1s"/>
+          <rect x="96" y="86" width="26" height="64" rx="3" fill="#fbfaf7" class="a gy st-ink" style="--d:.25s"/>
+          <rect x="136" y="98" width="26" height="52" rx="3" fill="#fbfaf7" class="a gy st-ink" style="--d:.4s"/>
+          <rect x="176" y="52" width="26" height="98" rx="3" fill="#e8efe9" class="a gy st-acc" style="--d:.55s"/>
+          <rect x="216" y="78" width="26" height="72" rx="3" fill="#fbfaf7" class="a gy st-ink" style="--d:.7s"/>
+          <circle cx="189" cy="52" r="4" fill="#1f5c45" stroke="none" class="a pop" style="--d:1s"/>
+          <path d="M189 52V32H214" class="draw st-acc" stroke-width="2" style="--len:46;--d:1.05s"/>
+          <g class="a rise" style="--d:1.3s"><rect x="214" y="12" width="84" height="40" rx="6" fill="#fbfaf7" class="st-acc"/></g>
+          <path d="M224 26h58" class="draw st-acc" stroke-width="2.5" style="--len:58;--d:1.6s"/>
+          <path d="M224 39h36" class="draw st-acc" stroke-width="2.5" style="--len:36;--d:1.85s"/>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="num">03</span>
+        <h3>Automated reporting</h3>
+        <p>Weekly and monthly reports that pull themselves together, with a plain-English summary on top.</p>
+        <span class="more">Read more →</span>
+      </div>
+    </a>
+
+    <!-- 04 AI email replies -->
+    <a class="card" href="#">
+      <div class="art anim" data-anim>
+        <svg viewBox="0 0 320 180" aria-hidden="true" fill="none" stroke-width="2.5">
+          <g class="a rise" style="--d:.1s">
+            <path d="M36 28h124a6 6 0 0 1 6 6v38a6 6 0 0 1-6 6H64l-14 12v-12H36a6 6 0 0 1-6-6V34a6 6 0 0 1 6-6z" fill="#fbfaf7" class="st-ink"/>
+            <path d="M44 46h96M44 60h64" class="st-ink" stroke-width="2"/>
+          </g>
+          <circle cx="164" cy="30" r="6" fill="#c96f4a" stroke="none" class="a unread" style="--d:.3s"/>
+          <g class="a soft" style="--d:.7s">
+            <path d="M126 96h132a6 6 0 0 1 6 6v34a6 6 0 0 1-6 6h-8v12l-14-12H126a6 6 0 0 1-6-6v-34a6 6 0 0 1 6-6z" fill="#e8efe9" class="st-acc"/>
+          </g>
+          <g class="blip" style="--d:.85s;--dur:1s">
+            <circle cx="178" cy="119" r="4" fill="#1f5c45" stroke="none" class="a bob" style="--d:.85s"/>
+            <circle cx="192" cy="119" r="4" fill="#1f5c45" stroke="none" class="a bob" style="--d:.97s"/>
+            <circle cx="206" cy="119" r="4" fill="#1f5c45" stroke="none" class="a bob" style="--d:1.09s"/>
+          </g>
+          <path d="M134 112h104" class="draw st-acc" stroke-width="2" style="--len:104;--d:1.85s"/>
+          <path d="M134 126h70" class="draw st-acc" stroke-width="2" style="--len:70;--d:2.05s"/>
+          <g class="a rise" style="--d:2.2s">
+            <circle cx="290" cy="130" r="14" fill="#fbfaf7" class="st-ink"/>
+            <circle cx="290" cy="125" r="4.5" class="st-ink" stroke-width="2"/>
+            <path d="M282.5 138a8 7 0 0 1 15 0" class="st-ink" stroke-width="2"/>
+          </g>
+          <g class="a pop" style="--d:2.55s"><circle cx="301" cy="117" r="7.5" fill="#1f5c45" stroke="none"/><path d="M297.5 117l2.5 2.5 4.5-5" stroke="#fbfaf7" stroke-width="2"/></g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="num">04</span>
+        <h3>AI email replies</h3>
+        <p>Draft replies to common enquiries, ready for someone on your team to check and send.</p>
+        <span class="more">Read more →</span>
+      </div>
+    </a>
+
+    <!-- 05 Quotes & proposals -->
+    <a class="card" href="#">
+      <div class="art anim" data-anim>
+        <svg viewBox="0 0 320 180" aria-hidden="true" fill="none" stroke-width="2.5">
+          <circle cx="36" cy="96" r="6" fill="#fbfaf7" class="st-ink"/>
+          <path d="M42 96H118M214 80H278" class="st-ink"/>
+          <circle cx="284" cy="80" r="6" fill="#fbfaf7" class="st-ink"/>
+          <rect x="118" y="34" width="96" height="124" rx="6" fill="#fbfaf7" class="st-ink"/>
+          <rect x="146" y="26" width="40" height="14" rx="4" fill="#fbfaf7" class="st-ink"/>
+          <path d="M132 62h44" class="draw st-ink" stroke-width="2" style="--len:44;--d:.55s"/>
+          <path d="M132 76h50" class="draw st-ink" stroke-width="2" style="--len:50;--d:.75s"/>
+          <path d="M132 90h38" class="draw st-ink" stroke-width="2" style="--len:38;--d:.95s"/>
+          <path d="M132 104h46" class="draw st-ink" stroke-width="2" style="--len:46;--d:1.15s"/>
+          <path d="M188 62h14" class="draw st-acc" stroke-width="2" style="--len:14;--d:.7s"/>
+          <path d="M188 76h14" class="draw st-acc" stroke-width="2" style="--len:14;--d:.9s"/>
+          <path d="M188 90h14" class="draw st-acc" stroke-width="2" style="--len:14;--d:1.1s"/>
+          <path d="M188 104h14" class="draw st-acc" stroke-width="2" style="--len:14;--d:1.3s"/>
+          <path d="M132 118h70" class="st-line" stroke-width="1.5"/>
+          <path d="M170 132h32" class="draw st-ink" stroke-width="4" style="--len:32;--d:1.55s"/>
+          <circle cx="42" cy="96" r="5" fill="#6cbf9a" stroke="none" class="a trav" style="--dx:72px;--d:.05s;--dur:.55s"/>
+          <g transform="translate(196 134) rotate(-10)"><g class="a stamp" style="--d:2s"><rect x="-26" y="-14" width="52" height="28" rx="5" fill="#e8efe9" class="st-acc"/><path d="M-9 0l5 5 11-11" class="st-acc" stroke-width="3"/></g></g>
+          <circle cx="214" cy="80" r="5" fill="#6cbf9a" stroke="none" class="a trav" style="--dx:64px;--d:2.45s;--dur:.55s"/>
+          <circle cx="284" cy="80" r="6" fill="#1f5c45" stroke="none" class="a pop" style="--d:2.95s"/>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="num">05</span>
+        <h3>Quotes &amp; proposals</h3>
+        <p>First drafts of quotes and proposals built from your notes, prices and past work.</p>
+        <span class="more">Read more →</span>
+      </div>
+    </a>
+
+    <!-- 06 Security questionnaires -->
+    <a class="card" href="#">
+      <div class="art anim" data-anim>
+        <svg viewBox="0 0 320 180" aria-hidden="true" fill="none" stroke-width="2.5">
+          <rect x="24" y="40" width="64" height="86" rx="5" fill="#e8efe9" class="st-acc"/>
+          <path d="M34 58h44M34 70h44M34 82h30M34 94h40M34 106h24" class="st-acc" stroke-width="2"/>
+          <rect x="132" y="22" width="164" height="136" rx="6" fill="#fbfaf7" class="st-ink"/>
+          <rect x="148" y="38" width="16" height="16" rx="3" class="st-ink" stroke-width="2"/><path d="M176 46h96" class="st-ink" stroke-width="2"/>
+          <rect x="148" y="68" width="16" height="16" rx="3" class="st-ink" stroke-width="2"/><path d="M176 76h84" class="st-ink" stroke-width="2"/>
+          <rect x="148" y="98" width="16" height="16" rx="3" class="st-ink" stroke-width="2"/><path d="M176 106h90" class="st-ink" stroke-width="2"/>
+          <rect x="148" y="128" width="16" height="16" rx="3" class="st-adm" stroke-width="2" stroke-dasharray="3 4"/><path d="M176 136h70" class="st-ink" stroke-width="2"/>
+          <circle cx="88" cy="83" r="5" fill="#6cbf9a" stroke="none" class="a trav" style="--dx:68px;--dy:-37px;--d:.1s;--dur:.55s"/>
+          <circle cx="88" cy="83" r="5" fill="#6cbf9a" stroke="none" class="a trav" style="--dx:68px;--dy:-7px;--d:.7s;--dur:.55s"/>
+          <circle cx="88" cy="83" r="5" fill="#6cbf9a" stroke="none" class="a trav" style="--dx:68px;--dy:23px;--d:1.3s;--dur:.55s"/>
+          <g class="a pop" style="--d:.6s"><rect x="148" y="38" width="16" height="16" rx="3" fill="#e8efe9" class="st-acc" stroke-width="2"/><path d="M151.5 46l3.5 3.5 6-7" class="st-acc"/></g>
+          <g class="a pop" style="--d:1.2s"><rect x="148" y="68" width="16" height="16" rx="3" fill="#e8efe9" class="st-acc" stroke-width="2"/><path d="M151.5 76l3.5 3.5 6-7" class="st-acc"/></g>
+          <g class="a pop" style="--d:1.8s"><rect x="148" y="98" width="16" height="16" rx="3" fill="#e8efe9" class="st-acc" stroke-width="2"/><path d="M151.5 106l3.5 3.5 6-7" class="st-acc"/></g>
+          <path d="M176 136h70" class="draw st-adm" stroke-width="2" style="--len:70;--d:2.3s"/>
+          <circle cx="156" cy="136" r="3" fill="#c96f4a" stroke="none" class="a pop" style="--d:2.3s"/>
+          <g class="a pop" style="--d:2.6s">
+            <circle cx="276" cy="136" r="11" fill="#f6e4da" class="st-adm" stroke-width="2"/>
+            <circle cx="276" cy="132.5" r="3.2" class="st-adm" stroke-width="1.8"/>
+            <path d="M270.5 142a5.5 5 0 0 1 11 0" class="st-adm" stroke-width="1.8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="num">06</span>
+        <h3>Security questionnaires</h3>
+        <p>Supplier and customer questionnaires pre-filled from your existing policies and past answers.</p>
+        <span class="more">Read more →</span>
+      </div>
+    </a>
+
+    <!-- Websites (full width) -->
+    <a class="card wide" href="#" id="websites">
+      <div class="art anim" data-anim>
+        <svg viewBox="0 0 640 180" aria-hidden="true" fill="none" stroke-width="2.5">
+          <rect x="24" y="22" width="260" height="136" rx="8" fill="#fbfaf7" class="st-ink"/>
+          <path d="M24 44H284" class="st-ink" stroke-width="2"/>
+          <circle cx="38" cy="33" r="3" fill="#cfcac0" stroke="none"/><circle cx="50" cy="33" r="3" fill="#cfcac0" stroke="none"/><circle cx="62" cy="33" r="3" fill="#cfcac0" stroke="none"/>
+          <path d="M48 62h40M48 98h52" class="st-line" stroke-width="2"/>
+          <rect x="48" y="68" width="212" height="18" rx="3" class="st-ink" stroke-width="2"/>
+          <rect x="48" y="104" width="212" height="18" rx="3" class="st-ink" stroke-width="2"/>
+          <path d="M56 77h96" class="draw st-acc" stroke-width="2.5" style="--len:96;--d:.2s"/>
+          <path d="M56 113h132" class="draw st-acc" stroke-width="2.5" style="--len:132;--d:.7s"/>
+          <g class="a press" style="--d:1.3s"><rect x="48" y="132" width="84" height="18" rx="4" fill="#1f5c45" stroke="none"/><path d="M70 141h40" stroke="#fbfaf7" stroke-width="2"/></g>
+          <path d="M290 95H452" class="st-line" stroke-dasharray="2 7"/>
+          <g transform="translate(296 84)"><g class="a trav" style="--dx:142px;--d:1.55s;--dur:.95s"><rect width="30" height="22" rx="3" fill="#fbfaf7" class="st-acc" stroke-width="2"/><path d="M1 2l14 10 14-10" class="st-acc" stroke-width="2"/></g></g>
+          <rect x="456" y="30" width="160" height="122" rx="8" fill="#fbfaf7" class="st-ink"/>
+          <path d="M456 52H616" class="st-ink" stroke-width="2"/><path d="M470 41h44" class="st-ink" stroke-width="2"/>
+          <rect x="470" y="62" width="132" height="14" rx="3" fill="#f4f2ed" stroke="none"/>
+          <rect x="470" y="84" width="132" height="14" rx="3" fill="#f4f2ed" stroke="none"/>
+          <rect x="470" y="106" width="132" height="14" rx="3" fill="#f4f2ed" stroke="none"/>
+          <g class="a rise" style="--d:2.45s"><rect x="470" y="128" width="132" height="14" rx="3" fill="#e8efe9" class="st-acc" stroke-width="1.5"/></g>
+          <g class="a pop" style="--d:2.8s"><circle cx="616" cy="30" r="10" fill="#1f5c45" stroke="none"/><path d="M611.5 30l3 3 6-6.5" stroke="#fbfaf7" stroke-width="2.2"/></g>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Websites that bring in work</h3>
+        <p>A fast, clear site that explains what you do and turns visitors into enquiries. Built on its own or alongside an automation project, and connected to the systems behind it, so enquiries land where your team already works.</p>
+        <span class="more">Talk about a website →</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="notes" aria-label="How the animations behave">
+    <div><h2>The story in each card</h2><p>Orange is the manual work from the hero: the pile of paper, the flagged question. Green is the automated result. Where a person should check, a small person icon appears with a tick, the same promise the hero makes.</p></div>
+    <div><h2>When they play</h2><p>Once, as each card scrolls into view, staggered so the grid doesn't all move at once. Hover or keyboard focus replays a card. With reduced motion switched on, every card shows its finished state and nothing moves.</p></div>
+    <div><h2>Weight</h2><p>Inline SVG with CSS keyframes and about 30 lines of script. No libraries and no images, and only transform, opacity and stroke offsets are animated.</p></div>
+  </section>
+</main>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var anims = Array.prototype.slice.call(document.querySelectorAll('[data-anim]'));
+  function play(el){ el.classList.remove('play','pending'); void el.getBoundingClientRect(); el.classList.add('play'); }
+  if (reduce) return;
+  anims.forEach(function(el){
+    el.classList.add('pending');
+    var card = el.closest('.card');
+    card.addEventListener('mouseenter', function(){ play(el); });
+    card.addEventListener('focusin', function(){ play(el); });
+  });
+  if (!('IntersectionObserver' in window)) { anims.forEach(play); }
+  else {
+    var queue = 0;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (!entry.isIntersecting) return;
+        var el = entry.target; io.unobserve(el);
+        var delay = (queue++ % 3) * 180;
+        setTimeout(function(){ if (el.classList.contains('pending')) play(el); }, delay);
+        setTimeout(function(){ queue = 0; }, 600);
+      });
+    }, { threshold: 0.45 });
+    anims.forEach(function(el){ io.observe(el); });
+  }
+  document.getElementById('replay-all').addEventListener('click', function(){
+    anims.forEach(function(el, i){ setTimeout(function(){ play(el); }, (i % 3) * 180); });
+  });
+  document.querySelectorAll('.card').forEach(function(c){ c.addEventListener('click', function(e){ e.preventDefault(); }); });
+})();
+</script>

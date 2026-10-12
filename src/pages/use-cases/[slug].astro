@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import CallToAction from "@/components/CallToAction.astro";
-import { illustrations } from "@/components/illustrations";
+import AnimatedIllustration from "@/components/illustrations/AnimatedIllustration.astro";
 import { useCases, type UseCase } from "@/data/useCases";
 import { site } from "@/data/site";
 
@@ -15,7 +15,6 @@ interface Props {
 
 const { useCase } = Astro.props;
 const others = useCases.filter((uc) => uc.slug !== useCase.slug);
-const Illustration = illustrations[useCase.slug];
 const url = `${site.url}/use-cases/${useCase.slug}/`;
 
 const structuredData = [
@@ -61,9 +60,7 @@ const structuredData = [
       <span class="mx-1.5" aria-hidden="true">/</span>
       <span aria-current="page" class="text-ink">{useCase.title}</span>
     </nav>
-    <div class="mt-6 flex max-w-xl items-center justify-center bg-band border border-line rounded-xl px-6 py-6 [&>svg]:h-[200px] [&>svg]:w-auto [&>svg]:max-w-full">
-      {Illustration && <Illustration />}
-    </div>
+    <AnimatedIllustration name={useCase.slug} class="mt-6 max-w-xl bg-band border border-line rounded-xl px-6 py-6" />
     <h1 class="mt-8 max-w-4xl text-4xl sm:text-5xl leading-tight">{useCase.headline}</h1>
     <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">{useCase.intro}</p>
   </section>

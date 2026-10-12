@@ -1,0 +1,123 @@
+---
+// Wraps an animated use-case illustration (design/use-case-anim/use-case-cards-animated.html).
+// The CSS and script below are bundled once per page however many cards use this.
+// Without JS, or with reduced motion, the SVG shows its final state: .pending is only added by the script.
+import { illustrations } from "@/components/illustrations";
+
+interface Props {
+  name: keyof typeof illustrations;
+  class?: string;
+}
+
+const { name, class: className = "" } = Astro.props;
+const Illustration = illustrations[name];
+---
+
+<div class:list={["anim", className]} data-anim>
+  {Illustration && <Illustration />}
+</div>
+
+<style is:global>
+  /* Illustration primitives, scoped to .anim. Tokens map to the site's Tailwind colours
+     (ink, accent, admin); --line-strong is the prototype's darker line, used only here. */
+  .anim {
+    --ink: #16181a;
+    --accent: #1f5c45;
+    --admin: #c96f4a;
+    --line-strong: #cfcac0;
+  }
+  .anim svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  .anim .st-ink { stroke: var(--ink); }
+  .anim .st-acc { stroke: var(--accent); }
+  .anim .st-adm { stroke: var(--admin); }
+  .anim .st-line { stroke: var(--line-strong); }
+  .anim svg * { stroke-linecap: round; stroke-linejoin: round; }
+  .anim .a { transform-box: fill-box; transform-origin: 50% 50%; }
+  .anim .gx { transform-origin: 0 50%; }
+  .anim .gy { transform-origin: 50% 100%; }
+  .anim .draw { stroke-dasharray: var(--len); stroke-dashoffset: 0; }
+  .anim .gone, .anim .trav, .anim .blip, .anim .unread { opacity: 0; }
+
+  @keyframes il-pop { 0% { opacity: 0; transform: scale(0); } 65% { opacity: 1; transform: scale(1.18); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes il-gx { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes il-gy { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes il-draw { from { stroke-dashoffset: var(--len); } to { stroke-dashoffset: 0; } }
+  @keyframes il-rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes il-soft { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: none; } }
+  @keyframes il-trav { 0% { opacity: 0; transform: translate(0, 0); } 15% { opacity: 1; } 85% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--dx, 0px), var(--dy, 0px)); } }
+  @keyframes il-doc { 0% { opacity: 1; transform: rotate(var(--r)); } 55% { opacity: 1; transform: translate(var(--dx), var(--dy)) rotate(0deg); } 80% { opacity: 1; transform: translate(var(--dx), var(--dy)); } 100% { opacity: 0; transform: translate(var(--dx), var(--dy)); } }
+  @keyframes il-blip { 0% { opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { opacity: 0; } }
+  @keyframes il-scan { from { transform: translateY(0); } to { transform: translateY(72px); } }
+  @keyframes il-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  @keyframes il-unread { 0% { opacity: 0; transform: scale(0); } 12% { opacity: 1; transform: scale(1); } 86% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(0.6); } }
+  @keyframes il-press { 0%, 100% { transform: none; } 45% { transform: scale(0.92); } }
+  @keyframes il-stamp { 0% { opacity: 0; transform: scale(1.7); } 60% { opacity: 1; transform: scale(0.92); } 100% { opacity: 1; transform: scale(1); } }
+
+  .anim:is(.play, .pending) .pop { animation: il-pop 0.45s cubic-bezier(0.3, 1.3, 0.5, 1) var(--d, 0s) both; }
+  .anim:is(.play, .pending) .gx { animation: il-gx 0.45s ease-out var(--d, 0s) both; }
+  .anim:is(.play, .pending) .gy { animation: il-gy 0.6s cubic-bezier(0.2, 0.8, 0.3, 1) var(--d, 0s) both; }
+  .anim:is(.play, .pending) .draw { animation: il-draw 0.5s ease-out var(--d, 0s) both; }
+  .anim:is(.play, .pending) .rise { animation: il-rise 0.5s ease-out var(--d, 0s) both; }
+  .anim:is(.play, .pending) .soft { animation: il-soft 0.4s ease-out var(--d, 0s) both; }
+  .anim:is(.play, .pending) .trav { animation: il-trav var(--dur, 0.5s) ease-in-out var(--d, 0s) both; }
+  .anim:is(.play, .pending) .doc { animation: il-doc 0.9s ease-in-out var(--d, 0s) both; }
+  .anim:is(.play, .pending) .blip { animation: il-blip var(--dur, 1s) linear var(--d, 0s) both; }
+  .anim:is(.play, .pending) .scan { animation: il-scan 0.75s ease-in-out var(--d, 0s) 3 alternate both; }
+  .anim:is(.play, .pending) .bob { animation: il-bob 0.5s ease-in-out var(--d, 0s) 2 both; }
+  .anim:is(.play, .pending) .unread { animation: il-unread 2.6s ease var(--d, 0s) both; }
+  .anim:is(.play, .pending) .press { animation: il-press 0.35s ease var(--d, 0s) both; }
+  .anim:is(.play, .pending) .stamp { animation: il-stamp 0.5s cubic-bezier(0.3, 1.2, 0.5, 1) var(--d, 0s) both; }
+  .anim.pending * { animation-play-state: paused !important; }
+  @media (prefers-reduced-motion: reduce) {
+    .anim * { animation: none !important; }
+  }
+</style>
+
+<script>
+  // Play once when scrolled into view (threshold 0.45, 180ms stagger across a row of three),
+  // and replay when the parent card is hovered or receives focus. Reduced motion: do nothing,
+  // so every illustration stays in its final state.
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const anims = Array.from(document.querySelectorAll<HTMLElement>("[data-anim]"));
+
+  const play = (el: HTMLElement) => {
+    el.classList.remove("play", "pending");
+    void el.getBoundingClientRect();
+    el.classList.add("play");
+  };
+
+  if (!reduce && anims.length) {
+    anims.forEach((el) => {
+      el.classList.add("pending");
+      const card = el.closest("[data-anim-card]");
+      card?.addEventListener("mouseenter", () => play(el));
+      card?.addEventListener("focusin", () => play(el));
+    });
+    if (!("IntersectionObserver" in window)) {
+      anims.forEach(play);
+    } else {
+      let queue = 0;
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target as HTMLElement;
+            io.unobserve(el);
+            const delay = (queue++ % 3) * 180;
+            setTimeout(() => {
+              if (el.classList.contains("pending")) play(el);
+            }, delay);
+            setTimeout(() => (queue = 0), 600);
+          });
+        },
+        { threshold: 0.45 },
+      );
+      anims.forEach((el) => io.observe(el));
+    }
+  }
+</script>
