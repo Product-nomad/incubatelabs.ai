@@ -1,0 +1,92 @@
+---
+// Site-wide announcement above the nav. Dismissal is stored per campaign: a new announcement needs a
+// new key (and the matching check in Layout's <head> script). Retire by end of January 2027 (STATE.md).
+export const ANNOUNCEMENT_KEY = "il-bar-eu-ai-act-dismissed";
+---
+
+<aside aria-label="Announcement" class="announcement">
+  <p class="announcement-text">
+    <span class="hidden sm:inline">The EU AI Act already applies to some UK businesses. Does it apply to yours?</span>
+    <span class="sm:hidden">Does the EU AI Act apply to you?</span>
+    <a href="/guides/eu-ai-act-uk/">Read the guide →</a>
+  </p>
+  <button type="button" class="announcement-close" aria-label="Dismiss announcement" data-announcement-close>
+    <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+      <path d="M3.5 3.5l9 9m0-9l-9 9" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+    </svg>
+  </button>
+</aside>
+
+<script is:inline define:vars={{ key: ANNOUNCEMENT_KEY }}>
+  document.querySelector("[data-announcement-close]")?.addEventListener("click", () => {
+    document.documentElement.classList.add("bar-dismissed");
+    try {
+      localStorage.setItem(key, "1");
+    } catch (e) {}
+  });
+</script>
+
+<style is:global>
+  .announcement {
+    position: relative;
+    background: #1f5c45;
+    color: #fbfaf7;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 8px 48px;
+    text-align: center;
+  }
+  /* Set before first paint by the inline script in Layout's <head>, so the bar never flashes. */
+  html.bar-dismissed .announcement {
+    display: none;
+  }
+  .announcement-text {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .announcement a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-left: 0.25em;
+  }
+  .announcement a:hover {
+    text-decoration-thickness: 2px;
+  }
+  .announcement-close {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    color: #fbfaf7;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .announcement-close:hover {
+    background: rgba(251, 250, 247, 0.12);
+  }
+  /* The site's accent focus ring would vanish on the accent bar, so use paper here. */
+  .announcement a:focus-visible,
+  .announcement-close:focus-visible {
+    outline: 2px solid #fbfaf7;
+    outline-offset: 2px;
+  }
+  /* At 14px the mobile line can't sit on one line beside a 44px close button at 360px, so it drops
+     to 12px below 640px (agreed 2026-10-12). */
+  @media (max-width: 639px) {
+    .announcement {
+      font-size: 12px;
+      padding-left: 12px;
+      padding-right: 44px;
+    }
+  }
+</style>

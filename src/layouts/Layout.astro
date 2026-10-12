@@ -6,6 +6,7 @@ import "@fontsource/source-serif-4/500.css";
 import "@fontsource/source-serif-4/600.css";
 import Nav from "@/components/Nav.astro";
 import Footer from "@/components/Footer.astro";
+import AnnouncementBar, { ANNOUNCEMENT_KEY } from "@/components/AnnouncementBar.astro";
 import { site } from "@/data/site";
 // Heading and body fonts, preloaded so text don't reflow when it arrives (technical audit issue 10).
 import serifHeading from "@fontsource/source-serif-4/files/source-serif-4-latin-600-normal.woff2?url";
@@ -36,6 +37,8 @@ const {
 } = Astro.props;
 const fullCanonical = canonical || new URL(Astro.url.pathname, site.url).href;
 const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
+// The announcement points at this guide, so it isn't shown there.
+const showAnnouncement = Astro.url.pathname !== "/guides/eu-ai-act-uk/";
 
 const siteOgImage = `${site.url}/og-image.png`;
 const ogImage = ogImagePath ? new URL(ogImagePath, site.url).href : siteOgImage;
@@ -61,6 +64,13 @@ const jsonLd = {
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
+    {showAnnouncement && (
+      <script is:inline define:vars={{ key: ANNOUNCEMENT_KEY }}>
+        try {
+          if (localStorage.getItem(key) === "1") document.documentElement.classList.add("bar-dismissed");
+        } catch (e) {}
+      </script>
+    )}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -109,6 +119,7 @@ const jsonLd = {
     >
       Skip to content
     </a>
+    {showAnnouncement && <AnnouncementBar />}
     <Nav />
     <main id="main">
       <slot />

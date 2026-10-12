@@ -40,6 +40,7 @@
 - "Illustrative" is still visible in the hero footnote that cites the Amex and Microsoft sources (`src/components/LostDayHero.astro`); left in place.
 
 ## Open items
+- Announcement bar: EU AI Act guide (key il-bar-eu-ai-act-dismissed). Review or retire by end of January 2027. (`src/components/AnnouncementBar.astro`; hidden on /guides/eu-ai-act-uk/; text is 12px below 640px so the mobile line fits beside the 44px close button at 360px.)
 - **AI literacy page H1/title**: SERPs checked 2026-10-12 (see `research/seo-2026-10/eu-ai-act.md` addendum): "ai literacy training" is gov.uk, education bodies and training sellers; "ai literacy course" is course-shopping intent. Revisit the H1 and title as the copy's build note says; not changed in this sprint.
 - **Readiness Check EU questions**: add the EU AI Act questions later.
 - **Legal footer line**: still names the town ("…a sole trader based in Huntingdon, Cambridgeshire."), the only location on the site. Keep the town or use a business address.

@@ -2,6 +2,11 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.2.1] — 2026-10-12
+
+### Added
+- Site-wide, dismissible announcement bar linking to the EU AI Act guide (not shown on the guide itself). Dismissal is remembered per campaign and applied before first paint.
+
 ## [1.2.0] — 2026-10-12
 
 ### Added
