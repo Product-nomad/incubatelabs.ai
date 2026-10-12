@@ -22,7 +22,7 @@ const pages = fs
     if (!h1) throw new Error(`${f}: no h1 in front matter`);
     return { out: `${path.basename(f, ".md")}.png`, h1 };
   });
-pages.push({ out: "guides.png", h1: "Guides" });
+pages.push({ out: "guides.png", h1: "AI rules guides for UK small businesses" });
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });

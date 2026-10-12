@@ -134,4 +134,4 @@ AI tools staff use for work without the business knowing or approving, usually o
 
 1. [Microsoft and Censuswide research on unapproved AI use at work, 2025](https://ukstories.microsoft.com/features/rise-in-shadow-ai-tools-raising-security-concerns-for-uk)
 2. [AI literacy under Article 4, as amended in July 2026](https://euaiactchecklist.com/eu-ai-act-ai-literacy-article-4.html)
-3. [ICO: 72 hours, how to respond to a personal data breach](https://ico.org.uk/for-organisations/sme-web-hub/72-hours-how-to-respond-to-a-personal-data-breach)
+3. [ICO: UK GDPR data breach reporting](https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/)

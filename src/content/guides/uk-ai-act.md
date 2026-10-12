@@ -94,4 +94,4 @@ It applies to UK businesses whose AI is used in the EU or whose AI output is use
 2. [UK AI regulation in 2026: what's in force and what's coming (Scaffold)](https://www.scaffold.digital/news/uk-ai-regulation-in-2026-whats-in-force-whats-coming-and-what-your-business-should-do)
 3. [King's Speech signals diffuse UK digital policy agenda, but no AI bill (IAPP)](https://iapp.org/news/a/king-s-speech-signals-diffuse-uk-digital-policy-agenda-but-no-ai-bill)
 4. [Data (Use and Access) Act 2025 (legislation.gov.uk)](https://www.legislation.gov.uk/ukpga/2025/18/contents)
-5. [ICO: 72 hours, how to respond to a personal data breach](https://ico.org.uk/for-organisations/sme-web-hub/72-hours-how-to-respond-to-a-personal-data-breach)
+5. [ICO: UK GDPR data breach reporting](https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/)
