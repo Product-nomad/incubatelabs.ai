@@ -46,12 +46,13 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    // /resources/ has no index page, so that crumb has no link.
+    // /resources/ has no index page: Google needs a URL on every crumb but the last, so the
+    // visible "Resources" crumb is left out of the structured data.
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
-      { "@type": "ListItem", position: 2, name: parent.name, ...(parent.item ? { item: parent.item } : {}) },
-      { "@type": "ListItem", position: 3, name: crumb, item: url },
-    ],
+      { name: "Home", item: `${site.url}/` },
+      ...(parent.item ? [{ name: parent.name, item: parent.item }] : []),
+      { name: crumb, item: url },
+    ].map((c, i) => ({ "@type": "ListItem", position: i + 1, ...c })),
   },
   ...(faq.length
     ? [
