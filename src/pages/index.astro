@@ -4,6 +4,8 @@ import LostDayHero from "@/components/LostDayHero.astro";
 import Hexagon from "@/components/Hexagon.astro";
 import UseCaseCard from "@/components/UseCaseCard.astro";
 import WebsiteCard from "@/components/WebsiteCard.astro";
+import SeeItWorking from "@/components/SeeItWorking.astro";
+import SeeItWorkingNoScript from "@/components/SeeItWorkingNoScript.astro";
 import CostCheck from "@/components/CostCheck.astro";
 import EngagementCard from "@/components/EngagementCard.astro";
 import WorkCard from "@/components/WorkCard.astro";
@@ -51,6 +53,7 @@ const websiteService = {
   socialDescription="Practical AI and automation for UK small businesses. Fixed-price projects that take the repetitive admin off your team."
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(websiteService)} />
+  <SeeItWorkingNoScript slot="head" />
   <LostDayHero />
 
   <!-- Sound familiar? -->
@@ -83,6 +86,8 @@ const websiteService = {
       <WebsiteCard />
     </div>
   </section>
+
+  <SeeItWorking />
 
   <!-- Not everything needs AI -->
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">

@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import rehypeGuide from "./src/lib/rehype-guide.mjs";
+import rehypeExample from "./src/lib/rehype-example.mjs";
 import siteChecks from "./src/integrations/site-checks.mjs";
 
 // https://astro.build/config
@@ -22,7 +23,8 @@ export default defineConfig({
   markdown: {
     // Straight quotes, as in the rest of the site, so FAQ JSON-LD matches the visible text exactly.
     smartypants: false,
-    rehypePlugins: [rehypeGuide],
+    // Each plugin only touches its own content folder.
+    rehypePlugins: [rehypeGuide, rehypeExample],
   },
   build: {
     format: "directory",

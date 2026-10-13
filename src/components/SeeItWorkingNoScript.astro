@@ -1,0 +1,12 @@
+---
+// No-JS fallback for SeeItWorking.astro: show the first step of all three examples, stacked, and
+// hide the tabs (they need JS). Goes in the page head, where <style> inside <noscript> is valid.
+---
+
+<noscript>
+  <style>
+    #see-it-working .tabs { display: none; }
+    #see-it-working .example[hidden] { display: block; }
+    #see-it-working .example { margin-top: 36px; }
+  </style>
+</noscript>

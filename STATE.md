@@ -1,8 +1,15 @@
 # incubatelabs.ai — STATE
 
 **Goal**: A lead-generation site for practical AI and automation for UK small businesses (5–50 staff). AI services lead; websites are offered alongside.
-**Phase**: AI rules guides sprint (v1.2) shipped 2026-10-12. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
-**Last touched**: 2026-10-12.
+**Phase**: Worked examples sprint (v1.4) shipped 2026-10-13. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
+**Last touched**: 2026-10-13.
+
+## v1.4 Worked examples and "See it working" (2026-10-13; branch `examples-2026-10`, spec `design/examples-2026-10/00-build-spec.md`)
+- **Scope**: eight worked examples from the supplied copy (final), an /examples/ index, the "See it working" home section from `design/examples-2026-10/see-it-working.html`, and internal links. Research behind it: `research/examples-2026-10/` (committed first, separately).
+- **Copy**: no typos found. Eight metadata strings were over the site-check limits and were trimmed with Simon's approval (visible copy unchanged): titles of tenant-repair-requests (61→53) and monday-morning-report (63→59, "&"); the index title drops " | Incubate Labs" (66→50); descriptions of supplier-invoices-into-xero, missed-call-text-back, job-sheets-to-timesheets ("invoice lines"), chasing-client-records and the index (176→155, drops ", with the time saved").
+- **Shipped**: `examples` collection (`src/content.config.ts`, `src/content/examples/`; `target_keyword`, `secondary_keywords`, `order`, `demo` never rendered; optional `video` path/URL renders a native player for a file, an iframe otherwise, nothing when absent). `src/layouts/ExampleLayout.astro` (breadcrumbs, fact strip with tool chips, Article + BreadcrumbList JSON-LD, no FAQPage, "More worked examples": same industry first, then order), shaped by `src/lib/rehype-example.mjs` (note box, person-checks callout with the CustomerReplies person glyph, time-back table and bold hours line, CTA button). Guide prose CSS moved unchanged to `src/styles/prose.css`, shared by both layouts. `src/components/ExampleCard.astro` used on /examples/, the "More" strip and use-case pages (`USE_CASE_EXAMPLES` in `src/lib/examples.ts`; security-questionnaires has none). Footer "Worked examples" above "Websites". OG images in `public/og/` from `design/examples-2026-10/og/build-og.mjs`.
+- **Home section**: `src/components/SeeItWorking.astro` is the prototype's markup and script unchanged, except queries are limited to the section; CSS scoped under `.siw`, tokens mapped via `theme()`, keyframes prefixed `siw-`. No-JS fallback (`SeeItWorkingNoScript.astro`, a `<noscript><style>` in the head): the first step of all three examples, stacked, tabs hidden. Inter 600 is preloaded on example pages (the bold note line is above the fold; without it CLS was 0.0005).
+- **Checks**: browser checks 119/119 on local (every example page, index, home autoplay/click/arrow keys/reduced motion/no-JS/360px, use-case blocks, footer, the Article 50 guide link, internal links, console). Guides regression 65/66 locally (the .docx content-type comes from `_headers`, which `astro preview` doesn't apply). Lighthouse 100/100/100/100 and CLS 0 on home, /examples/ and two example pages, mobile and desktop (local).
 
 ## Animated use-case illustrations (2026-10-12; design `design/use-case-anim/use-case-cards-animated.html`)
 - Seven SVGs copied unchanged from the approved prototype into `src/components/illustrations/` (six use cases plus `Websites.astro`), replacing the v1.1 static art. Rendered through `AnimatedIllustration.astro`, which carries the scoped primitives CSS (keyframes prefixed `il-`) and one script island per page: `.pending` on load unless reduced motion, play at IntersectionObserver 0.45 with a 180ms stagger across a row of three, replay on card mouseenter/focusin (`data-anim-card`).
@@ -45,6 +52,7 @@
 - "Illustrative" is still visible in the hero footnote that cites the Amex and Microsoft sources (`src/components/LostDayHero.astro`); left in place.
 
 ## Open items
+- **Worked example demos**: Simon to build and record the three demos (voice note to quote, supplier invoices into Xero, tenant repair requests). Add each as `video:` (path under `public/` or a URL) in the example's front matter; nothing renders until then.
 - Announcement bar: EU AI Act guide (key il-bar-eu-ai-act-dismissed). Review or retire by end of January 2027. (`src/components/AnnouncementBar.astro`; hidden on /guides/eu-ai-act-uk/; text is 12px below 640px so the mobile line fits beside the 44px close button at 360px.)
 - **AI literacy page H1/title**: SERPs checked 2026-10-12 (see `research/seo-2026-10/eu-ai-act.md` addendum): "ai literacy training" is gov.uk, education bodies and training sellers; "ai literacy course" is course-shopping intent. Revisit the H1 and title as the copy's build note says; not changed in this sprint.
 - **Readiness Check EU questions**: add the EU AI Act questions later.

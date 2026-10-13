@@ -1,0 +1,62 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ExampleCard from "@/components/ExampleCard.astro";
+import { site } from "@/data/site";
+import { getExamples } from "@/lib/examples";
+
+const examples = await getExamples();
+const url = `${site.url}/examples/`;
+const intro =
+  "Eight everyday jobs in real types of small business, showing how each one works today, what we'd build, where a person stays in charge and the time it gives back. Figures are illustrative; we measure yours in the first conversation.";
+const description =
+  "Eight worked examples of practical AI and automation in UK small businesses: quotes, supplier invoices, repair requests, missed calls, timesheets and more.";
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Worked examples",
+    url,
+    description,
+    publisher: { "@id": `${site.url}/#org` },
+    hasPart: examples.map((e) => ({ "@type": "Article", name: e.data.h1, url: new URL(e.data.slug, site.url).href })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
+      { "@type": "ListItem", position: 2, name: "Worked examples", item: url },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Worked Examples: Automation in UK Small Businesses"
+  description={description}
+  ogImage="/og/examples.png"
+  ogImageAlt="Worked examples. incubatelabs.ai"
+>
+  {structuredData.map((d) => (
+    <script slot="head" type="application/ld+json" set:html={JSON.stringify(d)} />
+  ))}
+
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-12">
+    <nav aria-label="Breadcrumb" class="text-sm text-muted">
+      <ol class="flex flex-wrap items-center gap-x-1.5">
+        <li><a href="/" class="hover:text-accent">Home</a></li>
+        <li aria-hidden="true">›</li>
+        <li aria-current="page" class="text-ink">Worked examples</li>
+      </ol>
+    </nav>
+    <h1 class="mt-6 text-4xl sm:text-5xl leading-tight">Worked examples</h1>
+    <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">{intro}</p>
+  </section>
+
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-10">
+    <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {examples.map((e) => <li><ExampleCard example={e} headingLevel="h2" /></li>)}
+    </ul>
+  </section>
+</Layout>

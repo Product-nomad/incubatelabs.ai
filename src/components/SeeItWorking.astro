@@ -1,0 +1,331 @@
+---
+// "See it working" home section (design/examples-2026-10/see-it-working.html, approved 2026-10-13).
+// Markup, styles and script are the prototype's. The CSS is scoped under .siw with its tokens mapped
+// to the Tailwind theme, keyframes are prefixed siw-, and the script only queries inside the section.
+// Without JS (see SeeItWorkingNoScript.astro) the first step of each example is shown, stacked.
+---
+
+<section class="siw" id="see-it-working" aria-labelledby="siw-h">
+  <p class="eyebrow">See it working</p>
+  <h2 id="siw-h">Three everyday jobs, before and after</h2>
+  <p class="intro">Worked examples based on typical businesses of this size. Step through how each one works, including where a person stays in charge.</p>
+
+  <div class="tabs" role="tablist" aria-label="Worked examples">
+    <button class="tab" role="tab" id="tab-0" aria-controls="ex-0" aria-selected="true">Voice note to quote <span class="ind">Electrician</span></button>
+    <button class="tab" role="tab" id="tab-1" aria-controls="ex-1" aria-selected="false" tabindex="-1">Supplier invoices into Xero <span class="ind">Builder</span></button>
+    <button class="tab" role="tab" id="tab-2" aria-controls="ex-2" aria-selected="false" tabindex="-1">Repair requests sorted <span class="ind">Letting agent</span></button>
+  </div>
+
+  <!-- Example 0 -->
+  <div class="example" id="ex-0" role="tabpanel" aria-labelledby="tab-0">
+    <div class="stage">
+      <ol class="steps">
+        <li><button class="step" type="button"><span class="n">1</span><span class="t">A voice note on site</span><span class="d">The owner describes the job in a minute, standing in the kitchen.</span><span class="bar"></span></button></li>
+        <li><button class="step" type="button"><span class="n">2</span><span class="t">Drafted from your price list</span><span class="d">Each item is matched to a line on the firm's own list. Nothing is invented.</span><span class="bar"></span></button></li>
+        <li><button class="step person" type="button"><span class="n">3</span><span class="t">The owner checks it</span><span class="d">Anything unclear is flagged, not guessed. Approve or edit in a couple of minutes.</span><span class="bar"></span></button></li>
+        <li><button class="step" type="button"><span class="n">4</span><span class="t">Sent, and followed up</span><span class="d">Out the same day. If it goes quiet, a follow-up is drafted for approval.</span><span class="bar"></span></button></li>
+      </ol>
+      <div class="screen" aria-live="off">
+        <div class="screen-top"><span class="dots"><i></i><i></i><i></i></span><span class="example-tag">Example data</span></div>
+        <div class="view">
+          <p class="lbl">Voice note · 0:48</p>
+          <div class="panel"><div class="wave" aria-hidden="true"></div></div>
+          <p class="lbl">Transcript</p>
+          <div class="panel"><p class="quote">“Kitchen rewire at 14 Mill Lane. Six new double sockets along the worktop, two downlight circuits, swap the consumer unit, and we'll need the certificate. Customer wants it done before the fitters come in.”</p></div>
+        </div>
+        <div class="view" hidden>
+          <div class="row"><p class="lbl">Draft quote Q-1042 · 14 Mill Lane</p><span class="chip">4 of 4 matched to your price list</span></div>
+          <div class="panel tbl-wrap"><table>
+            <thead><tr><th>Item</th><th>Rate code</th><th class="num">Qty</th></tr></thead>
+            <tbody>
+              <tr><td>Consumer unit replacement</td><td>CU-01</td><td class="num">1</td></tr>
+              <tr><td>Double socket, new circuit</td><td>SKT-2G</td><td class="num">6</td></tr>
+              <tr><td>Downlight circuit</td><td>DL-CCT</td><td class="num">2</td></tr>
+              <tr><td>Electrical installation certificate</td><td>EIC</td><td class="num">1</td></tr>
+            </tbody></table></div>
+          <p class="lbl">Rates and totals come from your list, in your quote template.</p>
+        </div>
+        <div class="view" hidden>
+          <div class="row"><p class="lbl">Ready for you to check</p><span class="chip warn">1 thing to confirm</span></div>
+          <div class="alert"><strong>Downlight type not mentioned.</strong> Fire-rated fittings assumed from your usual spec. Please confirm before sending.</div>
+          <div class="panel"><p class="quote">Q-1042 · 4 lines · same template as your other quotes</p></div>
+          <div class="row" style="justify-content:flex-start"><span class="fakebtn">Edit</span><span class="fakebtn go">Approve and send</span></div>
+        </div>
+        <div class="view" hidden>
+          <p class="lbl">Q-1042 timeline</p>
+          <div class="panel"><ul class="timeline">
+            <li><span class="dot"></span><span><span class="when">Monday 17:40</span>Quote approved and sent to the customer, the same day as the visit</span></li>
+            <li><span class="dot wait"></span><span><span class="when">Saturday 09:00</span>No reply yet. A friendly follow-up is drafted and waiting for your OK</span></li>
+          </ul></div>
+          <p class="lbl">Nothing goes to a customer without the owner's approval.</p>
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <div><div class="big">About 5 hours a week back</div><p class="work">15 quotes a week × 20 minutes saved on each. Quotes go out the same day.</p></div>
+      <a class="full" href="/examples/voice-note-to-quote/">Read the full example →</a>
+    </div>
+  </div>
+
+  <!-- Example 1 -->
+  <div class="example" id="ex-1" role="tabpanel" aria-labelledby="tab-1" hidden>
+    <div class="stage">
+      <ol class="steps">
+        <li><button class="step" type="button"><span class="n">1</span><span class="t">Picked out of the inbox</span><span class="d">Invoices are spotted among everything else that arrives.</span><span class="bar"></span></button></li>
+        <li><button class="step" type="button"><span class="n">2</span><span class="t">Read and coded</span><span class="d">Supplier, reference, date, VAT and the job it belongs to.</span><span class="bar"></span></button></li>
+        <li><button class="step person" type="button"><span class="n">3</span><span class="t">Checked against the order</span><span class="d">Anything that doesn't match goes to a named person, with the reason.</span><span class="bar"></span></button></li>
+        <li><button class="step" type="button"><span class="n">4</span><span class="t">Waiting in Xero</span><span class="d">A draft bill with the PDF attached, ready to approve in a batch.</span><span class="bar"></span></button></li>
+      </ol>
+      <div class="screen" aria-live="off">
+        <div class="screen-top"><span class="dots"><i></i><i></i><i></i></span><span class="example-tag">Example data</span></div>
+        <div class="view">
+          <p class="lbl">Accounts inbox · this morning</p>
+          <div class="mail">
+            <div class="m"><span>Kestrel Building Supplies · Invoice INV-55821.pdf</span><span class="chip">Invoice</span></div>
+            <div class="m dim"><span>Re: site meeting Thursday</span><span class="chip muted">Not an invoice</span></div>
+            <div class="m"><span>Plant hire · Invoice 7713 · mini digger</span><span class="chip">Invoice</span></div>
+            <div class="m"><span>Timber order · Invoice T-20931.pdf</span><span class="chip">Invoice</span></div>
+          </div>
+        </div>
+        <div class="view" hidden>
+          <div class="row"><p class="lbl">INV-55821 · read from the PDF</p><span class="chip">Coded</span></div>
+          <div class="panel"><dl class="fields">
+            <dt>Supplier</dt><dd>Kestrel Building Supplies</dd>
+            <dt>Invoice no.</dt><dd>INV-55821</dd>
+            <dt>Date</dt><dd>9 October 2026</dd>
+            <dt>VAT</dt><dd>Standard rate, 20%</dd>
+            <dt>Job</dt><dd>J-2214 · Mill Lane extension</dd>
+            <dt>Account</dt><dd>310 · Materials</dd>
+          </dl></div>
+        </div>
+        <div class="view" hidden>
+          <div class="row"><p class="lbl">Checked against PO-0388</p><span class="chip warn">1 sent to Sarah</span></div>
+          <div class="panel tbl-wrap"><table>
+            <thead><tr><th>Line</th><th class="num">Invoiced</th><th class="num">Ordered</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Plasterboard 12.5mm</td><td class="num">40</td><td class="num">40</td><td class="ok">✓</td></tr>
+              <tr><td>Timber 47 × 100</td><td class="num">24</td><td class="num">24</td><td class="ok">✓</td></tr>
+              <tr><td>Delivery charge</td><td class="num">1</td><td class="num">0</td><td class="flag">Not on order</td></tr>
+            </tbody></table></div>
+          <div class="alert"><strong>Sent to Sarah:</strong> delivery charge isn't on the purchase order. Approve it, or query it with the supplier.</div>
+        </div>
+        <div class="view" hidden>
+          <p class="lbl">Xero · draft bills awaiting approval</p>
+          <div class="panel"><ul class="timeline">
+            <li><span class="dot"></span><span><span class="when">Draft bill · PDF attached</span>Kestrel Building Supplies INV-55821, coded to 310 Materials, job J-2214</span></li>
+            <li><span class="dot"></span><span><span class="when">This week</span>37 invoices ready to approve in one batch</span></li>
+            <li><span class="dot wait"></span><span><span class="when">With a person</span>5 exceptions, each with the reason it was flagged</span></li>
+          </ul></div>
+          <p class="lbl">Nothing is approved or paid automatically.</p>
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <div><div class="big">About 6 hours a month back</div><p class="work">150 invoices × 3 minutes of keying, against about 1.5 hours of exceptions and review.</p></div>
+      <a class="full" href="/examples/supplier-invoices-into-xero/">Read the full example →</a>
+    </div>
+  </div>
+
+  <!-- Example 2 -->
+  <div class="example" id="ex-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+    <div class="stage">
+      <ol class="steps">
+        <li><button class="step" type="button"><span class="n">1</span><span class="t">A tenant emails</span><span class="d">One of 25 repair requests today, in whatever words the tenant uses.</span><span class="bar"></span></button></li>
+        <li><button class="step" type="button"><span class="n">2</span><span class="t">Sorted by urgency</span><span class="d">Your rules, written down. Urgent cases jump the queue and alert the team.</span><span class="bar"></span></button></li>
+        <li><button class="step" type="button"><span class="n">3</span><span class="t">Replies drafted</span><span class="d">A reply to the tenant and a job email to a contractor on your approved list.</span><span class="bar"></span></button></li>
+        <li><button class="step person" type="button"><span class="n">4</span><span class="t">A person sends them</span><span class="d">Checked and sent in a couple of minutes, and logged against the property.</span><span class="bar"></span></button></li>
+      </ol>
+      <div class="screen" aria-live="off">
+        <div class="screen-top"><span class="dots"><i></i><i></i><i></i></span><span class="example-tag">Example data</span></div>
+        <div class="view">
+          <p class="lbl">From: tenant, Flat 3 · 07:52</p>
+          <div class="panel"><p class="quote"><strong>No hot water</strong><br>Hi, the boiler stopped working last night and we've got no heating or hot water. I've got two small children so please can someone come today?</p></div>
+          <p class="lbl">Arrived behind 6 routine requests</p>
+        </div>
+        <div class="view" hidden>
+          <div class="row"><p class="lbl">Triage</p><span class="chip warn">Urgent · team alerted</span></div>
+          <div class="panel"><dl class="fields">
+            <dt>Property</dt><dd>Flat 3, 22 Station Road</dd>
+            <dt>Category</dt><dd>Heating and hot water</dd>
+            <dt>Why urgent</dt><dd>No heating or hot water · young children in the property</dd>
+            <dt>Rule</dt><dd>Your policy: heating failures are same-day</dd>
+          </dl></div>
+        </div>
+        <div class="view" hidden>
+          <p class="lbl">Draft reply to tenant</p>
+          <div class="panel"><p class="quote">Thanks for letting us know. We're arranging a heating engineer for today and will confirm a time within the hour. If you smell gas, call the National Gas Emergency number on 0800 111 999 straight away.</p></div>
+          <p class="lbl">Suggested contractor</p>
+          <div class="panel row"><span>Heating engineer · covers this postcode · on your approved list</span><span class="chip">Job email drafted</span></div>
+        </div>
+        <div class="view" hidden>
+          <p class="lbl">Flat 3, 22 Station Road · property file</p>
+          <div class="panel"><ul class="timeline">
+            <li><span class="dot"></span><span><span class="when">07:58</span>Reply checked and sent to the tenant by Priya</span></li>
+            <li><span class="dot"></span><span><span class="when">08:01</span>Job sent to the heating engineer and logged against the property</span></li>
+            <li><span class="dot wait"></span><span><span class="when">Next</span>Time to confirm with the tenant once the engineer replies</span></li>
+          </ul></div>
+          <p class="lbl">Every message is sent by a person.</p>
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <div><div class="big">About 8 hours a week back</div><p class="work">25 emails a day × 4 minutes saved on each. Urgent cases are seen first.</p></div>
+      <a class="full" href="/examples/tenant-repair-requests/">Read the full example →</a>
+    </div>
+  </div>
+
+  <p class="foot">Figures are illustrative for a typical business of this size. We measure yours in the first conversation. <a href="/examples/">See all eight worked examples →</a></p>
+</section>
+
+<style is:global>
+.siw{--ink:theme('colors.ink');--paper:theme('colors.paper');--band:theme('colors.band');--line:theme('colors.line');--muted:theme('colors.muted');--accent:theme('colors.accent');--accent-soft:theme('colors.accent-soft');--night:theme('colors.night');--night-2:#22262a;--night-3:theme('colors.night-raised');--night-fg:#f1efe9;--night-muted:#9aa0a6;--bright:theme('colors.accent-bright');--admin:theme('colors.admin');--admin-soft:#3a2a23;--serif:theme('fontFamily.serif');--sans:theme('fontFamily.sans');color-scheme:light}
+.siw{color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
+.siw{max-width:1180px;margin:0 auto;padding-inline:24px;padding-block:72px 88px}
+@media (max-width:480px){.siw{padding-inline:16px;padding-block:44px 56px}}
+.siw .eyebrow{font-size:14px;font-weight:500;color:var(--accent);margin:0 0 12px}
+.siw h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.2vw,44px);line-height:1.08;letter-spacing:-.01em;margin:0;text-wrap:balance;max-width:20ch}
+.siw .intro{margin:16px 0 0;color:var(--muted);font-size:18px;max-width:60ch}
+.siw .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:36px 0 20px}
+.siw .tab{appearance:none;font:inherit;font-size:15px;font-weight:500;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:9px 16px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.siw .tab .ind{font-size:12px;color:var(--muted);font-weight:500}
+.siw .tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.siw .tab[aria-selected="true"] .ind{color:#b9bdc1}
+.siw .tab:focus-visible,.siw .step:focus-visible,.siw .full:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.siw .stage{border:1px solid var(--line);border-radius:20px;background:var(--band);padding:20px;display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.25fr);gap:20px}
+@media (max-width:860px){.siw .stage{grid-template-columns:1fr;padding:14px}}
+.siw .steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.siw .step{appearance:none;font:inherit;text-align:left;width:100%;border:1px solid transparent;background:transparent;border-radius:12px;padding:14px 16px;cursor:pointer;display:grid;grid-template-columns:28px 1fr;gap:4px 12px;color:var(--ink);position:relative;overflow:hidden}
+.siw .step .n{grid-row:span 2;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--muted);background:var(--paper);font-variant-numeric:tabular-nums}
+.siw .step .t{font-weight:600;font-size:16px;line-height:1.3}
+.siw .step .d{color:var(--muted);font-size:14.5px;line-height:1.45}
+.siw .step[aria-current="step"]{background:var(--paper);border-color:var(--line)}
+.siw .step[aria-current="step"] .n{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.siw .step.person .n{border-color:var(--accent)}
+.siw .step .bar{position:absolute;left:0;bottom:0;height:2px;background:var(--accent);width:0}
+.siw.playing .step[aria-current="step"] .bar{animation:siw-fill var(--dwell,3800ms) linear forwards}
+@keyframes siw-fill{to{width:100%}}
+@media (max-width:860px){.siw .step .d{display:none}.siw .step{padding:10px 12px}}
+.siw .screen{background:var(--night);color:var(--night-fg);border-radius:16px;padding:18px;min-height:340px;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(22,24,26,.16);min-width:0}
+.siw .screen-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;font-size:12px;color:var(--night-muted)}
+.siw .dots{display:flex;gap:6px}
+.siw .dots i{width:9px;height:9px;border-radius:50%;background:var(--night-3);display:block}
+.siw .example-tag{border:1px solid var(--night-3);border-radius:999px;padding:2px 9px}
+.siw .view{flex:1;display:flex;flex-direction:column;gap:12px;min-width:0}
+.siw .view[hidden]{display:none}
+.siw .view.enter{animation:siw-enter .45s ease-out both}
+@keyframes siw-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.siw .lbl{font-size:12px;color:var(--night-muted);text-transform:uppercase;letter-spacing:.06em;margin:0}
+.siw .panel{background:var(--night-2);border:1px solid var(--night-3);border-radius:12px;padding:14px 16px;min-width:0}
+.siw .panel p{margin:0}
+.siw .quote{font-size:15px;line-height:1.55;color:var(--night-fg)}
+.siw .wave{display:flex;align-items:center;gap:3px;height:36px}
+.siw .wave span{flex:1;max-width:5px;border-radius:3px;background:var(--bright);opacity:.85}
+.siw .chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;border-radius:999px;padding:3px 10px;background:rgba(108,191,154,.14);color:var(--bright);white-space:nowrap}
+.siw .chip.warn{background:rgba(201,111,74,.16);color:#e39a79}
+.siw .chip.muted{background:var(--night-3);color:var(--night-muted)}
+.siw .tbl-wrap{overflow-x:auto}
+.siw table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
+.siw th{text-align:left;font-weight:500;color:var(--night-muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em;padding:0 8px 8px 0;border-bottom:1px solid var(--night-3)}
+.siw td{padding:9px 8px 9px 0;border-bottom:1px solid var(--night-3);vertical-align:top}
+.siw tr:last-child td{border-bottom:0}
+.siw td.num,.siw th.num{text-align:right;padding-right:0}
+.siw td.ok,.siw td.flag{padding-left:14px;white-space:nowrap}
+.siw .ok{color:var(--bright)}
+.siw .flag{color:#e39a79}
+.siw .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.siw .fields{margin:1em 0;display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:8px 16px;font-size:14px}
+.siw .fields dt{color:var(--night-muted)}
+.siw .fields dd{margin:0}
+.siw .alert{border-left:3px solid var(--admin);background:var(--admin-soft);border-radius:8px;padding:12px 14px;font-size:14.5px}
+.siw .fakebtn{display:inline-block;font-size:13px;font-weight:500;border-radius:6px;padding:7px 12px;background:var(--night-3);color:var(--night-fg)}
+.siw .fakebtn.go{background:var(--bright);color:#0f1412}
+.siw .timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.siw .timeline li{display:grid;grid-template-columns:14px 1fr;gap:12px;font-size:14.5px}
+.siw .timeline .dot{width:10px;height:10px;border-radius:50%;margin-top:6px;background:var(--bright)}
+.siw .timeline .dot.wait{background:var(--admin)}
+.siw .timeline .when{color:var(--night-muted);font-size:12.5px;display:block}
+.siw .mail{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.siw .mail .m{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;background:var(--night-2);border:1px solid var(--night-3);min-width:0}
+.siw .mail .m span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.siw .mail .m.dim{opacity:.5}
+.siw .result{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:4px 4px 0}
+.siw .result .big{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.15}
+.siw .result .work{color:var(--muted);font-size:14.5px;margin:4px 0 0}
+.siw .full{color:var(--accent);font-weight:500;text-decoration:none;white-space:nowrap}
+.siw .full:hover{text-decoration:underline}
+.siw .foot{margin:28px 0 0;color:var(--muted);font-size:15px}
+.siw .foot a{color:var(--accent);text-decoration:underline}
+.siw .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.siw .view.enter{animation:none}.siw.playing .step .bar{animation:none}}
+
+</style>
+
+<script>
+(function(){
+  var section = document.getElementById('see-it-working');
+  if (!section) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DWELL = 3800;
+  // waveform bars
+  section.querySelectorAll('.wave').forEach(function(w){
+    var h=[8,14,22,30,18,26,34,20,12,28,36,24,16,30,22,10,26,32,18,14,24,30,20,12,8,16,28,22,14,10];
+    h.forEach(function(v){ var s=document.createElement('span'); s.style.height=v+'px'; w.appendChild(s); });
+  });
+  var tabs = Array.prototype.slice.call(section.querySelectorAll('.tab'));
+  var examples = Array.prototype.slice.call(section.querySelectorAll('.example'));
+  var state = { ex:0, step:0, auto:!reduce, timer:null, visible:false };
+
+  function render(animate){
+    examples.forEach(function(ex, i){
+      ex.hidden = i !== state.ex;
+      if (i !== state.ex) return;
+      var steps = ex.querySelectorAll('.step');
+      var views = ex.querySelectorAll('.view');
+      steps.forEach(function(s, j){ if (j === state.step) s.setAttribute('aria-current','step'); else s.removeAttribute('aria-current'); });
+      views.forEach(function(v, j){
+        var on = j === state.step;
+        v.hidden = !on;
+        v.classList.remove('enter');
+        if (on && animate && !reduce){ void v.offsetWidth; v.classList.add('enter'); }
+      });
+      // restart progress bar
+      var bar = steps[state.step] && steps[state.step].querySelector('.bar');
+      if (bar){ bar.style.animation='none'; void bar.offsetWidth; bar.style.animation=''; }
+    });
+    tabs.forEach(function(t, i){ t.setAttribute('aria-selected', i === state.ex ? 'true' : 'false'); t.tabIndex = i === state.ex ? 0 : -1; });
+    section.classList.toggle('playing', state.auto && state.visible);
+  }
+  function schedule(){
+    clearTimeout(state.timer);
+    if (!state.auto || !state.visible) return;
+    state.timer = setTimeout(function(){
+      var n = examples[state.ex].querySelectorAll('.step').length;
+      if (state.step < n - 1) { state.step++; }
+      else { state.step = 0; state.ex = (state.ex + 1) % examples.length; }
+      render(true); schedule();
+    }, DWELL);
+  }
+  function stopAuto(){ state.auto = false; clearTimeout(state.timer); section.classList.remove('playing'); }
+
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ stopAuto(); state.ex = i; state.step = 0; render(true); });
+    t.addEventListener('keydown', function(e){
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault(); stopAuto();
+      state.ex = (state.ex + (e.key === 'ArrowRight' ? 1 : examples.length - 1)) % examples.length;
+      state.step = 0; render(true); tabs[state.ex].focus();
+    });
+  });
+  examples.forEach(function(ex){
+    ex.querySelectorAll('.step').forEach(function(s, j){
+      s.addEventListener('click', function(){ stopAuto(); state.step = j; render(true); });
+    });
+  });
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      es.forEach(function(e){ state.visible = e.isIntersecting; render(false); schedule(); });
+    }, { threshold: 0.35 }).observe(section);
+  } else { state.visible = true; schedule(); }
+  render(false);
+})();
+</script>

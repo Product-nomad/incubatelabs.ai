@@ -1,0 +1,21 @@
+---
+// One worked example as a card: industry chip, H1 as the title, summary, time back.
+// Used on /examples/, in "More worked examples" and on the use-case pages.
+import type { Example } from "@/lib/examples";
+
+interface Props {
+  example: Example;
+  headingLevel?: "h2" | "h3";
+}
+
+const { example, headingLevel = "h3" } = Astro.props;
+const { data } = example;
+const Heading = headingLevel;
+---
+
+<a href={data.slug} class="group flex h-full flex-col rounded-xl border border-line bg-paper p-6 transition-colors hover:border-accent">
+  <span class="self-start rounded-full bg-band border border-line px-3 py-0.5 text-xs font-medium text-muted">{data.industry}</span>
+  <Heading class="mt-4 font-serif text-xl font-semibold leading-snug group-hover:text-accent">{data.h1}</Heading>
+  <span class="mt-3 text-muted">{data.card_summary}</span>
+  <span class="mt-auto pt-5 font-semibold text-accent">{data.time_back}</span>
+</a>

@@ -25,4 +25,31 @@ const guides = defineCollection({
   }),
 });
 
-export const collections = { guides };
+// Worked examples (design/examples-2026-10/). target_keyword, secondary_keywords, order and demo are
+// editorial notes and are never rendered. `video` is an optional path or URL for a recorded demo.
+const examples = defineCollection({
+  loader: glob({
+    pattern: "*.md",
+    base: "./src/content/examples",
+    generateId: ({ entry }) => entry.replace(/\.md$/, ""),
+  }),
+  schema: z.object({
+    slug: z.string().regex(/^\/examples\/[a-z0-9-]+\/$/),
+    order: z.number().int(),
+    demo: z.boolean(),
+    industry: z.string(),
+    business: z.string(),
+    target_keyword: z.string(),
+    secondary_keywords: z.string().optional(),
+    title: z.string(),
+    meta_description: z.string(),
+    h1: z.string(),
+    card_summary: z.string(),
+    tools: z.array(z.string()).min(1),
+    time_back: z.string(),
+    last_reviewed: z.coerce.date(),
+    video: z.string().optional(),
+  }),
+});
+
+export const collections = { guides, examples };

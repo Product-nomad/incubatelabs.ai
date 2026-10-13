@@ -2,6 +2,8 @@
 import Layout from "@/layouts/Layout.astro";
 import CallToAction from "@/components/CallToAction.astro";
 import AnimatedIllustration from "@/components/illustrations/AnimatedIllustration.astro";
+import ExampleCard from "@/components/ExampleCard.astro";
+import { examplesFor } from "@/lib/examples";
 import { useCases, type UseCase } from "@/data/useCases";
 import { site } from "@/data/site";
 
@@ -16,6 +18,7 @@ interface Props {
 const { useCase } = Astro.props;
 const others = useCases.filter((uc) => uc.slug !== useCase.slug);
 const url = `${site.url}/use-cases/${useCase.slug}/`;
+const examples = await examplesFor(useCase.slug);
 
 const structuredData = [
   {
@@ -129,6 +132,18 @@ const structuredData = [
       </div>
     </div>
   </section>
+
+  {examples.length > 0 && (
+    <section class="max-w-page mx-auto px-4 sm:px-6 pt-16" aria-labelledby="worked-example">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <h2 id="worked-example" class="text-2xl sm:text-3xl">See a worked example</h2>
+        <a href="/examples/" class="shrink-0 font-medium text-accent hover:underline">All worked examples →</a>
+      </div>
+      <ul class="mt-6 grid gap-5 md:grid-cols-3">
+        {examples.map((e) => <li><ExampleCard example={e} /></li>)}
+      </ul>
+    </section>
+  )}
 
   <CallToAction
     heading={`Talk to us about ${useCase.short}.`}

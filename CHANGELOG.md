@@ -2,6 +2,13 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.4.0] — 2026-10-13
+
+### Added
+- Worked examples: /examples/ index and eight example pages (voice note to quote, supplier invoices into Xero, tenant repair requests, missed-call text back, job sheets to timesheets, chasing client records, credit control emails, Monday morning report), each with a fact strip, a "Where a person checks" callout, a time-back table, Article and BreadcrumbList structured data and its own social image. An optional `video` field is ready for recorded demos.
+- "See it working" home section after "Where we can help": three examples stepped through with tabs, autoplaying only while in view, keyboard-operable, with no autoplay under reduced motion. Without JS, the first step of each example is shown.
+- "See a worked example" cards on five use-case pages; "Worked examples" in the footer.
+
 ## [1.3.0] — 2026-10-12
 
 ### Changed

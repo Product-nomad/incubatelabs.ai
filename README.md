@@ -39,6 +39,8 @@ Output lands in `dist/`. Cloudflare Pages picks it up via `npm run build`.
 | `/` | Home |
 | `/use-cases/` | What we automate |
 | `/use-cases/<slug>/` | Six use-case pages, from `src/data/useCases.ts` |
+| `/examples/` | Worked examples index |
+| `/examples/<slug>/` | Eight worked examples, from `src/content/examples/` |
 | `/how-we-work/` | Process and the three engagement sizes |
 | `/work/` | Things I've built |
 | `/readiness-check/` | Free AI readiness check (runs in the browser; logic in `src/data/readiness.ts`) |

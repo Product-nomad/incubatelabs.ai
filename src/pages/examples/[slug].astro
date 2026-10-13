@@ -1,0 +1,15 @@
+---
+import ExampleLayout from "@/layouts/ExampleLayout.astro";
+import { getExamples, type Example } from "@/lib/examples";
+
+export async function getStaticPaths() {
+  const examples = await getExamples();
+  return examples.map((example) => ({ params: { slug: example.data.slug.split("/")[2] }, props: { example } }));
+}
+
+interface Props {
+  example: Example;
+}
+---
+
+<ExampleLayout example={Astro.props.example} />

@@ -1,0 +1,209 @@
+---
+// One layout for the eight worked examples (design/examples-2026-10/00-build-spec.md §1).
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/prose.css";
+import ExampleCard from "@/components/ExampleCard.astro";
+import { render } from "astro:content";
+import { site } from "@/data/site";
+import { isoDate } from "@/lib/guides";
+import { type Example, getExamples, moreExamples, ogImagePath, isVideoFile } from "@/lib/examples";
+// The bold "Worked example." in the note box is above the fold: preload Inter 600 so it doesn't reflow.
+import interBold from "@fontsource/inter/files/inter-latin-600-normal.woff2?url";
+
+interface Props {
+  example: Example;
+}
+
+const { example } = Astro.props;
+const { data } = example;
+const { Content } = await render(example);
+
+const url = new URL(data.slug, site.url).href;
+const more = moreExamples(await getExamples(), example);
+const org = {
+  "@type": "Organization",
+  name: site.name,
+  url: site.url,
+  logo: { "@type": "ImageObject", url: `${site.url}/brand/incubatelabs-logo.svg` },
+};
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: data.h1,
+    description: data.meta_description,
+    url,
+    mainEntityOfPage: url,
+    image: new URL(ogImagePath(example), site.url).href,
+    datePublished: isoDate(data.last_reviewed),
+    dateModified: isoDate(data.last_reviewed),
+    inLanguage: "en-GB",
+    author: org,
+    publisher: org,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { name: "Home", item: `${site.url}/` },
+      { name: "Worked examples", item: `${site.url}/examples/` },
+      { name: data.h1, item: url },
+    ].map((c, i) => ({ "@type": "ListItem", position: i + 1, ...c })),
+  },
+];
+
+const video = data.video ? new URL(data.video, site.url).href : null;
+---
+
+<Layout
+  title={data.title}
+  description={data.meta_description}
+  canonical={url}
+  ogImage={ogImagePath(example)}
+  ogImageAlt={`${data.h1} incubatelabs.ai`}
+  ogType="article"
+>
+  {structuredData.map((d) => (
+    <script slot="head" type="application/ld+json" set:html={JSON.stringify(d)} />
+  ))}
+  <meta slot="head" property="article:modified_time" content={isoDate(data.last_reviewed)} />
+  <link slot="head" rel="preload" href={interBold} as="font" type="font/woff2" crossorigin />
+
+  <article class="max-w-page mx-auto px-4 sm:px-6 pt-12">
+    <nav aria-label="Breadcrumb" class="text-sm text-muted">
+      <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1">
+        <li><a href="/" class="hover:text-accent">Home</a></li>
+        <li aria-hidden="true">›</li>
+        <li><a href="/examples/" class="hover:text-accent">Worked examples</a></li>
+        <li aria-hidden="true">›</li>
+        <li aria-current="page" class="text-ink">{data.h1}</li>
+      </ol>
+    </nav>
+
+    <header class="guide-measure">
+      <h1 class="mt-6 text-4xl sm:text-5xl leading-tight">{data.h1}</h1>
+      <dl class="example-facts mt-5 text-sm text-muted">
+        <div><dt class="sr-only">Business</dt><dd>{data.business}</dd></div>
+        <div><dt class="sr-only">Industry</dt><dd>{data.industry}</dd></div>
+        <div><dt class="sr-only">Time back</dt><dd>{data.time_back}</dd></div>
+        <div class="example-tools">
+          <dt class="sr-only">Tools</dt>
+          {data.tools.map((t) => <dd class="rounded-full border border-line bg-band px-2.5 py-0.5 text-xs">{t}</dd>)}
+        </div>
+      </dl>
+    </header>
+
+    {video && (
+      <div class="guide-measure mt-8">
+        {isVideoFile(video) ? (
+          <video class="w-full rounded-xl border border-line" src={video} controls preload="metadata" playsinline>
+            <a href={video}>Watch the demo</a>
+          </video>
+        ) : (
+          <div class="aspect-video">
+            <iframe class="h-full w-full rounded-xl border border-line" src={video} title={`Demo: ${data.h1}`} loading="lazy" allow="fullscreen; picture-in-picture" />
+          </div>
+        )}
+      </div>
+    )}
+
+    <div class="guide-prose example-prose guide-measure mt-8">
+      <Content />
+    </div>
+  </article>
+
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-20" aria-labelledby="more-examples">
+    <h2 id="more-examples" class="text-2xl sm:text-3xl">More worked examples</h2>
+    <ul class="mt-6 grid gap-5 md:grid-cols-3">
+      {more.map((e) => <li><ExampleCard example={e} /></li>)}
+    </ul>
+  </section>
+</Layout>
+
+<style is:global>
+  /* Fact strip under the H1: Business · Industry · Time back · Tools. */
+  .example-facts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0;
+  }
+  .example-facts > div {
+    display: flex;
+    align-items: center;
+  }
+  .example-facts > div + div::before {
+    content: "·";
+    margin: 0 0.6rem;
+  }
+  .example-facts dd {
+    margin: 0;
+  }
+  /* Tools sit on their own row, so a wrapped line never starts with a separator. */
+  .example-facts .example-tools {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-top: 0.25rem;
+  }
+  .example-facts > .example-tools::before {
+    content: none;
+  }
+
+  /* The opening "Worked example." line. */
+  .example-prose .example-note {
+    background: #f4f2ed;
+    border: 1px solid #e4e1da;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    font-size: 0.9375rem;
+    color: #5d6166;
+  }
+  .example-prose .example-note p {
+    margin-top: 0;
+  }
+  .example-prose .example-note strong {
+    color: #16181a;
+  }
+
+  /* "Where a person checks". */
+  .example-prose .example-checks {
+    background: #e8efe9;
+    border: 1px solid #cfe0d4;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .example-prose .example-checks {
+      padding: 2rem;
+    }
+  }
+  .example-prose .checks-head {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+  }
+  .example-prose .checks-icon {
+    flex-shrink: 0;
+    display: flex;
+  }
+  .example-prose .example-checks h2 {
+    font-size: 1.5rem;
+  }
+
+  /* "Time back": the hours line under the table. */
+  .example-prose .time-line {
+    font-size: 1.125rem;
+  }
+  .example-prose .time-line strong {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.375rem;
+    color: #1f5c45;
+  }
+
+  /* "How we'd start" ends with the CTA button. */
+  .example-prose .example-start p:last-child {
+    margin-top: 1.5rem;
+  }
+</style>
