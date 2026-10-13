@@ -1,0 +1,121 @@
+group,rank,template,apps,total_views,n8n_categories,url
+sales,1,Building Your First WhatsApp Chatbot,AI Agent; Embeddings OpenAI; HTTP Request; OpenAI Chat Model; Simple Vector Store; Vector Store Question Answer Tool; WhatsApp Business Cloud,331713,Sales; Lead Nurturing,https://n8n.io/workflows/2465
+sales,2,Scrape business emails from Google Maps without the use of any third party APIs,Google Sheets; HTTP Request,150209,Sales,https://n8n.io/workflows/2567
+sales,3,Generate Leads with Google Maps,Google Sheets; HTTP Request,82097,Sales,https://n8n.io/workflows/2605
+sales,4,OpenAI GPT-3: Company Enrichment from website content,Google Sheets; HTTP Request; OpenAI,72240,Sales,https://n8n.io/workflows/1862
+sales,5,AI web researcher for sales,AI Agent; Google Sheets; OpenAI Chat Model; SerpApi (Google Search),68630,Sales,https://n8n.io/workflows/2324
+sales,6,Autonomous AI crawler,AI Agent; HTML; HTTP Request; OpenAI Chat Model; Supabase,60593,Sales,https://n8n.io/workflows/2315
+sales,7,Google Maps Scraper,Google Sheets; HTTP Request,46593,Sales,https://n8n.io/workflows/2063
+sales,8,Scrape business leads from Google Maps using OpenAI and Google Sheets,AI Agent; Google Sheets; HTTP Request; OpenAI Chat Model; SerpApi (Google Search),43596,Sales,https://n8n.io/workflows/3443
+sales,9,"Automate sales cold calling pipeline with Apify, gpt-5.6-terra, and WhatsApp",AI Agent; Embeddings OpenAI; Google Drive; Google Sheets; HTTP Request; OpenAI Chat Model; Postgres Chat Memory; Reranker Cohere; Supabase Vector Store,33663,Sales; Lead Nurturing,https://n8n.io/workflows/5449
+sales,10,"Scrape Google Maps businesses and contacts with CoreClaw, Firecrawl and Google Sheets",Google Sheets; HTTP Request,29698,Sales,https://n8n.io/workflows/4573
+sales,11,AI agent for Instagram DM/inbox. Manychat + Open AI integration,AI Agent; OpenAI Chat Model,28043,Sales; Lead Nurturing,https://n8n.io/workflows/2718
+sales,12,Social Media Analysis and Automated Email Generation,Basic LLM Chain; Google Sheets; HTTP Request; OpenAI Chat Model; Send Email,27873,Sales; Lead Nurturing,https://n8n.io/workflows/2823
+sales,13,Qualify new leads in Google Sheets via OpenAI's GPT-4,Google Sheets; OpenAI,27257,Sales,https://n8n.io/workflows/2163
+sales,14,"Search LinkedIn companies, Score with AI and add them to Google Sheet CRM",Google Sheets; HTTP Request; OpenAI,25022,Sales,https://n8n.io/workflows/3904
+sales,15,"Handling Appointment Leads and Follow-up With Twilio, Cal.com and AI",AI Agent; Airtable; Basic LLM Chain; HTTP Request Tool; OpenAI Chat Model; Twilio,23186,Sales; Lead Nurturing,https://n8n.io/workflows/2342
+sales,16,Gmail campaign sender: Bulk-send emails and follow up automatically if no reply,Gmail; Google Sheets,20926,Sales; Lead Nurturing,https://n8n.io/workflows/2137
+sales,17,ERP AI chatbot for Odoo sales module with OpenAI,AI Agent; Odoo; OpenAI Chat Model; OpenAI Model; Summarization Chain,19022,Sales; CRM,https://n8n.io/workflows/2325
+sales,18,Scrape recent news about a company before a call,Gmail; Google Calendar; HTTP Request,18561,Sales; CRM,https://n8n.io/workflows/2110
+sales,19,"Generate & Enrich LinkedIn Leads with Apollo.io, LinkedIn API, Mail.so & GPT-3.5",Google Sheets; HTTP Request; OpenAI,18110,Sales,https://n8n.io/workflows/3791
+sales,20,Automate Business Lead Scraping from Apify to Google Sheets with Data Cleaning,Google Sheets; HTTP Request,17005,Sales,https://n8n.io/workflows/4295
+sales,21,Extract & Enrich LinkedIn Comments to Leads with Apify → Google Sheets/CSV,Google Sheets; HTTP Request,14729,Sales,https://n8n.io/workflows/4635
+sales,22,Qualifying Appointment Requests with AI & n8n Forms,Basic LLM Chain; Gmail; Google Calendar; OpenAI Chat Model; Text Classifier,14284,Sales; Lead Nurturing,https://n8n.io/workflows/2580
+sales,23,"Automate Lead Qualification with RetellAI Phone Agent, OpenAI GPT & Google Sheet",Gmail; Google Sheets; HTTP Request; OpenAI; Twilio,14246,Sales,https://n8n.io/workflows/3912
+sales,24, Telegram AI Bot-to-Human Handoff for Sales Calls,AI Agent; Chat Memory Manager; Information Extractor; OpenAI Chat Model; Redis; Redis Chat Memory; Telegram,13185,Sales; Lead Nurturing,https://n8n.io/workflows/3350
+sales,25,Automated LinkedIn Profile Discovery with Airtop and Google Search,Airtop; Google Sheets,13041,Sales,https://n8n.io/workflows/3477
+sales,26,"Automated LinkedIn Lead Generation, Scoring & Communication with AI-Agent",AI Agent; Basic LLM Chain; Google Sheets; OpenAI; OpenAI Chat Model,12106,Sales,https://n8n.io/workflows/3490
+sales,27,Smart Email Auto-Responder Template using AI,Brevo; Gmail; Google Gemini Chat Model; Send Email; Text Classifier,11950,Sales; Lead Nurturing,https://n8n.io/workflows/3277
+sales,28,Enrich Linkedin Profiles from Google Sheets via RapidAPI,Google Sheets; HTTP Request,11928,Sales,https://n8n.io/workflows/2808
+sales,29,Automatic Reminders For Follow-ups with AI and Human in the loop Gmail,AI Agent; Gmail; Google Calendar; OpenAI Chat Model,11378,Sales; Lead Nurturing,https://n8n.io/workflows/3123
+sales,30,Scrape LinkedIn Job Listings for Hiring Signals & Prospecting with Bright Data,Google Sheets; HTTP Request,11192,Sales,https://n8n.io/workflows/3580
+sales,31,Two way sync Pipedrive and MySQL,MySQL; Pipedrive,10719,Sales; CRM,https://n8n.io/workflows/1822
+sales,32,"Automate hyper-personalized email outreach with AI, Gmail & Google Sheets",Gmail; Google Sheets; HTTP Request; OpenAI,10700,Sales; Lead Nurturing,https://n8n.io/workflows/7163
+sales,33,Get Qualified Leads in One Click from Apollo to Airtable,Airtable; HTTP Request,9807,Sales,https://n8n.io/workflows/3435
+sales,34,Automate Sales Meeting Prep with AI &  APIFY Sent To WhatsApp,Basic LLM Chain; Gmail; Google Calendar; HTML; HTTP Request; Information Extractor; OpenAI Chat Model; WhatsApp Business Cloud,9721,Sales; CRM,https://n8n.io/workflows/2582
+sales,35,Summarize social media activity of a company before a call,Clearbit; Gmail; Google Calendar; HTML; HTTP Request; OpenAI,9644,Sales; CRM,https://n8n.io/workflows/2125
+sales,36,Extract Business Leads from Google Maps with Dumpling AI to Google Sheets,Google Sheets; HTTP Request,9534,Sales,https://n8n.io/workflows/3593
+sales,37,Sync new data between two apps,Google Sheets,9429,Sales,https://n8n.io/workflows/1930
+sales,38, Automate Sales for Digital Products & SaaS with AI (GPT-4o),Basic LLM Chain; Gmail; HTTP Request; OpenAI; OpenAI Chat Model,9197,Sales; Lead Nurturing,https://n8n.io/workflows/3342
+sales,39,Extract emails from website HTMLs,HTTP Request,8806,Sales,https://n8n.io/workflows/2134
+sales,40,Enrich Company Data from Google Sheet with OpenAI Agent and ScrapingBee,AI Agent; Google Sheets; HTTP Request; OpenAI Chat Model,8342,Sales,https://n8n.io/workflows/2463
+finance,1,Extract text from a PDF file,,96182,Document Ops; Document Extraction,https://n8n.io/workflows/585
+finance,2,Chat with PDF docs using AI (quoting sources),Basic LLM Chain; Embeddings OpenAI; Google Drive; OpenAI Chat Model; Pinecone Vector Store,95385,Document Ops; Document Extraction,https://n8n.io/workflows/2165
+finance,3,"Transcribe Audio Files, Summarize with GPT-4, and Store in Notion",Google Drive; Notion; OpenAI,58105,Document Ops; Document Extraction,https://n8n.io/workflows/2178
+finance,4,Invoice data extraction with LlamaParse and OpenAI,Basic LLM Chain; Gmail; Google Sheets; HTTP Request; OpenAI Model,37004,Invoice Processing; Document Ops,https://n8n.io/workflows/2320
+finance,5,Read in an Excel spreadsheet file,,31409,Document Ops; Document Extraction,https://n8n.io/workflows/890
+finance,6,Parse and Extract Data from Documents/Images with Mistral OCR,Google Drive; HTTP Request,30378,Document Ops; Document Extraction,https://n8n.io/workflows/3102
+finance,7,Invoices from Gmail to Drive and Google Sheets,Basic LLM Chain; Gmail; Google Drive; Google Sheets; HTTP Request; OpenAI Model,27090,Invoice Processing; Document Ops,https://n8n.io/workflows/3016
+finance,8,Create an RSS feed based on a website's content,HTTP Request,26940,Document Ops; Document Extraction,https://n8n.io/workflows/1418
+finance,9,Extract text from PDF and image using Vertex AI (Gemini) into CSV,Basic LLM Chain; Google Drive; Google Gemini Chat Model; HTTP Request,26113,Document Ops; Document Extraction,https://n8n.io/workflows/2614
+finance,10,Advanced AI Demo (Presented at AI Developers #14 meetup),AI Agent; Anthropic Chat Model; Embeddings OpenAI; Gmail; HTTP Request; HTTP Request Tool; OpenAI Chat Model; Pinecone Vector Store; Question and Answer Chain; Slack; Text Classifier; Vector Store Retriever,24254,Document Ops; Document Extraction,https://n8n.io/workflows/2358
+finance,11,Supabase Insertion & Upsertion & Retrieval,Embeddings OpenAI; Google Drive; OpenAI Chat Model; Question and Answer Chain; Supabase; Supabase Vector Store; Vector Store Retriever,24214,Document Ops; Document Extraction,https://n8n.io/workflows/2395
+finance,12,Load and summarize Google Drive files with AI,Google Drive; OpenAI Chat Model; Summarization Chain; Token Splitter,23665,Document Ops; Document Extraction,https://n8n.io/workflows/1962
+finance,13,Breakdown Documents into Study Notes using Templating MistralAI and Qdrant,Basic LLM Chain; Embeddings Mistral Cloud; Item List Output Parser; Mistral Cloud Chat Model; Qdrant Vector Store; Question and Answer Chain; Summarization Chain; Vector Store Retriever,22476,Document Ops; Document Extraction,https://n8n.io/workflows/2339
+finance,14,Automate Image Validation Tasks using AI Vision,Basic LLM Chain; Edit Image; Google Drive; Google Gemini Chat Model,22435,Document Ops; Document Extraction,https://n8n.io/workflows/2420
+finance,15,5 Ways to Process Images & PDFs with Gemini AI in n8n,AI Agent; Google Gemini Chat Model; HTTP Request,20677,Document Ops; Document Extraction,https://n8n.io/workflows/3078
+finance,16,"Build a PDF Document RAG System with Mistral OCR, Qdrant and Gemini AI",Embeddings OpenAI; Google Drive; Google Gemini Chat Model; HTTP Request; Qdrant Vector Store; Question and Answer Chain; Summarization Chain; Token Splitter; Vector Store Retriever,20271,Document Ops; Document Extraction,https://n8n.io/workflows/4400
+finance,17,🦜✨Use OpenAI to Transcribe Audio + Summarize with AI + Save to Google Drive,Gmail; Google Drive; OpenAI; Telegram,18348,Document Ops; Document Extraction,https://n8n.io/workflows/3076
+finance,18,Build a Financial Documents Assistant using Qdrant and Mistral.ai,Embeddings Mistral Cloud; HTTP Request; Mistral Cloud Chat Model; Qdrant Vector Store; Question and Answer Chain; Vector Store Retriever,16883,Document Ops; Document Extraction,https://n8n.io/workflows/2335
+finance,19,Telegram chat with PDF,Embeddings OpenAI; Groq Chat Model; Pinecone Vector Store; Question and Answer Chain; Telegram; Vector Store Retriever,16332,Document Ops; Document Extraction,https://n8n.io/workflows/2392
+finance,20,✨🔪 Advanced AI Powered Document Parsing & Text Extraction with Llama Parse,Basic LLM Chain; Gmail; Google Drive; Google Sheets; HTTP Request; OpenAI Chat Model; Telegram; Text Classifier,15905,Document Ops; Document Extraction,https://n8n.io/workflows/3005
+finance,21,AI Agent for realtime insights on meetings,HTTP Request; OpenAI; Postgres; Supabase,15744,Document Ops; Document Extraction,https://n8n.io/workflows/2651
+finance,22,Talk to Your Google Sheets Using ChatGPT-5,AI Agent; OpenAI Chat Model,15162,Document Ops; Document Extraction,https://n8n.io/workflows/7639
+finance,23,Transcribing Bank Statements To Markdown Using Gemini Vision AI,Basic LLM Chain; Compression; Edit Image; Google Drive; Google Gemini Chat Model; HTTP Request; Information Extractor,14662,Document Ops; Document Extraction,https://n8n.io/workflows/2421
+finance,24,"Generate Monthly Financial Reports with Gemini AI, SQL, and Outlook",AI Agent; Google Gemini Chat Model; HTML; Microsoft Outlook; MySQL; Think Tool,13715,Document Ops; Document Extraction,https://n8n.io/workflows/3617
+finance,25,"Invoice Processor & Validator with OCR, AI & Google Sheets",AI Agent; Google Sheets; OpenRouter Chat Model,13688,Invoice Processing; Document Ops,https://n8n.io/workflows/4247
+finance,26,Extract and process information directly from PDF using Claude and Gemini,Google Drive; HTTP Request,13377,Document Ops; Document Extraction,https://n8n.io/workflows/2764
+finance,27,Automate Google Analytics Reporting,Gmail; Google Analytics,13279,Document Ops; Document Extraction,https://n8n.io/workflows/2549
+finance,28,Generate structured scientific research PDF summaries with GPT-4o,AI Agent; OpenAI Chat Model,13211,Document Ops; Document Extraction,https://n8n.io/workflows/5607
+finance,29,"Automated Invoice Processing with Telegram, GPT-4o, OCR and SAP Integration",Basic LLM Chain; Google Sheets; HTTP Request; OpenAI Chat Model; Telegram,12872,Invoice Processing; Document Ops,https://n8n.io/workflows/4849
+finance,30,Receipt scanning & analysis workflow,AI Agent; Google Sheets; HTTP Request; Mistral AI; OpenAI Chat Model,11701,Document Ops; Document Extraction,https://n8n.io/workflows/7990
+finance,31,Extract expenses from emails and add to Google Sheets,Google Sheets; Mindee,11589,Invoice Processing; Document Ops,https://n8n.io/workflows/1466
+finance,32,"🛻 AI agent for logistics order processing with GPT-4o, Gmail and Google Sheet",AI Agent; Google Sheets; OpenAI Chat Model,10689,Document Ops; Document Extraction,https://n8n.io/workflows/3344
+finance,33,Convert HTML to PDF using ConvertAPI,HTTP Request,9974,Document Ops; Document Extraction,https://n8n.io/workflows/2314
+finance,34,Auto document your n8n workflows,OpenAI,9873,Document Ops; Document Extraction,https://n8n.io/workflows/2173
+finance,35,Automated PDF Invoice Processing & Approval Flow using OpenAI and Google Sheets,AI Agent; Gmail; Google Drive; Google Sheets; OpenAI Chat Model,9817,Invoice Processing; Document Ops,https://n8n.io/workflows/4452
+finance,36,Transcribe audio files from Cloud Storage,AWS S3; AWS Transcribe; Google Sheets,9361,Document Ops; Document Extraction,https://n8n.io/workflows/1394
+finance,37,Automate Your RFP Process with OpenAI Assistants,Basic LLM Chain; Gmail; Google Docs; Item List Output Parser; OpenAI; OpenAI Chat Model; Slack,8946,Document Ops; Document Extraction,https://n8n.io/workflows/2321
+finance,38,Recognize invoices / receipts from Google Drive and put them into Google Sheets,Google Drive; Google Sheets; HTTP Request,8465,Invoice Processing; Document Ops,https://n8n.io/workflows/2389
+finance,39,Query Google Sheets/CSV data through an AI Agent using PostgreSQL,AI Agent; Google Gemini Chat Model; Google Sheets; Postgres,8069,Document Ops; Document Extraction,https://n8n.io/workflows/3079
+finance,40,Generate dynamic contents for EMAILS or HTML pages,Customer Datastore (n8n training); Send Email,8004,Document Ops; Document Extraction,https://n8n.io/workflows/1790
+operations,1,Telegram AI Chatbot,OpenAI; Telegram,168542,Support,https://n8n.io/workflows/1934
+operations,2,Build Your First AI Data Analyst Chatbot,AI Agent; HTTP Request; OpenAI Chat Model,133537,Support,https://n8n.io/workflows/3050
+operations,3,Ask questions about a PDF using AI,Binary Input Loader; Embeddings OpenAI; Google Drive; OpenAI Chat Model; Pinecone: Insert; Pinecone: Load; Question and Answer Chain; Vector Store Retriever,118063,Support,https://n8n.io/workflows/1960
+operations,4,Extract text from a PDF file,,96182,Document Ops; Document Extraction,https://n8n.io/workflows/585
+operations,5,Chat with PDF docs using AI (quoting sources),Basic LLM Chain; Embeddings OpenAI; Google Drive; OpenAI Chat Model; Pinecone Vector Store,95385,Document Ops; Document Extraction,https://n8n.io/workflows/2165
+operations,6,RAG Chatbot for Company Documents using Google Drive and Gemini,AI Agent; Embeddings Google Gemini; Google Drive; Google Gemini Chat Model; Pinecone Vector Store; Vector Store Question Answer Tool,94941,Support,https://n8n.io/workflows/2753
+operations,7,Respond to WhatsApp Messages with AI Like a Pro!,AI Agent; Basic LLM Chain; Google Gemini Chat Model; HTTP Request; WhatsApp Business Cloud; Wikipedia,91062,Support,https://n8n.io/workflows/2466
+operations,8,Create a Branded AI-Powered Website Chatbot,AI Agent; HTTP Request; HTTP Request Tool; Microsoft Outlook; OpenAI Chat Model,88237,Support,https://n8n.io/workflows/2786
+operations,9,Conversational Telegram Bot with GPT-5/GPT-4o for Text and Voice Messages,AI Agent; OpenAI; OpenAI Chat Model; Telegram,82466,Support,https://n8n.io/workflows/4696
+operations,10,Suggest meeting slots using AI,AI Agent; Gmail; OpenAI Chat Model; Text Classifier,78236,Support,https://n8n.io/workflows/1953
+operations,11,Chat with Postgresql Database,AI Agent; OpenAI Chat Model,73534,Support,https://n8n.io/workflows/2859
+operations,12,"AI-Powered WhatsApp Chatbot 🤖📲 for Text, Voice, Images & PDFs with memory 🧠",AI Agent; HTTP Request; OpenAI; OpenAI Chat Model; WhatsApp Business Cloud,71396,Support,https://n8n.io/workflows/3586
+operations,13,AI Agent To Chat With Files In Supabase Storage,AI Agent; Embeddings OpenAI; HTTP Request; OpenAI Chat Model; Supabase; Supabase Vector Store; Vector Store Question Answer Tool,68149,Support,https://n8n.io/workflows/2621
+operations,14,🤖 AI Powered RAG Chatbot for Your Docs + Google Drive + Gemini + Qdrant,AI Agent; Embeddings OpenAI; Google Docs; Google Drive; Google Gemini Chat Model; Information Extractor; LangChain Code; OpenAI Chat Model; Qdrant Vector Store; Telegram; Token Splitter,65428,Support,https://n8n.io/workflows/2982
+operations,15,AI Voice Chatbot with ElevenLabs & OpenAI for Customer Service and Restaurants,AI Agent; Embeddings OpenAI; Google Drive; HTTP Request; OpenAI Chat Model; Qdrant Vector Store; Token Splitter; Vector Store Question Answer Tool,62222,Support,https://n8n.io/workflows/2846
+operations,16,Telegram AI bot with LangChain nodes,AI Agent; HTTP Request; OpenAI Chat Model; Telegram,59442,Support,https://n8n.io/workflows/2035
+operations,17,"Transcribe Audio Files, Summarize with GPT-4, and Store in Notion",Google Drive; Notion; OpenAI,58105,Document Ops; Document Extraction,https://n8n.io/workflows/2178
+operations,18,Gmail AI Auto-Responder: Create Draft Replies to incoming emails,Basic LLM Chain; Gmail; OpenAI Chat Model,54727,Support,https://n8n.io/workflows/2271
+operations,19,AI Automated HR Workflow for CV Analysis and Candidate Evaluation,Basic LLM Chain; Google Drive; Google Sheets; Information Extractor; OpenAI Chat Model; Summarization Chain,50878,HR,https://n8n.io/workflows/2860
+operations,20,Chat with a Google Sheet using AI,AI Agent; Google Sheets; OpenAI Chat Model,49906,Support,https://n8n.io/workflows/2085
+operations,21,🚀 Boost your customer service with this WhatsApp Business bot!,Google Sheets; WhatsApp Business Cloud,47602,Support,https://n8n.io/workflows/2340
+operations,22,"AI-Powered WhatsApp Chatbot for Text, Voice, Images, and PDF with RAG",AI Agent; Embeddings OpenAI; Google Docs; HTTP Request; MongoDB Atlas Vector Store; OpenAI; OpenAI Chat Model; WhatsApp Business Cloud,46989,Support,https://n8n.io/workflows/4827
+operations,23,AI Customer Support Assistant · WhatsApp Ready · Works for Any Business,AI Agent; HTTP Request Tool; OpenAI Chat Model; Postgres Chat Memory; WhatsApp Business Cloud,43454,Support,https://n8n.io/workflows/3859
+operations,24,Email Summary Agent ,Gmail; OpenAI,42263,Support,https://n8n.io/workflows/2722
+operations,25,AI chat with any data source (using the n8n workflow tool),AI Agent; Hacker News; OpenAI Chat Model,42185,Support,https://n8n.io/workflows/2026
+operations,26,Notion AI Assistant Generator,AI Agent; Anthropic Chat Model; Notion; Text Classifier,42016,Support,https://n8n.io/workflows/2415
+operations,27,Convert JSON to an Excel file,,41974,Document Ops,https://n8n.io/workflows/1435
+operations,28,Notion knowledge base AI assistant,AI Agent; HTTP Request Tool; Notion; OpenAI Chat Model,40155,Support,https://n8n.io/workflows/2413
+operations,29,Auto Categorise Outlook Emails with AI,AI Agent; Microsoft Outlook; Ollama Chat Model,38584,Support,https://n8n.io/workflows/2454
+operations,30,Telegram AI bot assistant: ready-made template for voice & text messages,AI Agent; OpenAI; OpenAI Chat Model; Telegram,37867,Support,https://n8n.io/workflows/2534
+operations,31,Invoice data extraction with LlamaParse and OpenAI,Basic LLM Chain; Gmail; Google Sheets; HTTP Request; OpenAI Model,37004,Invoice Processing; Document Ops,https://n8n.io/workflows/2320
+operations,32,HR & IT Helpdesk Chatbot with Audio Transcription,AI Agent; Embeddings OpenAI; HTTP Request; OpenAI; OpenAI Chat Model; Postgres Chat Memory; Postgres PGVector Store; Telegram; Vector Store Question Answer Tool,35685,Support,https://n8n.io/workflows/2752
+operations,33,Slack chatbot powered by AI,AI Agent; OpenAI Chat Model; SerpApi (Google Search); Slack; Wikipedia,35192,Support,https://n8n.io/workflows/1961
+operations,34,Complete business WhatsApp AI-Powered RAG Chatbot using OpenAI,AI Agent; Embeddings OpenAI; Google Drive; HTTP Request; OpenAI Chat Model; Qdrant Vector Store; Token Splitter; Vector Store Question Answer Tool; WhatsApp Business Cloud,35110,Support,https://n8n.io/workflows/2845
+operations,35,"AI Voice Chat using Webhook, Memory Manager, OpenAI, Google Gemini & ElevenLabs",Basic LLM Chain; Chat Memory Manager; Google Gemini Chat Model; HTTP Request; OpenAI,34325,Support,https://n8n.io/workflows/2405
+operations,36,"Automate Product Training & Customer Support via WhatsApp, GPT-4 & Google Sheets",AI Agent; Google Sheets; HTTP Request; OpenAI Chat Model; WhatsApp Business Cloud,32249,Support,https://n8n.io/workflows/3379
+operations,37,"🤖 Create a Documentation Expert Bot with RAG, Gemini, and Supabase",AI Agent; Embeddings Google Gemini; Google Gemini Chat Model; HTML; HTTP Request; Supabase; Supabase Vector Store,31465,Support,https://n8n.io/workflows/5993
+operations,38,Build a Voice AI Chatbot with ElevenLabs and InfraNodus Knowledge Experts,AI Agent; Google Gemini Chat Model; OpenAI Chat Model,31420,Support,https://n8n.io/workflows/4484
+operations,39,Read in an Excel spreadsheet file,,31409,Document Ops; Document Extraction,https://n8n.io/workflows/890
+operations,40,Parse and Extract Data from Documents/Images with Mistral OCR,Google Drive; HTTP Request,30378,Document Ops; Document Extraction,https://n8n.io/workflows/3102

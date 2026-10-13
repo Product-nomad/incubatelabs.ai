@@ -28,3 +28,6 @@ dist/
 
 # SEO research API responses (35 MB); summaries are committed
 research/seo-2026-10/raw/
+
+# Examples research: raw API responses and private YouTube transcripts (never commit)
+research/examples-2026-10/raw/

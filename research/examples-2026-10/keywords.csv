@@ -1,0 +1,95 @@
+keyword,group,uk_monthly_volume,kd,competition,cpc_gbp,note
+automate invoices,automate-task,110,,LOW,65.63,"Google Ads merges close variants, so this matches its paired phrasing"
+automate invoicing,automate-task,110,,LOW,65.63,"Google Ads merges close variants, so this matches its paired phrasing"
+invoice automation,automate-task,110,0,LOW,65.63,"Google Ads merges close variants, so this matches its paired phrasing"
+automate quotes,automate-task,50,0,MEDIUM,,"Google Ads merges close variants, so this matches its paired phrasing"
+quote automation,automate-task,50,,MEDIUM,,"Google Ads merges close variants, so this matches its paired phrasing"
+automate timesheets,automate-task,,,,,
+timesheet automation,automate-task,,,,,
+automate job sheets,automate-task,,,,,
+job sheet app,supporting,90,0,MEDIUM,65.85,
+digital job sheets,supporting,30,,HIGH,104.41,
+automate purchase orders,automate-task,30,0,MEDIUM,132.2,"Google Ads merges close variants, so this matches its paired phrasing"
+purchase order automation,automate-task,30,0,MEDIUM,132.2,"Google Ads merges close variants, so this matches its paired phrasing"
+automate client onboarding,automate-task,30,0,MEDIUM,52.66,"Google Ads merges close variants, so this matches its paired phrasing"
+client onboarding automation,automate-task,30,0,MEDIUM,52.66,"Google Ads merges close variants, so this matches its paired phrasing"
+automate appointment reminders,automate-task,,,,,
+appointment reminder software,supporting,10,49,MEDIUM,12.48,
+automated appointment reminders,automate-task,30,53,HIGH,,
+automate reports,automate-task,90,0,MEDIUM,,"Google Ads merges close variants, so this matches its paired phrasing"
+report automation,automate-task,90,0,MEDIUM,,"Google Ads merges close variants, so this matches its paired phrasing"
+automate data entry,automate-task,30,9,MEDIUM,6.11,"Google Ads merges close variants, so this matches its paired phrasing"
+data entry automation,automate-task,30,9,MEDIUM,6.11,"Google Ads merges close variants, so this matches its paired phrasing"
+automate email,automate-task,320,30,MEDIUM,41.24,"Google Ads merges close variants, so this matches its paired phrasing"
+email automation,automate-task,320,28,MEDIUM,41.24,"Google Ads merges close variants, so this matches its paired phrasing"
+electrician software,industry,170,1,MEDIUM,28.06,
+electrician automation,industry,20,,LOW,2.11,
+electrical contractor software,industry,90,2,LOW,40.25,
+plumber software,industry,260,2,MEDIUM,33,"Google Ads merges close variants, so this matches its paired phrasing"
+plumbing software,industry,260,0,MEDIUM,33,"Google Ads merges close variants, so this matches its paired phrasing"
+plumber automation,industry,,,,,
+builder software,industry,170,11,MEDIUM,23.25,"Google Ads merges close variants, so this matches its paired phrasing"
+builders software,industry,170,11,MEDIUM,23.25,"Google Ads merges close variants, so this matches its paired phrasing"
+construction software,industry,720,24,MEDIUM,57.79,
+builder automation,industry,,,,,
+accountant software,industry,320,63,MEDIUM,71.24,
+accounting practice software,industry,170,7,MEDIUM,22.59,
+accountant automation,industry,140,,LOW,17.48,"Google Ads merges close variants, so this matches its paired phrasing"
+accounting automation,industry,140,7,LOW,17.48,"Google Ads merges close variants, so this matches its paired phrasing"
+bookkeeper software,industry,720,59,MEDIUM,61.31,"Google Ads merges close variants, so this matches its paired phrasing"
+bookkeeping software,industry,720,59,MEDIUM,61.31,"Google Ads merges close variants, so this matches its paired phrasing"
+bookkeeper automation,industry,10,,MEDIUM,28.53,"Google Ads merges close variants, so this matches its paired phrasing"
+bookkeeping automation,industry,10,16,MEDIUM,28.53,"Google Ads merges close variants, so this matches its paired phrasing"
+letting agent software,industry,480,82,MEDIUM,55.02,
+letting agent automation,industry,,,,,
+lettings software,industry,30,95,MEDIUM,143,
+recruitment agency software,industry,480,24,LOW,52.26,
+recruitment agency automation,industry,,,,,
+recruitment automation,industry,390,14,LOW,12.06,
+dental practice software,industry,20,,MEDIUM,24.75,
+dental practice automation,industry,,,,,
+dental software,industry,720,9,MEDIUM,6.6,
+care agency software,industry,20,53,HIGH,44.76,
+care agency automation,industry,,,,,
+domiciliary care software,industry,140,0,MEDIUM,45.04,
+ecommerce software,industry,90,16,MEDIUM,16.51,
+ecommerce automation,industry,40,0,MEDIUM,,
+small business automation,automate-task,50,7,MEDIUM,12.89,
+business process automation,automate-task,320,20,MEDIUM,29.24,
+ai automation for small business,automate-task,40,,MEDIUM,18.61,
+missed call text back,supporting,50,8,MEDIUM,9.88,
+automated review requests,automate-task,10,,HIGH,79.92,
+invoice chasing software,supporting,10,,HIGH,92.41,
+automated invoice reminders,automate-task,10,,,,
+quote follow up software,supporting,10,,,,
+job management software,supporting,480,13,HIGH,100.75,
+timesheet app,supporting,390,12,HIGH,30.67,
+timesheet software,supporting,320,38,MEDIUM,67.86,
+invoice processing software,supporting,40,,MEDIUM,109.64,
+accounts payable automation,automate-task,390,,MEDIUM,252.53,
+xero automation,automate-task,20,,MEDIUM,9.99,
+quickbooks automation,automate-task,10,,HIGH,,
+ai receptionist,supporting,1300,,HIGH,26.19,
+call answering service,supporting,590,,HIGH,84.53,
+review management software,supporting,50,,MEDIUM,16.25,
+purchase order software,supporting,170,,HIGH,68.38,
+job sheet software,supporting,50,,MEDIUM,46.11,
+quoting software,supporting,320,,HIGH,71.41,
+client onboarding software,supporting,170,,MEDIUM,55.74,
+ai bookkeeping,industry,110,,HIGH,22.73,
+rota software,supporting,260,,HIGH,52.14,
+care planning software,industry,170,,MEDIUM,53.98,
+recruitment crm,industry,1300,,MEDIUM,18.69,
+candidate screening software,supporting,70,,MEDIUM,40.08,
+tenant referencing,supporting,880,,HIGH,7.34,
+property maintenance software,supporting,110,,HIGH,47.91,
+dental appointment reminders,industry,30,,LOW,,
+patient recall software,supporting,10,,,,
+ecommerce customer service automation,industry,10,,,,
+shopify xero integration,supporting,260,,HIGH,32.25,
+proposal software,supporting,210,,HIGH,54.57,
+ai email assistant,supporting,390,,HIGH,11.21,
+microsoft 365 automation,automate-task,10,,MEDIUM,12.21,
+power automate,supporting,33100,,LOW,16.34,
+zapier,supporting,33100,,MEDIUM,3.49,
+n8n,supporting,49500,,MEDIUM,1.74,

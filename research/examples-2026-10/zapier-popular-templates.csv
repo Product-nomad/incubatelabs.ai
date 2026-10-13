@@ -1,0 +1,85 @@
+page_app,page_rank,template,apps,template_id,usage_count,url
+excel,1,Add new Jotform submissions to Excel spreadsheet rows,excel + jotform,11158,not shown,https://zapier.com/apps/excel/integrations/jotform/11158
+excel,2,Add new Jotform submissions to Excel as rows in a table,excel + jotform,12670,not shown,https://zapier.com/apps/excel/integrations/jotform/12670
+excel,3,Add new Jotform submissions to Microsoft Excel as rows,excel + jotform,255586863,not shown,https://zapier.com/apps/excel/integrations/jotform/255586863
+excel,4,Create Microsoft Excel spreadsheets from new Jotform submissions,excel + jotform,860319,not shown,https://zapier.com/apps/excel/integrations/jotform/860319
+excel,5,Update rows in Microsoft Excel for new Jotform submissions,excel + jotform,1312762,not shown,https://zapier.com/apps/excel/integrations/jotform/1312762
+excel,6,Add new Jotform submissions to Microsoft Excel as rows,excel + jotform,255673329,not shown,https://zapier.com/apps/excel/integrations/jotform/255673329
+excel,7,Add new Gravity Forms submissions to Excel rows,excel + gravity-forms,11153,not shown,https://zapier.com/apps/excel/integrations/gravity-forms/11153
+excel,8,Add new Facebook Lead Ads leads to Excel,excel + facebook-lead-ads,13329,not shown,https://zapier.com/apps/excel/integrations/facebook-lead-ads/13329
+excel,9,Add new Paperform submissions as rows in Excel,excel + paperform,26520,not shown,https://zapier.com/apps/excel/integrations/paperform/26520
+excel,10,Add Excel rows for new Unbounce form submissions,excel + unbounce,11177,not shown,https://zapier.com/apps/excel/integrations/unbounce/11177
+excel,11,Add new SurveyMonkey responses to Excel spreadsheets,excel + surveymonkey,11169,not shown,https://zapier.com/apps/excel/integrations/surveymonkey/11169
+excel,12,Add rows to Excel with new Kajabi form submissions,excel + kajabi,12443,not shown,https://zapier.com/apps/excel/integrations/kajabi/12443
+gmail,1,Save new Gmail emails matching certain traits to a Google Spreadsheet,gmail + google-sheets,2618,not shown,https://zapier.com/apps/gmail/integrations/google-sheets/2618
+gmail,2,Save new Gmail attachments to Google Drive,gmail + google-drive,192,not shown,https://zapier.com/apps/gmail/integrations/google-drive/192
+gmail,3,Get email notifications or send follow-ups to new Typeform respondents,gmail + typeform,114,not shown,https://zapier.com/apps/gmail/integrations/typeform/114
+gmail,4,Send emails via Gmail when Google Sheets rows are updated,gmail + google-sheets,144,not shown,https://zapier.com/apps/gmail/integrations/google-sheets/144
+gmail,5,Add new Gmail attachments to Google Drive,gmail + google-drive,761,not shown,https://zapier.com/apps/gmail/integrations/google-drive/761
+gmail,6,Send email via Gmail for new Google Forms submissions,gmail + google-forms,11008,not shown,https://zapier.com/apps/gmail/integrations/google-forms/11008
+gmail,7,Send new Gmail emails as Slack channel messages,gmail + slack,48,not shown,https://zapier.com/apps/gmail/integrations/slack/48
+gmail,8,Send emails via Gmail for new Google Ads leads,gmail + google-ads,534416,not shown,https://zapier.com/apps/gmail/integrations/google-ads/534416
+gmail,9,Save new attachments from labeled emails in Gmail to Google Drive,gmail + google-drive,9245,not shown,https://zapier.com/apps/gmail/integrations/google-drive/9245
+gmail,10,Get an email reminder in Gmail 1 hour before a new Google Calendar event starts,gmail + google-calendar,366,not shown,https://zapier.com/apps/gmail/integrations/google-calendar/366
+gmail,11,Send emails in Gmail for new form submissions created in Zapier Forms,gmail + zapier-forms,1225969,not shown,https://zapier.com/apps/gmail/integrations/zapier-forms/1225969
+gmail,12,Send daily emails with Gmail,gmail + schedule,2809,not shown,https://zapier.com/apps/gmail/integrations/schedule/2809
+google-sheets,1,Save new Gmail emails matching certain traits to a Google Spreadsheet,gmail + google-sheets,2618,not shown,https://zapier.com/apps/gmail/integrations/google-sheets/2618
+google-sheets,2,Create Google Sheets rows for new Google Ads leads,google-ads + google-sheets,534408,not shown,https://zapier.com/apps/google-ads/integrations/google-sheets/534408
+google-sheets,3,Send emails via Gmail when Google Sheets rows are updated,gmail + google-sheets,144,not shown,https://zapier.com/apps/gmail/integrations/google-sheets/144
+google-sheets,4,Add new Facebook Lead Ads leads to rows on Google Sheets,facebook-lead-ads + google-sheets,10179,not shown,https://zapier.com/apps/facebook-lead-ads/integrations/google-sheets/10179
+google-sheets,5,Generate rows in Google Sheets for new Unbounce submissions,google-sheets + unbounce,50,not shown,https://zapier.com/apps/google-sheets/integrations/unbounce/50
+google-sheets,6,Add new Acuity Scheduling appointments to a Google Sheets spreadsheet,acuity-scheduling + google-sheets,3968,not shown,https://zapier.com/apps/acuity-scheduling/integrations/google-sheets/3968
+google-sheets,7,Create Google Sheets rows for new Zapier Forms form submissions.,google-sheets + zapier-forms,1211688,not shown,https://zapier.com/apps/google-sheets/integrations/zapier-forms/1211688
+google-sheets,8,Create new Google Sheets row from a new Google Calendar event,google-calendar + google-sheets,1499,not shown,https://zapier.com/apps/google-calendar/integrations/google-sheets/1499
+google-sheets,9,Add new Stripe sales as rows on Google Sheets,google-sheets + stripe,938,not shown,https://zapier.com/apps/google-sheets/integrations/stripe/938
+google-sheets,10,Send Slack messages whenever Google Sheets rows are updated,google-sheets + slack,1538,not shown,https://zapier.com/apps/google-sheets/integrations/slack/1538
+google-sheets,11,Create rows in Google Sheets for new Gravity Forms submissions,google-sheets + gravity-forms,13,not shown,https://zapier.com/apps/google-sheets/integrations/gravity-forms/13
+google-sheets,12,Add new Wufoo entries to a Google Sheets spreadsheet,google-sheets + wufoo,2,not shown,https://zapier.com/apps/google-sheets/integrations/wufoo/2
+microsoft-outlook,1,Add Microsoft Outlook events to Google Calendar,google-calendar + microsoft-outlook,4213,not shown,https://zapier.com/apps/google-calendar/integrations/microsoft-outlook/4213
+microsoft-outlook,2,Add Microsoft Outlook events from new Google Calendar events,google-calendar + microsoft-outlook,4212,not shown,https://zapier.com/apps/google-calendar/integrations/microsoft-outlook/4212
+microsoft-outlook,3,Send Microsoft Outlook emails for new Typeform entries,microsoft-outlook + typeform,4238,not shown,https://zapier.com/apps/microsoft-outlook/integrations/typeform/4238
+microsoft-outlook,4,Add new Microsoft Outlook calendar events to Notion databases,microsoft-outlook + notion,975134,not shown,https://zapier.com/apps/microsoft-outlook/integrations/notion/975134
+microsoft-outlook,5,Create tasks in Microsoft To-Do from new Microsoft Outlook emails,microsoft-outlook + microsoft-todo,57267,not shown,https://zapier.com/apps/microsoft-outlook/integrations/microsoft-todo/57267
+microsoft-outlook,6,Create tasks in Any.do when new meetings start in Outlook Calendar,any-do + microsoft-outlook,58971,not shown,https://zapier.com/apps/any-do/integrations/microsoft-outlook/58971
+microsoft-outlook,7,Create Events in Microsoft Outlook for New Approved Absence Requests in BrightHR,brighthr + microsoft-outlook,1214934,not shown,https://zapier.com/apps/brighthr/integrations/microsoft-outlook/1214934
+microsoft-outlook,8,Create Microsoft Outlook emails for new submissions on Zapier Forms,microsoft-outlook + zapier-forms,1585174,not shown,https://zapier.com/apps/microsoft-outlook/integrations/zapier-forms/1585174
+microsoft-outlook,9,Create tasks in Motion from new flagged emails in Microsoft Outlook,microsoft-outlook + motion,1673060,not shown,https://zapier.com/apps/microsoft-outlook/integrations/motion/1673060
+microsoft-outlook,10,Send Microsoft Outlook emails for new Google Ads leads,google-ads + microsoft-outlook,534659,not shown,https://zapier.com/apps/google-ads/integrations/microsoft-outlook/534659
+microsoft-outlook,11,Create tasks on Any.do for new Microsoft Outlook events,any-do + microsoft-outlook,58972,not shown,https://zapier.com/apps/any-do/integrations/microsoft-outlook/58972
+microsoft-outlook,12,Create email copy with ChatGPT from new Microsoft Outlook emails and save as drafts,microsoft-outlook + microsoft-outlook,1533281,not shown,https://zapier.com/apps/microsoft-outlook/integrations/microsoft-outlook/1533281
+microsoft-teams,1,Send chat messages in Microsoft Teams for new tickets created in Atera,atera-1 + microsoft-teams,255597681,not shown,https://zapier.com/apps/atera-1/integrations/microsoft-teams/255597681
+microsoft-teams,2,Send channel messages in Microsoft Teams for new tickets created in Atera,atera-1 + microsoft-teams,255611989,not shown,https://zapier.com/apps/atera-1/integrations/microsoft-teams/255611989
+microsoft-teams,3,Send messages to Microsoft Teams channels for new Typeform entries,microsoft-teams + typeform,50755,not shown,https://zapier.com/apps/microsoft-teams/integrations/typeform/50755
+microsoft-teams,4,Send channel messages in Microsoft Teams for new alerts created in Atera,atera-1 + microsoft-teams,255613120,not shown,https://zapier.com/apps/atera-1/integrations/microsoft-teams/255613120
+microsoft-teams,5,Send chat messages in Microsoft Teams for new pending absence requests in BrightHR,brighthr + microsoft-teams,974437,not shown,https://zapier.com/apps/brighthr/integrations/microsoft-teams/974437
+microsoft-teams,6,Send Microsoft Teams channel messages for new Google My Business reviews,google-business-profile + microsoft-teams,59767,not shown,https://zapier.com/apps/google-business-profile/integrations/microsoft-teams/59767
+microsoft-teams,7,Post to Microsoft Teams channels when new Google Calendar events start,google-calendar + microsoft-teams,50749,not shown,https://zapier.com/apps/google-calendar/integrations/microsoft-teams/50749
+microsoft-teams,8,Send new Slack messages to Microsoft Teams as chat messages,microsoft-teams + slack,1214757,not shown,https://zapier.com/apps/microsoft-teams/integrations/slack/1214757
+microsoft-teams,9,Send chat messages in Microsoft Teams for new Jotform submissions,jotform + microsoft-teams,946309,not shown,https://zapier.com/apps/jotform/integrations/microsoft-teams/946309
+microsoft-teams,10,Send Microsoft Teams channel messages for new or updated tickets in ConnectWise Manage,connectwise-manage + microsoft-teams,174742,not shown,https://zapier.com/apps/connectwise-manage/integrations/microsoft-teams/174742
+microsoft-teams,11,Notify a Microsoft Teams channel for new Zap errors,microsoft-teams + zapier-manager,973438,not shown,https://zapier.com/apps/microsoft-teams/integrations/zapier-manager/973438
+microsoft-teams,12,Send daily reminders in Microsoft Teams,microsoft-teams + schedule,128391,not shown,https://zapier.com/apps/microsoft-teams/integrations/schedule/128391
+quickbooks,1,Create QuickBooks Online customers with sales receipts for new Stripe payments,quickbooks + stripe,9826,not shown,https://zapier.com/apps/quickbooks/integrations/stripe/9826
+quickbooks,2,Add new ZenMaid contacts as QuickBooks Online customers,quickbooks + zenmaid-nWD,1155846,not shown,https://zapier.com/apps/quickbooks/integrations/zenmaid-nWD/1155846
+quickbooks,3,Create ShipStation order from QuickBooks invoices,quickbooks + shipstation,9626,not shown,https://zapier.com/apps/quickbooks/integrations/shipstation/9626
+quickbooks,4,Add new QuickBooks Online invoices to Google Sheets spreadsheet rows,google-sheets + quickbooks,1974,not shown,https://zapier.com/apps/google-sheets/integrations/quickbooks/1974
+quickbooks,5,Generate receipts in QuickBooks Online for new Stripe payments,quickbooks + stripe,1936,not shown,https://zapier.com/apps/quickbooks/integrations/stripe/1936
+quickbooks,6,Send channel messages in Slack for new payments in Quickbooks Online,quickbooks + slack,146473,not shown,https://zapier.com/apps/quickbooks/integrations/slack/146473
+quickbooks,7,Record every new or updated Donorbox donation in QuickBooks,donorbox + quickbooks,23391,not shown,https://zapier.com/apps/donorbox/integrations/quickbooks/23391
+quickbooks,8,Update QuickBooks Online customers when ZenMaid contacts are modified,quickbooks + zenmaid-nWD,1719201,not shown,https://zapier.com/apps/quickbooks/integrations/zenmaid-nWD/1719201
+quickbooks,9,Add new Clulo sales receipts to QuickBooks Online,clulo + quickbooks,1109687,not shown,https://zapier.com/apps/clulo/integrations/quickbooks/1109687
+quickbooks,10,Create sales receipts in QuickBooks Online for new Givebutter transactions,givebutter + quickbooks,1407181,not shown,https://zapier.com/apps/givebutter/integrations/quickbooks/1407181
+quickbooks,11,Create QuickBooks Online invoices from new Stripe payments,quickbooks + stripe,10319,not shown,https://zapier.com/apps/quickbooks/integrations/stripe/10319
+quickbooks,12,Add new or updated Donorbox donors as QuickBooks customers,donorbox + quickbooks,23390,not shown,https://zapier.com/apps/donorbox/integrations/quickbooks/23390
+xero,1,Create Xero invoices for new Stripe payments,stripe + xero,3384,not shown,https://zapier.com/apps/stripe/integrations/xero/3384
+xero,2,Create Xero invoices for new WooCommerce orders,woocommerce + xero,2121,not shown,https://zapier.com/apps/woocommerce/integrations/xero/2121
+xero,3,Create Xero invoices for new Shopify paid orders,shopify + xero,2774,not shown,https://zapier.com/apps/shopify/integrations/xero/2774
+xero,4,Send Gmail messages when new payments are received in Xero,gmail + xero,12415,not shown,https://zapier.com/apps/gmail/integrations/xero/12415
+xero,5,Create Xero invoices from new Jotform entries,jotform + xero,2125,not shown,https://zapier.com/apps/jotform/integrations/xero/2125
+xero,6,Create Xero Invoices for new Ticket Tailor orders,ticket-tailor + xero,12287,not shown,https://zapier.com/apps/ticket-tailor/integrations/xero/12287
+xero,7,Create Xero invoices from new Google Sheets rows,google-sheets + xero,2152,not shown,https://zapier.com/apps/google-sheets/integrations/xero/2152
+xero,8,Add new Mailchimp subscribers from new contacts in Xero,mailchimp + xero,2126,not shown,https://zapier.com/apps/mailchimp/integrations/xero/2126
+xero,9,Create Xero sales invoices for new Stripe invoices,stripe + xero,224063,not shown,https://zapier.com/apps/stripe/integrations/xero/224063
+xero,10,Send Slack channel messages for new payments in Xero,slack + xero,199061,not shown,https://zapier.com/apps/slack/integrations/xero/199061
+xero,11,Save new Xero invoices to Google Sheets rows,google-sheets + xero,2123,not shown,https://zapier.com/apps/google-sheets/integrations/xero/2123
+xero,12,Get Slack alert messages for new Xero invoices,slack + xero,2157,not shown,https://zapier.com/apps/slack/integrations/xero/2157
