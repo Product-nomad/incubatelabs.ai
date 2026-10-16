@@ -22,6 +22,8 @@ export interface UseCase {
   // HTML allowed.
   fits: string[];
   faq: Faq[];
+  // Two-sentence "The short answer" box under the H1. Not shown until set.
+  shortAnswer?: string;
   // Without the " | Incubate Labs" suffix, so 44 characters at most.
   seoTitle: string;
   seoDescription: string;

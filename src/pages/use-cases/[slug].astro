@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import CallToAction from "@/components/CallToAction.astro";
 import AnimatedIllustration from "@/components/illustrations/AnimatedIllustration.astro";
 import ExampleCard from "@/components/ExampleCard.astro";
+import ShortAnswer from "@/components/ShortAnswer.astro";
 import { examplesFor } from "@/lib/examples";
 import { useCases, type UseCase } from "@/data/useCases";
 import { site } from "@/data/site";
@@ -65,6 +66,7 @@ const structuredData = [
     </nav>
     <AnimatedIllustration name={useCase.slug} class="mt-6 max-w-xl bg-band border border-line rounded-xl px-6 py-6" />
     <h1 class="mt-8 max-w-4xl text-4xl sm:text-5xl leading-tight">{useCase.headline}</h1>
+    {useCase.shortAnswer && <ShortAnswer text={useCase.shortAnswer} class="mt-6 max-w-prose" />}
     <p class="mt-6 max-w-prose text-lg sm:text-xl text-muted leading-relaxed">{useCase.intro}</p>
   </section>
 

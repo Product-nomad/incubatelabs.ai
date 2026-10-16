@@ -3,10 +3,11 @@
 import Layout from "@/layouts/Layout.astro";
 import "@/styles/prose.css";
 import ExampleCard from "@/components/ExampleCard.astro";
+import ShortAnswer from "@/components/ShortAnswer.astro";
 import { render } from "astro:content";
 import { site } from "@/data/site";
 import { isoDate } from "@/lib/guides";
-import { type Example, getExamples, moreExamples, ogImagePath, isVideoFile } from "@/lib/examples";
+import { type Example, getExamples, moreExamples, ogImagePath, isVideoFile, shortAnswer } from "@/lib/examples";
 // The bold "Worked example." in the note box is above the fold: preload Inter 600 so it doesn't reflow.
 import interBold from "@fontsource/inter/files/inter-latin-600-normal.woff2?url";
 
@@ -83,6 +84,7 @@ const video = data.video ? new URL(data.video, site.url).href : null;
 
     <header class="guide-measure">
       <h1 class="mt-6 text-4xl sm:text-5xl leading-tight">{data.h1}</h1>
+      <ShortAnswer text={shortAnswer(example)} class="mt-6" />
       <dl class="example-facts mt-5 text-sm text-muted">
         <div><dt class="sr-only">Business</dt><dd>{data.business}</dd></div>
         <div><dt class="sr-only">Industry</dt><dd>{data.industry}</dd></div>

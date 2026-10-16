@@ -12,3 +12,6 @@
 # AI policy template downloads (generated at build time from src/content/guides/ai-policy-template.md).
 /resources/ai-policy-template/incubatelabs-ai-policy-template.md
   Content-Type: text/markdown; charset=utf-8
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8

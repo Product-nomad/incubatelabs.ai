@@ -71,6 +71,15 @@ export default function siteChecks() {
           if (decode(title).length > TITLE_MAX) errors.push(`${page}: title is ${decode(title).length} characters`);
           if (decode(desc).length > DESCRIPTION_MAX) errors.push(`${page}: meta description is ${decode(desc).length} characters`);
         }
+        // /llms.txt: no prices, no location, and the same one-line description as the JSON-LD.
+        const llms = fs.readFileSync(path.join(root, "llms.txt"), "utf8");
+        if (llms.includes("£")) errors.push(`/llms.txt: "£"`);
+        if (llms.includes("Huntingdon")) errors.push(`/llms.txt: location`);
+        const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
+        const summary = llms.match(/^> (.*)$/m)?.[1];
+        const homeDesc = home.match(/<meta name="description" content="([^"]*)"/)?.[1];
+        if (!summary || !home.includes(`"description":${JSON.stringify(summary)}`) || homeDesc !== summary)
+          errors.push("/llms.txt summary, home meta description and Organization JSON-LD description differ");
         if (errors.length) {
           errors.forEach((e) => logger.error(e));
           throw new Error(`site-checks: ${errors.length} problem(s) in dist/`);

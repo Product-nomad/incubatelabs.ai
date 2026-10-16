@@ -53,9 +53,15 @@ const jsonLd = {
   email: site.email,
   image: siteOgImage,
   logo: `${site.url}/brand/incubatelabs-logo.svg`,
-  description: "Practical AI and automation for UK small businesses. We build it, you use it.",
-  founder: { "@type": "Person", name: site.founder, url: `${site.url}/about/` },
+  description: site.description,
+  founder: { "@type": "Person", name: site.founder, jobTitle: "Founder", url: `${site.url}/about/` },
   areaServed: { "@type": "Country", name: "United Kingdom" },
+  knowsAbout: [
+    "AI automation",
+    "document processing",
+    "workflow automation",
+    "EU AI Act compliance for small businesses",
+  ],
   sameAs: [site.github],
 };
 ---
@@ -74,6 +80,7 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {site.bingSiteVerification && <meta name="msvalidate.01" content={site.bingSiteVerification} />}
     {noindex && <meta name="robots" content="noindex" />}
     {!noindex && <link rel="canonical" href={fullCanonical} />}
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />

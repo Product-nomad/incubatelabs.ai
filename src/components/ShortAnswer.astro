@@ -1,0 +1,27 @@
+---
+// Answer-first box directly under the H1 on use-case and example pages. Heading and body type match
+// the "The short answer" opening of the guides (src/styles/prose.css .guide-prose h2 and body).
+interface Props {
+  text: string;
+  class?: string;
+}
+
+const { text, class: className = "" } = Astro.props;
+---
+
+<section class:list={["short-answer rounded-xl border border-accent-line bg-accent-soft p-6 sm:p-8", className]} aria-labelledby="short-answer">
+  <h2 id="short-answer">The short answer</h2>
+  <p>{text}</p>
+</section>
+
+<style>
+  .short-answer h2 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+  .short-answer p {
+    margin-top: 1rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+</style>

@@ -2,7 +2,13 @@
 
 **Goal**: A lead-generation site for practical AI and automation for UK small businesses (5–50 staff). AI services lead; websites are offered alongside.
 **Phase**: Worked examples sprint (v1.4) shipped 2026-10-13. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
-**Last touched**: 2026-10-13.
+**Last touched**: 2026-10-16.
+
+## AEO pass (2026-10-16; branch `aeo-2026-10`)
+- **Shipped**: `public/robots.txt` allows OAI-SearchBot, ChatGPT-User, GPTBot, PerplexityBot, Perplexity-User, ClaudeBot, Claude-User, Claude-SearchBot, Google-Extended, Googlebot and Bingbot by name. `/llms.txt` built by `src/pages/llms.txt.ts` from `useCases` and the examples and guides collections. One-line description in `site.description`, used by the Organization JSON-LD, the home meta description and llms.txt (site-checks fails the build if they differ, or if llms.txt has £ or a location). Organization JSON-LD gains founder jobTitle and `knowsAbout`. "The short answer" box (`src/components/ShortAnswer.astro`) on the eight example pages (`card_summary` + `time_back`); the use-case pages render it only when `shortAnswer` is set. Bing meta slot: `site.bingSiteVerification` (empty renders nothing).
+- **Awaiting Simon's approval**: six use-case short answers and new FAQs in `design/aeo-2026-10/approval.md`. Not on the site.
+- **TODO (Simon)**: LinkedIn company/profile URL for the Organization `sameAs`; not rendered until supplied.
+- **TODO (Simon)**: Cloudflare bot settings ("Block AI bots", AI Crawl Control, Bot Fight Mode) are unreadable with the deploy token (no Bot Management/Analytics permissions); check in the dashboard. Served robots.txt is ours (Cloudflare managed robots.txt not injecting) and all 11 user agents got 200 on 2026-10-16.
 
 ## v1.4 Worked examples and "See it working" (2026-10-13; branch `examples-2026-10`, spec `design/examples-2026-10/00-build-spec.md`)
 - **Scope**: eight worked examples from the supplied copy (final), an /examples/ index, the "See it working" home section from `design/examples-2026-10/see-it-working.html`, and internal links. Research behind it: `research/examples-2026-10/` (committed first, separately).

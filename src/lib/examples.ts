@@ -35,6 +35,13 @@ export async function examplesFor(useCaseSlug: string): Promise<Example[]> {
   });
 }
 
+// "The short answer" box: the card summary plus the time back, worded as in the page's bold line
+// ("About 6 hours a month back"); the missed-call example is counted in enquiries "kept".
+export const shortAnswer = (e: Example) => {
+  const t = e.data.time_back;
+  return `${e.data.card_summary} ${/\b(back|kept)$/.test(t) ? t : `${t} back`}.`;
+};
+
 export const ogImagePath = (e: Example) => `/og/${e.id}.png`;
 
 // Plays a recorded demo: a video file is shown with the native player, anything else (a hosted
