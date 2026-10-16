@@ -6,6 +6,7 @@ import EngagementCard from "@/components/EngagementCard.astro";
 import Commitments from "@/components/Commitments.astro";
 import TeamChange from "@/components/TeamChange.astro";
 import { engagements } from "@/data/engagements";
+import { evidencePack } from "@/data/commitments";
 
 const steps = [
   {
@@ -48,13 +49,11 @@ const faqJsonLd = {
   mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
+// The points the five promises in "What we commit to" don't already cover (follow-up sprint, 2026-10).
 const promises = [
   "Fixed scope and fixed price, agreed in writing before work starts",
   "Every scope says what's not included as clearly as what is",
-  "We'll tell you if the answer is a simpler fix than AI",
   "Your data stays in your systems wherever possible, and we'll tell you exactly where it goes",
-  "A person stays in the loop wherever a mistake would matter",
-  "You own what we build",
   "A cost check before any build, including what happens if AI prices rise",
 ];
 ---
@@ -80,6 +79,9 @@ const promises = [
           <span class="text-sm font-medium text-accent">Step {i + 1}</span>
           <h3 class="mt-3 text-xl">{s.title}</h3>
           <p class="mt-2 text-muted">{s.body}</p>
+          {s.title === "Handover" && (
+            <p id="evidence-pack" class="mt-4 border-t border-line pt-4 text-muted"><strong class="font-semibold text-ink">{evidencePack.lead}</strong> {evidencePack.text}</p>
+          )}
         </li>
       ))}
     </ol>

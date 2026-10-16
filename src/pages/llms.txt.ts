@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 import { site } from "@/data/site";
 import { useCases } from "@/data/useCases";
 import { getExamples } from "@/lib/examples";
-import { commitments, teamChange } from "@/data/commitments";
+import { commitments, evidencePack, teamChange } from "@/data/commitments";
 
 const line = (title: string, path: string, description: string) => `- [${title}](${new URL(path, site.url).href}): ${description}`;
 
@@ -35,7 +35,7 @@ export const GET: APIRoute = async () => {
       "Resources",
       guides.filter((g) => g.data.slug.startsWith("/resources/")).map((g) => line(g.data.title, g.data.slug, g.data.meta_description)),
     ),
-    ...section("Our commitments", commitments.map((c) => `- ${c.lead} ${c.text}`)),
+    ...section("Our commitments", [...commitments, evidencePack].map((c) => `- ${c.lead} ${c.text}`)),
     ...section("Bringing your team with you", teamChange.map((t) => `- ${t.lead} ${t.text}`)),
   ].join("\n");
 

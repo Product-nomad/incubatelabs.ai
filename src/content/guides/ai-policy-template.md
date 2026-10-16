@@ -5,14 +5,14 @@ secondary_keywords: ai policy template uk, ai acceptable use policy, ai use poli
 title: "Free AI Policy Template for UK Small Businesses (2026)"
 meta_description: "A free, plain-English AI use policy for UK small businesses: approved tools, personal data, checking output, disclosure and training. No email needed."
 h1: "Free AI policy template for small businesses"
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-16
 schema: Article + FAQPage
 downloads: ai-policy-template.docx, ai-policy-template.md (generated from the template section below)
 ---
 
 # Free AI policy template for small businesses
 
-**Last reviewed: 12 October 2026.** Practical guidance, not legal advice.
+**Last reviewed: 16 October 2026.** Practical guidance, not legal advice.
 
 Your team is probably using AI already. Microsoft and Censuswide found 71% of UK workers have used AI tools their employer never approved. That's not a discipline problem. It means people have found something useful and nobody has told them where the lines are.
 
@@ -43,15 +43,17 @@ We use AI tools to save time on routine work. This policy sets out which tools w
 
 It applies to everyone who works for [Business name], including contractors and temporary staff, on any device used for work.
 
-#### 2. Approved tools
+#### 2. Approved tools (our AI register)
 
 Only use the tools listed here for work. If a tool isn't on the list, ask [Name] before using it.
 
-| Tool | Account type | Approved for | Not approved for |
-|---|---|---|---|
-| [e.g. Microsoft 365 Copilot] | [Business account] | [Drafting emails and documents, summarising meetings] | [Anything listed in section 3] |
-| [e.g. ChatGPT Team] | [Business account, training on our data switched off] | [Drafting, research, rewording] | [Customer personal data] |
-| [Tool] | [Account] | [Use] | [Limits] |
+| Tool | Account type | What it's used for | What data goes in | Who's responsible | Not approved for |
+|---|---|---|---|---|---|
+| [e.g. Microsoft 365 Copilot] | [Business account] | [Drafting emails and documents, summarising meetings] | [Our own emails and documents, no special category data] | [e.g. Office manager] | [Anything listed in section 3] |
+| [e.g. ChatGPT Team] | [Business account, training on our data switched off] | [Drafting, research, rewording] | [Public information and our own non-confidential text] | [Name] | [Customer personal data] |
+| [Tool] | [Account] | [Use] | [Data] | [Name] | [Limits] |
+
+This table is also your AI register. If a customer asks what AI you use, this is the answer.
 
 Don't use personal AI accounts for work.
 

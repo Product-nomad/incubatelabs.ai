@@ -206,6 +206,15 @@
     padding: 2rem 2.25rem;
   }
 }
+/* The six-column AI register in the policy template: tighter cells so it fits the document panel on
+   desktop; it still scrolls sideways on narrow screens. */
+.guide-prose .template-doc table:has(th:nth-child(6)) {
+  font-size: 0.8125rem;
+}
+.guide-prose .template-doc table:has(th:nth-child(6)) :is(th, td) {
+  min-width: 5.5rem;
+  padding: 0.5rem 0.55rem;
+}
 .guide-prose .template-doc > :first-child {
   margin-top: 0;
   font-size: 1.5rem;

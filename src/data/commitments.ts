@@ -30,6 +30,13 @@ export const commitments: LeadItem[] = [
   },
 ];
 
+// Delivered with every build: shown with the handover step on /how-we-work/ and listed under
+// "Our commitments" in /llms.txt.
+export const evidencePack: LeadItem = {
+  lead: "An evidence pack with every build.",
+  text: "A short document covering what the AI does, which tools and data it uses, where a person checks, how it's monitored and what to do if it goes wrong. When a customer's supplier questionnaire asks about your use of AI, you have the answers.",
+};
+
 // The commitment shown with the person-and-tick icon.
 export const PERSON_COMMITMENT = 3;
 

@@ -5,13 +5,13 @@ secondary_keywords: eu ai act uk, eu ai act summary, eu ai act compliance, eu ai
 title: "Does the EU AI Act Apply to UK Businesses? (2026 Guide)"
 meta_description: "Plain-English guide for UK small businesses: when the EU AI Act applies, what's in force now, what was delayed to 2027, and what to do this month."
 h1: "Does the EU AI Act apply to your UK business?"
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-16
 schema: Article + FAQPage
 ---
 
 # Does the EU AI Act apply to your UK business?
 
-**Last reviewed: 12 October 2026.** Practical guidance, not legal advice.
+**Last reviewed: 16 October 2026.** Practical guidance, not legal advice.
 
 ## The short answer
 
@@ -127,6 +127,9 @@ No. Since July 2026 the rule is to take measures to support AI literacy. Keep yo
 
 **Is there a UK version of the AI Act?**
 No. The UK has no AI Act, but UK GDPR and new rules on automated decisions still apply. See [Is there a UK AI Act?](/guides/uk-ai-act/)
+
+**Do I need an AI certification, such as ISO/IEC 42001?**
+No law requires a small business to hold one. ISO/IEC 42001 is the international standard for running an AI management system, and some larger customers may ask about it or about other schemes. For most small firms, a written AI policy, a list of the AI tools you use, a training record and a note of where a person checks the output answer most of the questions customers ask. If a major customer insists on certification, that's the point to look at it.
 
 ## Sources
 
