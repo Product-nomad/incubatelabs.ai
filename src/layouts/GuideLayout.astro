@@ -90,12 +90,14 @@ const structuredData = [
 
   <article class="max-w-page mx-auto px-4 sm:px-6 pt-12">
     <nav aria-label="Breadcrumb" class="text-sm text-muted">
-      <ol class="flex flex-wrap items-center gap-x-1.5 gap-y-1">
-        <li><a href="/" class="hover:text-accent">Home</a></li>
+      {/* One line, the current page truncated if it doesn't fit: a wrapping breadcrumb changes height
+          when Inter replaces the fallback font, which shifted the H1 (CLS) on long guide titles. */}
+      <ol class="flex items-center gap-x-1.5 whitespace-nowrap">
+        <li class="shrink-0"><a href="/" class="hover:text-accent">Home</a></li>
         <li aria-hidden="true">›</li>
-        <li>{parent.item ? <a href="/guides/" class="hover:text-accent">{parent.name}</a> : parent.name}</li>
+        <li class="shrink-0">{parent.item ? <a href="/guides/" class="hover:text-accent">{parent.name}</a> : parent.name}</li>
         <li aria-hidden="true">›</li>
-        <li aria-current="page" class="text-ink">{crumb}</li>
+        <li aria-current="page" class="min-w-0 truncate text-ink" title={crumb}>{crumb}</li>
       </ol>
     </nav>
 

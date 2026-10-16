@@ -8,6 +8,7 @@
 - **Shipped**: /guides/iso-42001-small-business/ from Simon's Drive copy (`design/guides-2026-10/06-iso-42001-small-business.md`, Drive file 1W671ggaTr_jbRfudiEGFeseLEc3Crfhk); same GuideLayout (breadcrumbs, FAQPage + Article JSON-LD, sources, "More guides"), OG card `public/og/iso-42001-small-business.png`. In `ORDER` after the UK AI Act guide; llms.txt and sitemap pick it up from the collection. No typos found. **Meta description trimmed** 157→153 ("ISO/IEC 42001 explained…" → "ISO 42001 explained…") to pass the 155 check; visible copy unchanged.
 - **Links**: "ISO/IEC 42001" in the eu-ai-act-uk certification FAQ links to the guide; security questionnaires "Where it fits" gains "Asked about ISO 42001? See do you actually need it?". All four sources return 200 (iso.org answers HEAD with 403, GET 200).
 - **Layout**: /guides/ index cards now two columns (four guides in a 2×2); "More guides" shows four cards (three guides in display order plus the template) so it stays one row.
+- **CLS fix**: the guide breadcrumb wrapped to two lines on mobile for long titles and changed height when Inter swapped in, shifting the H1 (CLS up to 0.0097, intermittent; existing guides showed it too). GuideLayout's breadcrumb is now one line with the current page truncated.
 - **OG build note**: `design/guides-2026-10/og/build-og.mjs` re-renders every guide card; keep only the new PNG (the others re-render byte-different but identical).
 
 ## Tidy-ups (2026-10-16; branch `tidy-2026-10`)
