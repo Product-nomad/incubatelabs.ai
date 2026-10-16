@@ -1,0 +1,375 @@
+{
+ "month": "2026-10",
+ "run_at": "2026-10-16T07:25:35+00:00",
+ "spent_usd": 0.2411,
+ "cap_usd": 0.5,
+ "skipped": [],
+ "results": {
+  "does the EU AI Act apply to UK businesses": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "ai-act-service-desk.ec.europa.eu",
+     "eur-lex.europa.eu",
+     "digital-strategy.ec.europa.eu"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "isms.online",
+     "rmoklegal.com",
+     "c4cgroup.co.uk",
+     "farrer.co.uk",
+     "activemind.uk"
+    ]
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "uk.cdw.com",
+     "bratby.law",
+     "activemind.uk",
+     "pwc.co.uk",
+     "bandmlaw.co.uk",
+     "ey.com",
+     "hcrlaw.com",
+     "charlesrussellspeechlys.com",
+     "tessgroup.co.uk"
+    ]
+   }
+  },
+  "is there a UK AI Act": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "commonslibrary.parliament.uk",
+     "lordslibrary.parliament.uk",
+     "gov.uk",
+     "questions-statements.parliament.uk",
+     "bills.parliament.uk"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "bratby.law",
+     "airegulations.co.uk",
+     "edwincoe.com"
+    ]
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "bills.parliament.uk",
+     "reedsmith.com",
+     "bratby.law",
+     "cms.law",
+     "theregister.com",
+     "intelligence.dlapiper.com",
+     "trowers.com",
+     "twobirds.com",
+     "stephensonharwood.com",
+     "rpclegal.com"
+    ]
+   }
+  },
+  "AI policy template for small business": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "theoxfordaischool.com",
+     "foresightuk.com",
+     "inferred.co.uk",
+     "aiuseatwork.com"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "cyansolutions.co.uk",
+     "aipolicydesk.com",
+     "scottishaiplaybook.com"
+    ]
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "aicpa-cima.com",
+     "github.com",
+     "business-in-a-box.com",
+     "thoropass.com",
+     "pwc.com.au",
+     "ai.gov.au",
+     "hubspot.com",
+     "mainms.org"
+    ]
+   }
+  },
+  "how to automate supplier invoices into Xero": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "xero.com",
+     "apps.xero.com",
+     "help.dext.com",
+     "central.xero.com",
+     "hubdoc.com",
+     "dext.com",
+     "support.approvalmax.com",
+     "approvalmax.com"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": []
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "xero.com",
+     "apps.xero.com",
+     "parseur.com",
+     "zaharasoftware.com",
+     "payhawk.com",
+     "lightyear.cloud",
+     "zapier.com"
+    ]
+   }
+  },
+  "AI receptionist for trades UK": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "tradehalo.co.uk",
+     "gripai.co.uk",
+     "tradereceptionist.com",
+     "yellowphone.co.uk"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "mytradebuddy.co",
+     "tradecall24.co.uk",
+     "aiphonecalls.co.uk",
+     "downtoearthai.co.uk",
+     "constructvirtual.com",
+     "tradereceptionist.com"
+    ]
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "tradereceptionist.com",
+     "trademore.uk",
+     "tradevoice.uk",
+     "norango.ai",
+     "whoza.ai",
+     "tradesaioperator.uk",
+     "tradecall24.co.uk",
+     "constructvirtual.com",
+     "letsaskclaire.com",
+     "vocalenda.com"
+    ]
+   }
+  },
+  "automate quotes for electricians": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "plutoprice.co.uk",
+     "zappyapp.co.uk",
+     "myjobnix.com",
+     "gettraddie.com"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "tradifyhq.com",
+     "voxtrade.app",
+     "countfire.com"
+    ]
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "ustechautomations.com",
+     "unitelvoice.com",
+     "jotquote.com",
+     "acewatt.com",
+     "octopuspro.com",
+     "myquoteiq.com",
+     "toolcie.com",
+     "tradifyhq.com",
+     "rebolthq.com"
+    ]
+   }
+  },
+  "AI literacy training for staff": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "gov.uk",
+     "nationalcentreforai.jiscinvolve.org",
+     "tnaqa.mirrorweb.com",
+     "governmentdigitalanddatahub.campaign.gov.uk"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "learnexperts.ai",
+     "devlinpeck.com"
+    ]
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "qa.com",
+     "lewissilkin.com",
+     "aiforeducation.io",
+     "bundesnetzagentur.de",
+     "digital-strategy.ec.europa.eu",
+     "thoughtspot.com",
+     "bsigroup.com"
+    ]
+   }
+  },
+  "how can a small business use AI": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "chatgpt.com",
+     "canva.com",
+     "microsoft.com",
+     "zapier.com",
+     "smallbusinesscommissioner.gov.uk",
+     "ico.org.uk"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "sigmatechnology.com",
+     "business.linkedin.com",
+     "perplexity.ai"
+    ]
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "legacy.sba.gov",
+     "microsoft.com",
+     "wolterskluwer.com",
+     "business.govt.nz",
+     "een.ec.europa.eu",
+     "business.qld.gov.au",
+     "quickbooks.intuit.com",
+     "business.att.com"
+    ]
+   }
+  },
+  "AI consultant for small business UK": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "google.com",
+     "nura.solutions",
+     "biq-consulting.com",
+     "samcloud.co.uk",
+     "plusway.co.uk"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "techcare.co.uk",
+     "hartzai.com",
+     "theaiconsultancy.ai",
+     "help4it.co.uk",
+     "insightfulai.co.uk"
+    ]
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "hartzai.com",
+     "biq-consulting.com",
+     "techcare.co.uk",
+     "ajairu.ai",
+     "magneticai.co.uk",
+     "elevatewith-ai.co.uk",
+     "theaiconsultancy.ai",
+     "smartaistudio.co.uk",
+     "openkit.co.uk"
+    ]
+   }
+  },
+  "letting agent repair request automation": {
+   "chat_gpt": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "leto.ai",
+     "rental-reporter.co.uk",
+     "fixflo.com",
+     "proplio.co"
+    ]
+   },
+   "gemini": {
+    "cited": false,
+    "mentioned": false,
+    "sources": []
+   },
+   "perplexity": {
+    "cited": false,
+    "mentioned": false,
+    "sources": [
+     "altosoftware.co.uk",
+     "linkedin.com",
+     "happywebs.co.uk",
+     "getmaintaro.com",
+     "spideychat.com",
+     "lanten.ai",
+     "fixflo.com",
+     "lettings.quest",
+     "remiproperties.co.uk",
+     "sorto.co"
+    ]
+   }
+  }
+ },
+ "mentions": {
+  "total": 0,
+  "questions": []
+ }
+}
