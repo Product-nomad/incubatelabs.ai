@@ -12,6 +12,7 @@ h1: "Supplier invoices into Xero, without anyone typing them"
 card_summary: "Supplier invoices are read from the inbox, coded and matched to the job, then wait in Xero as draft bills. Anything odd goes to a person."
 tools: [Outlook or Gmail, Xero, Your purchase orders or job list in a spreadsheet]
 time_back: "About 6 hours a month"
+team_change: "Whoever does the bookkeeping approves draft bills in a batch instead of typing them, and deals with the few invoices that are flagged."
 last_reviewed: 2026-10-13
 ---
 

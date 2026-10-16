@@ -12,6 +12,7 @@ h1: "Missed calls answered in under a minute, while you're under a sink"
 card_summary: "When a call is missed, the customer gets a clearly labelled text within a minute. The details are waiting in the office inbox."
 tools: [Your business phone system, Text messaging, Outlook or Gmail, Your job or enquiry list]
 time_back: "About 3 enquiries a week kept"
+team_change: "The office starts the day with a list of tidy enquiries to call back instead of a list of missed numbers. Engineers don't change anything."
 last_reviewed: 2026-10-13
 ---
 

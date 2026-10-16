@@ -1,0 +1,19 @@
+---
+// "Bringing your team with you" on /how-we-work/: a plain numbered list, no cards.
+import { teamChange, teamChangeClosing, UCL_STUDY_URL } from "@/data/commitments";
+---
+
+<section id="bringing-your-team" class="max-w-page mx-auto px-4 sm:px-6 pb-20" aria-labelledby="team-heading">
+  <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
+    <h2 id="team-heading" class="text-3xl sm:text-4xl">Bringing your team with you</h2>
+    <div class="max-w-prose">
+      <p class="text-lg text-muted">New ways of working take time to stick. <a href={UCL_STUDY_URL} rel="noopener" class="text-accent underline underline-offset-[3px] hover:decoration-2">A UCL study</a> found a new habit took a median of 66 days to become automatic, which is why we measure after 12 weeks, not 12 days. Here's how we make the change easy for the people doing the work.</p>
+      <ol class="mt-6 list-decimal space-y-3 pl-6 text-lg marker:font-medium marker:text-accent">
+        {teamChange.map((t) => (
+          <li class="pl-1"><strong class="font-semibold">{t.lead}</strong> <span class="text-muted">{t.text}</span></li>
+        ))}
+      </ol>
+      <p class="mt-8 font-serif text-2xl leading-snug">{teamChangeClosing}</p>
+    </div>
+  </div>
+</section>

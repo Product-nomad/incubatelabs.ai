@@ -10,18 +10,21 @@ import CostCheck from "@/components/CostCheck.astro";
 import EngagementCard from "@/components/EngagementCard.astro";
 import WorkCard from "@/components/WorkCard.astro";
 import CallToAction from "@/components/CallToAction.astro";
+import Commitments from "@/components/Commitments.astro";
+import RightForYou from "@/components/RightForYou.astro";
 import { useCases } from "@/data/useCases";
 import { engagements } from "@/data/engagements";
 import { work } from "@/data/work";
 import { site } from "@/data/site";
 
+// Each item links to the closest worked example or use-case page (trust, fit and change sprint §7).
 const familiar = [
-  "Evenings and weekends go on admin you'd love to hand off",
-  "You're about to hire someone mainly to keep up with paperwork",
-  "The same details get typed into three different systems",
-  'Your team already uses ChatGPT, on personal accounts, with <a href="/resources/ai-policy-template/" class="text-accent underline underline-offset-[3px] hover:decoration-2">no rules</a>',
-  "You know AI could help, but not where, or what it would pay back",
-  "Quotes and replies wait until the one person who knows has time",
+  { text: "Evenings and weekends go on admin you'd love to hand off", href: "/examples/voice-note-to-quote/" },
+  { text: "You're about to hire someone mainly to keep up with paperwork", href: "/use-cases/invoice-and-document-processing/" },
+  { text: "The same details get typed into three different systems", href: "/use-cases/data-entry-automation/" },
+  { text: "Your team already uses ChatGPT, on personal accounts, with no rules", href: "/resources/ai-policy-template/" },
+  { text: "You know AI could help, but not where, or what it would pay back", href: "/examples/" },
+  { text: "Quotes and replies wait until the one person who knows has time", href: "/use-cases/ai-email-replies/" },
 ];
 
 const askedFor = [
@@ -66,9 +69,12 @@ const websiteService = {
       </div>
       <ul class="familiar-grid">
         {familiar.map((item) => (
-          <li class="flex items-start gap-3 bg-paper border border-line rounded-xl px-5 py-[18px] text-[17px]">
-            <Hexagon />
-            <span set:html={item} />
+          <li>
+            <a href={item.href} class="familiar-item group flex h-full items-start gap-3 bg-paper border border-line rounded-xl px-5 py-[18px] text-[17px] transition-colors hover:border-accent focus-visible:border-accent">
+              <Hexagon />
+              <span class="flex-1">{item.text}</span>
+              <span class="familiar-arrow font-semibold text-accent" aria-hidden="true">→</span>
+            </a>
           </li>
         ))}
       </ul>
@@ -117,6 +123,8 @@ const websiteService = {
 
   <CostCheck />
 
+  <Commitments />
+
   <!-- Engagement sizes -->
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
     <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -132,6 +140,8 @@ const websiteService = {
       {engagements.map((e) => <EngagementCard engagement={e} />)}
     </div>
   </section>
+
+  <RightForYou />
 
   <!-- Who you'll work with -->
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
@@ -175,5 +185,20 @@ const websiteService = {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 12px;
+  }
+  .familiar-arrow {
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.15s, transform 0.15s;
+  }
+  .familiar-item:hover .familiar-arrow,
+  .familiar-item:focus-visible .familiar-arrow {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .familiar-arrow {
+      transition: none;
+    }
   }
 </style>

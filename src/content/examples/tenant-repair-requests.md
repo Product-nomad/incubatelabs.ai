@@ -12,6 +12,7 @@ h1: "Tenant repair requests, sorted before anyone opens them"
 card_summary: "Repair emails are sorted by urgency, logged against the right property and answered with a draft reply. A person checks and sends."
 tools: [Outlook or Gmail, Your property management software or spreadsheet, Your list of approved contractors]
 time_back: "About 8 hours a week"
+team_change: "Property managers start from a sorted queue with draft replies instead of an unsorted inbox. They still send every message."
 last_reviewed: 2026-10-13
 ---
 

@@ -12,6 +12,7 @@ h1: "From a voice note on site to a quote ready to send"
 card_summary: "The owner records a minute on site. A draft quote is waiting from their own price list by the time they're back in the van."
 tools: [Phone voice notes or WhatsApp, Your price list in Excel or Google Sheets, Outlook or Gmail, Xero or QuickBooks for the final quote]
 time_back: "About 5 hours a week"
+team_change: "The owner records a voice note on site instead of writing notes, and checks a draft instead of typing one. Nobody learns new software."
 last_reviewed: 2026-10-13
 ---
 

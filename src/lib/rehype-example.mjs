@@ -71,6 +71,16 @@ export default function rehypeExample() {
       current.children.push(n);
     }
     if (current.children.length) out.push(current);
+
+    // 3b. "What changes for your team", from front matter `team_change`, right after "What we'd build".
+    const teamChange = file.data?.astro?.frontmatter?.team_change;
+    if (!teamChange) throw new Error(`${id}: no team_change in front matter`);
+    const build = out.findIndex((s) => isEl(s.children[0], "h2") && textOf(s.children[0]) === "What we'd build");
+    if (build === -1) throw new Error(`${id}: no "What we'd build" section`);
+    out.splice(build + 1, 0, el("section", { className: ["guide-section", "example-team"] }, [
+      el("h2", { id: slugger.slug("What changes for your team") }, [{ type: "text", value: "What changes for your team" }]),
+      el("p", {}, [{ type: "text", value: teamChange }]),
+    ]));
     tree.children = out;
 
     const has = (s, c) => (s.properties.className || []).includes(c);

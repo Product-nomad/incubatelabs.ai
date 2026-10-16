@@ -3,6 +3,8 @@ import Layout from "@/layouts/Layout.astro";
 import CallToAction from "@/components/CallToAction.astro";
 import CostCheck from "@/components/CostCheck.astro";
 import EngagementCard from "@/components/EngagementCard.astro";
+import Commitments from "@/components/Commitments.astro";
+import TeamChange from "@/components/TeamChange.astro";
 import { engagements } from "@/data/engagements";
 
 const steps = [
@@ -22,7 +24,29 @@ const steps = [
     title: "Handover",
     body: "We walk your team through it, leave simple instructions, and make sure it can run without us.",
   },
+  {
+    title: "After a quarter: we measure again",
+    body: "Twelve weeks after go-live, we measure the same work the same way as at the start and show you the hours back. If it's falling short, we agree what to change.",
+  },
 ];
+
+// The site's general FAQ. FAQPage JSON-LD is built from the same text as the visible answers.
+const faq = [
+  {
+    q: "What if my team doesn't want to use it?",
+    a: "That's common at the start, and it usually comes from worry about jobs or about the AI getting things wrong. We involve the person who does the work from day one, run the new way alongside the old one at first, and keep a person signing off anything that matters. It takes the parts of the job people dislike, not the job.",
+  },
+  {
+    q: "What if people slip back to the old way?",
+    a: "Some slipping is normal: new habits typically take around two months to settle. Fortnightly check-ins pick it up early, and it usually means something is awkward that we can fix. That's also why we measure at 12 weeks rather than straight after go-live.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+};
 
 const promises = [
   "Fixed scope and fixed price, agreed in writing before work starts",
@@ -39,6 +63,7 @@ const promises = [
   title="Fixed-Price AI Consulting Services | Incubate Labs"
   description="How our AI consulting works: a free first call, a written scope and cost check, then a Quick Win, Automation Sprint or Operations Uplift. No retainers."
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <section class="max-w-page mx-auto px-4 sm:px-6 pt-16 pb-12">
     <p class="text-sm font-medium text-accent">How we work</p>
     <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl leading-tight">Fixed-price AI consulting: small pieces of work that pay for themselves</h1>
@@ -47,9 +72,9 @@ const promises = [
     </p>
   </section>
 
-  <section class="max-w-page mx-auto px-4 sm:px-6 py-8">
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-8 pb-20">
     <h2 class="text-3xl sm:text-4xl">From first call to handover</h2>
-    <ol class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <ol class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {steps.map((s, i) => (
         <li class="border border-line rounded-xl p-6">
           <span class="text-sm font-medium text-accent">Step {i + 1}</span>
@@ -60,7 +85,11 @@ const promises = [
     </ol>
   </section>
 
-  <section class="max-w-page mx-auto px-4 sm:px-6 py-16">
+  <TeamChange />
+
+  <Commitments />
+
+  <section class="max-w-page mx-auto px-4 sm:px-6 pb-16">
     <h2 class="text-3xl sm:text-4xl">Three sizes of engagement</h2>
     <div class="mt-10 grid gap-5 md:grid-cols-3">
       {engagements.map((e) => <EngagementCard engagement={e} showGoodIf />)}
@@ -84,6 +113,20 @@ const promises = [
           </li>
         ))}
       </ul>
+    </div>
+  </section>
+
+  <section class="max-w-page mx-auto px-4 sm:px-6 pt-16">
+    <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
+      <h2 class="text-3xl sm:text-4xl">Questions we get asked</h2>
+      <div class="max-w-prose divide-y divide-line border-y border-line">
+        {faq.map((f) => (
+          <div class="faq-item py-5">
+            <h3 class="text-xl">{f.q}</h3>
+            <p class="mt-2 text-lg text-muted">{f.a}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 

@@ -12,6 +12,7 @@ h1: "Paper job sheets into timesheets and invoice lines, without retyping"
 card_summary: "Engineers photograph their job sheets. Hours and materials become timesheets and invoice-ready lines for the office to check."
 tools: [Engineers' phones, Excel or Google Sheets, Xero or QuickBooks, Your payroll export]
 time_back: "About 4 hours a week"
+team_change: "Engineers keep their paper job sheets and take a photo at the end of the job. The office checks a summary instead of retyping."
 last_reviewed: 2026-10-13
 ---
 

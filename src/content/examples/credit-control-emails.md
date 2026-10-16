@@ -12,6 +12,7 @@ h1: "Overdue invoices chased in the right tone, without the dread"
 card_summary: "Overdue invoice reminders are drafted from Xero in the right tone for each customer. A person approves and sends them."
 tools: [Xero, Outlook or Gmail, Your customer notes]
 time_back: "About 6 hours a month"
+team_change: "Whoever chases payments reviews a morning list of drafts instead of writing each email, and still makes the calls."
 last_reviewed: 2026-10-13
 ---
 

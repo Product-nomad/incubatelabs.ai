@@ -1,0 +1,46 @@
+---
+// "Is this right for you?" on the home page, after the engagement sizes.
+const fit = [
+  "You run a business of roughly 5 to 50 people, and hours go on repetitive admin every week.",
+  "You can point to a job that eats time, even if you're not sure AI is the fix.",
+  "You'd rather keep the tools you already use than move to new software.",
+  "Someone on your team can give an hour or two a week while we build and test.",
+  "You want the results measured, before and after.",
+];
+const notFit = [
+  "You want a chatbot because a competitor has one, without a job for it to do.",
+  "You want AI making decisions about people without anyone checking.",
+  "You need a product rolled out to hundreds of staff.",
+  "You're after a strategy deck rather than something working in your business.",
+  "Nobody on the team can spare any time during the build.",
+];
+---
+
+<section id="right-for-you" class="max-w-page mx-auto px-4 sm:px-6 pb-20" aria-labelledby="fit-heading">
+  <h2 id="fit-heading" class="text-3xl sm:text-4xl">Is this right for you?</h2>
+  <div class="mt-10 grid gap-5 md:grid-cols-2">
+    <div class="bg-accent-soft border border-accent-line rounded-xl p-6 sm:p-8">
+      <h3 class="text-2xl">Right for you if</h3>
+      <ul class="mt-4 space-y-3">
+        {fit.map((f) => (
+          <li class="flex gap-3">
+            <span class="font-semibold text-accent" aria-hidden="true">✓</span>
+            <span>{f}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="bg-band border border-line rounded-xl p-6 sm:p-8">
+      <h3 class="text-2xl">Probably not for you if</h3>
+      <ul class="mt-4 space-y-3">
+        {notFit.map((f) => (
+          <li class="flex gap-3">
+            <span class="font-semibold text-muted" aria-hidden="true">✕</span>
+            <span class="text-muted">{f}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+  <a href="/contact/" class="mt-8 inline-block bg-ink text-paper rounded-md px-6 py-3 font-medium transition-colors hover:bg-accent">Talk it through →</a>
+</section>
