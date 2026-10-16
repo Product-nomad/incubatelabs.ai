@@ -76,7 +76,25 @@ export const useCases: UseCase[] = [
         q: "Is automated invoice processing worth it for a small business?",
         a: "It depends on how many invoices you handle and how long they take to type in today. The cost check we do before any build answers that with your own numbers. If it doesn't pay back, we'll say so.",
       },
+      {
+        q: "How much time does invoice automation save?",
+        a: "In our worked example, a 15-person building firm receives about 150 supplier invoices a month, and keying each one into Xero takes about 3 minutes: 7.5 hours in all. Once invoices are read and matched automatically, about 1.5 hours of exceptions and review remain, so about 6 hours a month come back. The figures are illustrative; we measure yours in the first conversation.",
+      },
+      {
+        q: "Will it approve or pay bills automatically?",
+        a: "No. Bills arrive in Xero as drafts with the PDF attached, for a person to approve in batches. Anything unusual, such as an unknown supplier, a missing job reference or a price that doesn't match the order, goes to a named person with the reason it was flagged.",
+      },
+      {
+        q: "Can it read paper job sheets?",
+        a: "Yes. In our job sheets example, engineers photograph the sheet and the job reference, times, materials and notes are read into timesheets and draft invoice lines. Anything hard to read is flagged with the photo alongside, not guessed.",
+      },
+      {
+        q: "Where do we start?",
+        a: "Often with your three biggest suppliers: prove the accuracy on a month of invoices, then extend to the rest.",
+      },
     ],
+    shortAnswer:
+      "Invoice and document processing means AI reads incoming invoices, delivery notes and forms, picks out the fields you use and files them in the right system, with a person checking anything it isn't sure about. In our worked examples, supplier invoices into Xero gives a building firm about 6 hours a month back, and paper job sheets into timesheets gives a maintenance contractor about 4 hours a week.",
     seoTitle: "AI Invoice & Document Processing for SMEs",
     seoDescription:
       "Automate reading, sorting and filing invoices, delivery notes and forms. AI document processing for UK small businesses, with a person on the edge cases.",
@@ -127,7 +145,25 @@ export const useCases: UseCase[] = [
         q: "What happens when the data doesn't match?",
         a: "The system flags duplicates and mismatches for a person to sort out instead of guessing. You also get a simple log of what moved where.",
       },
+      {
+        q: "How much time can data entry automation save?",
+        a: "In our job sheets example, a maintenance contractor's office retypes about 60 job sheets a week, once for payroll and once for invoicing: about 4 hours, plus an hour chasing missing sheets. Once the sheets are read automatically, about an hour of checking remains, so about 4 hours a week come back.",
+      },
+      {
+        q: "Do our engineers need a new app?",
+        a: "Not necessarily. Before buying a new timesheet app and retraining staff, it's worth asking whether the paper can stay and the retyping go. In the example, engineers photograph the sheet at the end of the job and send it.",
+      },
+      {
+        q: "Can it chase missing paperwork?",
+        a: "Yes. In the job sheets example, if a booked job has no sheet by the next morning, the engineer gets a reminder automatically.",
+      },
+      {
+        q: "Who approves what goes into our systems?",
+        a: "A person. In the example, timesheets are approved by the office before payroll, and invoice lines stay as drafts until someone approves them.",
+      },
     ],
+    shortAnswer:
+      "Data entry automation means details are captured once, then copied, checked and passed on between the tools you already use, with AI tidying messy input such as free-text emails and notes. In our worked examples, turning job sheets into timesheets saves about 4 hours a week, and supplier invoices into Xero about 6 hours a month.",
     seoTitle: "Data Entry Automation for Small Businesses",
     seoDescription:
       "Stop typing the same information into three systems. We connect the tools you already use and add AI where the input is messy. For UK small businesses.",
@@ -174,7 +210,21 @@ export const useCases: UseCase[] = [
         q: "Can you automate client reporting?",
         a: "Yes, as long as the figures come from systems we can connect to. Each client gets the same consistent report, and someone on your team reviews it before it goes out.",
       },
+      {
+        q: "How much time does automated reporting save?",
+        a: "In our worked example, a 30-person trades firm owner spent about 2 hours 15 minutes every Monday exporting and pasting into a spreadsheet. The one-page report now arrives by 7am and takes about 15 minutes to read, so about 2 hours a week come back, and the report arrives every week.",
+      },
+      {
+        q: "What goes in a weekly one-page report?",
+        a: "In the example: work won and lost, quote win rate by lead source, hours against estimate by job and crew, money owed and money due out, with the three things that need a decision listed first.",
+      },
+      {
+        q: "Will the written summary make things up?",
+        a: "No. The summary only describes the figures and doesn't invent explanations. The calculations are fixed and visible, so the numbers are the same each week and can be traced to the source.",
+      },
     ],
+    shortAnswer:
+      "Automated reporting gathers figures from your accounts, sales and job systems on a schedule and adds a plain-English summary on top, with the numbers worked out by ordinary, testable code rather than AI. In our worked example, a trades firm owner's Monday one-page report saves about 2 hours a week.",
     seoTitle: "Automated Reporting for Small Businesses",
     seoDescription:
       "Weekly and monthly reports that build themselves from your existing systems, with a plain-English AI summary on top. Built for UK small businesses.",
@@ -226,7 +276,21 @@ export const useCases: UseCase[] = [
         q: "How is this different from a chatbot?",
         a: "A chatbot talks to your customers directly. This helps your team answer them. We don't put unsupervised chatbots in front of customers.",
       },
+      {
+        q: "How much time can AI email replies save?",
+        a: "In our letting agent example, about 25 repair emails a day took around 6 minutes each. With each email read, sorted and given a draft reply, checking and sending takes about 2 minutes, so about 8 hours a week come back. In our credit control example, 60 overdue invoice reminders a month drop from about 8 hours to about 2.",
+      },
+      {
+        q: "How are urgent emails handled?",
+        a: "They're sorted by urgency using your own rules. In the letting agent example, no heating or hot water, leaks, electrical danger and security problems go to the top, as does anything mentioning children, elderly or vulnerable occupants, and urgent cases alert the team straight away.",
+      },
+      {
+        q: "Can it chase overdue invoices?",
+        a: "Yes. In our credit control example, overdue invoices are pulled from Xero each morning and a reminder is drafted in the right tone for each customer. A person reviews the drafts and sends them, and disputed invoices are never chased automatically.",
+      },
     ],
+    shortAnswer:
+      "AI email replies means AI drafts answers to customer enquiries in your shared inbox from your own policies and past answers, and your team checks each draft before it's sent. In our worked examples, a letting agent gets about 8 hours a week back on repair requests, and a wholesaler about 6 hours a month on overdue invoice reminders.",
     seoTitle: "AI Email Replies for Customer Enquiries",
     seoDescription:
       "Answer customer emails faster with AI-drafted replies written from your own policies and checked by your team before they go. For UK SMEs.",
@@ -276,7 +340,21 @@ export const useCases: UseCase[] = [
         q: "What about proposals for bigger jobs?",
         a: "The same approach works for longer proposals. AI assembles a first draft from your standard sections, past proposals and the notes for this job, and you edit from there.",
       },
+      {
+        q: "How much time does AI quoting save?",
+        a: "In our worked example, an electrical contractor sends about 15 quotes a week, each taking about 25 minutes to type up in the evening. Starting from a voice note on site, checking and sending the draft takes about 5 minutes, so about 5 hours a week come back and quotes go out the same day.",
+      },
+      {
+        q: "What if an item isn't on our price list?",
+        a: "It's flagged, not priced. Anything the voice note left unclear, such as the downlight type, is highlighted in the draft for you to decide.",
+      },
+      {
+        q: "Does it follow up quotes?",
+        a: "If the customer hasn't replied after five days, a polite follow-up is drafted for you to approve. Follow-ups are never sent automatically.",
+      },
     ],
+    shortAnswer:
+      "AI quoting turns your site notes, voice memos and photos into a first-draft quote from your own price list, and you check the numbers and judgement calls before it goes. In our worked example, an electrician working from a voice note on site saves about 5 hours a week.",
     seoTitle: "AI Quoting & Proposal Drafting for SMEs",
     seoDescription:
       "Turn site notes, photos and measurements into consistent quotes and proposals in minutes, inside the quoting software you already use. For UK trades.",
@@ -327,7 +405,21 @@ export const useCases: UseCase[] = [
         q: "Is it worth it if we only get a few a year?",
         a: "Possibly not. If questionnaires are rare, a well-organised answer document may be enough, and we'll tell you so.",
       },
+      {
+        q: "How much time can it save?",
+        a: "Answered from scratch, each questionnaire can eat a day. With a library of approved answers, a new questionnaire starts as a set of drafts, each linked to its source, so the work becomes reviewing them and filling the real gaps.",
+      },
+      {
+        q: "What goes into the answer library?",
+        a: "Your policies, insurance details, past questionnaire responses and certificates, kept as a single set of approved answers and supporting documents.",
+      },
+      {
+        q: "Do you provide Cyber Essentials certification?",
+        a: "No. We don't certify anyone, but we make sure the answers you've already given are found and reused consistently, and that real gaps are flagged clearly rather than papered over.",
+      },
     ],
+    shortAnswer:
+      "AI drafts answers to new security and supplier questionnaires from a single library of your approved answers, flags gaps instead of guessing, and a person signs off before anything is returned. Each questionnaire answered from scratch can eat a day, though if you only get a couple a year, a well-organised answer document may be enough.",
     seoTitle: "Security & Supplier Questionnaire Help",
     seoDescription:
       "Pre-fill security, data protection and supplier questionnaires from your existing policies and past answers, with gaps flagged. For UK small suppliers.",
