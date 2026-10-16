@@ -34,3 +34,4 @@ research/examples-2026-10/raw/
 
 # AI answer tracking: raw API responses (never commit)
 research/aeo-tracking/raw/
+__pycache__/
