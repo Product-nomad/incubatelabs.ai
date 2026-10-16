@@ -50,7 +50,7 @@ const websiteService = {
 <Layout
   title="AI Consultant for UK Small Businesses | Incubate Labs"
   description={site.description}
-  socialDescription="Practical AI and automation for UK small businesses. Fixed-price projects that take the repetitive admin off your team."
+  socialDescription={site.description}
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(websiteService)} />
   <SeeItWorkingNoScript slot="head" />

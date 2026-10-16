@@ -4,10 +4,10 @@ export const site = {
   email: "hello@incubatelabs.ai",
   founder: "Simon Newton",
   github: "https://github.com/Product-nomad",
-  // One-line description, used word for word in the Organization JSON-LD, the home meta description
-  // and /llms.txt.
+  // One-line description, used word for word in the Organization JSON-LD, the home meta, og: and
+  // twitter: descriptions and /llms.txt.
   description:
-    "Practical AI and automation for UK small businesses. Fixed-scope projects that take repetitive admin off the team, with a person checking what matters.",
+    "Practical AI and automation for UK small businesses. Fixed-price projects that take the repetitive admin off your team.",
   // Bing Webmaster Tools meta-tag code (the content="..." value of msvalidate.01). Empty renders nothing.
   bingSiteVerification: "",
   // Public Google Calendar appointment schedule link. Booking buttons are

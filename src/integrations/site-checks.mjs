@@ -77,9 +77,14 @@ export default function siteChecks() {
         if (llms.includes("Huntingdon")) errors.push(`/llms.txt: location`);
         const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
         const summary = llms.match(/^> (.*)$/m)?.[1];
-        const homeDesc = home.match(/<meta name="description" content="([^"]*)"/)?.[1];
-        if (!summary || !home.includes(`"description":${JSON.stringify(summary)}`) || homeDesc !== summary)
-          errors.push("/llms.txt summary, home meta description and Organization JSON-LD description differ");
+        const decode = (s) => s?.replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, "&");
+        const homeMeta = [
+          /<meta name="description" content="([^"]*)"/,
+          /<meta property="og:description" content="([^"]*)"/,
+          /<meta name="twitter:description" content="([^"]*)"/,
+        ].map((re) => decode(home.match(re)?.[1]));
+        if (!summary || !home.includes(`"description":${JSON.stringify(summary)}`) || homeMeta.some((d) => d !== summary))
+          errors.push("/llms.txt summary, home meta/og/twitter descriptions and Organization JSON-LD description differ");
         if (errors.length) {
           errors.forEach((e) => logger.error(e));
           throw new Error(`site-checks: ${errors.length} problem(s) in dist/`);
