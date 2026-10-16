@@ -4,7 +4,7 @@
 # main working copy's branch doesn't matter. "[skip ci]" stops the commit triggering a deploy.
 set -euo pipefail
 CLONE=/home/vpc/.local/share/incubatelabs-aeo-tracking
-REPO=https://github.com/Product-nomad/incubatelabs.ai.git
+REPO=git@github.com:Product-nomad/incubatelabs.ai.git
 as_vpc() { sudo -u vpc -H "$@"; }
 
 [ -d "$CLONE/.git" ] || as_vpc git clone -q "$REPO" "$CLONE"
