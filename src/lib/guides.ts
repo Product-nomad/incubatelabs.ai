@@ -7,6 +7,7 @@ const ORDER = [
   "eu-ai-act-uk",
   "eu-ai-act-article-50-chatbots",
   "uk-ai-act",
+  "iso-42001-small-business",
   "ai-literacy-training-staff",
   "ai-policy-template",
 ];

@@ -21,7 +21,10 @@ const parent = resource
   ? { name: "Resources", item: null }
   : { name: "Guides", item: `${site.url}/guides/` };
 const crumb = resource ? "AI policy template" : data.h1;
-const others = (await getGuides()).filter((g) => g.id !== guide.id);
+// "More guides": four cards (one row on desktop), the first three other guides in display order plus
+// the policy template.
+const all = (await getGuides()).filter((g) => g.id !== guide.id);
+const others = [...all.filter((g) => !isResource(g)).slice(0, all.some(isResource) ? 3 : 4), ...all.filter(isResource)].slice(0, 4);
 const org = {
   "@type": "Organization",
   name: site.name,

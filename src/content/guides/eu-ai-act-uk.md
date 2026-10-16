@@ -129,7 +129,7 @@ No. Since July 2026 the rule is to take measures to support AI literacy. Keep yo
 No. The UK has no AI Act, but UK GDPR and new rules on automated decisions still apply. See [Is there a UK AI Act?](/guides/uk-ai-act/)
 
 **Do I need an AI certification, such as ISO/IEC 42001?**
-No law requires a small business to hold one. ISO/IEC 42001 is the international standard for running an AI management system, and some larger customers may ask about it or about other schemes. For most small firms, a written AI policy, a list of the AI tools you use, a training record and a note of where a person checks the output answer most of the questions customers ask. If a major customer insists on certification, that's the point to look at it.
+No law requires a small business to hold one. [ISO/IEC 42001](/guides/iso-42001-small-business/) is the international standard for running an AI management system, and some larger customers may ask about it or about other schemes. For most small firms, a written AI policy, a list of the AI tools you use, a training record and a note of where a person checks the output answer most of the questions customers ask. If a major customer insists on certification, that's the point to look at it.
 
 ## Sources
 

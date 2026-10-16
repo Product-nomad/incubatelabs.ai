@@ -388,6 +388,7 @@ export const useCases: UseCase[] = [
       "Security questionnaire automation starts with a single library of your approved answers: policies, insurance details, past questionnaire responses and certificates. When a new supplier questionnaire or due diligence questionnaire arrives, AI matches each question to the closest approved answer and drafts a response with its source attached.",
       "Information security questionnaires for vendors often ask about recognised schemes such as <a href=\"https://www.ncsc.gov.uk/cyberessentials/overview\" rel=\"noopener\">Cyber Essentials</a>. We don't certify anyone, but we make sure the answers you've already given are found and reused consistently, and that real gaps are flagged clearly rather than papered over.",
       'Every build we deliver comes with an <a href="/how-we-work/#evidence-pack">evidence pack</a> you can reuse in your own questionnaires.',
+      'Asked about ISO 42001? See <a href="/guides/iso-42001-small-business/">do you actually need it?</a>',
     ],
     faq: [
       {
