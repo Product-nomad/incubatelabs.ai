@@ -4,6 +4,10 @@
 **Phase**: Worked examples sprint (v1.4) shipped 2026-10-13. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
 **Last touched**: 2026-10-16.
 
+## Font fallbacks (2026-10-16; branch `font-fallbacks`)
+- `src/styles/font-fallbacks.css` (imported in Layout.astro): metric-matched local fallback faces, "Inter Fallback" (Arial / Liberation Sans / Arimo), "Inter Fallback Roboto" (Android), "Source Serif 4 Fallback" (Georgia), "… Times" (Times New Roman / Liberation Serif / Tinos), "… Noto" (Noto Serif); size-adjust and ascent/descent/line-gap overrides from @capsizecss/metrics, checked against the served woff2 files. Each face is limited to the latin unicode-range so glyphs the web fonts lack (✓ ✕ →) render exactly as before. Placed straight after the web font in every stack (tailwind sans/serif, Layout, ExampleLayout, prose.css, LostDayHero, AnnouncementBar). font-display unchanged (swap).
+- Fully loaded pages are pixel-identical to before (home, two guides, an example, How we work, Readiness Check; 390 and 1280).
+
 ## ISO 42001 guide (2026-10-16; branch `iso-42001-guide`)
 - **Shipped**: /guides/iso-42001-small-business/ from Simon's Drive copy (`design/guides-2026-10/06-iso-42001-small-business.md`, Drive file 1W671ggaTr_jbRfudiEGFeseLEc3Crfhk); same GuideLayout (breadcrumbs, FAQPage + Article JSON-LD, sources, "More guides"), OG card `public/og/iso-42001-small-business.png`. In `ORDER` after the UK AI Act guide; llms.txt and sitemap pick it up from the collection. No typos found. **Meta description trimmed** 157→153 ("ISO/IEC 42001 explained…" → "ISO 42001 explained…") to pass the 155 check; visible copy unchanged.
 - **Links**: "ISO/IEC 42001" in the eu-ai-act-uk certification FAQ links to the guide; security questionnaires "Where it fits" gains "Asked about ISO 42001? See do you actually need it?". All four sources return 200 (iso.org answers HEAD with 403, GET 200).

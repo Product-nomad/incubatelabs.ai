@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        serif: ['"Source Serif 4"', "Georgia", "serif"],
+        // Each web font is followed by its metric-matched fallbacks (src/styles/font-fallbacks.css).
+        sans: ["Inter", '"Inter Fallback"', '"Inter Fallback Roboto"', "system-ui", "sans-serif"],
+        serif: ['"Source Serif 4"', '"Source Serif 4 Fallback"', '"Source Serif 4 Fallback Times"', '"Source Serif 4 Fallback Noto"', "Georgia", "serif"],
       },
       colors: {
         ink: "#16181a",
