@@ -131,7 +131,7 @@ const totalSteps = steps.length + 1;
         <input type="hidden" name="message" id="rc-summary" />
         <label for="rc-email" class="font-medium">Your email</label>
         <input id="rc-email" name="email" type="email" autocomplete="email" required maxlength="320" class="mt-2 block w-full rounded-md border border-line bg-white px-3 py-2.5 text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" />
-        <p class="mt-2 text-sm text-muted prose-links">Your result goes to Simon, who will email it to you personally. We only use your address to reply. See our <a href="/privacy/">privacy notice</a>.</p>
+        <p class="mt-2 text-sm text-muted prose-links">Your result comes to us, and we'll email it to you personally. We only use your address to reply. See our <a href="/privacy/">privacy notice</a>.</p>
         <div class="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
           <label for="rc-website">Leave this field empty</label>
           <input id="rc-website" name="website" type="text" tabindex="-1" autocomplete="off" />
@@ -142,7 +142,7 @@ const totalSteps = steps.length + 1;
           Sorry, that didn't send. Please email <a href={mailto} class="text-accent underline">{site.email}</a> instead.
         </p>
       </form>
-      <p id="rc-email-sent" role="status" class="mt-6 hidden text-lg">Thanks. Simon will email your result to you personally.</p>
+      <p id="rc-email-sent" role="status" class="mt-6 hidden text-lg">Thanks. We'll email your result to you personally.</p>
 
       <p class="mt-10 text-sm text-muted">This is a starting point, not a diagnosis. Every business is different.</p>
       <button type="button" id="rc-restart" class="mt-4 text-sm font-medium text-accent hover:underline">Start again</button>
