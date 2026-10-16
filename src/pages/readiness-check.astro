@@ -123,7 +123,7 @@ const totalSteps = steps.length + 1;
         {site.bookingUrl && (
           <a href={site.bookingUrl} target="_blank" rel="noopener" class={buttonPrimary}>Book a call to talk it through</a>
         )}
-        <button type="button" id="rc-email-open" class={site.bookingUrl ? buttonSecondary : buttonPrimary}>Send my result to Simon</button>
+        <button type="button" id="rc-email-open" class={site.bookingUrl ? buttonSecondary : buttonPrimary}>Send my result to us</button>
       </div>
 
       <form id="rc-email-form" class="mt-6 hidden max-w-xl border border-line rounded-xl p-6" action="/api/contact" method="post">
@@ -241,7 +241,7 @@ const totalSteps = steps.length + 1;
     priority.classList.toggle("hidden", !r.priority);
     const cost = costInputs();
     $("rc-cost").textContent = `Roughly ${formatPounds(annualCost(cost))} a year`;
-    // Hidden field, submitted only with "Send my result to Simon".
+    // Hidden field, submitted only with "Send my result to us".
     $<HTMLInputElement>("rc-summary").value = summarise(a, r, cost);
     form.classList.add("hidden");
     result.classList.remove("hidden");

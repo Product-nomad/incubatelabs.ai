@@ -346,10 +346,10 @@ export function formatPounds(amount: number): string {
   return `£${amount.toLocaleString("en-GB")}`;
 }
 
-// Shown in the result and included in the summary sent to Simon.
+// Shown in the result and included in the summary sent with "Send my result to us".
 export const priorityLine = (label: string) => `Your first priority for the time saved: ${label}. We'll plan around it.`;
 
-// Plain-text summary, sent only if the visitor chooses "Send my result to Simon".
+// Plain-text summary, sent only if the visitor chooses "Send my result to us".
 export function summarise(answers: Answers, result: Result, cost?: CostInputs): string {
   const lines: string[] = ["Recommended first:"];
   if (result.recommendations.length === 0) lines.push("- Nothing stood out");

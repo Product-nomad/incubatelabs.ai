@@ -4,9 +4,13 @@
 **Phase**: Worked examples sprint (v1.4) shipped 2026-10-13. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
 **Last touched**: 2026-10-16.
 
+## Tidy-ups (2026-10-16; branch `tidy-2026-10`)
+- Readiness Check button is now "Send my result to us". Still naming Simon (not changed, listed for review): the Readiness Check note under the email field ("Your result goes to Simon…") and its sent message ("Simon will email your result…"); the contact form's success message and /contact/thanks/ H1 ("…on its way to Simon"); the home "More about Simon →" link; privacy ("Simon's inbox", data controller). About not checked by request.
+- **Lighthouse home "97" was a local artefact**: `astro preview` serves the 145 KB HTML uncompressed. Production (Cloudflare, brotli to 30 KB) scores **100** mobile, three runs (FCP 1.1 s, LCP 1.7 s, TBT 0, CLS 0). Measure Lighthouse on the preview or live URL, not localhost. The only remaining flag is Cloudflare Email Obfuscation's render-blocking `email-decode.min.js` (est. 20 ms; dashboard setting, already in the backlog).
+
 ## "Then what?" sprint (2026-10-16; branch `then-what-2026-10`)
 - **Delivery commitment extended**: before any build we also **agree where the hours saved should go, and how we'll know**; the 12-week re-measure checks both the hours back and whether they went where planned (commitment 1, /how-we-work/ steps 1 and 5, /llms.txt).
-- **Shipped**: `ThenWhat.astro` on home straight after "See it working" (eyebrow, H2, body, four accent-soft tags). Examples: `time_to` and `watch` front matter, rendered by `rehype-example.mjs` as "Where the time could go" straight after "Time back" / "What it's worth" (build fails if missing). Readiness Check: new "Then what?" step before the cost step ("If you got five hours a week back…", five options; steps now flag `aboutPickedJob` instead of relying on position); the result shows "Your first priority for the time saved: … We'll plan around it." and the same line goes into the summary sent with "Send my result to Simon". The booking link passes nothing. Cost estimate unchanged.
+- **Shipped**: `ThenWhat.astro` on home straight after "See it working" (eyebrow, H2, body, four accent-soft tags). Examples: `time_to` and `watch` front matter, rendered by `rehype-example.mjs` as "Where the time could go" straight after "Time back" / "What it's worth" (build fails if missing). Readiness Check: new "Then what?" step before the cost step ("If you got five hours a week back…", five options; steps now flag `aboutPickedJob` instead of relying on position); the result shows "Your first priority for the time saved: … We'll plan around it." and the same line goes into the summary sent with "Send my result to us". The booking link passes nothing. Cost estimate unchanged.
 - **Checks**: 75 new browser checks plus the 143 existing; Lighthouse mobile home 97/100/100/100, CLS 0.
 
 ## Evidence pack follow-up (2026-10-16; branch `evidence-2026-10`)
@@ -58,7 +62,7 @@
 - "Sound familiar?", illustrated use-case cards (six SVG components in `src/components/illustrations/`), asked-for vs fix list, cost-check section with payback chart (`CostCheck.astro`), hexagon engagement cards with "Where most clients start" badge.
 - Projects (was "Things I've built"): attestloop, removepii, publicguard, retail PoC, plus Readiness Check on /work/. Image slots read `public/projects/<name>.webp` when present.
 - De-personalised: no location except the legal line; Iraq entry removed from About; JSON-LD address removed.
-- Readiness Check cost estimate (hours × rate × 46 + monthly × 12, nearest £100), sent only with "Send my result to Simon".
+- Readiness Check cost estimate (hours × rate × 46 + monthly × 12, nearest £100), sent only with "Send my result to us" (renamed from "…to Simon", 2026-10-16).
 - SEO addendum applied: hero copy, renamed use-case pages with 301s (`public/_redirects`), "Where it fits", "What it costs" (no prices) and FAQ blocks, Service/BreadcrumbList/FAQPage JSON-LD, OG image (`public/og-image.png`, source in `design/v1.1/og-image-source.html`), technical-audit fixes. Research summaries committed under `research/seo-2026-10/`; `raw/` is gitignored.
 - Acceptance checks passed 2026-10-11 locally and on the preview; screenshots in `.screens/v1.1/` (gitignored). After deploy: redirects 301 on the live domain, OG image passes opengraph.xyz (0 errors; warnings: no call-to-action text in the image, og:description 142 characters where some social previews show ~125). IndexNow re-pinged with all 14 URLs.
 
