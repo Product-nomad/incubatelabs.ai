@@ -52,7 +52,14 @@ const inputClass =
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
           </div>
           {turnstileSiteKey && (
+            <>
             <div class="cf-turnstile" data-sitekey={turnstileSiteKey}></div>
+            {/* The normal widget is 300px wide, more than this card leaves at 360px; use the compact one there.
+                Runs before the deferred Turnstile script reads data-size. */}
+            <script is:inline>
+              if (innerWidth < 400) document.querySelector(".cf-turnstile")?.setAttribute("data-size", "compact");
+            </script>
+            </>
           )}
           <div>
             <button type="submit" class="bg-ink text-paper rounded-md px-6 py-3 font-medium transition-colors hover:bg-accent disabled:opacity-60">Send message</button>
