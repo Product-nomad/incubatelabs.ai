@@ -49,7 +49,8 @@ const faqJsonLd = {
   mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
 
-// The points the five promises in "What we commit to" don't already cover (follow-up sprint, 2026-10).
+// "Agreed before we start": the points the five promises in "What we commit to" don't already
+// cover. Shown just before the promises.
 const promises = [
   "Fixed scope and fixed price, agreed in writing before work starts",
   "Every scope says what's not included as clearly as what is",
@@ -89,6 +90,20 @@ const promises = [
 
   <TeamChange />
 
+  <section class="max-w-page mx-auto px-4 sm:px-6 pb-20">
+    <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
+      <h2 class="text-3xl sm:text-4xl">Agreed before we start</h2>
+      <ul class="space-y-3 text-lg">
+        {promises.map((p) => (
+          <li class="flex gap-3">
+            <span class="font-semibold text-accent" aria-hidden="true">✓</span>
+            <span>{p}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
   <Commitments />
 
   <section class="max-w-page mx-auto px-4 sm:px-6 pb-16">
@@ -104,19 +119,6 @@ const promises = [
 
   <CostCheck showPanel={false} />
 
-  <section class="max-w-page mx-auto px-4 sm:px-6 pb-4">
-    <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
-      <h2 class="text-3xl sm:text-4xl">What you can hold us to</h2>
-      <ul class="space-y-3 text-lg">
-        {promises.map((p) => (
-          <li class="flex gap-3">
-            <span class="font-semibold text-accent" aria-hidden="true">✓</span>
-            <span>{p}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
 
   <section class="max-w-page mx-auto px-4 sm:px-6 pt-16">
     <div class="grid gap-8 border-t border-line pt-10 md:grid-cols-[1fr_2fr]">
