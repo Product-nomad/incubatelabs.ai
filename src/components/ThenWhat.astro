@@ -1,0 +1,27 @@
+---
+// "Then what?" on the home page, straight after "See it working": where the hours saved should go.
+// Compact on purpose: no cards, no illustration.
+const tags = [
+  "Winning more work",
+  "Keeping on top of jobs, changes and risk",
+  "Faster replies to customers",
+  "More of the work your team enjoys",
+];
+---
+
+<section id="then-what" class="max-w-page mx-auto px-4 sm:px-6 pb-20" aria-labelledby="then-what-heading">
+  <div class="grid gap-6 border-t border-line pt-10 md:grid-cols-[1fr_2fr] md:gap-8">
+    <div>
+      <p class="text-sm font-medium text-accent">Then what?</p>
+      <h2 id="then-what-heading" class="mt-3 text-3xl sm:text-4xl">Five hours back is the start. What you do with them is the point.</h2>
+    </div>
+    <div class="max-w-prose md:pt-8">
+      <p class="text-lg text-muted">Time saved has a habit of disappearing into the rest of the week. So before we build anything, we agree where the hours should go: following up more quotes, keeping on top of jobs and changes, getting back to customers faster, or finishing on time. At 12 weeks we check both: the hours back, and whether they went where you planned.</p>
+      <ul class="mt-6 flex flex-wrap gap-2" aria-label="Where the hours can go">
+        {tags.map((t) => (
+          <li class="rounded-full border border-accent-line bg-accent-soft px-3 py-1 text-sm font-medium text-accent">{t}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

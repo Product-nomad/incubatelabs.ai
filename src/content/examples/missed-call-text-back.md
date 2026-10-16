@@ -13,6 +13,8 @@ card_summary: "When a call is missed, the customer gets a clearly labelled text 
 tools: [Your business phone system, Text messaging, Outlook or Gmail, Your job or enquiry list]
 time_back: "About 3 enquiries a week kept"
 team_change: "The office starts the day with a list of tidy enquiries to call back instead of a list of missed numbers. Engineers don't change anything."
+time_to: "Booking jobs instead of chasing missed numbers."
+watch: "enquiries turned into jobs"
 last_reviewed: 2026-10-13
 ---
 

@@ -42,7 +42,7 @@ const totalSteps = steps.length + 1;
       {steps.map((step, i) => (
         <div class="rc-step hidden" data-step={i}>
           <h2 class="text-3xl sm:text-4xl" tabindex="-1">{step.title}</h2>
-          {i === steps.length - 1 && (
+          {step.aboutPickedJob && (
             <p class="mt-3 text-lg text-muted">These questions are about <span id="rc-job" class="font-medium text-ink">the job that takes up most time</span>.</p>
           )}
           <div class="mt-8 space-y-8">
@@ -106,6 +106,8 @@ const totalSteps = steps.length + 1;
         Nothing stands out from your answers. That's useful to know too. If something is still eating your week, a short conversation is the quickest way to find out whether it's worth automating.
       </p>
 
+      <p id="rc-priority" class="mt-8 hidden border-l-[3px] border-accent pl-4 text-lg text-ink"></p>
+
       <div class="mt-10 bg-accent-soft border border-accent-line rounded-xl p-6 sm:p-8">
         <h3 class="text-2xl">What this is costing you</h3>
         <p id="rc-cost" class="mt-3 font-serif text-4xl font-semibold text-ink">Roughly £0 a year</p>
@@ -149,7 +151,7 @@ const totalSteps = steps.length + 1;
 </Layout>
 
 <script>
-  import { steps, computeResult, summarise, annualCost, formatPounds, type Answers, type CostInputs } from "@/data/readiness";
+  import { steps, computeResult, summarise, annualCost, formatPounds, priorityLine, type Answers, type CostInputs } from "@/data/readiness";
   import { useCases } from "@/data/useCases";
 
   const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -185,7 +187,7 @@ const totalSteps = steps.length + 1;
     back.classList.toggle("hidden", step === 0);
     next.textContent = step === total - 1 ? "See my result" : "Next";
     missing.classList.add("hidden");
-    if (step === steps.length - 1) {
+    if (steps[step]?.aboutPickedJob) {
       const picked = useCases.find((uc) => uc.slug === answers().pick);
       $("rc-job").textContent = picked ? picked.short : "the job that takes up most time";
     }
@@ -234,6 +236,9 @@ const totalSteps = steps.length + 1;
         return li;
       }),
     );
+    const priority = $("rc-priority");
+    priority.textContent = r.priority ? priorityLine(r.priority) : "";
+    priority.classList.toggle("hidden", !r.priority);
     const cost = costInputs();
     $("rc-cost").textContent = `Roughly ${formatPounds(annualCost(cost))} a year`;
     // Hidden field, submitted only with "Send my result to Simon".

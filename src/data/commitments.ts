@@ -10,7 +10,7 @@ export const commitmentsIntro = "Five promises that apply to every project, what
 export const commitments: LeadItem[] = [
   {
     lead: "We measure before and after.",
-    text: "Before we build anything, we record how long the work takes today. A quarter (12 weeks) after it goes live, we measure the same work the same way and show you the hours back, in your numbers.",
+    text: "Before we build anything, we record how long the work takes today and agree where the time saved should go. A quarter (12 weeks) after go-live, we measure the same work the same way and check both: the hours back, and whether they went where you planned.",
   },
   {
     lead: "You own what we build.",

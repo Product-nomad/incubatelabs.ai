@@ -13,6 +13,8 @@ card_summary: "Overdue invoice reminders are drafted from Xero in the right tone
 tools: [Xero, Outlook or Gmail, Your customer notes]
 time_back: "About 6 hours a month"
 team_change: "Whoever chases payments reviews a morning list of drafts instead of writing each email, and still makes the calls."
+time_to: "Calls on the accounts that matter most."
+watch: "average days to get paid"
 last_reviewed: 2026-10-13
 ---
 

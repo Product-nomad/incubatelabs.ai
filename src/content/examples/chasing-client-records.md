@@ -13,6 +13,8 @@ card_summary: "Each client gets a personalised list of what's still missing, wit
 tools: [Outlook or Gmail, Your practice management software or client spreadsheet, Your document portal or shared folders]
 time_back: "About 40 hours a season"
 team_change: "The team approves batches of reminders and calls the few clients who don't respond, instead of writing every chaser."
+time_to: "Advisory conversations with clients instead of chasers."
+watch: "records complete before the deadline"
 last_reviewed: 2026-10-13
 ---
 

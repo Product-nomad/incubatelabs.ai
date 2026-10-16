@@ -13,6 +13,8 @@ card_summary: "Repair emails are sorted by urgency, logged against the right pro
 tools: [Outlook or Gmail, Your property management software or spreadsheet, Your list of approved contractors]
 time_back: "About 8 hours a week"
 team_change: "Property managers start from a sorted queue with draft replies instead of an unsorted inbox. They still send every message."
+time_to: "Property inspections and keeping landlords updated."
+watch: "time to first reply"
 last_reviewed: 2026-10-13
 ---
 

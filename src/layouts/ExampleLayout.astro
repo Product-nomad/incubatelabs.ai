@@ -204,6 +204,23 @@ const video = data.video ? new URL(data.video, site.url).href : null;
     color: #1f5c45;
   }
 
+  /* "Where the time could go": a short block straight after the time back, tied to it visually. */
+  .example-prose .example-time-to {
+    margin-top: 1.5rem;
+    border-left: 3px solid #1f5c45;
+    padding: 0.25rem 0 0.25rem 1.25rem;
+  }
+  .example-prose .example-time-to h3 {
+    margin-top: 0;
+  }
+  .example-prose .example-time-to p {
+    margin-top: 0.5rem;
+  }
+  .example-prose .example-time-to .time-watch {
+    font-size: 0.9375rem;
+    color: #5d6166;
+  }
+
   /* "How we'd start" ends with the CTA button. */
   .example-prose .example-start p:last-child {
     margin-top: 1.5rem;

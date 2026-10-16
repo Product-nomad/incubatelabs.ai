@@ -13,6 +13,8 @@ card_summary: "Every Monday, one page: work won, jobs running over, cash in and 
 tools: [Your job management software, Xero or QuickBooks, Excel or Google Sheets, Email]
 time_back: "About 2 hours a week"
 team_change: "The owner reads one page on Monday instead of building it. Nobody else changes anything."
+time_to: "Acting on the three decisions, not building the report."
+watch: "jobs caught running over"
 last_reviewed: 2026-10-13
 ---
 

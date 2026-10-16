@@ -4,6 +4,11 @@
 **Phase**: Worked examples sprint (v1.4) shipped 2026-10-13. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
 **Last touched**: 2026-10-16.
 
+## "Then what?" sprint (2026-10-16; branch `then-what-2026-10`)
+- **Delivery commitment extended**: before any build we also **agree where the hours saved should go, and how we'll know**; the 12-week re-measure checks both the hours back and whether they went where planned (commitment 1, /how-we-work/ steps 1 and 5, /llms.txt).
+- **Shipped**: `ThenWhat.astro` on home straight after "See it working" (eyebrow, H2, body, four accent-soft tags). Examples: `time_to` and `watch` front matter, rendered by `rehype-example.mjs` as "Where the time could go" straight after "Time back" / "What it's worth" (build fails if missing). Readiness Check: new "Then what?" step before the cost step ("If you got five hours a week back…", five options; steps now flag `aboutPickedJob` instead of relying on position); the result shows "Your first priority for the time saved: … We'll plan around it." and the same line goes into the summary sent with "Send my result to Simon". The booking link passes nothing. Cost estimate unchanged.
+- **Checks**: 75 new browser checks plus the 143 existing; Lighthouse mobile home 97/100/100/100, CLS 0.
+
 ## Evidence pack follow-up (2026-10-16; branch `evidence-2026-10`)
 - **Delivery commitment added**: **an evidence pack with every build** (what the AI does, tools and data, where a person checks, monitoring, what to do if it goes wrong), reusable in clients' own supplier questionnaires. Shown with the Handover step on /how-we-work/ (`#evidence-pack`, text in `evidencePack` in `src/data/commitments.ts`), linked from the security questionnaires page ("Where it fits") and listed under "Our commitments" in /llms.txt.
 - **"What you can hold us to"** trimmed to the four points the five promises don't cover: fixed scope and price in writing; scope says what's not included; data in your systems wherever possible and where it goes; a cost check including AI price rises. Removed as covered: simpler fix than AI, person in the loop, you own what we build.
@@ -88,6 +93,7 @@
 - **GitHub bio**: replace "Open to PM and Delivery roles" (Simon, manual).
 
 ## Backlog (parked, not in the open list)
+- Ninth worked example: "Variations log from site voice notes and photos (construction)" (parked 2026-10-16).
 - Founder photo (on hold); "Works with the tools you already use" strip (not confirmed).
 - Technical-audit leftovers: `priceRange` (no prices), Cloudflare email obfuscation (dashboard decision), analytics (Plausible account or Cloudflare Web Analytics), CSP (needs testing against Turnstile).
 - The SEO README's "keep 'based near Huntingdon'" suggestion was not applied: Simon chose to show no location.

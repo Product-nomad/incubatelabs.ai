@@ -13,6 +13,8 @@ card_summary: "Supplier invoices are read from the inbox, coded and matched to t
 tools: [Outlook or Gmail, Xero, Your purchase orders or job list in a spreadsheet]
 time_back: "About 6 hours a month"
 team_change: "Whoever does the bookkeeping approves draft bills in a batch instead of typing them, and deals with the few invoices that are flagged."
+time_to: "Checking margins on each job, now that price mismatches are caught when the invoice arrives."
+watch: "overcharges caught"
 last_reviewed: 2026-10-13
 ---
 

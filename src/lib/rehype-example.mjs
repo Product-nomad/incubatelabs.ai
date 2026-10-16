@@ -99,6 +99,16 @@ export default function rehypeExample() {
     if (!line) throw new Error(`${id}: no bold hours line in the time-back section`);
     addClass(line, "time-line");
 
+    // 5b. "Where the time could go", from front matter `time_to` and `watch`, straight after the
+    //     time-back (or "What it's worth") section.
+    const fm = file.data?.astro?.frontmatter ?? {};
+    if (!fm.time_to || !fm.watch) throw new Error(`${id}: time_to and watch are required in front matter`);
+    out.splice(out.indexOf(time) + 1, 0, el("section", { className: ["guide-section", "example-time-to"] }, [
+      el("h3", { id: slugger.slug("Where the time could go") }, [{ type: "text", value: "Where the time could go" }]),
+      el("p", {}, [{ type: "text", value: fm.time_to }]),
+      el("p", { className: ["time-watch"] }, [{ type: "text", value: `What to watch: ${fm.watch}` }]),
+    ]));
+
     // 6. Element-level touches, as in the guides.
     let cta = 0;
     const tables = [];

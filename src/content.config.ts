@@ -49,6 +49,9 @@ const examples = defineCollection({
     time_back: z.string(),
     // "What changes for your team", rendered after "What we'd build" by src/lib/rehype-example.mjs.
     team_change: z.string(),
+    // "Where the time could go", rendered after "Time back" (or "What it's worth") by rehype-example.
+    time_to: z.string(),
+    watch: z.string(),
     last_reviewed: z.coerce.date(),
     video: z.string().optional(),
   }),

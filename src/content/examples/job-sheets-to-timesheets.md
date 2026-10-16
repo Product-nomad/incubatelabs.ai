@@ -13,6 +13,8 @@ card_summary: "Engineers photograph their job sheets. Hours and materials become
 tools: [Engineers' phones, Excel or Google Sheets, Xero or QuickBooks, Your payroll export]
 time_back: "About 4 hours a week"
 team_change: "Engineers keep their paper job sheets and take a photo at the end of the job. The office checks a summary instead of retyping."
+time_to: "Invoicing sooner and chasing changes to the job while it's still fresh."
+watch: "days from job done to invoice sent"
 last_reviewed: 2026-10-13
 ---
 

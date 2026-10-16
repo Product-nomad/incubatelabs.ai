@@ -24,6 +24,8 @@ export interface Question {
 export interface Step {
   title: string;
   questions: Question[];
+  // The step's questions are about the job picked in "pick" (shows "These questions are about …").
+  aboutPickedJob?: boolean;
 }
 
 const jobOptions: Option[] = [
@@ -135,6 +137,7 @@ export const steps: Step[] = [
   },
   {
     title: "Before you start",
+    aboutPickedJob: true,
     questions: [
       {
         id: "where",
@@ -176,6 +179,22 @@ export const steps: Step[] = [
       },
     ],
   },
+  {
+    title: "Then what?",
+    questions: [
+      {
+        id: "priority",
+        text: "If you got five hours a week back, where would they go first?",
+        options: [
+          { value: "win-work", label: "Winning more work" },
+          { value: "jobs-risk", label: "Keeping on top of jobs, changes and risk" },
+          { value: "customers", label: "Getting back to customers faster" },
+          { value: "team", label: "Developing the team" },
+          { value: "evenings", label: "Getting evenings back" },
+        ],
+      },
+    ],
+  },
 ];
 
 export type Answers = Record<string, string>;
@@ -189,6 +208,8 @@ export interface Recommendation {
 export interface Result {
   recommendations: Recommendation[];
   beforeYouStart: { lead: string; body: string }[];
+  // Label of the "priority" answer: where the hours saved should go first.
+  priority?: string;
 }
 
 // One-line reasons, keyed by question id then answer value.
@@ -298,7 +319,12 @@ export function computeResult(answers: Answers): Result {
   if (recommendations.some((r) => r.slug === "data-entry-automation")) candidates.push(points.integration);
   if (candidates.length === 0) candidates.push(points.good);
 
-  return { recommendations, beforeYouStart: candidates.slice(0, MAX_POINTS) };
+  const priority = steps
+    .flatMap((st) => st.questions)
+    .find((q) => q.id === "priority")
+    ?.options.find((o) => o.value === answers.priority)?.label;
+
+  return { recommendations, beforeYouStart: candidates.slice(0, MAX_POINTS), priority };
 }
 
 // Rough annual cost of the picked jobs (v1.1 spec §10): hours × rate × 46 working weeks,
@@ -320,11 +346,15 @@ export function formatPounds(amount: number): string {
   return `£${amount.toLocaleString("en-GB")}`;
 }
 
+// Shown in the result and included in the summary sent to Simon.
+export const priorityLine = (label: string) => `Your first priority for the time saved: ${label}. We'll plan around it.`;
+
 // Plain-text summary, sent only if the visitor chooses "Send my result to Simon".
 export function summarise(answers: Answers, result: Result, cost?: CostInputs): string {
   const lines: string[] = ["Recommended first:"];
   if (result.recommendations.length === 0) lines.push("- Nothing stood out");
   for (const r of result.recommendations) lines.push(`- ${r.title}: ${r.reason}`);
+  if (result.priority) lines.push("", priorityLine(result.priority));
   lines.push("", "Before you start:");
   for (const p of result.beforeYouStart) lines.push(`- ${p.lead} ${p.body}`);
   if (cost) {
