@@ -7,7 +7,7 @@
 ## Site audit follow-up (2026-11-23; branch `audit-2026-11-23`)
 - **Sitemap lastmod** = `last_reviewed` for guides and examples (`src/lib/sitemap-lastmod.mjs`); no lastmod elsewhere. Bumping `last_reviewed` is now what tells search engines a guide changed, so only bump it after a real review.
 - **CSP** (`src/integrations/csp-header.mjs` + `src/lib/csp.mjs`): appended to `dist/_headers` at build, inline scripts by sha256 hash (9 today), style-src 'unsafe-inline'. New third-party script or frame (e.g. an example `video` iframe) → add its host in `csp.mjs`. Browser check of all 30 preview pages: no violations from our policy; Turnstile's console noise (`connect-src data:` inside its own frame) is identical on production. Headless Chrome gets no Turnstile token on preview or production, so a real form submission on the preview is still needed before merge.
-- **Tests**: `npm test` (node --test, `src/**/*.test.mjs`), 7 tests. Not run by the deploy workflow yet.
+- **Tests**: `npm test` (node --test, `src/**/*.test.mjs`), 7 tests, run by the deploy workflow before anything deploys.
 - **Guides reviewed**: Article 50 (no change but date-proof FAQ wording) and AI literacy (Commission Q&A of 20 Oct 2026 added) → last_reviewed 2026-11-23. ISO 42001 checked, nothing new; left at 2026-10-16.
 - **AI agents page**: not built. UK search demand for the compliance angle is ~10/month per phrase (DataForSEO, Oct 2026); "ai agents uk" 110/month is general interest. The UK AI Act guide subsection covers it.
 - **Search titles**: not changed. The pages near page 1 (AI email replies, Xero example) show only one-impression queries; already well linked internally.
