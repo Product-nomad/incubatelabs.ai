@@ -8,13 +8,7 @@ export async function getExamples(): Promise<Example[]> {
   return all.sort((a, b) => a.data.order - b.data.order);
 }
 
-// "More worked examples": three others, same industry first, then by order.
-export function moreExamples(all: Example[], current: Example, count = 3): Example[] {
-  const others = all.filter((e) => e.id !== current.id);
-  const same = others.filter((e) => e.data.industry === current.data.industry);
-  const rest = others.filter((e) => e.data.industry !== current.data.industry);
-  return [...same, ...rest].slice(0, count);
-}
+export { moreExamples } from "./more-examples.mjs";
 
 // "See a worked example" block on each use-case page (examples spec §4). No entry, no block.
 export const USE_CASE_EXAMPLES: Record<string, string[]> = {
