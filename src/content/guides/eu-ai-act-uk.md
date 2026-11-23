@@ -5,13 +5,13 @@ secondary_keywords: eu ai act uk, eu ai act summary, eu ai act compliance, eu ai
 title: "Does the EU AI Act Apply to UK Businesses? (2026 Guide)"
 meta_description: "Plain-English guide for UK small businesses: when the EU AI Act applies, what's in force now, what was delayed to 2027, and what to do this month."
 h1: "Does the EU AI Act apply to your UK business?"
-last_reviewed: 2026-10-16
+last_reviewed: 2026-11-23
 schema: Article + FAQPage
 ---
 
 # Does the EU AI Act apply to your UK business?
 
-**Last reviewed: 16 October 2026.** Practical guidance, not legal advice.
+**Last reviewed: 23 November 2026.** Practical guidance, not legal advice.
 
 ## The short answer
 
@@ -85,6 +85,8 @@ The July 2026 changes moved the high-risk rules back:
 | 2 December 2027 | High-risk rules for uses like recruitment, credit and education |
 | 2 August 2028 | High-risk rules for AI built into regulated products |
 
+Ahead of the December 2027 high-risk date, the first harmonised standard under the Act, EN 18286 (a quality management standard), has applied since 14 October 2026 under Commission Implementing Decision (EU) 2026/2274. It matters mainly to providers of high-risk systems sold into the EU: if you only use AI tools there's nothing to do yet, though EU customers may start asking their suppliers about it.
+
 ## What the July 2026 changes mean for small firms
 
 - More time before the high-risk rules: December 2027 instead of August 2026.
@@ -138,3 +140,4 @@ No law requires a small business to hold one. [ISO/IEC 42001](/guides/iso-42001-
 3. [AI Act obligations in force and delays under the omnibus (ActuIA)](https://www.actuia.com/en/news/ai-act-obligations-in-force-and-delays-under-omnibus-2026-1744/)
 4. [EU AI Act update: Digital Omnibus finalises 8 compliance changes (Orrick)](https://www.orrick.com/en/Insights/2026/07/EU-AI-Act-Update-Digital-Omnibus-Finalizes-8-Compliance-Changes)
 5. [Commission guidelines on Article 50, deployer obligations (McCann FitzGerald)](https://www.mccannfitzgerald.com/knowledge/data-privacy-and-cyber-risk/ai-transparency-european-commissions-guidelines-on-article-50-part-2-deployer-obligations)
+6. [Commission Implementing Decision (EU) 2026/2274 on harmonised standards, EN 18286 (EUR-Lex)](https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj)

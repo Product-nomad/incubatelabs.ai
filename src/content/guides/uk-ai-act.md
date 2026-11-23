@@ -5,13 +5,13 @@ secondary_keywords: uk ai regulation, uk ai regulation small business, automated
 title: "Is There a UK AI Act? What Applies to UK Businesses in 2026"
 meta_description: "There's no UK AI Act. Here's what does apply to UK small businesses using AI in 2026: UK GDPR, new automated decision rules and regulator guidance."
 h1: "Is there a UK AI Act?"
-last_reviewed: 2026-10-12
+last_reviewed: 2026-11-23
 schema: Article + FAQPage
 ---
 
 # Is there a UK AI Act?
 
-**Last reviewed: 12 October 2026.** Practical guidance, not legal advice.
+**Last reviewed: 23 November 2026.** Practical guidance, not legal advice.
 
 ## The short answer
 
@@ -27,6 +27,7 @@ Any AI tool that touches personal data is covered by UK GDPR, the same as any ot
 - Use tools whose providers give you proper data protection terms. Business accounts usually do; personal accounts usually don't.
 - Tell people in your privacy notice if you use AI with their data in ways they wouldn't expect.
 - Report serious personal data breaches to the ICO within 72 hours. That includes customer data pasted into the wrong tool.
+- Answer subject access requests drafted with AI like any other: they're still valid and the usual one-month limit applies, even when they're long or cite the wrong law. Have a short process, name who handles requests, and don't discourage people from using AI to make them.
 
 ## 2. New rules on automated decisions (since 5 February 2026)
 
@@ -47,8 +48,22 @@ Stricter limits still apply to decisions based on special category data, such as
 
 ## 3. Regulators are writing AI-specific guidance
 
-- **ICO:** consulted on draft guidance on automated decision-making and profiling in spring 2026, and is required by regulations made in May 2026 to prepare a statutory code of practice on AI.
+- **ICO:** consulted on draft guidance on automated decision-making and profiling in spring 2026, and is required by regulations made in May 2026 to prepare a statutory code of practice on AI. From 8 October to 20 November 2026 it ran a call for evidence on agentic AI to shape future guidance and its statutory code of practice on AI and automated decision-making. The code is expected to cover businesses that use AI agents, not just those that build them.
+- **ICO on advertising:** its AdTech 3.0 report (13 November 2026) sets no new duties, but confirms that the existing consent and transparency rules (PECR and UK GDPR) apply to AI-run campaigns, audience selection and chatbot ads. It warns against targeting people on sensitive traits an AI has inferred.
 - **Other regulators** apply their existing rules to AI in their sectors. If you're FCA-regulated, for example, your AI use is covered by the same conduct rules as everything else you do.
+
+### AI agents
+
+AI agents are tools that act for you, such as booking, buying or replying. On 30 October 2026 the CMA, FCA, ICO and Ofcom (the Digital Regulation Cooperation Forum) said existing law already applies to them. You stay responsible for any agent you deploy, even a supplier's. The CMA has updated its consumer-law guidance on AI agents (fines up to 10% of turnover).
+
+On 16 November 2026 the same regulators wrote to ministers about personal AI agents. Firms launching them must comply before launch, talk early to every relevant regulator, and tackle fraud, unexpected sharing of personal data and misleading recommendations. If customers act through an agent, your duties to them remain.
+
+What to do:
+
+- Limit what each agent can do.
+- Ask customers to confirm anything irreversible.
+- Keep logs, and make agent-made transactions checkable and reversible.
+- Check supplier contracts for testing information and liability.
 
 ## 4. Other law still applies to what AI does
 
@@ -95,3 +110,9 @@ It applies to UK businesses whose AI is used in the EU or whose AI output is use
 3. [King's Speech signals diffuse UK digital policy agenda, but no AI bill (IAPP)](https://iapp.org/news/a/king-s-speech-signals-diffuse-uk-digital-policy-agenda-but-no-ai-bill)
 4. [Data (Use and Access) Act 2025 (legislation.gov.uk)](https://www.legislation.gov.uk/ukpga/2025/18/contents)
 5. [ICO: UK GDPR data breach reporting](https://ico.org.uk/for-organisations/report-a-breach/personal-data-breach/)
+6. [ICO: call for evidence on agentic AI, 8 October to 20 November 2026](https://ico.org.uk/about-the-ico/ico-and-stakeholder-consultations/2026/10/agentic-ai-call-for-evidence/)
+7. [DRCF: joint statement on protecting people and businesses in an agentic economy, 30 October 2026](https://www.drcf.org.uk/publications/joint-statements/joint-statement-on-protecting-people-and-businesses-in-an-agentic-economy)
+8. [CMA: complying with consumer law when using AI agents (GOV.UK)](https://www.gov.uk/government/publications/complying-with-consumer-law-when-using-ai-agents)
+9. [DRCF: joint letter to ministers on personal AI agents, 16 November 2026](https://www.drcf.org.uk/publications/joint-statements/drcf-joint-letter-personal-ai-agents)
+10. [ICO: subject access requests generated by AI](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/subject-access-requests/subject-access-requests-generated-by-artificial-intelligence/)
+11. [ICO: AdTech 3.0 report, 13 November 2026 (PDF)](https://ico.org.uk/media2/nt4jmexg/adtech-3-0-202611.pdf)

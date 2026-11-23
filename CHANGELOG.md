@@ -2,6 +2,17 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.4.1] — 2026-11-23
+
+### Changed
+AI regulation watch catch-up, 19 October to 23 November 2026. Last reviewed moved to 23 November 2026 on the three guides below only.
+- /guides/uk-ai-act/: ICO bullet adds the agentic AI call for evidence (8 October to 20 November 2026) and that the coming statutory code is expected to cover businesses that use AI agents ([ICO](https://ico.org.uk/about-the-ico/ico-and-stakeholder-consultations/2026/10/agentic-ai-call-for-evidence/)).
+- /guides/uk-ai-act/: new "AI agents" subsection: the DRCF joint statement of 30 October 2026 ([DRCF](https://www.drcf.org.uk/publications/joint-statements/joint-statement-on-protecting-people-and-businesses-in-an-agentic-economy)), the CMA's updated consumer-law guidance on AI agents ([GOV.UK](https://www.gov.uk/government/publications/complying-with-consumer-law-when-using-ai-agents)), the DRCF letter to ministers on personal AI agents of 16 November 2026 ([DRCF](https://www.drcf.org.uk/publications/joint-statements/drcf-joint-letter-personal-ai-agents)), and four practical steps.
+- /guides/uk-ai-act/: UK GDPR basics add that AI-drafted subject access requests are valid and get the usual one-month limit ([ICO](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/subject-access-requests/subject-access-requests-generated-by-artificial-intelligence/)).
+- /guides/uk-ai-act/: regulator guidance adds the ICO AdTech 3.0 report of 13 November 2026 ([ICO PDF](https://ico.org.uk/media2/nt4jmexg/adtech-3-0-202611.pdf)). Sources list 5 → 11.
+- /guides/eu-ai-act-uk/: after the timeline, EN 18286, the first harmonised standard under the AI Act, applying since 14 October 2026 ([Commission Implementing Decision (EU) 2026/2274](https://eur-lex.europa.eu/eli/dec_impl/2026/2274/oj)). Added to sources.
+- /resources/ai-policy-template/: three template lines (AI agents in section 7, AI-drafted subject access requests in section 6, sensitive-trait targeting in marketing in section 5), using the sources above. The .docx, .md and copy button pick them up from the same Markdown.
+
 ## [1.4.0] — 2026-10-13
 
 ### Added
