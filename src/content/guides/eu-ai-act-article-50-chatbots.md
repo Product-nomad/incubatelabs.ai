@@ -5,6 +5,7 @@ secondary_keywords: article 50 eu ai act, chatbot disclosure requirement, ai cha
 title: "EU AI Act Article 50: What Your Website Chatbot Must Say"
 meta_description: "Article 50 of the EU AI Act has applied since 2 August 2026. What UK small businesses must tell people about chatbots, AI content and deepfakes."
 h1: "EU AI Act Article 50: what your chatbot must tell people"
+published: 2026-10-12
 last_reviewed: 2026-11-23
 schema: Article + FAQPage
 ---

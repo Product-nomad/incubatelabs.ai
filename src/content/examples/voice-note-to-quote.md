@@ -15,6 +15,7 @@ time_back: "About 5 hours a week"
 team_change: "The owner records a voice note on site instead of writing notes, and checks a draft instead of typing one. Nobody learns new software."
 time_to: "Following up the quotes that go quiet, while they're still warm."
 watch: "how many quotes are won"
+published: 2026-10-13
 last_reviewed: 2026-10-13
 ---
 

@@ -5,6 +5,7 @@ secondary_keywords: iso iec 42001, what is iso 42001, iso 42001 certification co
 title: "ISO 42001 for Small Businesses: Do You Actually Need It?"
 meta_description: "ISO 42001 explained for UK small businesses: what it is, who asks for it, what certification involves, and the proportionate alternative most firms need."
 h1: "ISO 42001 for small businesses: do you actually need it?"
+published: 2026-10-16
 last_reviewed: 2026-10-16
 schema: Article + FAQPage
 ---

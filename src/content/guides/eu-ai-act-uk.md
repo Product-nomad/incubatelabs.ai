@@ -5,6 +5,7 @@ secondary_keywords: eu ai act uk, eu ai act summary, eu ai act compliance, eu ai
 title: "Does the EU AI Act Apply to UK Businesses? (2026 Guide)"
 meta_description: "Plain-English guide for UK small businesses: when the EU AI Act applies, what's in force now, what was delayed to 2027, and what to do this month."
 h1: "Does the EU AI Act apply to your UK business?"
+published: 2026-10-12
 last_reviewed: 2026-11-23
 schema: Article + FAQPage
 ---

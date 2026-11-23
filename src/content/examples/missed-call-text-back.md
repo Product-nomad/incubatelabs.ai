@@ -15,6 +15,7 @@ time_back: "About 3 enquiries a week kept"
 team_change: "The office starts the day with a list of tidy enquiries to call back instead of a list of missed numbers. Engineers don't change anything."
 time_to: "Booking jobs instead of chasing missed numbers."
 watch: "enquiries turned into jobs"
+published: 2026-10-13
 last_reviewed: 2026-10-13
 ---
 

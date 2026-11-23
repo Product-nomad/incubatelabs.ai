@@ -15,6 +15,7 @@ time_back: "About 4 hours a week"
 team_change: "Engineers keep their paper job sheets and take a photo at the end of the job. The office checks a summary instead of retyping."
 time_to: "Invoicing sooner and chasing changes to the job while it's still fresh."
 watch: "days from job done to invoice sent"
+published: 2026-10-13
 last_reviewed: 2026-10-13
 ---
 

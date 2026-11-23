@@ -5,6 +5,7 @@ secondary_keywords: uk ai regulation, uk ai regulation small business, automated
 title: "Is There a UK AI Act? What Applies to UK Businesses in 2026"
 meta_description: "There's no UK AI Act. Here's what does apply to UK small businesses using AI in 2026: UK GDPR, new automated decision rules and regulator guidance."
 h1: "Is there a UK AI Act?"
+published: 2026-10-12
 last_reviewed: 2026-11-23
 schema: Article + FAQPage
 ---

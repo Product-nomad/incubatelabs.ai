@@ -5,6 +5,7 @@ secondary_keywords: ai literacy training for staff, eu ai act article 4, ai lite
 title: "AI Literacy Training for Staff: A Small Business Guide"
 meta_description: "What the EU AI Act's AI literacy rule asks of small businesses after the July 2026 changes, plus a simple staff training plan you can run in a week."
 h1: "AI literacy training for staff: what small businesses need to do"
+published: 2026-10-12
 last_reviewed: 2026-11-23
 schema: Article + FAQPage
 note_for_build: SERP not yet checked. Publish anyway; revisit the H1 and title once the SERP data is in.

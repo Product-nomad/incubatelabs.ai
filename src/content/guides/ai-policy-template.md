@@ -5,6 +5,7 @@ secondary_keywords: ai policy template uk, ai acceptable use policy, ai use poli
 title: "Free AI Policy Template for UK Small Businesses (2026)"
 meta_description: "A free, plain-English AI use policy for UK small businesses: approved tools, personal data, checking output, disclosure and training. No email needed."
 h1: "Free AI policy template for small businesses"
+published: 2026-10-12
 last_reviewed: 2026-11-23
 schema: Article + FAQPage
 downloads: ai-policy-template.docx, ai-policy-template.md (generated from the template section below)
