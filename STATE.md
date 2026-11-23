@@ -4,6 +4,16 @@
 **Phase**: Worked examples sprint (v1.4) shipped 2026-10-13. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
 **Last touched**: 2026-11-23.
 
+## Site audit follow-up (2026-11-23; branch `audit-2026-11-23`)
+- **Sitemap lastmod** = `last_reviewed` for guides and examples (`src/lib/sitemap-lastmod.mjs`); no lastmod elsewhere. Bumping `last_reviewed` is now what tells search engines a guide changed, so only bump it after a real review.
+- **CSP** (`src/integrations/csp-header.mjs` + `src/lib/csp.mjs`): appended to `dist/_headers` at build, inline scripts by sha256 hash (9 today), style-src 'unsafe-inline'. New third-party script or frame (e.g. an example `video` iframe) → add its host in `csp.mjs`. Browser check of all 30 preview pages: no violations from our policy; Turnstile's console noise (`connect-src data:` inside its own frame) is identical on production. Headless Chrome gets no Turnstile token on preview or production, so a real form submission on the preview is still needed before merge.
+- **Tests**: `npm test` (node --test, `src/**/*.test.mjs`), 7 tests. Not run by the deploy workflow yet.
+- **Guides reviewed**: Article 50 (no change but date-proof FAQ wording) and AI literacy (Commission Q&A of 20 Oct 2026 added) → last_reviewed 2026-11-23. ISO 42001 checked, nothing new; left at 2026-10-16.
+- **AI agents page**: not built. UK search demand for the compliance angle is ~10/month per phrase (DataForSEO, Oct 2026); "ai agents uk" 110/month is general interest. The UK AI Act guide subsection covers it.
+- **Search titles**: not changed. The pages near page 1 (AI email replies, Xero example) show only one-impression queries; already well linked internally.
+- **Dated follow-ups**: (1) on or after 2 Dec 2026, the EU guide timeline's 2 December 2026 row is past; wording is now date-neutral, nothing breaks. (2) early January 2027: "2026" in the titles of /guides/uk-ai-act/, /guides/eu-ai-act-uk/ and /resources/ai-policy-template/ → 2027 (title ≤60 check). (3) announcement bar review by end of January 2027.
+- **Not measured**: Lighthouse/PageSpeed (API quota exhausted on 2026-11-23; local run blocked). Re-measure on the preview or live.
+
 ## AI regulation watch catch-up, 19 Oct to 23 Nov 2026 (2026-11-23; branch `watch/ai-reg-2026-11-23`)
 - **Changed**: /guides/uk-ai-act/ (ICO agentic AI call for evidence, "AI agents" subsection from the DRCF statement and letter plus CMA guidance, AI-drafted SARs, ICO AdTech 3.0; sources 6–11), /guides/eu-ai-act-uk/ (EN 18286 under Implementing Decision (EU) 2026/2274, source 6), /resources/ai-policy-template/ (agents in §7, SARs in §6, sensitive-trait marketing in §5). last_reviewed 2026-11-23 on those three only. Details and sources in CHANGELOG 1.4.1.
 - **Unchanged**: titles, meta descriptions, H1s, target keywords; FAQs (none contradicted). Article 50 and AI literacy guides untouched by request.
