@@ -5,14 +5,14 @@ secondary_keywords: ai literacy training for staff, eu ai act article 4, ai lite
 title: "AI Literacy Training for Staff: A Small Business Guide"
 meta_description: "What the EU AI Act's AI literacy rule asks of small businesses after the July 2026 changes, plus a simple staff training plan you can run in a week."
 h1: "AI literacy training for staff: what small businesses need to do"
-last_reviewed: 2026-10-12
+last_reviewed: 2026-11-23
 schema: Article + FAQPage
 note_for_build: SERP not yet checked. Publish anyway; revisit the H1 and title once the SERP data is in.
 ---
 
 # AI literacy training for staff: what small businesses need to do
 
-**Last reviewed: 12 October 2026.** Practical guidance, not legal advice.
+**Last reviewed: 23 November 2026.** Practical guidance, not legal advice.
 
 ## The short answer
 
@@ -74,7 +74,7 @@ You don't need a certificate. Keep a simple record:
 |---|---|---|---|---|
 | [Date] | [Names] | [Policy walk-through, checking output, data rules] | [Tools] | [Name] |
 
-Store it with your AI policy. If anyone ever asks what you've done, that page is the answer.
+Store it with your AI policy. If anyone ever asks what you've done, that page is the answer. The European Commission's AI literacy Q&A (updated 20 October 2026) confirms there's no need for a certificate and that an internal record is fine. National authorities have supervised and enforced the rule since 2 August 2026.
 
 ## Do you need an AI literacy course?
 
@@ -106,3 +106,4 @@ No. Keep your own record of who was trained, when, and on what.
 2. [Digital Omnibus on AI, Regulation (EU) 2026/1744 (NicFab summary)](https://www.nicfab.eu/en/posts/digital-omnibus-ai-official-journal/)
 3. [Microsoft and Censuswide research on unapproved AI use at work, 2025](https://ukstories.microsoft.com/features/rise-in-shadow-ai-tools-raising-security-concerns-for-uk)
 4. [Regulation (EU) 2024/1689, the AI Act (EUR-Lex)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
+5. [European Commission: AI literacy questions and answers, updated 20 October 2026](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers)

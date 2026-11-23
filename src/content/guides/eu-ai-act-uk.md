@@ -59,7 +59,7 @@ In practice: a short policy, a training session matched to the tools your team u
 - Chatbots and AI assistants must make clear people are dealing with AI, unless that's obvious.
 - Deepfakes, meaning AI images, audio or video that look like real people, places or events, must be labelled.
 - AI-generated text published to inform the public on matters of public interest must be disclosed, unless a person has genuinely reviewed it and takes editorial responsibility.
-- Tools that generate content must mark it in a machine-readable way. That's mostly the tool maker's job. Tools already on the market before August 2026 have until 2 December 2026.
+- Tools that generate content must mark it in a machine-readable way. That's mostly the tool maker's job. For tools already on the market before August 2026, the deadline is 2 December 2026.
 
 ### Banned practices (since 2 February 2025)
 
