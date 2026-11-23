@@ -4,6 +4,10 @@ import sitemap from "@astrojs/sitemap";
 import rehypeGuide from "./src/lib/rehype-guide.mjs";
 import rehypeExample from "./src/lib/rehype-example.mjs";
 import siteChecks from "./src/integrations/site-checks.mjs";
+import cspHeader from "./src/integrations/csp-header.mjs";
+import { lastmodFor, reviewedDatesIn } from "./src/lib/sitemap-lastmod.mjs";
+
+const reviewed = reviewedDatesIn(["src/content/guides", "src/content/examples"]);
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,13 +16,14 @@ export default defineConfig({
     tailwind(),
     sitemap({
       filter: (page) => !page.includes("/contact/thanks/"),
-      // Build date as lastmod, so search engines can see when pages changed.
       serialize(item) {
-        item.lastmod = new Date().toISOString();
+        const lastmod = lastmodFor(item.url, reviewed);
+        if (lastmod) item.lastmod = lastmod;
         return item;
       },
     }),
     siteChecks(),
+    cspHeader(),
   ],
   markdown: {
     // Straight quotes, as in the rest of the site, so FAQ JSON-LD matches the visible text exactly.
