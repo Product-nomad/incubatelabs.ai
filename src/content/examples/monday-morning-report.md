@@ -15,6 +15,7 @@ time_back: "About 2 hours a week"
 team_change: "The owner reads one page on Monday instead of building it. Nobody else changes anything."
 time_to: "Acting on the three decisions, not building the report."
 watch: "jobs caught running over"
+published: 2026-10-13
 last_reviewed: 2026-10-13
 ---
 

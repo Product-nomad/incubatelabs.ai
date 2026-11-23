@@ -33,6 +33,8 @@ jobs:
 
       - run: npm ci
 
+      - run: npm test
+
       - name: Ensure Pages project exists (production branch main)
         run: |
           code=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \

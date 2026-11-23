@@ -15,6 +15,7 @@ time_back: "About 8 hours a week"
 team_change: "Property managers start from a sorted queue with draft replies instead of an unsorted inbox. They still send every message."
 time_to: "Property inspections and keeping landlords updated."
 watch: "time to first reply"
+published: 2026-10-13
 last_reviewed: 2026-10-13
 ---
 

@@ -18,6 +18,7 @@ const guides = defineCollection({
     title: z.string(),
     meta_description: z.string(),
     h1: z.string(),
+    published: z.coerce.date(),
     last_reviewed: z.coerce.date(),
     schema: z.string(),
     downloads: z.string().optional(),
@@ -52,6 +53,7 @@ const examples = defineCollection({
     // "Where the time could go", rendered after "Time back" (or "What it's worth") by rehype-example.
     time_to: z.string(),
     watch: z.string(),
+    published: z.coerce.date(),
     last_reviewed: z.coerce.date(),
     video: z.string().optional(),
   }),

@@ -5,13 +5,14 @@ secondary_keywords: article 50 eu ai act, chatbot disclosure requirement, ai cha
 title: "EU AI Act Article 50: What Your Website Chatbot Must Say"
 meta_description: "Article 50 of the EU AI Act has applied since 2 August 2026. What UK small businesses must tell people about chatbots, AI content and deepfakes."
 h1: "EU AI Act Article 50: what your chatbot must tell people"
-last_reviewed: 2026-10-12
+published: 2026-10-12
+last_reviewed: 2026-11-23
 schema: Article + FAQPage
 ---
 
 # EU AI Act Article 50: what your chatbot must tell people
 
-**Last reviewed: 12 October 2026.** Practical guidance, not legal advice.
+**Last reviewed: 23 November 2026.** Practical guidance, not legal advice.
 
 Since 2 August 2026, anyone talking to an AI chatbot covered by the EU AI Act must be told it's AI. If your website has a chat assistant and any of your visitors are in the EU, this is the rule most likely to apply to you. It's also the easiest one to get right.
 
@@ -85,7 +86,7 @@ Every chatbot and AI assistant we build discloses that it's AI from the first me
 ## Frequently asked questions
 
 **When did Article 50 come into force?**
-It has applied since 2 August 2026. Generative AI tools already on the market before then have until 2 December 2026 to add machine-readable marking.
+It has applied since 2 August 2026. For generative AI tools already on the market before then, the deadline to add machine-readable marking is 2 December 2026.
 
 **Does my website chatbot need to say it's AI?**
 Yes, if the EU AI Act applies to you and it isn't obvious. Put it in the first message.

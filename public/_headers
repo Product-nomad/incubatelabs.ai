@@ -1,5 +1,5 @@
-# Technical audit issue 12 (research/seo-2026-10/technical-audit.md). No CSP yet: add one
-# separately once it has been tested against Turnstile and the Google Calendar link.
+# Technical audit issue 12 (research/seo-2026-10/technical-audit.md). The Content-Security-Policy is
+# appended to dist/_headers at build by src/integrations/csp-header.mjs.
 /*
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Frame-Options: DENY

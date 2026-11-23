@@ -2,6 +2,21 @@
 
 All notable user-visible changes. Format: [Keep a Changelog](https://keepachangelog.com/).
 
+## [1.4.2] — 2026-11-23
+
+### Changed
+- /guides/eu-ai-act-article-50-chatbots/ reviewed: no developments since 12 October (final Commission guidelines of 20 July 2026 and the June 2026 code of practice already reflected). The FAQ now says "the deadline … is 2 December 2026" so it stays correct after that date.
+- /guides/ai-literacy-training-staff/ reviewed: the "What to record" section cites the European Commission's AI literacy Q&A, updated 20 October 2026 (no certificate needed; national authorities supervise and enforce from 2 August 2026), added as source 5 ([Commission](https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers)).
+- /guides/eu-ai-act-uk/: machine-readable marking line reworded to "the deadline is 2 December 2026" (no review-date change; reviewed earlier today).
+- Sitemap `lastmod` comes from each guide's and example's `last_reviewed` date instead of the build time; other pages carry no `lastmod`.
+
+- "More worked examples" continues from the current example and wraps round, so every example is linked from at least three others.
+- Article structured data on guides and examples uses the real publication date; it no longer changes when a page is reviewed.
+- The build fails when a guide, example or the template describes a past date in the future tense, and warns when a guide hasn't been reviewed for 60 days.
+
+### Security
+- Content-Security-Policy on every page: inline scripts allowed only by sha256 hash, generated at build; Turnstile (challenges.cloudflare.com) the only third party; framing, plugins and off-site form posts blocked.
+
 ## [1.4.1] — 2026-11-23
 
 ### Changed
