@@ -5,6 +5,8 @@ import { fileURLToPath } from "node:url";
 import { fromHtml } from "hast-util-from-html";
 import { toText } from "hast-util-to-text";
 import { visit, SKIP } from "unist-util-visit";
+import { pastDatesInFutureTense, isOverdue } from "../lib/freshness.mjs";
+import { reviewedDatesIn } from "../lib/sitemap-lastmod.mjs";
 
 const BANNED = ["CPMAI", "TODO", "[TBC]", "[Screenshot", "Iraq", "earns its place", "Things I've built"];
 // Square-bracket placeholders such as [Business name] or [Date]. Allowed only inside elements marked
@@ -14,6 +16,8 @@ const TITLE_MAX = 60;
 // The one place a location may appear (src/data/site.ts `legal`).
 const LEGAL_LINE = "a sole trader based in Huntingdon";
 const DESCRIPTION_MAX = 155;
+// A guide not reviewed for this long gets a build warning (not a failure).
+const REVIEW_DAYS = 60;
 
 function htmlFiles(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((d) => {
@@ -50,6 +54,7 @@ export default function siteChecks() {
       "astro:build:done": ({ dir, logger }) => {
         const root = fileURLToPath(dir);
         const errors = [];
+        const today = new Date();
         for (const file of htmlFiles(root)) {
           const page = "/" + path.relative(root, file).replace(/index\.html$/, "").split(path.sep).join("/");
           const html = fs.readFileSync(file, "utf8");
@@ -63,6 +68,8 @@ export default function siteChecks() {
           const legal = all.split(LEGAL_LINE).length - 1;
           if (towns !== legal) errors.push(`${page}: "Huntingdon" outside the legal line`);
           for (const m of outsideAllowed.matchAll(PLACEHOLDER)) errors.push(`${page}: placeholder ${m[0]}`);
+          if (/^\/(guides|examples|resources)\//.test(page))
+            for (const s of pastDatesInFutureTense(all, today)) errors.push(`${page}: "${s}" is in the past`);
 
           if (page.startsWith("/404") || html.includes('name="robots" content="noindex"')) continue;
           const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "";
@@ -89,7 +96,9 @@ export default function siteChecks() {
           errors.forEach((e) => logger.error(e));
           throw new Error(`site-checks: ${errors.length} problem(s) in dist/`);
         }
-        logger.info("banned strings, placeholders, titles and descriptions: OK");
+        for (const [slug, reviewed] of reviewedDatesIn(["src/content/guides"]))
+          if (isOverdue(reviewed, today, REVIEW_DAYS)) logger.warn(`${slug}: last reviewed ${reviewed}, over ${REVIEW_DAYS} days ago`);
+        logger.info("banned strings, placeholders, titles, descriptions and past dates: OK");
       },
     },
   };
