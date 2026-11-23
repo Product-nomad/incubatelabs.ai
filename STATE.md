@@ -2,7 +2,14 @@
 
 **Goal**: A lead-generation site for practical AI and automation for UK small businesses (5–50 staff). AI services lead; websites are offered alongside.
 **Phase**: Worked examples sprint (v1.4) shipped 2026-10-13. Live at https://incubatelabs.ai (`main`). Remaining work is the open items below.
-**Last touched**: 2026-10-16.
+**Last touched**: 2026-11-23.
+
+## AI regulation watch catch-up, 19 Oct to 23 Nov 2026 (2026-11-23; branch `watch/ai-reg-2026-11-23`)
+- **Changed**: /guides/uk-ai-act/ (ICO agentic AI call for evidence, "AI agents" subsection from the DRCF statement and letter plus CMA guidance, AI-drafted SARs, ICO AdTech 3.0; sources 6–11), /guides/eu-ai-act-uk/ (EN 18286 under Implementing Decision (EU) 2026/2274, source 6), /resources/ai-policy-template/ (agents in §7, SARs in §6, sensitive-trait marketing in §5). last_reviewed 2026-11-23 on those three only. Details and sources in CHANGELOG 1.4.1.
+- **Unchanged**: titles, meta descriptions, H1s, target keywords; FAQs (none contradicted). Article 50 and AI literacy guides untouched by request.
+- **AI Standards Hub check**: no page mentions "AI Standards Hub" or "Alan Turing", so nothing to change. aistandardshub.org returned 403 on 2026-11-23.
+- **Template placeholder**: the agent approval threshold is `[amount]`, not `[£ amount]`; site-checks bans "£" outside the Readiness Check.
+- **Built in a worktree** (`~/projects/incubatelabs.ai-watch`) because the main checkout had uncommitted `font-fallbacks` work. Remove it after merge: `git worktree remove ../incubatelabs.ai-watch`.
 
 ## ISO 42001 guide (2026-10-16; branch `iso-42001-guide`)
 - **Shipped**: /guides/iso-42001-small-business/ from Simon's Drive copy (`design/guides-2026-10/06-iso-42001-small-business.md`, Drive file 1W671ggaTr_jbRfudiEGFeseLEc3Crfhk); same GuideLayout (breadcrumbs, FAQPage + Article JSON-LD, sources, "More guides"), OG card `public/og/iso-42001-small-business.png`. In `ORDER` after the UK AI Act guide; llms.txt and sitemap pick it up from the collection. No typos found. **Meta description trimmed** 157→153 ("ISO/IEC 42001 explained…" → "ISO 42001 explained…") to pass the 155 check; visible copy unchanged.

@@ -5,14 +5,14 @@ secondary_keywords: ai policy template uk, ai acceptable use policy, ai use poli
 title: "Free AI Policy Template for UK Small Businesses (2026)"
 meta_description: "A free, plain-English AI use policy for UK small businesses: approved tools, personal data, checking output, disclosure and training. No email needed."
 h1: "Free AI policy template for small businesses"
-last_reviewed: 2026-10-16
+last_reviewed: 2026-11-23
 schema: Article + FAQPage
 downloads: ai-policy-template.docx, ai-policy-template.md (generated from the template section below)
 ---
 
 # Free AI policy template for small businesses
 
-**Last reviewed: 16 October 2026.** Practical guidance, not legal advice.
+**Last reviewed: 23 November 2026.** Practical guidance, not legal advice.
 
 Your team is probably using AI already. Microsoft and Censuswide found 71% of UK workers have used AI tools their employer never approved. That's not a discipline problem. It means people have found something useful and nobody has told them where the lines are.
 
@@ -80,15 +80,20 @@ AI tools make mistakes and sound confident while doing it. Whoever sends or publ
 
 AI can help prepare information, but a person makes every decision about people, including hiring, pay, performance, discipline, credit and refunds. That person must understand the decision and be able to change it.
 
+In marketing, we don't use AI to target or exclude people on sensitive traits (such as health, religion or political views), whether they've told us or an AI has inferred them. We check how our advertising and AI suppliers handle personal data.
+
 #### 6. Being open about AI
 
 - Any chatbot or AI assistant we run must tell people they're talking to AI at the start.
 - We label AI-generated images, audio or video that could be mistaken for real people, places or events.
 - If a customer asks whether AI was used, we tell them honestly.
+- If someone asks for a copy of their personal data (a subject access request), we handle it the same way whether or not they used AI to write it. [Name] answers it within one month.
 
 #### 7. New tools and features
 
 Before using a new AI tool, or a new AI feature in a tool we already use, ask [Name]. We'll check where the data goes, whether the provider trains on it, and whether the tool belongs in section 2.
+
+Each AI agent (a tool that takes actions for us, such as sending, booking or paying) has a named owner and written limits on what it can do. A person approves anything it does that can't be undone or is worth more than [amount], and we keep its logs.
 
 #### 8. Training
 
