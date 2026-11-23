@@ -10,6 +10,10 @@ All notable user-visible changes. Format: [Keep a Changelog](https://keepachange
 - /guides/eu-ai-act-uk/: machine-readable marking line reworded to "the deadline is 2 December 2026" (no review-date change; reviewed earlier today).
 - Sitemap `lastmod` comes from each guide's and example's `last_reviewed` date instead of the build time; other pages carry no `lastmod`.
 
+- "More worked examples" continues from the current example and wraps round, so every example is linked from at least three others.
+- Article structured data on guides and examples uses the real publication date; it no longer changes when a page is reviewed.
+- The build fails when a guide, example or the template describes a past date in the future tense, and warns when a guide hasn't been reviewed for 60 days.
+
 ### Security
 - Content-Security-Policy on every page: inline scripts allowed only by sha256 hash, generated at build; Turnstile (challenges.cloudflare.com) the only third party; framing, plugins and off-site form posts blocked.
 
